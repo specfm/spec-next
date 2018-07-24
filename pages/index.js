@@ -1,9 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
+// @flow
+import React from "react";
+import "isomorphic-unfetch";
+import { API_URL_ROOT } from "../config";
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
+class Index extends React.Component<{}> {
+  static async getInitialProps() {
+    // eslint-disable-next-line no-undef
+    const req = fetch(`${API_URL_ROOT}/podcasts.json`, {
+      method: "GET",
+      headers: {
+        "X-API-KEY": process.env.SIMPLECAST_API_KEY
+      }
+    });
 
-export default () => <Title>My page</Title>
+    const res = await req;
+    const json = await res.json();
+    return { json };
+  }
+
+  render() {
+    return <p>Hey</p>;
+  }
+}
+
+export default Index;

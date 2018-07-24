@@ -1,8 +1,9 @@
-{
-  "presets": [
-    "next/babel"
-  ],
+require('now-env')
+
+module.exports = {
+  "presets": ["next/babel"],
   "plugins": [
+    "transform-flow-strip-types",
     [
       "styled-components", 
       {
