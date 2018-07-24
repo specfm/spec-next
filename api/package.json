@@ -1,0 +1,18 @@
+{
+  "name": "spec-next-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev -p 3001"
+  },
+  "dependencies": {
+    "micro": "latest",
+    "node-fetch": "latest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "micro-dev": "^3.0.0",
+    "now-env": "^3.1.0"
+  }
+}
