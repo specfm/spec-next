@@ -1,11 +1,10 @@
 // @flow
 import podcasts from './podcasts'
 import sponsors from './sponsors'
-
-const API_URL_ROOT = 'https://api.simplecast.com/v1/'
+import api from './api'
 
 export {
   podcasts,
   sponsors,
-  API_URL_ROOT
+  api
 }
