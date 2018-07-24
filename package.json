@@ -2,10 +2,10 @@
   "name": "spec-next",
   "version": "1.0.0",
   "scripts": {
-    "dev:web": "next",
+    "dev:web": "node server.js",
     "dev:api": "(cd api && yarn run dev)",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "flow": "flow",
     "flow start": "flow start",
     "flow stop": "flow stop",
@@ -13,8 +13,11 @@
     "flow coverage": "flow coverage"
   },
   "dependencies": {
+    "eslint": "^5.2.0",
+    "express": "^4.16.3",
     "isomorphic-unfetch": "^2.1.0",
     "next": "^6.1.1",
+    "next-routes": "^1.4.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "styled-components": "^2.1.0"
@@ -25,8 +28,11 @@
     "babel-plugin-transform-define": "^1.3.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "flow-bin": "^0.77.0"
+    "flow-bin": "^0.77.0",
+    "now-env": "^3.1.0"
   },
   "license": "ISC"
 }
