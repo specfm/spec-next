@@ -15,10 +15,10 @@ const fetchUrl = async (url: string) => {
 
 const api = {
   getPodcasts: async () => await fetchUrl('podcasts.json'),
-  getPodcast: async (id: string) => await fetchUrl(`podcasts/${id}.json`),
-  getEpisodes: async (id: string) => await fetchUrl(`podcasts/${id}/episodes.json`),
-  getEpisode: async (showId: string, episodeId: string) => await fetchUrl(`podcasts/${showId}/episodes/${episodeId}.json`),
-  getPlayer: async (showId: string, episodeId: string) => await fetchUrl(`podcasts/${showId}/episodes/${episodeId}/embed.json`),
+  getPodcast: async (id: number) => await fetchUrl(`podcasts/${id}.json`),
+  getEpisodes: async (id: number) => await fetchUrl(`podcasts/${id}/episodes.json`),
+  getEpisode: async (showId: number, episodeId: number) => await fetchUrl(`podcasts/${showId}/episodes/${episodeId}.json`),
+  getPlayer: async (showId: number, episodeId: number) => await fetchUrl(`podcasts/${showId}/episodes/${episodeId}/embed.json`),
 }
 
 export default api

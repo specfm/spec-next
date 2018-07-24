@@ -1,6 +1,12 @@
 // @flow
 import * as React from "react";
+import styled from 'styled-components'
 import { api } from '../config'
+import Page from '../components/Page'
+
+const Title = styled.h1`
+  color: ${props => props.theme.text.alt};
+`
 
 class Index extends React.Component<{}> {
   static async getInitialProps() {
@@ -10,7 +16,11 @@ class Index extends React.Component<{}> {
   }
 
   render() {
-    return <p>Hey</p>;
+    return (
+      <Page>
+        <Title>Hey</Title>
+      </Page>
+    )
   }
 }
 
