@@ -1,24 +1,33 @@
 // @flow
 import * as React from "react";
-import styled from 'styled-components'
 import { api } from '../config'
 import Page from '../components/Page'
+import PodcastCard from '../components/PodcastCard'
+import type { SimplecastPodcast } from '../types'
 
-const Title = styled.h1`
-  color: ${props => props.theme.text.alt};
-`
+type Props = {
+  podcasts: Array<SimplecastPodcast>
+}
 
-class Index extends React.Component<{}> {
+class Index extends React.Component<Props> {
   static async getInitialProps() {
-    const podcasts = await api.getPodcast(363)
+    const podcasts = await api.getPodcasts()
 
     return { podcasts };
   }
 
   render() {
+    const { podcasts } = this.props
     return (
       <Page>
-        <Title>Hey</Title>
+        <div>
+          {
+            podcasts && podcasts.map(podcast => {
+              if (!podcast) return null
+              return <PodcastCard podcast={podcast} key={podcast.id} />
+            })
+          }
+        </div>
       </Page>
     )
   }
