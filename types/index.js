@@ -67,7 +67,7 @@ export type ConfigPodcast = {
   stitcherUrl: string,
   googlePlayUrl: string,
   applePodcastId: string,
-  twitterUsername: string,
+  twitterUsername: ?string,
   hosts: Array<Host>
 }
 

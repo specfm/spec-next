@@ -1,9 +1,12 @@
+// @flow
+import hosts from './hosts'
+
 export default [
   {
-    id: 1,
+    id: 363,
     name: "Developer Tea",
     slug: "developer-tea",
-    description: "A podcast for developers designed to fit inside your tea break.",
+    description: "A podcast for developers designed to fit inside your tea break",
     simplecastId: 363,
     artworkUrl: "https://media.simplecast.com/podcast/image/363/small_1471485029-artwork.jpg",
     iTunesUrl: "https://itunes.apple.com/us/podcast/developer-tea/id955596067?mt=2",
@@ -14,20 +17,14 @@ export default [
     googlePlayUrl: "https://play.google.com/music/m/Isv2vlzebfo5xid4zolzxpqber4?t=Developer_Tea",
     applePodcastId: "955596067",
     twitterUsername: "developertea",
-    hosts: [
-      {
-        name: "Jonathan Cutrell",
-        twitterUsername: "jcutrell",
-        profilePhotoUrl: "https://pbs.twimg.com/profile_images/905056588909744128/p5WV7tfX_400x400.jpg"
-      }
-    ]
+    hosts: [hosts.jcutrell]
   },
 
   {
-    id: 2,
+    id: 1034,
     name: "Design Details",
     slug: "design-details",
-    description: "A weekly conversation about design process and culture.",
+    description: "A weekly conversation about design process and culture",
     simplecastId: 1034,
     artworkUrl: "https://media.simplecast.com/podcast/image/1034/small_1471485006-artwork.jpg",
     iTunesUrl: "https://itunes.apple.com/us/podcast/design-details/id947191070",
@@ -38,41 +35,150 @@ export default [
     googlePlayUrl: "https://play.google.com/music/m/Iyvjpq3k44ux2azsmvlxe3cc5by?t=Design_Details",
     applePodcastId: "947191070",
     twitterUsername: "designdetailsfm",
-    hosts: [
-      {
-        name: "Brian Lovin",
-        twitterUsername: "brian_lovin",
-        profilePhotoUrl: "https://pbs.twimg.com/profile_images/570313913648955392/cf4tgX7M_400x400.jpeg"
-      },
-      {
-        name: "Marshall Bock",
-        twitterUsername: "marshallbock",
-        profilePhotoUrl: "https://pbs.twimg.com/profile_images/1248267100/Profile_400x400.png"
-      }
-    ]
+    hosts: [hosts.marshallbock, hosts.brian_lovin]
+  },
+
+  {
+    id: 1332,
+    name: "Immutable",
+    slug: "immutable",
+    description: "A short, weekly show about design and development",
+    simplecastId: 1332,
+    artworkUrl: "https://media.simplecast.com/podcast/image/1332/small_1471485110-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/immutable/id1035147995",
+    overcastUrl: "https://overcast.fm/itunes1035147995/immutable",
+    pocketCastsUrl: "https://pca.st/immutable",
+    rssFeedUrl: "http://simplecast.fm/podcasts/1332/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "https://play.google.com/music/m/Ibpdxh2uj5dd6gh5aoim6vscp5e?t=Immutable",
+    applePodcastId: "1035147995",
+    twitterUsername: "ImmutableFM",
+    hosts: [hosts.soffes, hosts.defaultbryn]
+  },
+
+  {
+    id: 1386,
+    name: "Does Not Compute",
+    slug: "does-not-compute",
+    description: "A weekly chat about the lives and workflows of modern web developers",
+    simplecastId: 1386,
+    artworkUrl: "https://media.simplecast.com/podcast/image/1386/small_1474491978-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/does-not-compute/id1048731980?mt=2",
+    overcastUrl: "https://overcast.fm/itunes1048731980/does-not-compute",
+    pocketCastsUrl: "http://pca.st/3WvJ",
+    rssFeedUrl: "http://simplecast.fm/podcasts/1386/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "https://spec.fm/podcasts/does-not-compute",
+    applePodcastId: "1048731980",
+    twitterUsername: "dnccast",
+    hosts: [hosts.seanwashbot, hosts.schrockwell]
+  },
+
+  {
+    id: 1457,
+    name: "Vicarious",
+    slug: "vicarious",
+    description: "Everyday escapism from a designers' point of view.",
+    simplecastId: 1457,
+    artworkUrl: "https://media.simplecast.com/podcast/image/1457/small_1458002335-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/vicarious/id1055180013?mt=2&ign-mpt=uo%3D4",
+    overcastUrl: "https://overcast.fm/itunes1055180013/vicarious",
+    pocketCastsUrl: "",
+    rssFeedUrl: "http://simplecast.fm/podcasts/1457/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "https://spec.fm/podcasts/vicarious",
+    applePodcastId: "1055180013",
+    twitterUsername: "vicarious_fm",
+    hosts: [hosts.defaultbryn, hosts.marshallbock, hosts.sortino, hosts.sarahberus]
+  },
+
+  {
+    id: 1684,
+    name: "Fragmented",
+    slug: "fragmented",
+    description: "An Android developer podcast where we talk about building good software and becoming better Android developers",
+    simplecastId: 1684,
+    artworkUrl: "https://media.simplecast.com/podcast/image/1684/small_1474255312-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/fragmented/id968779958?mt=2",
+    overcastUrl: "https://overcast.fm/itunes968779958/fragmented",
+    pocketCastsUrl: "http://pca.st/fragmented",
+    rssFeedUrl: "http://simplecast.com/podcasts/1684/rss",
+    stitcherUrl: "http://www.stitcher.com/podcast/fragmented",
+    googlePlayUrl: "https://play.google.com/music/m/Ipvgdmgnkk44rvdvdyg22lql4sq?t=Fragmented_-_Android_Developer_Podcast",
+    applePodcastId: "968779958",
+    twitterUsername: "FragmentedCast",
+    hosts: [hosts.donnfelker, hosts.kaushikgopal]
+  },
+
+  {
+    id: 2070,
+    name: "Runtime",
+    slug: "runtime",
+    description: "Sam Soffes and Caleb Davenport talk about Swift, iOS, and other things they like",
+    simplecastId: 2070,
+    artworkUrl: "https://media.simplecast.com/podcast/image/2070/small_1471485227-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/runtime/id1122203945?mt=2",
+    overcastUrl: "",
+    pocketCastsUrl: "",
+    rssFeedUrl: "http://simplecast.com/podcasts/2070/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "",
+    applePodcastId: "1122203945",
+    twitterUsername: "runtimefm",
+    hosts: [hosts.soffes, hosts.calebd]
+  },
+
+  {
+    id: 2128,
+    name: "Ortjogonal",
+    slug: "orthogonal",
+    description: "A show about finance, freelance and being better at both",
+    simplecastId: 2128,
+    artworkUrl: "https://media.simplecast.com/podcast/image/2128/small_1471485142-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/orthogonal/id1131320952?mt=2",
+    overcastUrl: "",
+    pocketCastsUrl: "",
+    rssFeedUrl: "http://simplecast.com/podcasts/2128/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "",
+    applePodcastId: "1131320952",
+    twitterUsername: "getorthogonal",
+    hosts: [hosts.cfoandrew, hosts.mrbrettkelly]
+  },
+
+  {
+    id: 2693,
+    name: "Swift Unwrapped",
+    slug: "swift-unwrapped",
+    description: "A 30-minute spin off of Swift Weekly Brief and other Swifty news.",
+    simplecastId: 2693,
+    artworkUrl: "https://media.simplecast.com/podcast/image/2693/small_1488855184-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/swift-unwrapped/id1209817203?mt=2",
+    overcastUrl: "https://overcast.fm/itunes1209817203/swift-unwrapped",
+    pocketCastsUrl: "http://pca.st/CAcU",
+    rssFeedUrl: "https://simplecast.com/podcasts/2693/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "",
+    applePodcastId: "1209817203",
+    twitterUsername: null,
+    hosts: [hosts.simjp, hosts.jesse_squires]
+  },
+
+  {
+    id: 4211,
+    name: "Toolsday",
+    slug: "toolsday",
+    description: "A show about the latest in tech tools, tips, and tricks on Tuesdays at 2",
+    simplecastId: 4211,
+    artworkUrl: "https://media.simplecast.com/podcast/image/4211/small_1516237529-artwork.jpg",
+    iTunesUrl: "https://itunes.apple.com/us/podcast/toolsday/id1063765302?mt=2",
+    overcastUrl: "",
+    pocketCastsUrl: "",
+    rssFeedUrl: "https://rss.simplecast.com/podcasts/4211/rss",
+    stitcherUrl: "",
+    googlePlayUrl: "",
+    applePodcastId: "1063765302",
+    twitterUsername: "toolsday",
+    hosts: [hosts.una, hosts.chrisdhanaraj]
   }
 ]
-
-// {
-//   id: 2,
-//   name: "",
-//   slug: "",
-//   description: "",
-//   simplecastId: "",
-//   artworkUrl: "",
-//   iTunesUrl: "",
-//   overcastUrl: "",
-//   pocketCastsUrl: "",
-//   rssFeedUrl: "",
-//   stitcherUrl: "",
-//   googlePlayUrl: "",
-//   applePodcastId: "",
-//   twitterUsername: "designdetailsfm"
-//   hosts: [
-//    {
-//      name: "",
-//      twitterUsername: "",
-//      profilePhotoUrl: ""
-//    }
-//   ]
-// }

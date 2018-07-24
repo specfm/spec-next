@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           <title>Spec · Level Up</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
-          <link href={'../static/normalize.css'} rel="stylesheet" />
+          <link href={'/static/normalize.css'} rel="stylesheet" />
           {this.props.styleTags}
         </Head>
         <body>

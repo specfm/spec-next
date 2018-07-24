@@ -22,8 +22,8 @@ const api = {
   getEpisodes: async (id: number): Promise<Array<SimplecastEpisode>> => await fetchUrl(`podcasts/${id}/episodes.json`),
   getEpisode: async (showId: number, episodeId: number): Promise<SimplecastEpisode> => await fetchUrl(`podcasts/${showId}/episodes/${episodeId}.json`),
   getPlayer: async (showId: number, episodeId: number): Promise<SimplecastEmbed> => await fetchUrl(`podcasts/${showId}/episodes/${episodeId}/embed.json`),
-  getConfigPodcastFromSlug: (slug: string): ConfigPodcast => podcasts.find(podcast => podcast.slug === slug),
-  getConfigPodcastFromId: (id: number): ConfigPodcast => podcasts.find(podcast => podcast.simplecastId === id)
+  getConfigPodcastFromSlug: (slug: string): ?ConfigPodcast => podcasts.find(podcast => podcast && podcast.slug === slug),
+  getConfigPodcastFromId: (id: number): ?ConfigPodcast => podcasts.find(podcast => podcast && podcast.simplecastId === id)
 }
 
 export default api
