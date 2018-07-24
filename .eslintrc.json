@@ -2,7 +2,13 @@
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
   ],
-  "plugins": ["react", "jsx-a11y", "import"]
+  "plugins": [
+    "react", 
+    "jsx-a11y", 
+    "import", 
+    "flowtype"
+  ]
 }
