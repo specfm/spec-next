@@ -1,9 +1,9 @@
 // @flow
 import * as React from "react";
 import { api } from '../config'
-import Page from '../components/Page'
-import PodcastCard from '../components/PodcastCard'
+import Page, { SectionHeading, Heading, Subheading } from '../components/Page'
 import type { SimplecastPodcast } from '../types'
+import PodcastGrid from '../components/PodcastGrid'
 
 type Props = {
   podcasts: Array<SimplecastPodcast>
@@ -20,14 +20,17 @@ class Index extends React.Component<Props> {
     const { podcasts } = this.props
     return (
       <Page>
-        <div>
-          {
-            podcasts && podcasts.map(podcast => {
-              if (!podcast) return null
-              return <PodcastCard podcast={podcast} key={podcast.id} />
-            })
-          }
-        </div>
+        <SectionHeading>
+          <Heading>Podcasts</Heading>
+          <Subheading>Level up by listening to podcasts from the best in the industry</Subheading>
+        </SectionHeading>
+
+        <PodcastGrid podcasts={podcasts} />
+
+        <SectionHeading>
+          <Heading>Resources</Heading>
+          <Subheading>Curated resources for designers and developers</Subheading>
+        </SectionHeading>
       </Page>
     )
   }
