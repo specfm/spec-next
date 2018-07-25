@@ -3,7 +3,7 @@ import * as React from "react";
 import { api } from '../config'
 import Page, { SectionHeading, Heading, Subheading } from '../components/Page'
 import type { SimplecastPodcast } from '../types'
-import PodcastGrid from '../components/PodcastGrid'
+import PodcastGrid from '../components/PodcastsGrid'
 
 type Props = {
   podcasts: Array<SimplecastPodcast>

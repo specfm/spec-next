@@ -14,7 +14,7 @@ export default class PodcastCard extends React.Component<Props> {
     const { podcast } = this.props
 
     return (
-      <RouteLink key={podcast.id} route='podcasts' params={{ slug: podcast.slug }}>
+      <RouteLink key={podcast.id} route='podcast' params={{ slug: podcast.slug }}>
         <a>
           <Card>
             <Art src={podcast.artworkUrl} />
