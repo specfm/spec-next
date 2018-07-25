@@ -51,7 +51,7 @@ export type Host = {
   profilePhotoUrl: string,
 }
 
-export type ConfigPodcast = {
+export type ConfigPodcast = {|
   id: number,
   name: string,
   slug: string,
@@ -62,12 +62,13 @@ export type ConfigPodcast = {
   overcastUrl: string,
   pocketCastsUrl: string,
   rssFeedUrl: string,
-  stitcherUrl: string,
-  googlePlayUrl: string,
+  googlePodcastsUrl: string,
+  castroUrl: string,
+  breakerUrl: string,
   applePodcastId: string,
   twitterUsername: ?string,
   hosts: Array<Host>
-}
+|}
 
 export type GetInitialProps = {
   pathname: string,

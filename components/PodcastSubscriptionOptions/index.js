@@ -17,7 +17,7 @@ class PodcastSubscriptionOptions extends React.Component<Props> {
           podcast.iTunesUrl &&
           <a href={podcast.iTunesUrl} target={"_blank"} rel={"noopener noreferrer"}>
             <Option>
-              <Avatar src={'/static/img/apple-podcasts.jpg'} />
+              <Avatar src={'/static/img/podcasts.png'} />
               <Label>Apple Podcasts</Label>
               <Arrow />
             </Option>
@@ -28,7 +28,7 @@ class PodcastSubscriptionOptions extends React.Component<Props> {
           podcast.overcastUrl &&
           <a href={podcast.overcastUrl} target={"_blank"} rel={"noopener noreferrer"}>
             <Option>
-              <Avatar src={'/static/img/overcast.jpg'} />
+              <Avatar src={'/static/img/overcast.png'} />
               <Label>Overcast</Label>
               <Arrow />
             </Option>
@@ -39,7 +39,7 @@ class PodcastSubscriptionOptions extends React.Component<Props> {
           podcast.pocketCastsUrl &&
           <a href={podcast.pocketCastsUrl} target={"_blank"} rel={"noopener noreferrer"}>
             <Option>
-              <Avatar src={'/static/img/pocketcasts.jpg'} />
+              <Avatar src={'/static/img/pocketcasts.png'} />
               <Label>PocketCasts</Label>
               <Arrow />
             </Option>
@@ -47,22 +47,33 @@ class PodcastSubscriptionOptions extends React.Component<Props> {
         }
 
         {
-          podcast.googlePlayUrl &&
-          <a href={podcast.googlePlayUrl} target={"_blank"} rel={"noopener noreferrer"}>
+          podcast.googlePodcastsUrl &&
+          <a href={podcast.googlePodcastsUrl} target={"_blank"} rel={"noopener noreferrer"}>
             <Option>
-              <Avatar src={'/static/img/google-play.png'} />
-              <Label>Google Play</Label>
+              <Avatar src={'/static/img/google-podcasts.png'} />
+              <Label>Google Podcasts</Label>
               <Arrow />
             </Option>
           </a>
         }
 
         {
-          podcast.stitcherUrl &&
-          <a href={podcast.stitcherUrl} target={"_blank"} rel={"noopener noreferrer"}>
+          podcast.castroUrl &&
+          <a href={podcast.castroUrl} target={"_blank"} rel={"noopener noreferrer"}>
             <Option>
-              <Avatar src={'/static/img/stitcher.jpg'}/>
-              <Label>Stitcher</Label>
+              <Avatar src={'/static/img/castro.png'} />
+              <Label>Castro</Label>
+              <Arrow />
+            </Option>
+          </a>
+        }
+
+        {
+          podcast.breakerUrl &&
+          <a href={podcast.breakerUrl} target={"_blank"} rel={"noopener noreferrer"}>
+            <Option>
+              <Avatar src={'/static/img/breaker.png'} />
+              <Label>Breakder</Label>
               <Arrow />
             </Option>
           </a>
@@ -72,7 +83,7 @@ class PodcastSubscriptionOptions extends React.Component<Props> {
           podcast.rssFeedUrl &&
           <a href={podcast.rssFeedUrl} target={"_blank"} rel={"noopener noreferrer"}>
             <Option>
-              <Avatar />
+              <Avatar src={'/static/img/rss.png'} />
               <Label>RSS Feed</Label>
               <Arrow />
             </Option>
