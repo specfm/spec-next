@@ -1,0 +1,26 @@
+<svg width="464" height="156" viewBox="0 0 464 156" version="2.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Group</title>
+<desc>Created using Figma 0.90</desc>
+<g id="Canvas" transform="translate(-11536 2460)" figma:type="canvas">
+<g id="Group" style="mix-blend-mode:normal;" figma:type="group">
+<g id="Main" style="mix-blend-mode:normal;" figma:type="vector-operation">
+<use xlink:href="#path0_fill" transform="translate(11536 -2460)" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path1_fill" transform="translate(11536 -2460)" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path2_fill" transform="translate(11536 -2460)" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path3_fill" transform="translate(11536 -2460)" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path4_fill" transform="translate(11536 -2460)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Accent" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path5_fill" transform="translate(11600 -2460)" fill="#747E8D" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 200 40L 200 32C 200 27.5817 196.418 24 192 24C 187.582 24 184 27.5817 184 32C 184 32 184 34.8758 184 38C 184 56 224 46 224 88C 224 92.6863 224 96 224 96C 224 113.673 209.673 128 192 128C 174.327 128 160 113.673 160 96L 160 88L 184 88L 184 96C 184 100.418 187.582 104 192 104C 196.418 104 200 100.418 200 96C 200 96 200 92.6863 200 88C 200 65 160 78 160 38C 160 34.8758 160 32 160 32C 160 14.3269 174.327 0 192 0C 209.673 0 224 14.3269 224 32L 224 40L 200 40Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 304 96L 304 32C 304 14.3269 289.673 0 272 0C 254.327 0 240 14.3269 240 32L 240 96L 240 156L 264 156L 264 126.992C 266.557 127.65 269.238 128 272 128C 289.673 128 304 113.673 304 96ZM 280 36L 280 92C 280 96.4183 276.418 100 272 100C 267.582 100 264 96.4183 264 92L 264 36C 264 31.5817 267.582 28 272 28C 276.418 28 280 31.5817 280 36Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 352 104C 356.418 104 360 100.418 360 96L 360 88L 384 88L 384 96C 384 113.673 369.673 128 352 128C 334.327 128 320 113.673 320 96L 320 32C 320 14.3269 334.327 0 352 0C 369.673 0 384 14.3269 384 32L 384 52L 384 72L 360 72L 344 72L 344 88L 344 96C 344 100.418 347.582 104 352 104ZM 344 32C 344 27.5817 347.582 24 352 24C 356.418 24 360 27.5817 360 32L 360 52L 344 52L 344 32Z"/>
+<path id="path3_fill" d="M 432 24C 427.582 24 424 27.5817 424 32L 424 96C 424 100.418 427.582 104 432 104C 436.418 104 440 100.418 440 96L 440 88L 464 88L 464 96C 464 113.673 449.673 128 432 128C 414.327 128 400 113.673 400 96L 400 32C 400 14.3269 414.327 0 432 0C 449.673 0 464 14.3269 464 32L 464 40L 440 40L 440 32C 440 27.5817 436.418 24 432 24Z"/>
+<path id="path4_fill" d="M 64 32L 32 32L 32 64L 0 64L 0 96L 32 96L 32 128L 64 128L 64 96L 96 96L 96 64L 64 64L 64 32Z"/>
+<path id="path5_fill" d="M 64 0L 32 0L 0 0L 0 32L 32 32L 32 64L 64 64L 64 32L 64 0Z"/>
+</defs>
+</svg>
