@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Grid = styled.div`
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  margin: 32px 0;
+  margin-top: 64px;
 `

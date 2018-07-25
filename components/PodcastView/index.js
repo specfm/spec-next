@@ -4,6 +4,7 @@ import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import Card from '../Card'
 import { Grid, Sidebar, Content, Art, Title, Description } from './style'
 import HostsGrid from '../HostsGrid'
+import EpisodesGrid from '../EpisodesGrid'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -25,6 +26,7 @@ class PodcastView extends React.Component<Props> {
           <Title>{podcast.name}</Title>
           <Description>{podcast.description}</Description>
           <HostsGrid hosts={podcast.hosts} />
+          <EpisodesGrid episodes={episodes} podcast={podcast} />
         </Content>
       </Grid>
     )

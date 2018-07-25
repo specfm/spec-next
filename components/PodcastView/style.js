@@ -27,7 +27,7 @@ export const Art = styled.img`
 `
 
 export const Title = styled.h1`
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   color: ${props => props.theme.text.default};
   letter-spacing: 0.8px;
@@ -36,7 +36,7 @@ export const Title = styled.h1`
 `
 
 export const Description = styled.h2`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   color: ${props => props.theme.text.tertiary};
   line-height: 1.4;
