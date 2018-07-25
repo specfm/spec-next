@@ -237,3 +237,9 @@ template {
 [hidden] {
   display: none;
 }
+
+audio {
+  display: block;
+  margin-top: 16px;
+  width: 100%;
+}

@@ -6,16 +6,19 @@ import Card from '../Card'
 import { Grid, Sidebar, Content, Art, Title, Description } from './style'
 import HostsGrid from '../HostsGrid'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
-import EpisodesGrid from '../EpisodesGrid'
+import { getDateObject } from '../../lib/getDateObject'
+import Markdown from '../Markdown'
 
 type Props = {
   podcast: ConfigPodcast,
-  episodes: ?Array<SimplecastEpisode>
+  episode: SimplecastEpisode
 }
 
-class PodcastView extends React.Component<Props> {
+class EpisodeView extends React.Component<Props> {
   render() {
-    const { podcast, episodes } = this.props
+    const { podcast, episode } = this.props
+    const { month, year, day } = getDateObject(episode.published_at)
+    const datestring = `${month} ${day}, ${year}`
 
     return (
       <Grid>
@@ -29,15 +32,22 @@ class PodcastView extends React.Component<Props> {
           </RouteLink>
           <PodcastSubscriptionOptions podcast={podcast} />
         </Sidebar>
+        
         <Content>
-          <Title>{podcast.name}</Title>
-          <Description>{podcast.description}</Description>
+          <Description>{datestring}</Description>
+          <Title>{episode.title}</Title>
+
+          <audio src={episode.audio_url} controls preload="none"></audio>
+
+          <Markdown>
+            {episode.long_description}
+          </Markdown>
+
           <HostsGrid hosts={podcast.hosts} />
-          <EpisodesGrid episodes={episodes} podcast={podcast} />
         </Content>
       </Grid>
     )
   }
 }
 
-export default PodcastView;
+export default EpisodeView;

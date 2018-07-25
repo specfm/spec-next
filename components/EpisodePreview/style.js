@@ -8,17 +8,11 @@ export const Grid = styled.div`
   grid-gap: 4px;
   grid-template-columns: minmax(min-content, 656px);
   grid-template-rows: auto;
-
-  audio {
-    display: block;
-    margin-top: 16px;
-    width: 100%;
-  }
 `
 
 export const Title = styled.h5`
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   color: ${props => props.theme.text.default};
 `
 

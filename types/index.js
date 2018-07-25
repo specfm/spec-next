@@ -45,8 +45,6 @@ export type SimplecastEpisode = {
   sponsors: Array<?any>
 }
 
-export type SimplecastEmbed = string
-
 export type Host = {
   name: string,
   twitterUsername: string,
