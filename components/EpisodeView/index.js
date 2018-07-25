@@ -34,7 +34,16 @@ class EpisodeView extends React.Component<Props> {
         </Sidebar>
         
         <Content>
-          <Description>{datestring}</Description>
+          <Description>
+            <RouteLink route='podcast' params={{ slug: podcast.slug }}>
+              <a>
+                {podcast.name}
+              </a>
+            </RouteLink>
+            
+            {' · '}
+            {datestring}
+          </Description>
           <Title>{episode.title}</Title>
 
           <audio src={episode.audio_url} controls preload="none"></audio>

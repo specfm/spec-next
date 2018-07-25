@@ -48,12 +48,12 @@ a:hover {
 
 ::-moz-selection {
   /* Code for Firefox */
-  background: #3818e5;
+  background: #067AE4;
   color: #ffffff;
 }
 
 ::selection {
-  background: #3818e5;
+  background: #067AE4;
   color: #ffffff;
 }
 

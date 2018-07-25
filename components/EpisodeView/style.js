@@ -45,4 +45,8 @@ export const Description = styled.h2`
   line-height: 1.4;
   margin-bottom: 4px;
   margin-top: 24px;
+
+  a:hover {
+    color: ${props => props.theme.text.default};
+  }
 `
