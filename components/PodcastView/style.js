@@ -19,13 +19,6 @@ export const Content = styled.div`
   grid-area: content;
 `
 
-export const Art = styled.img`
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-  margin-bottom: -6px;
-`
-
 export const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;

@@ -2,11 +2,11 @@
 import * as React from "react";
 import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
-import Card from '../Card'
-import { Grid, Sidebar, Content, Art, Title, Description } from './style'
+import { Grid, Sidebar, Content, Title, Description } from './style'
 import HostsGrid from '../HostsGrid'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import EpisodesGrid from '../EpisodesGrid'
+import PodcastArt from '../PodcastArt'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -22,9 +22,7 @@ class PodcastView extends React.Component<Props> {
         <Sidebar>
           <RouteLink route='podcast' params={{ slug: podcast.slug }}>
             <a>
-              <Card>
-                <Art src={podcast.artworkUrl} />
-              </Card>
+              <PodcastArt src={podcast.artworkUrl} />
             </a>
           </RouteLink>
           <PodcastSubscriptionOptions podcast={podcast} />
