@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev:web": "node server.js",
-    "dev:api": "(cd api && yarn run dev)",
+    "dev:api": "(cd servers/api && yarn run dev)",
+    "dev:search": "(cd servers/search && yarn run start)",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "flow": "flow",

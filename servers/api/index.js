@@ -6,7 +6,6 @@ const API_URL_ROOT = 'https://api.simplecast.com/v1'
 const API_KEY = process.env.SIMPLECAST_API_KEY
 const cors = microCors()
 
-// $FlowFixMe
 const handler = async (req) => {
   const response = await fetch(`${API_URL_ROOT}${req.url}`, {
     method: "GET",

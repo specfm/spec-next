@@ -1,0 +1,10 @@
+{
+  "env": {
+    "REDIS_PORT": "@redis-port",
+    "REDIS_URL": "@redis-url",
+    "REDIS_PASSWORD": "@redis-password",
+    "SIMPLECAST_API_KEY": "@simplecast-api-key",
+    "ALGOLIA_API_KEY": "@algolia-api-key",
+    "ALGOLIA_APP_ID": "@algolia-app-id"
+	}
+}
