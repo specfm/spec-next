@@ -6,7 +6,7 @@ export const Grid = styled.div`
   margin-bottom: 32px;
   display: grid;
   grid-gap: 4px;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(min-content, 656px);
   grid-template-rows: auto;
 
   audio {
@@ -33,6 +33,7 @@ export const Description = styled.p`
   font-weight: 400;
   color: ${props => props.theme.text.secondary};
   margin-top: 8px;
+  max-width: 100%;
 `
 
 export const Divider = styled.div`

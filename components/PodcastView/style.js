@@ -5,7 +5,7 @@ export const Grid = styled.div`
   margin-top: 64px;
   display: grid;
   grid-template-columns: 280px minmax(656px, 1fr);
-  grid-gap: 32px;
+  grid-gap: 64px;
   grid-template-rows: auto;
   grid-template-areas: "sidebar content";
   max-width: 968px;
