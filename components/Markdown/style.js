@@ -66,6 +66,11 @@ export const Notes = styled(ReactMarkdown)`
     margin-left: 24px;
     margin-top: 16px;
     margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: ${props => props.theme.text.secondary};
+    margin-top: 16px;
   }
 
   li {
