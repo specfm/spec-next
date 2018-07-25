@@ -1,19 +1,20 @@
 // @flow
 import * as React from "react";
 import { api } from '../../config'
-import { Link as RouteLink } from '../../config/routes'
-import Link from 'next/link'
 import Page from '../../components/Page'
-import type { SimplecastPodcast, GetInitialProps } from '../../types'
+import type { SimplecastPodcast, SimplecastEpisode, GetInitialProps } from '../../types'
+import PodcastsGrid from "../../components/PodcastsGrid";
+import PodcastView from '../../components/PodcastView'
 
 type Props = {
   podcast: ?SimplecastPodcast,
-  podcasts: ?Array<SimplecastPodcast>
+  podcasts: ?Array<SimplecastPodcast>,
+  episodes: ?Array<SimplecastEpisode>
 }
 
 class Podcasts extends React.Component<Props> {
   static async getInitialProps({ query }: GetInitialProps) {
-    let podcast, podcasts
+    let podcast, podcasts, episodes
 
     if (query.slug) {
       // match a slug to a podcast record in our config
@@ -22,7 +23,13 @@ class Podcasts extends React.Component<Props> {
       if (configPodcast) {
         // as long as the slug returns a valid config podcast, fetch the 
         // show from the api
-        podcast = await api.getPodcast(configPodcast.simplecastId)
+        [
+          podcast,
+          episodes
+        ] = await Promise.all([
+          api.getPodcast(configPodcast.simplecastId),
+          api.getEpisodes(configPodcast.simplecastId)
+        ])
       }
     }
 
@@ -30,45 +37,29 @@ class Podcasts extends React.Component<Props> {
       podcasts = await api.getPodcasts()
     }
 
-    return { podcast, podcasts };
+    return { podcast, podcasts, episodes };
   }
 
   render() {
-    const { podcast, podcasts } = this.props
+    const { podcast, podcasts, episodes } = this.props
 
     if (podcast) {
-      return (
-        <Page>
-          <div>
-            <p>{podcast.title}</p>
-            <Link href={'/podcasts'}>
-              <a>Back to podcasts</a>
-            </Link>
-          </div>
-        </Page>
-      )
+      const configPodcast = api.getConfigPodcastFromId(podcast.id)
+      if (configPodcast) {
+        return (
+          <Page>
+            <PodcastView podcast={configPodcast} episodes={episodes} />
+          </Page>
+        )
+      }
+
+      return null
     } 
 
     if (podcasts) {
       return (
         <Page>
-          <div>
-            {
-              podcasts.map(podcast => {
-                const configPodcast = api.getConfigPodcastFromId(podcast.id)
-                
-                if (configPodcast) {
-                  return (
-                    <RouteLink key={podcast.id} route='podcasts' params={{ slug: configPodcast.slug }}>
-                      <a>{configPodcast.name}</a>
-                    </RouteLink>
-                  )
-                }
-
-                return null
-              })
-            }
-          </div>
+          <PodcastsGrid podcasts={podcasts} />
         </Page>
       )
     }
