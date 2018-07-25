@@ -9,7 +9,7 @@ export default [
   {
     name: "App Center",
     url: "https://appcenter.ms/?utm_source=Fragmented_podcast&utm_medium=newsletter&utm_campaign=appcenter_Fragmengted",
-    logoUrl: "/static//img/sponsors/app-center.jpg",
+    logoUrl: "/static/img/sponsors/app-center.jpg",
   },
 
   {
@@ -75,7 +75,7 @@ export default [
   {
     name: "Reaktor",
     url: "https://reaktor.com/careers",
-    logoUrl: "/static//img/sponsors/reaktor.png",
+    logoUrl: "/static/img/sponsors/reaktor.png",
   },
 
   {
@@ -99,7 +99,7 @@ export default [
   {
     name: "https://swiftype.com/DoesNotCompute",
     url: "Swiftype",
-    logoUrl: "/static//img/sponsors/swiftype.png",
+    logoUrl: "/static/img/sponsors/swiftype.png",
   },
 
   {
@@ -147,7 +147,7 @@ export default [
   {
     name: "Fuse",
     url: "https://fusetools.com",
-    logoUrl: "/static//img/sponsors/fuse.png",
+    logoUrl: "/static/img/sponsors/fuse.png",
   },
 
   {
