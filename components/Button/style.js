@@ -32,6 +32,7 @@ const getFontSize = (size: Size) => {
 };
 
 const base = css`
+  -webkit-appearance: none;
   display: flex;
   flex: none;
   align-self: center;

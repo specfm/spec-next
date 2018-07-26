@@ -17,6 +17,7 @@ export const InnerContainer = styled.div`
   justify-content: flex-start;
   flex: 1 0 auto;
   padding-top: 64px;
+  position: relative;
 `
 
 export const SectionHeading = styled.div`

@@ -7,6 +7,7 @@ import Footer from '../Footer'
 import { theme } from '../theme'
 import { Container, SectionHeading, Heading, Subheading, InnerContainer, ScrollToTop } from './style'
 import { throttle } from 'throttle-debounce';
+import EmailCapture from '../EmailCapture';
 
 export { SectionHeading, Heading, Subheading }
 
@@ -53,6 +54,8 @@ export default class Page extends React.Component<Props, State> {
         <Container>
           <Header showHeaderShadow={showHeaderShadow}/>
           <InnerContainer>
+            <EmailCapture />
+            
             {this.props.children}
           </InnerContainer>
           <Footer />
