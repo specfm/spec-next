@@ -13,7 +13,8 @@ import * as gtag from '../../lib/gtag'
 export { SectionHeading, Heading, Subheading }
 
 type Props = {
-  children: React.Node
+  children: React.Node,
+  showEmailCapture?: boolean,
 }
 
 type State = {
@@ -68,6 +69,7 @@ export default class Page extends React.Component<Props, State> {
   }
 
   render() {
+    const { showEmailCapture = true } = this.props
     const { showHeaderShadow, scrollToTopVisible } = this.state
 
     return (
@@ -75,7 +77,10 @@ export default class Page extends React.Component<Props, State> {
         <Container>
           <Header showHeaderShadow={showHeaderShadow}/>
           <InnerContainer>
-            <EmailCapture />
+            {
+              showEmailCapture &&
+              <EmailCapture />
+            }
             
             {this.props.children}
           </InnerContainer>

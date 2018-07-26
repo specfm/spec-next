@@ -3,7 +3,7 @@ import * as React from "react";
 import Head from 'next/head'
 import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
-import { Grid, Sidebar, Content, Title, Description } from './style'
+import { Grid, Sidebar, Content, Title, Description, Divider, Label } from './style'
 import HostsGrid from '../HostsGrid'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import EpisodesGrid from '../EpisodesGrid'
@@ -43,6 +43,13 @@ class PodcastView extends React.Component<Props> {
             </a>
           </RouteLink>
           <PodcastSubscriptionOptions podcast={podcast} />
+
+          <Divider>
+            <Label>
+              Hosted By
+            </Label>
+          </Divider>
+
           <HostsGrid hosts={podcast.hosts} />
         </Sidebar>
         
