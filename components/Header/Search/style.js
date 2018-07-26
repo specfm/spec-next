@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   max-width: 600px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.04);
   transition: all 0.2s ease-in-out;
-  font-size: 15px;
+  font-size: 16px;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);

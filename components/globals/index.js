@@ -1,4 +1,6 @@
 // @flow
+import { css } from 'styled-components'
+
 export const hexa = (hex: string, alpha: number) => {
   const r = parseInt(hex.slice(1, 3), 16),
     g = parseInt(hex.slice(3, 5), 16),
@@ -44,3 +46,84 @@ export const Shadow = {
   mid: '0 4px 12px',
   high: '0 8px 16px',
 };
+
+
+export const Content = css`
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: ${props => props.theme.text.default};
+    margin-top: 28px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: ${props => props.theme.text.default};
+    margin-top: 26px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: ${props => props.theme.text.default};
+    margin-top: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: ${props => props.theme.text.default};
+    margin-top: 16px;
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: ${props => props.theme.text.default};
+    margin-top: 16px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: ${props => props.theme.text.default};
+    margin-top: 16px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: ${props => props.theme.text.secondary};
+    margin-top: 16px;
+  }
+
+  a {
+    color: ${props => props.theme.brand.default};
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: ${props => props.theme.text.secondary};
+    margin-top: 16px;
+  }
+
+  li {
+    line-height: 2;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+`

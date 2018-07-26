@@ -8,8 +8,8 @@ export const Container = styled.div`
 `
 
 export const Avatar = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 22px;
 `
 
@@ -21,14 +21,14 @@ export const Meta = styled.div`
 `
 
 export const Name = styled.h4`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: ${props => props.theme.text.default};
-  line-height: 1.2;
+  line-height: 1.3;
 `
 
 export const Username = styled.h5`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: ${props => props.theme.text.tertiary};
 `

@@ -9,16 +9,17 @@ import SearchEpisode from './SearchEpisode'
 injectGlobal`
   .ais-InstantSearch__root {
     width: 100%;
+    position: relative;
   }
 
   .ais-Hits {
     position: absolute;
-    top: 64px;
+    top: 48px;
     left: 50%;
     width: 50%;
     height: 100%;
     transform: translateX(-50%);
-    max-width: 550px;
+    width: 100%;
     background: #FFF;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: all 0.2s ease-in-out;

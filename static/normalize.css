@@ -36,6 +36,10 @@ body {
   height: 100%;
 }
 
+#__next {
+  height: 100%;
+}
+
 a {
   color: currentColor;
   text-decoration: none;

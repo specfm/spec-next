@@ -6,13 +6,13 @@ import type { Size } from './';
 const getPadding = (size: Size) => {
   switch (size) {
     case 'small':
-      return '2px 4px';
+      return '4px 8px';
     case 'default':
-      return '8px 16px';
+      return '10px 20px';
     case 'large':
-      return '12px 24px';
+      return '14px 28px';
     default: {
-      return '8px 16px';
+      return '10px 20px';
     }
   }
 };
@@ -20,13 +20,13 @@ const getPadding = (size: Size) => {
 const getFontSize = (size: Size) => {
   switch (size) {
     case 'small':
-      return '12px';
+      return '14px';
     case 'default':
-      return '14px';
-    case 'large':
       return '16px';
+    case 'large':
+      return '18px';
     default: {
-      return '14px';
+      return '16px';
     }
   }
 };
@@ -173,10 +173,6 @@ export const OutlineButton = styled.button`
 export const ButtonRow = styled.div`
   display: flex;
   align-items: center;
-
-  button {
-    margin-right: 8px;
-  }
 `;
 
 export const ButtonSegmentRow = styled.div`

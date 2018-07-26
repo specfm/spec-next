@@ -10,7 +10,7 @@ class Header extends React.Component<{}> {
     return (
       <Container>
         <Link href={'/'}>
-          <a>
+          <a style={{display:'flex',alignItems:'center'}}>
             <Logo src={'/static/img/logo.svg'} />
           </a>
         </Link>
@@ -25,7 +25,7 @@ class Header extends React.Component<{}> {
           </Link>
           
           <Link href={'/sponsors'}>
-            <a>
+            <a style={{marginLeft:'8px'}}>
               <PrimaryButton>Sponsor</PrimaryButton>
             </a>
           </Link>
