@@ -169,7 +169,7 @@ export default [
     castroUrl: "https://castro.fm/itunes/1209817203",
     breakerUrl: "https://www.breaker.audio/swift-unwrapped",
     applePodcastId: "1209817203",
-    twitterUsername: null,
+    twitterUsername: "swift_unwrapped",
     hosts: [hosts.simjp, hosts.jesse_squires]
   },
 

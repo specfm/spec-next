@@ -66,7 +66,7 @@ export type ConfigPodcast = {|
   castroUrl: string,
   breakerUrl: string,
   applePodcastId: string,
-  twitterUsername: ?string,
+  twitterUsername: string,
   hosts: Array<Host>
 |}
 

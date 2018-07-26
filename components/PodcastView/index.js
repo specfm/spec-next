@@ -7,6 +7,7 @@ import HostsGrid from '../HostsGrid'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import EpisodesGrid from '../EpisodesGrid'
 import PodcastArt from '../PodcastArt'
+import PodcastShareButtons from '../PodcastShareButtons'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -26,13 +27,16 @@ class PodcastView extends React.Component<Props> {
             </a>
           </RouteLink>
           <PodcastSubscriptionOptions podcast={podcast} />
+          <HostsGrid hosts={podcast.hosts} />
         </Sidebar>
+        
         <Content>
           <Title>{podcast.name}</Title>
           <Description>{podcast.description}</Description>
-          <HostsGrid hosts={podcast.hosts} />
+          <PodcastShareButtons podcast={podcast} />
           <EpisodesGrid episodes={episodes} podcast={podcast} />
         </Content>
+
       </Grid>
     )
   }

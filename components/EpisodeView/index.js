@@ -8,6 +8,7 @@ import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import { getDateObject } from '../../lib/getDateObject'
 import Markdown from '../Markdown'
 import PodcastArt from "../PodcastArt";
+import EpisodeShareButtons from '../EpisodeShareButtons'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -28,7 +29,10 @@ class EpisodeView extends React.Component<Props> {
               <PodcastArt src={podcast.artworkUrl} />
             </a>
           </RouteLink>
+          
           <PodcastSubscriptionOptions podcast={podcast} />
+
+          <HostsGrid hosts={podcast.hosts} />
         </Sidebar>
         
         <Content>
@@ -44,13 +48,14 @@ class EpisodeView extends React.Component<Props> {
           </Description>
           <Title>{episode.title}</Title>
 
+          <EpisodeShareButtons episode={episode} podcast={podcast} />
+
           <audio src={episode.audio_url} controls preload="none"></audio>
 
           <Markdown>
             {episode.long_description}
           </Markdown>
-
-          <HostsGrid hosts={podcast.hosts} />
+          
         </Content>
       </Grid>
     )

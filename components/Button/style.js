@@ -173,10 +173,9 @@ export const OutlineButton = styled.button`
 export const ButtonRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
 
   button {
-    margin-left: 8px;
+    margin-right: 8px;
   }
 `;
 
@@ -222,3 +221,120 @@ export const ButtonSegmentRow = styled.div`
     }
   }
 `;
+
+
+export const FacebookButton = styled.button`
+  ${base}
+  border: 1px solid ${props => props.theme.social.facebook};
+  color: ${props => props.theme.bg.default};
+  background-color: ${props => props.theme.social.facebook};
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.theme.social.facebook}, ${
+      props.theme.social.facebook
+    })`};
+  text-shadow: 0 1px 1px rgba(0,0,0,0.08);
+
+  .icon {
+    margin-right: 8px;
+    margin-left: -4px;
+  }
+
+  &:hover {
+    color: ${props => props.theme.text.reverse};
+    background-image: ${props =>
+      `linear-gradient(to bottom, ${tint(props.theme.social.facebook, 16)}, ${tint(
+        props.theme.social.facebook,
+        16
+      )})`};
+    box-shadow: ${props =>
+      props.disabled ? 'none' : `${Shadow.mid} rgba(0,0,0,0.12)`};
+  }
+
+  &:active {
+    border: 1px solid ${props => props.theme.social.facebook};
+    background-image: ${props =>
+      `linear-gradient(to top, ${props.theme.social.facebook}, ${
+        props.theme.social.facebook
+      })`};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px ${props =>
+      props.theme.bg.default}, 0 0 0 3px ${props => hexa(props.theme.social.facebook, 0.16)};
+  }
+`;
+
+export const TwitterButton = styled.button`
+  ${base}
+  border: 1px solid ${props => props.theme.social.twitter};
+  color: ${props => props.theme.bg.default};
+  background-color: ${props => props.theme.social.twitter};
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.theme.social.twitter}, ${
+      props.theme.social.twitter
+    })`};
+  text-shadow: 0 1px 1px rgba(0,0,0,0.08);
+
+  .icon {
+    margin-right: 8px;
+    margin-left: -4px;
+  }
+
+  &:hover {
+    color: ${props => props.theme.text.reverse};
+    background-image: ${props =>
+      `linear-gradient(to bottom, ${tint(props.theme.social.twitter, 4)}, ${tint(
+        props.theme.social.twitter,
+        4
+      )})`};
+    box-shadow: ${props =>
+      props.disabled ? 'none' : `${Shadow.mid} rgba(0,0,0,0.12)`};
+  }
+
+  &:active {
+    border: 1px solid ${props => props.theme.social.twitter};
+    background-image: ${props =>
+      `linear-gradient(to top, ${props.theme.social.twitter}, ${
+        props.theme.social.twitter
+      })`};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px ${props =>
+      props.theme.bg.default}, 0 0 0 3px ${props => hexa(props.theme.social.twitter, 0.16)};
+  }
+`;
+
+export const CopyLinkButton = styled.button`
+  ${base}
+  border: 1px solid ${props => props.isClicked ? tint(props.theme.success.default, -10) : props.theme.border.default};
+  color: ${props => props.isClicked ? props.theme.bg.default : props.theme.text.secondary};
+  background-color: ${props => props.isClicked ? props.theme.success.default : props.theme.bg.default};
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.isClicked ? props.theme.success.default : props.theme.bg.default}, ${
+      props.isClicked ? tint(props.theme.success.default, -4) : props.theme.bg.wash
+    })`};
+  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, background-image 0.2s ease-in-out;
+
+  &:hover {
+    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, background-image 0.2s ease-in-out;
+    color: ${props => props.isClicked ? props.theme.bg.default : props.theme.text.default};
+  }
+
+  &:active {
+    border: 1px solid ${props => props.isClicked ? tint(props.theme.success.default, -10) : props.theme.border.active};
+    background-image: ${props =>
+      `linear-gradient(to bottom, ${props.isClicked ? tint(props.theme.success.default, -4) : props.theme.bg.default}, ${
+        props.isClicked ? props.theme.success.default : props.theme.bg.wash
+      })`};
+  }
+
+  .icon {
+    margin-right: 8px;
+    margin-left: -4px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px ${props =>props.theme.bg.default}, 0 0 0 3px ${props => props.isClicked ? hexa(props.theme.success.default, 0.16) : props.theme.border.default};
+  }
+`
