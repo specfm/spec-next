@@ -1,5 +1,6 @@
 // @flow
 import * as React from "react";
+import Head from 'next/head'
 import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
 import { Grid, Sidebar, Content, Title, Description } from './style'
@@ -23,6 +24,16 @@ class EpisodeView extends React.Component<Props> {
 
     return (
       <Grid>
+
+        <Head>
+          <title>Spec · {podcast.name} · {episode.title}</title>
+          <meta content={`Spec · ${podcast.name} · ${episode.title}`} name="og:title" />
+          <meta content={episode.description} name="og:description" />
+          <meta content={podcast.artworkUrl} name="og:image" />
+          <meta content={episode.audio_url} name="twitter:player" />
+          <meta content={`Spec · ${podcast.name} · ${episode.title}`} name="twitter:title" />
+        </Head>
+
         <Sidebar>
           <RouteLink route='podcast' params={{ slug: podcast.slug }}>
             <a>

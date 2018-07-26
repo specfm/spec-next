@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import Head from 'next/head'
 import Page from '../../../components/Page'
 import { ShareButtons, Container, HeaderImage, PostHeader, Title, Subtitle, Divider } from '../../../components/Blog'
 
@@ -7,12 +8,21 @@ class Post extends React.Component<{}> {
   render() {
     return (
       <Page>
+
+        <Head>
+          <title>Spec · Typographic Scales</title>
+          <meta content={"Spec · Typographic Scales"} name="og:title" />
+          <meta content={"Consistent typography using simple math"} name="og:description" />
+          <meta content="/static/img/specifics/002-header.png" name="og:image" />
+          <meta content={"Spec · Typographic Scales"} name="twitter:title" />
+        </Head>
+
         <Container>
           <HeaderImage src={'/static/img/specifics/002-header.png'} />
 
           <PostHeader>
             <Title>Typographic Scales</Title>
-            <Subtitle>Consistent typography using simple math.</Subtitle>
+            <Subtitle>Consistent typography using simple math</Subtitle>
             <ShareButtons url={'https://spec.fm/specifics/type-scale'} text={'Typographic Scales'} />
           </PostHeader>
 

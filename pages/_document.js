@@ -19,6 +19,10 @@ export default class MyDocument extends Document {
           <title>Spec · Level Up</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
+          <meta content="@specfm" name="twitter:site" />
+          <meta content={"Spec · Level Up"} name="og:title" />
+          <meta content={"Podcasts and resources to help designers and developers level up"} name="og:description" />
+          <meta content={"Spec · Level Up"} name="twitter:title" />
           <link href={'/static/normalize.css'} rel="stylesheet" />
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css" />
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />

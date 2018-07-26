@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import Head from 'next/head'
 import Page from '../../../components/Page'
 import { ShareButtons, Notice, WarnNotice, Container, HeaderImage, PostHeader, Title, Subtitle, Grid, Divider } from '../../../components/Blog'
 
@@ -7,6 +8,15 @@ class Post extends React.Component<{}> {
   render() {
     return (
       <Page>
+
+        <Head>
+          <title>Spec · 8-Point Grid</title>
+          <meta content={"Spec · 8-Point Grid"} name="og:title" />
+          <meta content={"Using multiples of 8 to define dimensions, padding, and margin of elements"} name="og:description" />
+          <meta content="/static/img/specifics/001-header.png" name="og:image" />
+          <meta content={"Spec · 8-Point Grid"} name="twitter:title" />
+        </Head>
+
         <Container>
           <HeaderImage src={'/static/img/specifics/001-header.png'} />
 

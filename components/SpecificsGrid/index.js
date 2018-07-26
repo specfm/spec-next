@@ -31,7 +31,7 @@ class SpecificsGrid extends React.Component<{}> {
 
                 <Content>
                   <Title>The 8-Point Grid</Title>
-                  <Description>Using multiples of 8 to define dimensions, padding, and margin of elements.</Description>
+                  <Description>Using multiples of 8 to define dimensions, padding, and margin of elements</Description>
                   <OutlineButton>View</OutlineButton>
                 </Content>
               </Card>
