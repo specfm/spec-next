@@ -19,6 +19,10 @@ class Footer extends React.Component<{}> {
           <a href="https://github.com/specfm/spec-next" target="_blank" rel="noopener noreferrer">
             <Icon glyph={'github'} />
           </a>
+
+          <a href="https://spectrum.chat/specfm" target="_blank" rel="noopener noreferrer">
+            <Icon glyph={'spectrum'} />
+          </a>
         </Icons>
       </Container>
     )
