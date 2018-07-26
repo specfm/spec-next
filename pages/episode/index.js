@@ -43,6 +43,10 @@ class Episode extends React.Component<Props> {
       episodes = await api.getEpisodes(podcast.id)
     }
 
+    if (podcast && episode && !episode.published) {
+      episodes = await api.getEpisodes(podcast.id)
+    }
+
     return { podcast, episode, podcasts, episodes };
   }
 
@@ -57,7 +61,7 @@ class Episode extends React.Component<Props> {
           <Page>
 
             {
-              episode && !episode.error
+              episode && !episode.error && episode.published
               ? <EpisodeView podcast={configPodcast} episode={episode} />
               : <PodcastView podcast={configPodcast} episodes={episodes} />
             }
