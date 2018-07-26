@@ -1,18 +1,20 @@
 // @flow
 import * as React from "react";
 import { api } from '../../config'
-import Page from '../../components/Page'
+import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
 import type { SimplecastPodcast, SimplecastEpisode, GetInitialProps } from '../../types'
 import PodcastView from '../../components/PodcastView'
+import PodcastsGrid from '../../components/PodcastsGrid'
 
 type Props = {
   podcast: ?SimplecastPodcast,
-  episodes: ?Array<SimplecastEpisode>
+  episodes: ?Array<SimplecastEpisode>,
+  podcasts: ?Array<SimplecastPodcast>
 }
 
 class Podcast extends React.Component<Props> {
   static async getInitialProps({ query }: GetInitialProps) {
-    let podcast, episodes
+    let podcast, episodes, podcasts
 
     if (query.slug) {
       // match a slug to a podcast record in our config
@@ -29,13 +31,15 @@ class Podcast extends React.Component<Props> {
           api.getEpisodes(configPodcast.simplecastId)
         ])
       }
+
+      podcasts = await api.getPodcasts()
     }
 
-    return { podcast, episodes };
+    return { podcast, episodes, podcasts };
   }
 
   render() {
-    const { podcast, episodes } = this.props
+    const { podcast, episodes, podcasts } = this.props
 
     if (podcast) {
       const configPodcast = api.getConfigPodcastFromId(podcast.id)
@@ -53,7 +57,15 @@ class Podcast extends React.Component<Props> {
 
     return (
       <Page>
-        <p>Something bad happened</p>
+        <SectionHeading>
+          <Heading>Podcasts</Heading>
+          <Subheading>Level up by listening to podcasts from the best in the industry</Subheading>
+        </SectionHeading>
+
+        {
+          podcasts &&
+          <PodcastsGrid podcasts={podcasts} />
+        }
       </Page>
     )
   }
