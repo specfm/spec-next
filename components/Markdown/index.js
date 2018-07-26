@@ -6,10 +6,14 @@ type Props = {
   children: React.Node
 }
 
+function LinkRenderer(props: any) {
+  return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
+}
+
 class Markdown extends React.Component<Props> {
   render() {
     return (
-      <Notes>
+      <Notes renderers={{ link: LinkRenderer }}>
         {this.props.children}
       </Notes>
     )
