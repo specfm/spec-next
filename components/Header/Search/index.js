@@ -70,7 +70,8 @@ injectGlobal`
 
 const ALGOLIA_SEARCH_KEY = "edad66bc16c4912d142a8e7dae608ccd"
 const ALGOLIA_APP_ID = "M8MTCTQX8H"
-const INDEX = process.env.NODE_ENV === 'production' ? 'episodes' : 'dev_episodes'
+// dev_pisodes is a typo when i was running the first dev migration of data :P
+const INDEX = process.env.NODE_ENV === 'production' ? 'episodes' : 'dev_pisodes'
 
 const MySearchBox = ({ currentRefinement, refine, onChange }: any) =>
   <SearchInput
