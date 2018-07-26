@@ -10,6 +10,7 @@ import { getDateObject } from '../../lib/getDateObject'
 import Markdown from '../Markdown'
 import PodcastArt from "../PodcastArt";
 import EpisodeShareButtons from '../EpisodeShareButtons'
+import CommunityUpsell from '../CommunityUpsell'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -52,6 +53,14 @@ class EpisodeView extends React.Component<Props> {
           </Divider>
 
           <HostsGrid hosts={podcast.hosts} />
+
+          <Divider>
+            <Label>
+              Community
+            </Label>
+          </Divider>
+          
+          <CommunityUpsell />
         </Sidebar>
         
         <Content>

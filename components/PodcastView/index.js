@@ -9,7 +9,8 @@ import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import EpisodesGrid from '../EpisodesGrid'
 import PodcastArt from '../PodcastArt'
 import PodcastShareButtons from '../PodcastShareButtons'
-
+import CommunityUpsell from '../CommunityUpsell'
+ 
 type Props = {
   podcast: ConfigPodcast,
   episodes: ?Array<SimplecastEpisode>
@@ -51,6 +52,14 @@ class PodcastView extends React.Component<Props> {
           </Divider>
 
           <HostsGrid hosts={podcast.hosts} />
+
+          <Divider>
+            <Label>
+              Community
+            </Label>
+          </Divider>
+          
+          <CommunityUpsell />
         </Sidebar>
         
         <Content>
