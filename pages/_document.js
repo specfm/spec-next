@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link href={'/static/normalize.css'} rel="stylesheet" />
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css" />
+          <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
           {this.props.styleTags}
         </Head>
         <body>
