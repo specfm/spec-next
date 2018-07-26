@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex: 1 0 auto;
   align-items: center;
   justify-content: center;
+  position: relative;
 `
 
 export const SearchInput = styled.input`
@@ -18,7 +19,27 @@ export const SearchInput = styled.input`
   box-shadow: 0 2px 4px rgba(0,0,0,0.04);
   transition: all 0.2s ease-in-out;
   font-size: 16px;
-  text-align: center;
+  -webkit-appearance: none;
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  ::-webkit-input-placeholder {
+      text-align: center;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+      text-align: center;
+  }
+  
+  ::-moz-placeholder {  /* Firefox 19+ */
+      text-align: center;
+  }
+  
+  :-ms-input-placeholder {  
+      text-align: center;
+  }
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -68,4 +89,12 @@ export const Timestamp = styled.p`
   font-size: 14px;
   font-weight: 400;
   color: ${props => props.theme.text.tertiary};
+`
+
+export const AlgoliaLogo = styled.img`
+  position: absolute;
+  right: 48px;
+  top: 13px;
+  width: 120px;
+  z-index: 1;
 `

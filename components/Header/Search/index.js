@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { api } from '../../../config'
-import { Container, SearchInput, } from './style'
+import { Container, SearchInput, AlgoliaLogo } from './style'
 import { InstantSearch, Hits, connectSearchBox } from 'react-instantsearch-dom';
 import { injectGlobal } from 'styled-components'
 import SearchEpisode from './SearchEpisode'
@@ -74,8 +74,10 @@ const INDEX = process.env.NODE_ENV === 'production' ? 'episodes' : 'dev_episodes
 
 const MySearchBox = ({ currentRefinement, refine, onChange }: any) =>
   <SearchInput
-    type="text"
+    type="search"
+    autoFocus
     value={currentRefinement}
+    onFocus={onChange}
     onChange={e => { onChange(e); refine(e.target.value) }}
     placeholder={"Search for shows and episodes..."}
   />;
@@ -119,20 +121,20 @@ class Search extends React.Component<{}, State> {
 
     return (
       <Container>
-        <InstantSearch
-          appId={ALGOLIA_APP_ID}
-          apiKey={ALGOLIA_SEARCH_KEY}
-          indexName={INDEX}
-        >
-          <ConnectedSearchBox onChange={this.onChange} />
-          {
-            value && value.length > 0 &&
-            <OutsideClickHandler onOutsideClick={this.clear}>
+        <OutsideClickHandler onOutsideClick={this.clear} style={{width:'100%'}}>
+          { value && <a href="https://algolia.com" target="_blank" rel="noopener noreferrer"><AlgoliaLogo src={'/static/img/algolia.svg'}/></a> }
+          <InstantSearch
+            appId={ALGOLIA_APP_ID}
+            apiKey={ALGOLIA_SEARCH_KEY}
+            indexName={INDEX}
+          >
+            <ConnectedSearchBox onChange={this.onChange} />
+            {
+              value && value.length > 0 &&
               <Hits hitComponent={Episode} />
-            </OutsideClickHandler>
-          }
-        </InstantSearch>
-        
+            }
+          </InstantSearch>
+        </OutsideClickHandler>
       </Container>
     )
   }

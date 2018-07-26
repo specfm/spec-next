@@ -4,6 +4,7 @@ import * as React from 'react';
 type Props = {
   children: React.Node,
   onOutsideClick: Function,
+  style?: Object
 };
 
 class OutsideAlerter extends React.Component<Props> {
@@ -30,7 +31,7 @@ class OutsideAlerter extends React.Component<Props> {
 
   render() {
     // $FlowFixMe
-    return <div ref={this.setWrapperRef}>{this.props.children}</div>;
+    return <div style={this.props.style} ref={this.setWrapperRef}>{this.props.children}</div>;
   }
 }
 
