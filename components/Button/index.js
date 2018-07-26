@@ -109,6 +109,7 @@ export class CopyLinkButton extends React.Component<CopyLinkProps, CopyLinkState
         style={{ background: 'none' }}
         data-clipboard-text={text}
         onSuccess={this.onClick}
+        component="a"
       >
         <Styled.CopyLinkButton isClicked={isClicked}>
           <Icon glyph="link" size={24} />
