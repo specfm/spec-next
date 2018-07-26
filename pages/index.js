@@ -4,6 +4,7 @@ import { api } from '../config'
 import Page, { SectionHeading, Heading, Subheading } from '../components/Page'
 import type { SimplecastPodcast } from '../types'
 import PodcastGrid from '../components/PodcastsGrid'
+import ResourcesGrid from '../components/ResourcesGrid'
 
 type Props = {
   podcasts: Array<SimplecastPodcast>
@@ -31,6 +32,8 @@ class Index extends React.Component<Props> {
           <Heading>Resources</Heading>
           <Subheading>Curated resources for designers and developers</Subheading>
         </SectionHeading>
+
+        <ResourcesGrid />
       </Page>
     )
   }
