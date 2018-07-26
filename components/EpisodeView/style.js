@@ -9,12 +9,10 @@ export const Grid = styled.div`
   grid-template-rows: auto;
   grid-template-areas: "sidebar content";
   max-width: 968px;
-  padding 0 32px;
 
   @media (max-width: 968px) {
     grid-template-columns: 1fr; 
     grid-template-areas: "content" "sidebar";
-    padding: 0 16px;
     margin-top: 32px;
   }
 `

@@ -3,7 +3,7 @@ import * as React from "react";
 import Head from 'next/head'
 import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
-import { Grid, Sidebar, Content, Title, Description, Divider, Label, MobileArt, } from './style'
+import { Grid, Sidebar, Content, Title, Description, Divider, Label, MobileArt, MobileSubscriptionOptions, } from './style'
 import HostsGrid from '../HostsGrid'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import EpisodesGrid from '../EpisodesGrid'
@@ -72,6 +72,9 @@ class PodcastView extends React.Component<Props> {
           </MobileArt>
           <Title>{podcast.name}</Title>
           <Description>{podcast.description}</Description>
+          <MobileSubscriptionOptions>
+            <PodcastSubscriptionOptions podcast={podcast} />
+          </MobileSubscriptionOptions>
           <PodcastShareButtons podcast={podcast} />
           <EpisodesGrid episodes={episodes} podcast={podcast} />
         </Content>

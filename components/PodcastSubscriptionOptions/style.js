@@ -9,6 +9,7 @@ export const Grid = styled.div`
   grid-gap: 8px;
   align-items: center;
   margin-top: 32px;
+  width: 100%;
 `
 
 export const Option = styled.div`

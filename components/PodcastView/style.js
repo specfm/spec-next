@@ -69,6 +69,15 @@ export const MobileArt = styled.div`
   
   @media (max-width: 768px) {
     display: flex;
-    max-width: 320px;
+    max-width: 400px;
+  }
+`
+
+export const MobileSubscriptionOptions = styled.div`
+  display: none;
+    
+  @media (max-width: 768px) {
+    display: flex;
+    width: 100%;
   }
 `

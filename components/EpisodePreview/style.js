@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { tint } from '../globals'
 
 export const Grid = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 8px;
   display: grid;
   grid-gap: 4px;
   grid-template-columns: minmax(min-content, 656px);
@@ -38,5 +38,5 @@ export const Divider = styled.div`
   height: 1px;
   width: 100%;
   background: ${props => tint(props.theme.border.default, 3)};
-  margin-top: 48px;
+  margin-top: 24px;
 `
