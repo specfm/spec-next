@@ -194,13 +194,13 @@ export default [
 
   {
     name: "Dolby",
-    url: "https://spec.fm/dolby",
+    url: "https://goo.gl/CMMT6j",
     logoUrl: "/static/img/sponsors/dolby.png",
   },
 
   {
     name: "Chart.io",
-    url: "https://spec.fm/chartio",
+    url: "https://chartio.com?utm_source=specfm&utm_medium=podcast&utm_campaign=devtea_specfm",
     logoUrl: "/static/img/sponsors/chartio.png",
   },
 
@@ -249,7 +249,7 @@ export default [
 
   {
     name: "Mapbox",
-    url: "https://spec.fm/mapbox",
+    url: "http://www.mapbox.com/android",
     logoUrl: "/static/img/sponsors/mapbox.svg",
   },
 
