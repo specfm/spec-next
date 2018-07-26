@@ -5,10 +5,16 @@ import { Container, Logo } from './style'
 import { PrimaryButton, GhostButton, ButtonRow } from '../Button'
 import Search from './Search'
 
-class Header extends React.Component<{}> {
+type Props = {
+  isScrolled: boolean
+}
+
+class Header extends React.Component<Props> {
   render() {
+    const { isScrolled } = this.props
+
     return (
-      <Container>
+      <Container isScrolled={isScrolled}>
         <Link href={'/'}>
           <a style={{display:'flex',alignItems:'center'}}>
             <Logo src={'/static/img/logo.svg'} />

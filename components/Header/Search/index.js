@@ -31,6 +31,7 @@ injectGlobal`
     height: auto;
     max-height: 400px;
     overflow-y: scroll;
+    max-width: 100%;
   }
 
   .ais-Hits-list {

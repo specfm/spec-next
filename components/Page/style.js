@@ -15,6 +15,7 @@ export const InnerContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex: 1 0 auto;
+  padding-top: 64px;
 `
 
 export const SectionHeading = styled.div`
