@@ -10,10 +10,12 @@ export default async (job: Job<IndexPodcastJobData>) => {
   const { id } = job.data
 
   const episodes = await api.getEpisodes(id)
-  const indexEpisodesPromises = episodes.map(episode => indexEpisodeInSearch.add({ 
-    showId: id,
-    episode
-  }))
+  const indexEpisodesPromises = episodes
+    .filter(episode => episode.published)
+    .map(episode => indexEpisodeInSearch.add({ 
+      showId: id,
+      episode
+    }))
 
   return Promise.all(indexEpisodesPromises)
 };
