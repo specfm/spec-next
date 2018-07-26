@@ -17,7 +17,7 @@ export const ButtonSegmentRow = Styled.ButtonSegmentRow
 export class Button extends React.Component<Props> {
   render() {
     return (
-      <Styled.Button>
+      <Styled.Button {...this.props}>
         {this.props.children}
       </Styled.Button>
     )
@@ -27,7 +27,7 @@ export class Button extends React.Component<Props> {
 export class PrimaryButton extends React.Component<Props> {
   render() {
     return (
-      <Styled.PrimaryButton>
+      <Styled.PrimaryButton {...this.props}>
         {this.props.children}
       </Styled.PrimaryButton>
     )
@@ -37,7 +37,7 @@ export class PrimaryButton extends React.Component<Props> {
 export class GhostButton extends React.Component<Props> {
   render() {
     return (
-      <Styled.GhostButton>
+      <Styled.GhostButton {...this.props}>
         {this.props.children}
       </Styled.GhostButton>
     )
@@ -47,7 +47,7 @@ export class GhostButton extends React.Component<Props> {
 export class OutlineButton extends React.Component<Props> {
   render() {
     return (
-      <Styled.OutlineButton>
+      <Styled.OutlineButton {...this.props}>
         {this.props.children}
       </Styled.OutlineButton>
     )
@@ -57,7 +57,7 @@ export class OutlineButton extends React.Component<Props> {
 export class FacebookButton extends React.Component<Props> {
   render() {
     return (
-      <Styled.FacebookButton>
+      <Styled.FacebookButton {...this.props}>
         <Icon glyph="facebook" size={24} />
         {this.props.children}
       </Styled.FacebookButton>
@@ -68,7 +68,7 @@ export class FacebookButton extends React.Component<Props> {
 export class TwitterButton extends React.Component<Props> {
   render() {
     return (
-      <Styled.TwitterButton>
+      <Styled.TwitterButton {...this.props}>
         <Icon glyph="twitter" size={24} />
         {this.props.children}
       </Styled.TwitterButton>
@@ -111,7 +111,7 @@ export class CopyLinkButton extends React.Component<CopyLinkProps, CopyLinkState
         onSuccess={this.onClick}
         component="a"
       >
-        <Styled.CopyLinkButton isClicked={isClicked}>
+        <Styled.CopyLinkButton isClicked={isClicked} {...this.props}>
           <Icon glyph="link" size={24} />
           {
             isClicked
