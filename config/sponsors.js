@@ -268,7 +268,7 @@ export default [
   {
     name: "Freshbooks",
     url: "https://www.freshbooks.com/specfm",
-    logoUrl: "/static/img/sponsors/fresh",
+    logoUrl: "/static/img/sponsors/freshbooks.png",
   },
 
   {
