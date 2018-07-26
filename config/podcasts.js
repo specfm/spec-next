@@ -190,5 +190,24 @@ export default [
     applePodcastId: "1063765302",
     twitterUsername: "toolsday",
     hosts: [hosts.una, hosts.chrisdhanaraj]
+  },
+
+  {
+    id: null,
+    name: "Layout",
+    slug: "layout",
+    description: "Layout is a weekly podcast about design, technology, programming and everything else",
+    artworkUrl: "http://layout.fm/assets/artwork-spec.png",
+    simplecastId: null,
+    iTunesUrl: "https://geo.itunes.apple.com/ca/podcast/feed/id1050276556",
+    overcastUrl: "https://overcast.fm/itunes1050276556",
+    pocketCastsUrl: "http://pca.st/itunes/1050276556",
+    castroUrl: "https://castro.fm/itunes/1050276556",
+    breakerUrl: "https://www.breaker.audio/layout",
+    googlePodcastsUrl: "",
+    rssFeedUrl: "http://layout.fm/rss",
+    applePodcastId: "1050276556",
+    twitterUsername: "layoutfm",
+    hosts: [hosts.rafahari, hosts.vernalkick]
   }
 ]

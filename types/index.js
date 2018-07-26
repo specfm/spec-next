@@ -52,11 +52,11 @@ export type Host = {
 }
 
 export type ConfigPodcast = {|
-  id: number,
+  id: ?number,
   name: string,
   slug: string,
   description: string,
-  simplecastId: number,
+  simplecastId: ?number,
   artworkUrl: string,
   iTunesUrl: string,
   overcastUrl: string,

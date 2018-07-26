@@ -12,6 +12,14 @@ export default class PodcastCard extends React.Component<Props> {
   render() {
     const { podcast } = this.props
 
+    if (podcast.slug === 'layout') {
+      return (
+        <a href={"https://layout.fm"} target={"_blank"} rel={"noopener noreferrer"}>
+          <PodcastArt src={podcast.artworkUrl} />
+        </a>
+      )
+    }
+
     return (
       <RouteLink key={podcast.id} route='podcast' params={{ slug: podcast.slug }}>
         <a>

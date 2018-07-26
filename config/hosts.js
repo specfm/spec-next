@@ -107,4 +107,16 @@ export default {
     twitterUsername: "chrisdhanaraj",
     profilePhotoUrl: "https://pbs.twimg.com/profile_images/998322395059388417/Yysluf8N_400x400.jpg"
   },
+
+  vernalkick: {
+    name: "Kevin Clark",
+    twitterUsername: "vernalkick",
+    profilePhotoUrl: "https://pbs.twimg.com/profile_images/513432886226075648/ZViDgotW_400x400.jpeg"
+  },
+
+  rafahari: {
+    name: "Rafael Conde",
+    twitterUsername: "rafahari",
+    profilePhotoUrl: "https://pbs.twimg.com/profile_images/805709860037918720/fiNeqcj1_400x400.jpg"
+  }
 }

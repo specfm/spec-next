@@ -18,7 +18,7 @@ class Episode extends React.Component<Props> {
       // match a slug to a podcast record in our config
       const configPodcast = api.getConfigPodcastFromSlug(query.slug)
 
-      if (configPodcast) {
+      if (configPodcast && configPodcast.simplecastId) {
         // as long as the slug returns a valid config podcast, fetch the 
         // show from the api
         [
