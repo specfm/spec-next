@@ -2,7 +2,7 @@
 import * as React from "react";
 import Head from 'next/head'
 import { api } from '../../config'
-import Page from '../../components/Page'
+import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
 import type { SimplecastPodcast } from '../../types'
 import PodcastsGrid from "../../components/PodcastsGrid";
 
@@ -36,6 +36,12 @@ class Podcasts extends React.Component<Props> {
       return (
         <Page>
           {this.renderHead()}
+
+          <SectionHeading>
+            <Heading>Podcasts</Heading>
+            <Subheading>Level up by listening to podcasts from the best in the industry</Subheading>
+          </SectionHeading>
+
           <PodcastsGrid podcasts={podcasts} />
         </Page>
       )
