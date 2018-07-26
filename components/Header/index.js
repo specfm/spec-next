@@ -6,15 +6,15 @@ import { PrimaryButton, GhostButton, ButtonRow } from '../Button'
 import Search from './Search'
 
 type Props = {
-  isScrolled: boolean
+  showHeaderShadow: boolean
 }
 
 class Header extends React.Component<Props> {
   render() {
-    const { isScrolled } = this.props
+    const { showHeaderShadow } = this.props
 
     return (
-      <Container isScrolled={isScrolled}>
+      <Container showHeaderShadow={showHeaderShadow}>
         <Link href={'/'}>
           <a style={{display:'flex',alignItems:'center'}}>
             <Logo src={'/static/img/logo.svg'} />

@@ -1,10 +1,11 @@
 // @flow
 import * as React from 'react'
 import { ThemeProvider } from 'styled-components'
+import Icon from '../Icon'
 import Header from '../Header'
 import Footer from '../Footer'
 import { theme } from '../theme'
-import { Container, SectionHeading, Heading, Subheading, InnerContainer } from './style'
+import { Container, SectionHeading, Heading, Subheading, InnerContainer, ScrollToTop } from './style'
 
 export { SectionHeading, Heading, Subheading }
 
@@ -13,17 +14,12 @@ type Props = {
 }
 
 type State = {
-  isScrolled: boolean
+  showHeaderShadow: boolean,
+  scrollToTopVisible: boolean,
 }
 
 export default class Page extends React.Component<Props, State> {
-  ref: any;
-  ref: null;
-
-  constructor() {
-    super()
-    this.state = { isScrolled: false }
-  }
+  state = { showHeaderShadow: false, scrollToTopVisible: false }
 
   componentDidMount() {
     window && window.addEventListener('scroll', this.handleScroll);
@@ -34,21 +30,29 @@ export default class Page extends React.Component<Props, State> {
   }
 
   handleScroll = () => {
-    const isScrolled = window && window.scrollY > 0
-    return this.setState({ isScrolled })
+    const showHeaderShadow = window && window.pageYOffset > 0
+    const scrollToTopVisible = window && window.pageYOffset > 240
+    return this.setState({ showHeaderShadow, scrollToTopVisible })
+  }
+
+  scrollToTop = () => {
+    return window && window.scrollTo(0, 0)
   }
 
   render() {
-    const { isScrolled } = this.state
+    const { showHeaderShadow, scrollToTopVisible } = this.state
 
     return (
       <ThemeProvider theme={theme}>
-        <Container innerRef={c => this.ref = c}>
-          <Header isScrolled={isScrolled}/>
+        <Container>
+          <Header showHeaderShadow={showHeaderShadow}/>
           <InnerContainer>
             {this.props.children}
           </InnerContainer>
           <Footer />
+          <ScrollToTop isVisible={scrollToTopVisible} onClick={this.scrollToTop}>
+            <Icon glyph={'view-forward'} size={32} />
+          </ScrollToTop>
         </Container>
       </ThemeProvider>
     )

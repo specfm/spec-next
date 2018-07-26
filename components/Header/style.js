@@ -11,7 +11,7 @@ export const Container = styled.div`
   right: 0;
   background: ${props => props.theme.bg.wash};
   z-index: 3;
-  box-shadow: ${props => props.isScrolled ? '0 4px 8px rgba(0,0,0,0.04)' : 'none'};
+  box-shadow: ${props => props.showHeaderShadow ? '0 4px 8px rgba(0,0,0,0.04)' : 'none'};
   transition: all 0.2s ease-in-out;
 `
 
