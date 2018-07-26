@@ -1,18 +1,22 @@
 // @flow
 import * as React from "react";
 import { api } from '../../config'
-import Page from '../../components/Page'
+import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
 import type { SimplecastPodcast, SimplecastEpisode, GetInitialProps } from '../../types'
 import EpisodeView from '../../components/EpisodeView'
+import PodcastsGrid from '../../components/PodcastsGrid'
+import PodcastView from "../../components/PodcastView";
 
 type Props = {
   podcast: ?SimplecastPodcast,
-  episode: SimplecastEpisode
+  podcasts: ?Array<SimplecastPodcast>,
+  episode: SimplecastEpisode,
+  episodes: ?Array<SimplecastEpisode>
 }
 
 class Episode extends React.Component<Props> {
   static async getInitialProps({ query }: GetInitialProps) {
-    let podcast, episode
+    let podcast, episode, podcasts, episodes
 
     if (query.slug && query.episodeId) {
       // match a slug to a podcast record in our config
@@ -31,11 +35,19 @@ class Episode extends React.Component<Props> {
       }
     }
 
-    return { podcast, episode };
+    if (!podcast) {
+      podcasts = await api.getPodcasts()
+    }
+
+    if (podcast && episode && episode.error) {
+      episodes = await api.getEpisodes(podcast.id)
+    }
+
+    return { podcast, episode, podcasts, episodes };
   }
 
   render() {
-    const { podcast, episode } = this.props
+    const { podcast, episode, podcasts, episodes } = this.props
 
     if (podcast) {
       const configPodcast = api.getConfigPodcastFromId(podcast.id)
@@ -43,7 +55,13 @@ class Episode extends React.Component<Props> {
       if (configPodcast) {
         return (
           <Page>
-            <EpisodeView podcast={configPodcast} episode={episode} />
+
+            {
+              episode && !episode.error
+              ? <EpisodeView podcast={configPodcast} episode={episode} />
+              : <PodcastView podcast={configPodcast} episodes={episodes} />
+            }
+            
           </Page>
         )
       }
@@ -53,7 +71,15 @@ class Episode extends React.Component<Props> {
 
     return (
       <Page>
-        <p>Something bad happened</p>
+        <SectionHeading>
+          <Heading>Podcasts</Heading>
+          <Subheading>Level up by listening to podcasts from the best in the industry</Subheading>
+        </SectionHeading>
+
+        {
+          podcasts &&
+          <PodcastsGrid podcasts={podcasts} />
+        }
       </Page>
     )
   }

@@ -42,7 +42,8 @@ export type SimplecastEpisode = {
     small: string,
     thumb: string
   },
-  sponsors: Array<?any>
+  sponsors: Array<?any>,
+  error?: string,
 }
 
 export type Host = {
