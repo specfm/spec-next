@@ -67,7 +67,11 @@ export type ConfigPodcast = {|
   breakerUrl: string,
   applePodcastId: string,
   twitterUsername: string,
-  hosts: Array<Host>
+  hosts: Array<Host>,
+  color: {
+    text: string,
+    button: string,
+  }
 |}
 
 export type GetInitialProps = {

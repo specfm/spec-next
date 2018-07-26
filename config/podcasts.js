@@ -18,7 +18,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/developer-tea",
     applePodcastId: "955596067",
     twitterUsername: "developertea",
-    hosts: [hosts.jcutrell]
+    hosts: [hosts.jcutrell],
+    colors: {
+      text: '#E54324',
+      button: '#E54324'
+    }
   },
 
   {
@@ -37,7 +41,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/design-details",
     applePodcastId: "947191070",
     twitterUsername: "designdetailsfm",
-    hosts: [hosts.marshallbock, hosts.brian_lovin]
+    hosts: [hosts.marshallbock, hosts.brian_lovin],
+    colors: {
+      text: '#3D7B79',
+      button: '#499290'
+    }
   },
 
   {
@@ -56,7 +64,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/immutable",
     applePodcastId: "1035147995",
     twitterUsername: "ImmutableFM",
-    hosts: [hosts.soffes, hosts.defaultbryn]
+    hosts: [hosts.soffes, hosts.defaultbryn],
+    colors: {
+      text: '#C93634',
+      button: '#F65956'
+    }
   },
 
   {
@@ -75,7 +87,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/does-not-compute",
     applePodcastId: "1048731980",
     twitterUsername: "dnccast",
-    hosts: [hosts.seanwashbot, hosts.schrockwell]
+    hosts: [hosts.seanwashbot, hosts.schrockwell],
+    colors: {
+      text: '#474747',
+      button: '#474747'
+    }
   },
 
   {
@@ -94,7 +110,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/vicarious",
     applePodcastId: "1055180013",
     twitterUsername: "vicarious_fm",
-    hosts: [hosts.defaultbryn, hosts.marshallbock, hosts.sortino, hosts.sarahberus]
+    hosts: [hosts.defaultbryn, hosts.marshallbock, hosts.sortino, hosts.sarahberus],
+    colors: {
+      text: '#0F6CEB',
+      button: '#0F6CEB'
+    }
   },
 
   {
@@ -113,7 +133,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/fragmented-android-developer-podcast",
     applePodcastId: "968779958",
     twitterUsername: "FragmentedCast",
-    hosts: [hosts.donnfelker, hosts.kaushikgopal]
+    hosts: [hosts.donnfelker, hosts.kaushikgopal],
+    colors: {
+      text: '#0070DA',
+      button: '#0090FB'
+    }
   },
 
   {
@@ -132,7 +156,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/runtime",
     applePodcastId: "1122203945",
     twitterUsername: "runtimefm",
-    hosts: [hosts.soffes, hosts.calebd]
+    hosts: [hosts.soffes, hosts.calebd],
+    colors: {
+      text: '#6D3BEC',
+      button: '#6D3BEC'
+    }
   },
 
   {
@@ -151,7 +179,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/orthogonal",
     applePodcastId: "1131320952",
     twitterUsername: "getorthogonal",
-    hosts: [hosts.cfoandrew, hosts.mrbrettkelly]
+    hosts: [hosts.cfoandrew, hosts.mrbrettkelly],
+    colors: {
+      text: '#0B5351',
+      button: '#0B5351'
+    }
   },
 
   {
@@ -170,7 +202,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/swift-unwrapped",
     applePodcastId: "1209817203",
     twitterUsername: "swift_unwrapped",
-    hosts: [hosts.simjp, hosts.jesse_squires]
+    hosts: [hosts.simjp, hosts.jesse_squires],
+    colors: {
+      text: '#D65A00',
+      button: '#FF6B00'
+    }
   },
 
   {
@@ -189,7 +225,11 @@ export default [
     breakerUrl: "https://www.breaker.audio/toolsday",
     applePodcastId: "1063765302",
     twitterUsername: "toolsday",
-    hosts: [hosts.una, hosts.chrisdhanaraj]
+    hosts: [hosts.una, hosts.chrisdhanaraj],
+    colors: {
+      text: '#2167A4',
+      button: '#3A87C9'
+    }
   },
 
   {
@@ -208,6 +248,10 @@ export default [
     rssFeedUrl: "http://layout.fm/rss",
     applePodcastId: "1050276556",
     twitterUsername: "layoutfm",
-    hosts: [hosts.rafahari, hosts.vernalkick]
+    hosts: [hosts.rafahari, hosts.vernalkick],
+    colors: {
+      text: '#399434',
+      button: '#4AC644'
+    }
   }
 ]

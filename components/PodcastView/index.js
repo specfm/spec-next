@@ -33,6 +33,7 @@ class PodcastView extends React.Component<Props> {
           }
           <meta content={`Spec · ${podcast.name}`} name="twitter:title" />
           <meta name="apple-itunes-app" content={`app-id=${podcast.applePodcastId}`} />
+          <meta name="theme-color" content={podcast.colors.button} />
         </Head>
 
         <Sidebar>
