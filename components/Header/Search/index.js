@@ -5,6 +5,7 @@ import { Container, SearchInput, } from './style'
 import { InstantSearch, Hits, connectSearchBox } from 'react-instantsearch-dom';
 import { injectGlobal } from 'styled-components'
 import SearchEpisode from './SearchEpisode'
+import OutsideClickHandler from '../../OutsideClickHandler'
 
 injectGlobal`
   .ais-InstantSearch__root {
@@ -109,6 +110,10 @@ class Search extends React.Component<{}, State> {
     return this.setState({ value: e.target.value })
   }
 
+  clear = () => {
+    return this.setState({ value: '' })
+  }
+
   render() {
     const { value } = this.state
 
@@ -122,7 +127,9 @@ class Search extends React.Component<{}, State> {
           <ConnectedSearchBox onChange={this.onChange} />
           {
             value && value.length > 0 &&
-            <Hits hitComponent={Episode} />
+            <OutsideClickHandler onOutsideClick={this.clear}>
+              <Hits hitComponent={Episode} />
+            </OutsideClickHandler>
           }
         </InstantSearch>
         
