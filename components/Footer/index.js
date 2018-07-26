@@ -7,10 +7,6 @@ class Footer extends React.Component<{}> {
   render() {
     return ( 
       <Container>
-        <Description>
-          Copyright {new Date().getFullYear()} Spec Network, Inc.
-        </Description>
-
         <Icons>
           <a href="https://twitter.com/specfm" target="_blank" rel="noopener noreferrer">
             <Icon glyph={'twitter'} />
@@ -24,6 +20,10 @@ class Footer extends React.Component<{}> {
             <Icon glyph={'spectrum'} />
           </a>
         </Icons>
+        
+        <Description>
+          Copyright {new Date().getFullYear()} Spec Network, Inc.
+        </Description>
       </Container>
     )
   }
