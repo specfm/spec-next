@@ -8,6 +8,7 @@ import { theme } from '../theme'
 import { Container, SectionHeading, Heading, Subheading, InnerContainer, ScrollToTop } from './style'
 import { throttle } from 'throttle-debounce';
 import EmailCapture from '../EmailCapture';
+import * as gtag from '../../lib/gtag'
 
 export { SectionHeading, Heading, Subheading }
 
@@ -20,20 +21,40 @@ type State = {
   scrollToTopVisible: boolean,
 }
 
+
 export default class Page extends React.Component<Props, State> {
+  lastTrackedPageview: ?string;
+
   constructor() {
     super()
 
     this.state = { showHeaderShadow: false, scrollToTopVisible: false }
     this.handleScroll = throttle(300, this.handleScroll)
+    this.lastTrackedPageview = null
   }
 
   componentDidMount() {
     window && window.addEventListener('scroll', this.handleScroll);
+    
+    if (document) {
+      gtag.pageview(document.location.pathname)
+      this.lastTrackedPageview = document.location.pathname
+    }
   }
 
   componentWillUnmount() {
     window && window.removeEventListener('scroll', this.handleScroll);
+    this.lastTrackedPageview = null
+  }
+
+  componentDidUpdate() {
+    if (document) {
+      const newLocation = document.location.pathname
+      if (newLocation !== this.lastTrackedPageview) {
+        gtag.pageview(document.location.pathname)
+        this.lastTrackedPageview = newLocation
+      }
+    }
   }
 
   handleScroll = () => {
