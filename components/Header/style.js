@@ -9,7 +9,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  background: ${props => props.theme.bg.wash};
+  background: ${props => props.showHeaderShadow ? props.theme.bg.default : props.theme.bg.wash};
   z-index: 3;
   box-shadow: ${props => props.showHeaderShadow ? '0 4px 8px rgba(0,0,0,0.04)' : 'none'};
   transition: all 0.2s ease-in-out;

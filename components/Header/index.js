@@ -21,7 +21,7 @@ class Header extends React.Component<Props> {
           </a>
         </Link>
 
-        <Search />
+        <Search showHeaderShadow={showHeaderShadow} />
 
         <ButtonRow style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <Link href={'/about'}>

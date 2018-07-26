@@ -73,7 +73,7 @@ const ALGOLIA_APP_ID = "M8MTCTQX8H"
 // dev_pisodes is a typo when i was running the first dev migration of data :P
 const INDEX = process.env.NODE_ENV === 'production' ? 'episodes' : 'dev_pisodes'
 
-const MySearchBox = ({ currentRefinement, refine, onChange }: any) =>
+const MySearchBox = ({ currentRefinement, refine, onChange, showHeaderShadow }: any) =>
   <SearchInput
     type="search"
     autoFocus
@@ -81,6 +81,7 @@ const MySearchBox = ({ currentRefinement, refine, onChange }: any) =>
     onFocus={onChange}
     onChange={e => { onChange(e); refine(e.target.value) }}
     placeholder={"Search for shows and episodes..."}
+    showHeaderShadow={showHeaderShadow}
   />;
 
 const ConnectedSearchBox = connectSearchBox(MySearchBox);
@@ -104,7 +105,11 @@ type State = {
   value: ?string,
 }
 
-class Search extends React.Component<{}, State> {
+type Props = {
+  showHeaderShadow: boolean
+}
+
+class Search extends React.Component<Props, State> {
   state = {
     value: ''
   }
@@ -119,6 +124,7 @@ class Search extends React.Component<{}, State> {
 
   render() {
     const { value } = this.state
+    const { showHeaderShadow = false } = this.props
 
     return (
       <Container>
@@ -129,7 +135,7 @@ class Search extends React.Component<{}, State> {
             apiKey={ALGOLIA_SEARCH_KEY}
             indexName={INDEX}
           >
-            <ConnectedSearchBox onChange={this.onChange} />
+            <ConnectedSearchBox showHeaderShadow={showHeaderShadow} onChange={this.onChange} />
             {
               value && value.length > 0 &&
               <Hits hitComponent={Episode} />
