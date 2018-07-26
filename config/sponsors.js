@@ -414,10 +414,4 @@ export default [
     url: "https://hired.com/?utm_source=podcast&amp;utm_medium=specfm&amp;utm_campaign=sponsorpage",
     logoUrl: "/static/img/sponsors/hired.png",
   },
-
-  {
-    name: "App Center",
-    url: "https://appcenter.ms/?utm_source=Fragmented_podcast&utm_medium=newsletter&utm_campaign=appcenter_Fragmengted",
-    logoUrl: "/static/img/sponsors/app-center.jpg",
-  }
 ]
