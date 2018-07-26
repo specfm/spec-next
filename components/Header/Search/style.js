@@ -8,6 +8,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  grid-area: search;
+
+  @media (max-width: 968px) {
+    padding-top: 8px;
+  }
 `
 
 export const SearchInput = styled.input`

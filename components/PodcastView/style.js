@@ -9,6 +9,17 @@ export const Grid = styled.div`
   grid-template-rows: auto;
   grid-template-areas: "sidebar content";
   max-width: 968px;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 240px minmax(506px, 1fr);
+    grid-gap: 32px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "sidebar";
+    grid-gap: 16px;
+  }
 `
 
 export const Sidebar = styled.div`
@@ -51,4 +62,13 @@ export const Label = styled.span`
   font-size: 16px;
   font-weight: 500;
   color: ${props => props.theme.text.secondary};
+`
+
+export const MobileArt = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    max-width: 320px;
+  }
 `

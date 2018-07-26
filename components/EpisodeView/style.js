@@ -9,6 +9,14 @@ export const Grid = styled.div`
   grid-template-rows: auto;
   grid-template-areas: "sidebar content";
   max-width: 968px;
+  padding 0 32px;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr; 
+    grid-template-areas: "content" "sidebar";
+    padding: 0 16px;
+    margin-top: 32px;
+  }
 `
 
 export const Sidebar = styled.div`
@@ -29,6 +37,11 @@ export const Title = styled.h1`
   color: ${props => props.theme.text.default};
   letter-spacing: 0.8px;
   line-height: 1.2;
+
+  @media (max-width: 968px) {
+    font-size: 32px;
+    line-height: 1.1;
+  }
 `
 
 export const Description = styled.h2`
@@ -38,6 +51,11 @@ export const Description = styled.h2`
   line-height: 1.4;
   margin-bottom: 4px;
   margin-top: 24px;
+
+  @media (max-width: 968px) {
+    font-size: 18px; 
+    margin-bottom: 16px;
+  }
 
   a:hover {
     color: ${props => props.theme.text.default};

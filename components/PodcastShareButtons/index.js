@@ -36,7 +36,7 @@ class PodcastShareButtons extends React.Component<Props> {
         </a>
 
           <CopyLinkButton text={`https://spec.fm/podcasts/${podcast.slug}`}>
-            Copy Link
+            Copy
           </CopyLinkButton>
         </ButtonRow>
       </Container>

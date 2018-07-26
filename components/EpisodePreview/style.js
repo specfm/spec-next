@@ -8,6 +8,10 @@ export const Grid = styled.div`
   grid-gap: 4px;
   grid-template-columns: minmax(min-content, 656px);
   grid-template-rows: auto;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr; 
+  }
 `
 
 export const Title = styled.h5`

@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import Link from 'next/link'
-import { Container, Logo } from './style'
-import { PrimaryButton, GhostButton, ButtonRow } from '../Button'
+import { Container, Logo, ButtonRowContainer } from './style'
+import { PrimaryButton, GhostButton } from '../Button'
 import Search from './Search'
 
 type Props = {
@@ -23,7 +23,7 @@ class Header extends React.Component<Props> {
 
         <Search showHeaderShadow={showHeaderShadow} />
 
-        <ButtonRow style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <ButtonRowContainer>
           <Link href={'/about'}>
             <a>
               <GhostButton>About</GhostButton>
@@ -35,7 +35,7 @@ class Header extends React.Component<Props> {
               <PrimaryButton>Sponsor</PrimaryButton>
             </a>
           </Link>
-        </ButtonRow>
+        </ButtonRowContainer>
       </Container>
     )
   }

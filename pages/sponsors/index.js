@@ -5,7 +5,7 @@ import Page from '../../components/Page'
 import SponsorGrid from '../../components/SponsorGrid'
 import { PrimaryButton } from '../../components/Button'
 import { Container, PostHeader, Title, Subtitle, Divider } from '../../components/Blog'
-import { Grid, Section, Number, Label } from './style'
+import { Grid, Section, Number, Label, ButtonContainer } from './style'
 
 export default class Sponsors extends React.Component<{}> {
   render() {
@@ -46,9 +46,11 @@ export default class Sponsors extends React.Component<{}> {
 
         <Divider />
 
-        <a href="mailto:sponsors@spec.fm">
-          <PrimaryButton size={'large'}>Get in touch</PrimaryButton>
-        </a>
+        <ButtonContainer>
+          <a href="mailto:sponsors@spec.fm">
+            <PrimaryButton size={'large'}>Get in touch</PrimaryButton>
+          </a>
+        </ButtonContainer>
           
         <Divider />
 

@@ -11,6 +11,14 @@ export const Container = styled.div`
   background: ${props => tint(props.theme.bg.wash, -4)};
   padding: 10px 10px 10px 16px;
   border-radius: 8px;
+  position: relative;
+
+  @media (max-width: 968px) {
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 16px;
+    padding-bottom: 24px;
+  }
 `
 
 export const InnerContainer = styled.div`
@@ -19,6 +27,13 @@ export const InnerContainer = styled.div`
   align-items: center;
   padding-left: 16px;
   flex: 1;
+
+  @media (max-width: 968px) {
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: stretch;
+    padding-left: 0;
+  }
 `
 
 export const Label = styled.p`
@@ -49,6 +64,12 @@ export const Dismiss = styled.button`
     font-size: 16px;
     line-height: 1;
     font-weight: 600;
+  }
+
+  @media (max-width: 968px) {
+    position: absolute;
+    top: 16px;
+    right: 16px; 
   }
 `
 
@@ -111,6 +132,12 @@ export const EmbedContainer = styled.div`
   display: flex;
   flex: 1 0 auto;
   padding-left: 32px;
+
+  @media (max-width: 968px) {
+    padding-left: 0;
+    margin-top: 16px;
+    width: 100%; 
+  }
   
   form {
     width: 100%;

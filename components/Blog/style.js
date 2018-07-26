@@ -91,6 +91,14 @@ export const Grid = styled.div`
     width: 100%;
     margin-top: 32px;
   }
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    
+    img {
+      margin-top: 16px;
+    }
+  }
 `
 
 export const Divider = styled.div`

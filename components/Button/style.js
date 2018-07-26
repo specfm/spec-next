@@ -174,6 +174,14 @@ export const OutlineButton = styled.button`
 export const ButtonRow = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 968px) {
+    flex-wrap: nowrap; 
+    
+    button {
+      margin-top: 8px;
+    }
+  }
 `;
 
 export const ButtonSegmentRow = styled.div`

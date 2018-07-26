@@ -36,7 +36,7 @@ class BlogShareButtons extends React.Component<Props> {
         </a>
 
           <CopyLinkButton text={url}>
-            Copy Link
+            Copy
           </CopyLinkButton>
         </ButtonRow>
       </ShareButtonsContainer>

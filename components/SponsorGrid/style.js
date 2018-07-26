@@ -12,7 +12,16 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
+  width: 100%;
   max-width: 968px;
+
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 export const LogoContainer = styled.div`
@@ -29,4 +38,8 @@ export const Logo = styled.div`
   background-size: contain;
   width: 140px;
   height: 60px;
+
+  @media (max-width: 968px) {
+    width: calc(100%);
+  }
 `

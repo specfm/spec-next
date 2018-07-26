@@ -2,8 +2,9 @@
 import * as React from 'react'
 import type { SimplecastEpisode, ConfigPodcast } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
-import { Grid, Title, Timestamp, Description, Divider } from './style'
+import { Grid, Title, Timestamp,Divider } from './style'
 import { getDateObject } from '../../lib/getDateObject'
+import Markdown from '../Markdown'
 
 type Props = {
   episode: SimplecastEpisode,
@@ -30,7 +31,7 @@ class EpisodePreview extends React.Component<Props> {
           </a>
         </RouteLink>
 
-        <Description>{episode.description}</Description>
+        <Markdown>{episode.description}</Markdown>
         <audio src={episode.audio_url} controls preload="none"></audio>
         <Divider />
       </Grid>

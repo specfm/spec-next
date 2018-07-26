@@ -13,4 +13,9 @@ export const Grid = styled.div`
   grid-auto-rows: 1fr;
   grid-gap: 32px;
   max-width: 968px;
+
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
 `

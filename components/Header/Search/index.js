@@ -35,6 +35,12 @@ injectGlobal`
     max-width: 100%;
   }
 
+  @media (max-width: 968px) {
+    .ais-Hits {
+      top: 54px;
+    }
+  }
+
   .ais-Hits-list {
     display: flex;
     flex-direction: column;
@@ -51,6 +57,7 @@ injectGlobal`
     margin: 0;
     border: 0!important;
     box-shadow: none;
+    cursor: pointer;
   }
 
   .ais-Hits-item a {

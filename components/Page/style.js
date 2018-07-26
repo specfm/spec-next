@@ -17,7 +17,17 @@ export const InnerContainer = styled.div`
   justify-content: flex-start;
   flex: 1 0 auto;
   padding-top: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
   position: relative;
+
+  @media (max-width: 968px) {
+    align-items: flex-start; 
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 96px;
+  }
 `
 
 export const SectionHeading = styled.div`
@@ -28,6 +38,12 @@ export const SectionHeading = styled.div`
   margin-top: 72px;
   margin-bottom: 48px;
   max-width: 50%;
+
+  @media (max-width: 968px) {
+    align-items: flex-start;
+    padding: 0 16px;
+    max-width: 100%;
+  }
 `
 
 export const Heading = styled.h3`
@@ -35,6 +51,11 @@ export const Heading = styled.h3`
   font-weight: 700;
   color: ${props => props.theme.text.default};
   text-align: center;
+
+  @media (max-width: 968px) {
+    text-align: left; 
+    max-width: 100%;
+  }
 `
 
 export const Subheading = styled.h4`
@@ -42,6 +63,11 @@ export const Subheading = styled.h4`
   font-weight: 400;
   color: ${props => props.theme.text.tertiary};
   text-align: center;
+  
+  @media (max-width: 968px) {
+    text-align: left;  
+    max-width: 100%;
+  }
 `
 
 export const ScrollToTop = styled.button`
@@ -77,5 +103,10 @@ export const ScrollToTop = styled.button`
 
   .icon {
     transform: rotate(270deg);
+  }
+
+  @media (max-width: 968px) {
+    bottom: 16px;
+    right: 16px;
   }
 `
