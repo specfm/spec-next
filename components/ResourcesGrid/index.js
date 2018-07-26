@@ -41,7 +41,7 @@ class ResourcesGrid extends React.Component<{}> {
 
                 <Content>
                   <Title>Specifics</Title>
-                  <Description>Quick reference guides for design & dev workflow tricks</Description>
+                  <Description>Reference guides for designers</Description>
                   <OutlineButton>Get specific</OutlineButton>
                 </Content>
               </Card>
