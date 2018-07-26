@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { ThemeProvider } from 'styled-components'
 import Header from '../Header'
+import Footer from '../Footer'
 import { theme } from '../theme'
 import { Container, SectionHeading, Heading, Subheading, InnerContainer } from './style'
 
@@ -20,6 +21,7 @@ export default class Page extends React.Component<Props> {
           <InnerContainer>
             {this.props.children}
           </InnerContainer>
+          <Footer />
         </Container>
       </ThemeProvider>
     )
