@@ -24,7 +24,8 @@
     "react-dom": "^16.4.1",
     "react-instantsearch": "^5.2.2",
     "react-markdown": "^3.4.0",
-    "styled-components": "^2.1.0"
+    "styled-components": "^2.1.0",
+    "throttle-debounce": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

@@ -6,6 +6,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 import { theme } from '../theme'
 import { Container, SectionHeading, Heading, Subheading, InnerContainer, ScrollToTop } from './style'
+import { throttle } from 'throttle-debounce';
 
 export { SectionHeading, Heading, Subheading }
 
@@ -19,7 +20,12 @@ type State = {
 }
 
 export default class Page extends React.Component<Props, State> {
-  state = { showHeaderShadow: false, scrollToTopVisible: false }
+  constructor() {
+    super()
+
+    this.state = { showHeaderShadow: false, scrollToTopVisible: false }
+    this.handleScroll = throttle(300, this.handleScroll)
+  }
 
   componentDidMount() {
     window && window.addEventListener('scroll', this.handleScroll);
