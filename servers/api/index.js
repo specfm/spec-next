@@ -6,17 +6,10 @@ const fetch = require('node-fetch');
 const cache = require('micro-cacheable')
 const API_URL_ROOT = 'https://api.simplecast.com/v1'
 const API_KEY = process.env.SIMPLECAST_API_KEY
-const originWhitelist = ['https://spec.fm', 'https://search.spec.fm']
 const cors = microCors({
   origin:
     process.env.NODE_ENV === 'production'
-      ? (origin, cb) => {
-          if (originWhitelist.indexOf(origin) !== -1) {
-            cb(null, true)
-          } else {
-            cb(new Error('Invalid request origin'))
-          }
-        }
+      ? /spec\.fm$/
       : 'http://localhost:3000',
   credentials: true,
 })
