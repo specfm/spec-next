@@ -4,13 +4,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "DEBUG=search* nodemon lib/index.js --exec babel-node",
-    "build": "babel lib -d dist",
-    "start": "node dist/index.js"
+    "build": "babel lib -d build-search",
+    "start": "NODE_ENV=production node build-search/index.js"
   },
   "dependencies": {
     "algoliasearch": "^3.29.0",
+    "babel-polyfill": "^6.26.0",
     "bull": "^3.4.4",
     "ioredis": "^3.2.2",
+    "isomorphic-unfetch": "^2.1.0",
     "remove-markdown": "^0.3.0",
     "stopword": "^0.1.10",
     "toobusy-js": "^0.5.1"
