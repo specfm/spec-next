@@ -50,6 +50,7 @@ export const Dismiss = styled.button`
   border-radius: 18px;
   color: ${props => props.theme.text.tertiary};
   opacity: 0.5;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
@@ -119,7 +120,7 @@ export const SubmitIcon = styled.div`
   align-items: center;
   padding-right: 4px;
   padding-left: 24px;
-  color: ${props => props.theme.brand.default};
+  color: ${props => props.theme.text.default};
   border-radius: 8px;
   background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255, 1) 25%, rgba(255,255,255,1));
 `
