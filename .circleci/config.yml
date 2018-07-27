@@ -24,10 +24,6 @@ aliases:
     name: Setup and build web
     command: yarn run build
 
-  - &build-api
-    name: Build API
-    command: yarn run build:api
-
   - &start-api
     name: Start the API in the background
     command: yarn run start:api:test
@@ -80,7 +76,6 @@ jobs:
       - attach_workspace:
           at: ~/spec-next
       - run: *setup-and-build-web
-      - run: *build-api
       - run: *start-api
       - run: *start-web
       # Wait for the API and webserver to start
