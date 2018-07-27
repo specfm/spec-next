@@ -22,7 +22,7 @@ aliases:
 
   - &setup-and-build-web
     name: Setup and build web
-    command: yarn run build:web
+    command: yarn run build
 
   - &build-api
     name: Build API
