@@ -26,7 +26,7 @@ aliases:
 
   - &start-api
     name: Start the API in the background
-    command: yarn run start:api:test
+    command: yarn run start:api
     background: true
 
   - &start-web
