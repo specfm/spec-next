@@ -83,3 +83,10 @@ export type GetInitialProps = {
   jsonPageRes?: any,
   err?: any,
 }
+
+export type SearchResult = {
+  podcastId: number,
+  title: string,
+  id: number,
+  publishedAt: string,
+}
