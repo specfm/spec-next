@@ -18,8 +18,10 @@ const cors = microCors({
 })
 
 const handler = async (req, res) => {
-  if (!req.url) return send(res, 400, { error: 'Invalid url'})
-  if (!req.url.startsWith('/podcasts')) return send(res, 400, { error: 'Invalid url'})
+  const sendError = (code = 400, error = 'Invalid url') => send(res, code, { error })
+  if (!req.url) return sendError()
+  if (!req.url.startsWith('/podcasts')) return sendError()
+  if (req.url.length === 0 || req.url === '/') return sendError()
 
   const response = await fetch(`${API_URL_ROOT}${req.url}`, {
     method: "GET",
