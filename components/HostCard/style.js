@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components'
+import Img from 'react-image'
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ export const Container = styled.div`
   padding: 16px;
 `
 
-export const Avatar = styled.img`
+export const Avatar = styled(Img)`
   width: 44px;
   height: 44px;
   border-radius: 22px;

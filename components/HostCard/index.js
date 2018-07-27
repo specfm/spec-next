@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import VisibilitySensor from 'react-visibility-sensor'
 import type { Host } from '../../types'
 import Card from '../Card'
 import { Container, Avatar, Name, Username, Meta } from './style'
@@ -15,7 +16,9 @@ class HostCard extends React.Component<Props> {
       <a href={`https://twitter.com/${host.twitterUsername}`} target={"_blank"} rel={'noreferrer noopener'}>
         <Card>
           <Container>
-            <Avatar src={host.profilePhotoUrl} alt={host.name} />
+            <VisibilitySensor>
+              <Avatar src={host.profilePhotoUrl} alt={host.name} />
+            </VisibilitySensor>
             <Meta>
               <Name>{host.name}</Name>
               <Username>@{host.twitterUsername}</Username>

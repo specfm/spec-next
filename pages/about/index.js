@@ -6,10 +6,47 @@ import Page from '../../components/Page'
 import { hosts } from '../../config'
 import { Container, PostHeader, Title, } from '../../components/Blog'
 import HostsGrid from '../../components/HostsGrid'
+import type { Host } from '../../types'
 
-class Post extends React.Component<{}> {
-  render() {
+type State = {
+  shuffledHosts: ?Array<Host>
+}
+
+class Post extends React.Component<{}, State> {
+  state = { 
+    // $FlowFixMe
+    shuffledHosts: null 
+  }
+  
+  componentDidMount() {
+    const shuffle = (array: Array<Host>): Array<Host> => {
+      let currentIndex = array.length, temporaryValue, randomIndex;
+  
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+  
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+  
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+  
+      return array;
+    }
+
     const hostsArray = Object.keys(hosts).map(key => hosts[key])
+
+    this.setState({
+      shuffledHosts: shuffle(hostsArray)
+    })
+  }
+
+  render() {
+    const { shuffledHosts } = this.state
 
     return (
       <Page showEmailCapture={false} dataCy="about-view">
@@ -59,7 +96,10 @@ class Post extends React.Component<{}> {
 
         <div style={{padding: '16px 0'}} />
 
-        <HostsGrid cols={4} hosts={hostsArray} />
+        {
+          shuffledHosts &&
+          <HostsGrid cols={4} hosts={shuffledHosts} />
+        }
       </Page>
     )
   }
