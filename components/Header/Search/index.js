@@ -1,5 +1,4 @@
 // @flow
-require('./style-algolia')
 import * as React from 'react'
 import { Container, AlgoliaLogo } from './style'
 import { InstantSearch, Hits } from 'react-instantsearch-dom';
