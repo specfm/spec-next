@@ -30,9 +30,8 @@ const handler = async (req, res) => {
 	return json;
 };
 
-const fn = cors(handler)
 const result = process.env.NODE_ENV === 'production'
-  ? cache(60 * 60 * 1000, fn)
-  : fn
+  ? cache(60 * 60 * 1000, handler)
+  : handler
 
-module.exports = result
+module.exports = cors(result)
