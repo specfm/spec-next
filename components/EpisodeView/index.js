@@ -24,7 +24,7 @@ class EpisodeView extends React.Component<Props> {
     const datestring = `${month} ${day}, ${year}`
 
     return (
-      <Grid>
+      <Grid data-cy="episode-view">
 
         <Head>
           <title>Spec · {podcast.name} · {episode.title}</title>
@@ -78,7 +78,7 @@ class EpisodeView extends React.Component<Props> {
 
           <EpisodeShareButtons episode={episode} podcast={podcast} />
 
-          <audio src={episode.audio_url} controls preload="none"></audio>
+          <audio data-cy="episode-player" src={episode.audio_url} controls preload="none"></audio>
 
           <Markdown>
             {episode.long_description}

@@ -21,7 +21,7 @@ class PodcastView extends React.Component<Props> {
     const { podcast, episodes } = this.props
 
     return (
-      <Grid>
+      <Grid data-cy="podcast-view">
 
         <Head>
           <title>Spec · {podcast.name}</title>

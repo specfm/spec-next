@@ -34,7 +34,7 @@ class Podcasts extends React.Component<Props> {
 
     if (podcasts) {
       return (
-        <Page>
+        <Page dataCy={'podcasts-view'}>
           {this.renderHead()}
 
           <SectionHeading>

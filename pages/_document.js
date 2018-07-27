@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/static/meta/site.webmanifest" />
           <link rel="mask-icon" href="/static/meta/safari-pinned-tab.svg" color="#212325" />
           <meta name="msapplication-TileColor" content="#ffffff" />
-          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script

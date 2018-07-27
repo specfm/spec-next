@@ -10,7 +10,7 @@ import { Grid, Section, Number, Label, ButtonContainer } from './style'
 export default class Sponsors extends React.Component<{}> {
   render() {
     return (
-      <Page showEmailCapture={false}>
+      <Page showEmailCapture={false} dataCy="sponsors-view">
 
         <Head>
           <title>Spec · Sponsors</title>

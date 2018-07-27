@@ -7,7 +7,7 @@ import SpecificsGrid from '../../components/SpecificsGrid'
 class Specifics extends React.Component<{}> {
   render() {
     return (
-      <Page>
+      <Page dataCy="specifics-view">
         <Head>
           <title>Spec · Specifics</title>
           <meta content={"Spec · Specifics"} name="og:title" />

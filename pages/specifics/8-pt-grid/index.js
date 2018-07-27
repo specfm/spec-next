@@ -7,7 +7,7 @@ import { ShareButtons, Notice, WarnNotice, Container, HeaderImage, PostHeader, T
 class Post extends React.Component<{}> {
   render() {
     return (
-      <Page>
+      <Page dataCy="specifics-8pt-grid">
 
         <Head>
           <title>Spec · 8-Point Grid</title>

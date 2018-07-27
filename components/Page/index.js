@@ -15,6 +15,7 @@ export { SectionHeading, Heading, Subheading }
 type Props = {
   children: React.Node,
   showEmailCapture?: boolean,
+  dataCy?: string,
 }
 
 type State = {
@@ -69,12 +70,12 @@ export default class Page extends React.Component<Props, State> {
   }
 
   render() {
-    const { showEmailCapture = true } = this.props
+    const { showEmailCapture = true, dataCy } = this.props
     const { showHeaderShadow, scrollToTopVisible } = this.state
 
     return (
       <ThemeProvider theme={theme}>
-        <Container>
+        <Container data-cy={dataCy}>
           <Header showHeaderShadow={showHeaderShadow}/>
           <InnerContainer>
             {

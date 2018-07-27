@@ -16,7 +16,7 @@ class EpisodesGrid extends React.Component<Props> {
     if (!episodes) return null
 
     return (
-      <Grid>
+      <Grid data-cy="episodes-list">
         {
           episodes.filter(episode => episode.published).map(episode => {
             return <EpisodePreview podcast={podcast} episode={episode} key={episode.id} />

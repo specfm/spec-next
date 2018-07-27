@@ -56,7 +56,7 @@ class Podcast extends React.Component<Props> {
     } 
 
     return (
-      <Page>
+      <Page dataCy={'invalid-podcast-view'}>
         <SectionHeading>
           <Heading>Podcasts</Heading>
           <Subheading>Level up by listening to podcasts from the best in the industry</Subheading>

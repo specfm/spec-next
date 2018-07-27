@@ -12,7 +12,7 @@ class Post extends React.Component<{}> {
     const hostsArray = Object.keys(hosts).map(key => hosts[key])
 
     return (
-      <Page showEmailCapture={false}>
+      <Page showEmailCapture={false} dataCy="about-view">
 
         <Head>
           <title>Spec · Level Up</title>

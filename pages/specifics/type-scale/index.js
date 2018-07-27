@@ -7,7 +7,7 @@ import { ShareButtons, Container, HeaderImage, PostHeader, Title, Subtitle, Divi
 class Post extends React.Component<{}> {
   render() {
     return (
-      <Page>
+      <Page dataCy="specifics-type-scale">
 
         <Head>
           <title>Spec · Typographic Scales</title>

@@ -21,7 +21,7 @@ class Index extends React.Component<Props> {
   render() {
     const { podcasts } = this.props
     return (
-      <Page>
+      <Page dataCy={'home-view'}>
         <Head>
           <title>Spec · Level Up</title>
           <meta content={"Spec · Level Up"} name="og:title" />
