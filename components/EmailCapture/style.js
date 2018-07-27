@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 968px;
-  margin-top: 32px;
+  margin-top: 48px;
   background: ${props => tint(props.theme.bg.wash, -4)};
   padding: 10px 10px 10px 16px;
   border-radius: 8px;
