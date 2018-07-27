@@ -10,10 +10,10 @@ class Specifics extends React.Component<{}> {
       <Page dataCy="specifics-view">
         <Head>
           <title>Spec · Specifics</title>
-          <meta content={"Spec · Specifics"} name="og:title" />
-          <meta content={"Reference guides for designers and developers"} name="og:description" />
-          <meta content="/static/img/specifics/001-header.png" name="og:image" />
-          <meta content={"Spec · Specifics"} name="twitter:title" />
+          <meta content={"Spec · Specifics"} name="og:title" key="og:title" />
+          <meta content={"Reference guides for designers and developers"} name="og:description" key="og:description" />
+          <meta content="/static/img/specifics/001-header.png" name="og:image" key="og:image" />
+          <meta content={"Spec · Specifics"} name="twitter:title" key="twitter:title" />
         </Head>
       
         <SectionHeading>

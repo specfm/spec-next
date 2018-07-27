@@ -21,10 +21,10 @@ class Podcasts extends React.Component<Props> {
     return (
       <Head>
         <title>Spec · Podcasts</title>
-        <meta content={"Spec · Podcasts"} name="og:title" />
-        <meta content={"Level up by listening to podcasts from the best in the industry"} name="og:description" />
-        <meta content="/static/img/shows/developertea" name="og:image" />
-        <meta content={"Spec · Podcasts"} name="twitter:title" />
+        <meta content={"Spec · Podcasts"} name="og:title" key="og:title" />
+        <meta content={"Level up by listening to podcasts from the best in the industry"} name="og:description" key="og:description" />
+        <meta content="/static/img/shows/developertea" name="og:image" key="og:image" />
+        <meta content={"Spec · Podcasts"} name="twitter:title" key="og:image" />
       </Head>
     )
   }

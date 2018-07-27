@@ -16,9 +16,9 @@ class Post extends React.Component<{}> {
 
         <Head>
           <title>Spec · Level Up</title>
-          <meta content={"Spec · Level Up"} name="og:title" />
-          <meta content={"Podcasts and resources to help designers and developers level up"} name="og:description" />
-          <meta content={"Spec · Level Up"} name="twitter:title" />
+          <meta content={"Spec · Level Up"} name="og:title" key="og:title" />
+          <meta content={"Podcasts and resources to help designers and developers level up"} name="og:description" key="og:description" />
+          <meta content={"Spec · Level Up"} name="twitter:title" key="twitter:title" />
         </Head>
 
         <Container style={{paddingTop: '88px'}}>

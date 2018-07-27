@@ -11,10 +11,10 @@ class Post extends React.Component<{}> {
 
         <Head>
           <title>Spec · 8-Point Grid</title>
-          <meta content={"Spec · 8-Point Grid"} name="og:title" />
-          <meta content={"Using multiples of 8 to define dimensions, padding, and margin of elements"} name="og:description" />
-          <meta content="/static/img/specifics/001-header.png" name="og:image" />
-          <meta content={"Spec · 8-Point Grid"} name="twitter:title" />
+          <meta content={"Spec · 8-Point Grid"} name="og:title" key="og:title" />
+          <meta content={"Using multiples of 8 to define dimensions, padding, and margin of elements"} name="og:description" key="og:description" />
+          <meta content="/static/img/specifics/001-header.png" name="og:image" key="og:image" />
+          <meta content={"Spec · 8-Point Grid"} name="twitter:title" key="twitter:title" />
         </Head>
 
         <Container>

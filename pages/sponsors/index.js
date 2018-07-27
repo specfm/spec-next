@@ -14,9 +14,9 @@ export default class Sponsors extends React.Component<{}> {
 
         <Head>
           <title>Spec · Sponsors</title>
-          <meta content={"Spec · Sponsors"} name="og:title" />
-          <meta content={"If you’re hiring, launching a new product, managing an event, or doing anything else to help designers and developers level up, we’d love to help"} name="og:description" />
-          <meta content={"Spec · Sponsors"} name="twitter:title" />
+          <meta content={"Spec · Sponsors"} name="og:title" key="og:title" />
+          <meta content={"If you’re hiring, launching a new product, managing an event, or doing anything else to help designers and developers level up, we’d love to help"} name="og:description" key="og:description" />
+          <meta content={"Spec · Sponsors"} name="twitter:title" key="twitter:title" />
         </Head>
 
         <Container style={{paddingTop: '88px'}}>

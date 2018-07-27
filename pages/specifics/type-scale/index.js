@@ -11,10 +11,10 @@ class Post extends React.Component<{}> {
 
         <Head>
           <title>Spec · Typographic Scales</title>
-          <meta content={"Spec · Typographic Scales"} name="og:title" />
-          <meta content={"Consistent typography using simple math"} name="og:description" />
-          <meta content="/static/img/specifics/002-header.png" name="og:image" />
-          <meta content={"Spec · Typographic Scales"} name="twitter:title" />
+          <meta content={"Spec · Typographic Scales"} name="og:title" key="og:title" />
+          <meta content={"Consistent typography using simple math"} name="og:description" key="og:description" />
+          <meta content="/static/img/specifics/002-header.png" name="og:image" key="og:image" />
+          <meta content={"Spec · Typographic Scales"} name="twitter:title" key="twitter:title" />
         </Head>
 
         <Container>
