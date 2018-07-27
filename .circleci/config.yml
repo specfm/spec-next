@@ -20,6 +20,7 @@ aliases:
     |
       yarn
       yarn add global micro
+      cd ./servers/api && yarn && cd ../..
 
   - &setup-and-build-web
     name: Setup and build web
@@ -85,6 +86,16 @@ jobs:
           name: Run E2E Tests
           command: yarn run test:e2e
 
+  # Run eslint, flow etc.
+  test_static_js:
+    <<: *js_defaults
+    steps:
+      - attach_workspace:
+          at: ~/spectrum
+      - run:
+          name: Run Flow
+          command: yarn run flow
+
 workflows:
   version: 2
 
@@ -93,5 +104,8 @@ workflows:
       - checkout_environment
       
       - test_web:
+          requires:
+            - checkout_environment
+      - test_static_js:
           requires:
             - checkout_environment
