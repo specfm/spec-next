@@ -4,10 +4,12 @@
   "scripts": {
     "dev:web": "node server.js",
     "dev:api": "(cd servers/api && yarn run dev)",
-    "dev:search": "(cd servers/search && yarn run start)",
+    "dev:search": "(cd servers/search && yarn run dev)",
     "build": "next build",
+    "build:search": "(cd servers/search && yarn run build)",
     "start": "NODE_ENV=production node server.js",
     "start:api": "(cd servers/api && yarn run start)",
+    "start:search": "(cd servers/search && yarn run start)",
     "flow": "flow",
     "flow start": "flow start",
     "flow stop": "flow stop",

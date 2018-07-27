@@ -21,10 +21,15 @@ aliases:
       yarn
       yarn add global micro
       cd ./servers/api && yarn && cd ../..
+      cd ./servers/search && yarn && cd ../../
 
   - &setup-and-build-web
     name: Setup and build web
     command: yarn run build
+
+  - &setup-and-build-search
+    name: Setup and build search
+    command: yarn run build:search
 
   - &start-api
     name: Start the API in the background

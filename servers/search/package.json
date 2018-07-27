@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=search* nodemon lib/index.js --exec babel-node",
+    "dev": "DEBUG=search* nodemon lib/index.js --exec babel-node",
     "build": "babel lib -d dist",
-    "serve": "node dist/index.js"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "algoliasearch": "^3.29.0",
