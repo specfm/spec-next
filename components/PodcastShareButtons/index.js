@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import type { ConfigPodcast } from '../../types'
-import { ButtonRow, FacebookButton, TwitterButton, CopyLinkButton } from '../Button'
+import { FacebookButton, TwitterButton, CopyLinkButton } from '../Button'
 import { Container } from './style'
 
 type Props = {
@@ -14,7 +14,6 @@ class PodcastShareButtons extends React.Component<Props> {
 
     return (
       <Container>
-        <ButtonRow>
         <a
           href={`https://www.facebook.com/sharer/sharer.php?u=https://spec.fm/podcasts/${podcast.slug}`}
           target="_blank"
@@ -35,10 +34,9 @@ class PodcastShareButtons extends React.Component<Props> {
           </TwitterButton>
         </a>
 
-          <CopyLinkButton text={`https://spec.fm/podcasts/${podcast.slug}`}>
-            Copy
-          </CopyLinkButton>
-        </ButtonRow>
+        <CopyLinkButton text={`https://spec.fm/podcasts/${podcast.slug}`}>
+          Copy
+        </CopyLinkButton>
       </Container>
     )
   }
