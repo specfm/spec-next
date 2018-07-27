@@ -58,6 +58,9 @@ jobs:
 
       - restore-cache: *restore-yarn-cache
       - run: *yarn
+      - run:
+          name: install micro
+          command: yarn global add micro
       - save-cache: *save-yarn-cache
 
       - persist_to_workspace:
