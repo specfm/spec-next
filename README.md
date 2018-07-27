@@ -9,7 +9,7 @@ Clone the repository:
 `cd spec-next`
 
 Install dependencies for the web and api:
-`yarn && cd api && yarn && cd ../`
+`yarn && cd servers/api && yarn && cd ../..`
 
 Start the api:
 `yarn run dev:api`
