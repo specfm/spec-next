@@ -8,11 +8,7 @@ const API_KEY = process.env.SIMPLECAST_API_KEY
 const cors = microCors({
   origin:
     process.env.NODE_ENV === 'production'
-      ? [
-          'https://spec.fm',
-          /specfm-next-(\w|-)+\.now\.sh/g,
-          /spec\.fm$/,
-        ]
+      ? 'https://spec.fm'
       : 'http://localhost:3000',
   credentials: true,
 })
