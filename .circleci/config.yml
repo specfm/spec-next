@@ -19,7 +19,7 @@ aliases:
   - &yarn
     |
       yarn
-      yarn add global micro
+      yarn add global micro-dev
       cd ./servers/api && yarn && cd ../..
       cd ./servers/search && yarn && cd ../../
 
@@ -33,7 +33,7 @@ aliases:
 
   - &start-api
     name: Start the API in the background
-    command: yarn run start:api
+    command: yarn run dev:api
     background: true
 
   - &start-web
