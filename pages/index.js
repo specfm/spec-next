@@ -35,7 +35,10 @@ class Index extends React.Component<Props> {
           <Subheading>Level up by listening to podcasts from the best in the industry</Subheading>
         </SectionHeading>
 
-        <PodcastGrid podcasts={podcasts} />
+        {
+          podcasts &&
+          <PodcastGrid podcasts={podcasts} />
+        }
 
         <SectionHeading>
           <Heading>Resources</Heading>
