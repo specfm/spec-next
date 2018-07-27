@@ -18,7 +18,7 @@ class Post extends React.Component<{}> {
         </Head>
 
         <Container>
-          <HeaderImage src={'/static/img/specifics/001-header.png'} />
+          <HeaderImage src={'/static/img/specifics/001-header.png'} alt={'8-Point Grid'} />
 
           <PostHeader>
             <Title>The 8-Point Grid</Title>

@@ -18,7 +18,7 @@ class Post extends React.Component<{}> {
         </Head>
 
         <Container>
-          <HeaderImage src={'/static/img/specifics/002-header.png'} />
+          <HeaderImage src={'/static/img/specifics/002-header.png'} alt={'Typographic scales'} />
 
           <PostHeader>
             <Title>Typographic Scales</Title>

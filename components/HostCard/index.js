@@ -15,7 +15,7 @@ class HostCard extends React.Component<Props> {
       <a href={`https://twitter.com/${host.twitterUsername}`} target={"_blank"} rel={'noreferrer noopener'}>
         <Card>
           <Container>
-            <Avatar src={host.profilePhotoUrl} />
+            <Avatar src={host.profilePhotoUrl} alt={host.name} />
             <Meta>
               <Name>{host.name}</Name>
               <Username>@{host.twitterUsername}</Username>

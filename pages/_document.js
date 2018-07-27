@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
 
   render () {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>Spec · Level Up</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,20 +26,23 @@ export default class MyDocument extends Document {
           <meta content={"Spec · Level Up"} name="twitter:title" />
           <meta name="og:type" content="website" />
           <meta name="og:site_name" content="Spec" />
-          <link href={'/static/normalize.css'} rel="stylesheet" />
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css" />
+          <meta name="theme-color" content={"#212325"} />
+          <meta name="description" content="Podcasts and resources to help designers and developers level up"/>
           <link rel="apple-touch-icon" sizes="180x180" href="static/meta/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/meta/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/meta/favicon-16x16.png" />
           <link rel="manifest" href="/static/meta/site.webmanifest" />
           <link rel="mask-icon" href="/static/meta/safari-pinned-tab.svg" color="#212325" />
           <meta name="msapplication-TileColor" content="#ffffff" />
-
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css" />
+          <link href={'/static/normalize.css'} rel="stylesheet" />
+          {this.props.styleTags}
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
                 __html: `
@@ -49,12 +52,6 @@ export default class MyDocument extends Document {
               gtag('config', '${GA_TRACKING_ID}');
             `}}
           />
-
-          {this.props.styleTags}
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
         </body>
       </html>
     )

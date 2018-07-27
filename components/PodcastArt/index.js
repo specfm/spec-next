@@ -4,17 +4,18 @@ import Card from '../Card'
 import { BlurredArt, Art } from './style'
 
 type Props = {
-  src: string
+  src: string,
+  alt: string
 }
 
 class PodcastArt extends React.Component<Props> {
   render() {
-    const { src } = this.props
+    const { src, alt } = this.props
 
     return (
       <Card>
-        <BlurredArt src={src} />
-        <Art src={src} />
+        <BlurredArt src={src} alt={alt} />
+        <Art src={src} alt={alt} />
       </Card>
     )
   }

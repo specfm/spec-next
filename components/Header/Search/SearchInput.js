@@ -12,6 +12,7 @@ const MySearchBox = ({ currentRefinement, refine, onChange, showHeaderShadow }: 
     onChange={e => { onChange(e); refine(e.target.value) }}
     placeholder={"Search for shows and episodes..."}
     showHeaderShadow={showHeaderShadow}
+    aria-label={'Search'}
   />;
 
 const ConnectedSearchBox = connectSearchBox(MySearchBox);

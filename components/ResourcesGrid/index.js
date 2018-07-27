@@ -12,7 +12,7 @@ class ResourcesGrid extends React.Component<{}> {
         <Grid>
           <a href="http://littlebitesofcocoa.com/" target="_blank" rel="noopener noreferrer" data-cy="resource-lbc">
             <Card>
-              <Art src={'/static/img/lbc.png'} />
+              <Art src={'/static/img/resources/lbc.png'} alt={'Little Bites of Cocoa'} />
 
               <Content>
                 <Title>Little Bites of Cocoa</Title>
@@ -24,7 +24,7 @@ class ResourcesGrid extends React.Component<{}> {
 
           <a href="http://www.brianlovin.com/design-details/" target="_blank" rel="noopener noreferrer" data-cy="resource-ddblog">
             <Card>
-              <Art src={'/static/img/dd.png'} />
+              <Art src={'/static/img/resources/dd.png'} alt={'Design Details Blog'} />
 
               <Content>
                 <Title>Design Details Blog</Title>
@@ -37,7 +37,7 @@ class ResourcesGrid extends React.Component<{}> {
           <Link href={'/specifics'}>
             <a data-cy="resource-specifics">
               <Card>
-                <Art src={'/static/img/specifics.png'} />
+                <Art src={'/static/img/resources/specifics.png'} alt={'Specifics'} />
 
                 <Content>
                   <Title>Specifics</Title>

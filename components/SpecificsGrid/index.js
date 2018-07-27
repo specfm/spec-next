@@ -13,7 +13,7 @@ class SpecificsGrid extends React.Component<{}> {
           <Link href={'/specifics/type-scale'}>
             <a>
               <Card>
-                <Art src={'/static/img/specifics/002-header.png'} />
+                <Art src={'/static/img/specifics/002-header.png'} alt={'Typographic Scales'} />
 
                 <Content>
                   <Title>Typographic Scales</Title>
@@ -27,7 +27,7 @@ class SpecificsGrid extends React.Component<{}> {
           <Link href={'/specifics/8-pt-grid'}>
             <a>
               <Card>
-                <Art src={'/static/img/specifics/001-header.png'} />
+                <Art src={'/static/img/specifics/001-header.png'} alt={'8-pt Grid'} />
 
                 <Content>
                   <Title>The 8-Point Grid</Title>

@@ -40,7 +40,7 @@ class EpisodeView extends React.Component<Props> {
         <Sidebar>
           <RouteLink route='podcast' params={{ slug: podcast.slug }}>
             <a>
-              <PodcastArt src={podcast.artworkUrl} />
+              <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
             </a>
           </RouteLink>
           

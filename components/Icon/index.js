@@ -103,9 +103,8 @@ class Icon extends React.Component<Props> {
           viewBox="0 0 32 32"
           preserveAspectRatio="xMidYMid meet"
           fit
-          id={glyph}
         >
-          <title id="title">{glyph}</title>
+          <title>{glyph}</title>
           <Glyph glyph={glyph} />
         </InlineSvg>
       </SvgWrapper>

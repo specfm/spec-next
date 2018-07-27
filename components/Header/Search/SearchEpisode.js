@@ -26,7 +26,7 @@ class SearchEpisode extends React.Component<Props> {
       <RouteLink route='episode' params={{ slug: podcast.slug, episodeId: episode.id }}>
         <a>
           <SearchEpisodeContainer>
-            <Artwork src={podcast.artworkUrl} />
+            <Artwork src={podcast.artworkUrl} alt={podcast.name} />
             <Meta>
               <Title>{episode.title}</Title>
               <Timestamp>{datestring}</Timestamp>

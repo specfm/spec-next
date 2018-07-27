@@ -23,7 +23,7 @@ class SponsorGrid extends React.Component<{}> {
             <a key={sponsor.name} href={sponsor.url} onClick={() => this.track(sponsor.name, sponsor.url)} target={"_blank"} rel={"noopener noreferrer"}>
               <Card>
                 <LogoContainer>
-                  <Logo src={sponsor.logoUrl} />
+                  <Logo src={sponsor.logoUrl} alt={sponsor.name} />
                 </LogoContainer>
               </Card>
             </a>

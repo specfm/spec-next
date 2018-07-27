@@ -48,7 +48,7 @@ class Search extends React.Component<Props, State> {
       <SearchContext.Provider value={context}>
         <Container>
           <OutsideClickHandler onOutsideClick={this.clear} style={{width:'100%'}}>
-            { value && <a href="https://algolia.com" target="_blank" rel="noopener noreferrer"><AlgoliaLogo src={'/static/img/algolia.svg'}/></a> }
+            { value && <a href="https://algolia.com" target="_blank" rel="noopener noreferrer"><AlgoliaLogo src={'/static/img/algolia.svg'} alt="Search by Algolia"/></a> }
             <InstantSearch
               appId={ALGOLIA_APP_ID}
               apiKey={ALGOLIA_SEARCH_KEY}

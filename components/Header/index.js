@@ -17,7 +17,7 @@ class Header extends React.Component<Props> {
       <Container showHeaderShadow={showHeaderShadow}>
         <Link href={'/'}>
           <a style={{display:'flex',alignItems:'center'}}>
-            <Logo src={'/static/img/logo.svg'} />
+            <Logo src={'/static/img/logo.svg'} alt="Home" />
           </a>
         </Link>
 

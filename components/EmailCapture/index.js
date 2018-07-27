@@ -45,15 +45,15 @@ class EmailCapture extends React.Component<{}, State> {
                 <div id="mc_embed_signup_scroll">
               
                   <Field className="mc-field-group">
-                    <EmailInput type="email" placeholder="Your email address" name="EMAIL" className="required email" id="mce-EMAIL" />
-                    <Submit type="submit" value="" name="subscribe" id="mc-embedded-subscribe" />
+                    <EmailInput type="email" aria-label={'Your email address'} placeholder="Your email address" name="EMAIL" className="required email" id="mce-EMAIL" />
+                    <Submit type="submit" aria-label={'Submit'} aria-hidden value="" name="subscribe" id="mc-embedded-subscribe" />
                     <SubmitIcon>
                       <Icon glyph="view-forward" size={24} />
                     </SubmitIcon>
                   </Field>
 
                   <div style={{position: 'absolute', left: '-5000px'}}>
-                    <input type="text" name="b_bb74fc37bb01e808269590267_171da5009e" tabIndex="-1" value="" />
+                    <input type="text" aria-hidden name="b_bb74fc37bb01e808269590267_171da5009e" tabIndex="-1" value="" />
                   </div>
                   
                   <div className="response" id="mce-error-response" style={{display:'none'}} />

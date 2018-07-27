@@ -15,7 +15,7 @@ export default class PodcastCard extends React.Component<Props> {
     if (podcast.slug === 'layout') {
       return (
         <a data-cy="layout-podcast" href={"https://layout.fm"} target={"_blank"} rel={"noopener noreferrer"}>
-          <PodcastArt src={podcast.artworkUrl} />
+          <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
         </a>
       )
     }
@@ -23,7 +23,7 @@ export default class PodcastCard extends React.Component<Props> {
     return (
       <RouteLink key={podcast.id} route='podcast' params={{ slug: podcast.slug }}>
         <a data-cy={`${podcast.slug}-podcast`}>
-          <PodcastArt src={podcast.artworkUrl} />
+          <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
         </a>
       </RouteLink>
     )
