@@ -19,7 +19,7 @@ aliases:
   - &yarn
     |
       yarn
-      yarn add global micro-dev
+      yarn add global micro
       cd ./servers/api && yarn && cd ../..
 
   - &setup-and-build-web
