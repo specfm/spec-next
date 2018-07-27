@@ -250,7 +250,7 @@ export default [
   {
     name: "Mapbox",
     url: "http://www.mapbox.com/android",
-    logoUrl: "/static/img/sponsors/mapbox.svg",
+    logoUrl: "/static/img/sponsors/mapbox.png",
   },
 
   {
@@ -334,7 +334,7 @@ export default [
   {
     name: "Code School",
     url: "https://codeschool.com",
-    logoUrl: "/static/img/sponsors/codeschool.svg",
+    logoUrl: "/static/img/sponsors/codeschool.png",
   },
 
   {
@@ -394,7 +394,7 @@ export default [
   {
     name: "Zendesk",
     url: "https://www.zendesk.com/in-app-customer-service/?utm_medium=display&utm_source=specfm&utm_campaign=Little%2BBites%2BCocoa",
-    logoUrl: "/static/img/sponsors/zendesk.svg",
+    logoUrl: "/static/img/sponsors/zendesk.png",
   },
 
   {
