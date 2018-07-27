@@ -38,7 +38,7 @@ aliases:
 
   - &start-web
     name: Start web client in the background
-    command: yarn run start
+    command: yarn run dev:web
     background: true
 
 defaults: &defaults
