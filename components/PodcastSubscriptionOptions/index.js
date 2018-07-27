@@ -73,7 +73,7 @@ class PodcastSubscriptionOptions extends React.Component<Props> {
           <a href={podcast.breakerUrl} target={"_blank"} rel={"noopener noreferrer"} data-cy="subscription-breaker">
             <Option>
               <Avatar src={'/static/img/subscription_icons/breaker.png'} alt={'Breakrer'} />
-              <Label>Breakder</Label>
+              <Label>Breaker</Label>
               <Arrow />
             </Option>
           </a>
