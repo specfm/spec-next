@@ -3,6 +3,7 @@ require('now-env')
 const microCors = require('micro-cors')
 const { send } = require('micro')
 const fetch = require('node-fetch');
+const cache = require('micro-cacheable')
 const API_URL_ROOT = 'https://api.simplecast.com/v1'
 const API_KEY = process.env.SIMPLECAST_API_KEY
 const cors = microCors({
@@ -29,4 +30,9 @@ const handler = async (req, res) => {
 	return json;
 };
 
-module.exports = cors(handler)
+const fn = cors(handler)
+const result = process.env.NODE_ENV === 'production'
+  ? cache(60 * 60 * 1000, fn)
+  : fn
+
+module.exports = result

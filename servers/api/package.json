@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "micro": "latest",
+    "micro-cacheable": "^2.0.1",
     "micro-cors": "^0.1.0",
     "node-fetch": "latest"
   },
