@@ -25,10 +25,10 @@
     "react-clipboard.js": "^2.0.0",
     "react-dom": "^16.4.1",
     "react-instantsearch": "^5.2.2",
-    "react-markdown": "^3.4.0",
+    "react-markdown": "^3.4.1",
     "serve-favicon": "^2.5.0",
     "styled-components": "^2.1.0",
-    "throttle-debounce": "^2.0.0"
+    "throttle-debounce": "^2.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -44,5 +44,7 @@
     "now-env": "^3.1.0"
   },
   "license": "ISC",
-  "engines" : { "node" : ">=9.10.0" }
+  "engines": {
+    "node": ">=9.10.0"
+  }
 }
