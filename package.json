@@ -44,8 +44,5 @@
     "flow-bin": "^0.77.0",
     "now-env": "^3.1.0"
   },
-  "license": "ISC",
-  "engines": {
-    "node": ">=9.10.0"
-  }
+  "license": "ISC"
 }
