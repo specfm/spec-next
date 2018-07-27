@@ -24,8 +24,6 @@ export default class MyApp extends App {
           <meta name="description" content="Podcasts and resources to help designers and developers level up"/>
 
           <link rel="apple-touch-icon" sizes="180x180" href="static/meta/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/static/meta/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/static/meta/favicon-16x16.png" />
           <link rel="manifest" href="/static/meta/site.webmanifest" />
           <link rel="mask-icon" href="/static/meta/safari-pinned-tab.svg" color="#212325" />
           <meta name="msapplication-TileColor" content="#ffffff" />

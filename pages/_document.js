@@ -18,6 +18,8 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/meta/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/meta/favicon-16x16.png" />
           {this.props.styleTags}
         </Head>
         <body>
