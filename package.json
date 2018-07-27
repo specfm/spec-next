@@ -7,6 +7,7 @@
     "dev:search": "(cd servers/search && yarn run start)",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
+    "start:api": "(cd servers/api && yarn run start)",
     "flow": "flow",
     "flow start": "flow start",
     "flow stop": "flow stop",
