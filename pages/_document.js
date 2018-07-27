@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
           <meta content={"Podcasts and resources to help designers and developers level up"} name="og:description" key="og:description" />
           <meta content={"Spec · Level Up"} name="twitter:title" key="twitter:title" />
           <meta name="og:type" content="website" key="og:type" />
-          <meta name="og:image" content="/static/og-image.jpg" key="og:image" />
+          <meta name="og:image" content="https://spec.fm/static/og-image.jpg" key="og:image" />
           <meta name="og:site_name" content="Spec" key="og:site_name" />
           <meta name="theme-color" content="#212325" key="theme-color" />
           <meta name="description" content="Podcasts and resources to help designers and developers level up"/>
