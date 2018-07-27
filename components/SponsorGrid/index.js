@@ -20,7 +20,7 @@ class SponsorGrid extends React.Component<{}> {
       <Grid>
         {sponsors.map(sponsor => {
           return (
-            <a key={sponsor.name} href={sponsor.url} onClick={() => this.track(sponsor.name, sponsor.url)} target={"_blank"} rel={"noopener noreferrer"}>
+            <a key={sponsor.name} href={sponsor.url} onClick={() => this.track(sponsor.name, sponsor.url)} aria-label={sponsor.name} target={"_blank"} rel={"noopener noreferrer"}>
               <Card>
                 <LogoContainer>
                   <Logo src={sponsor.logoUrl} alt={sponsor.name} />

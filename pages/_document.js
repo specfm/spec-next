@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/static/meta/site.webmanifest" />
           <link rel="mask-icon" href="/static/meta/safari-pinned-tab.svg" color="#212325" />
           <meta name="msapplication-TileColor" content="#ffffff" />
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css" />
           <link href={'/static/normalize.css'} rel="stylesheet" />
           {this.props.styleTags}
         </Head>
