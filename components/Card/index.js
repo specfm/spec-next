@@ -3,12 +3,14 @@ import * as React from 'react'
 import { StyledCard } from './style'
 
 type Props = {
-  children: React.Node
+  children: React.Node,
+  style?: Object,
 }
 
 class Card extends React.Component<Props> {
   render() {
-    return <StyledCard>{this.props.children}</StyledCard>
+    const { style } = this.props
+    return <StyledCard style={style}>{this.props.children}</StyledCard>
   }
 }
 

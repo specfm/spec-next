@@ -4,6 +4,7 @@ import { sponsors } from '../../config'
 import Card from '../Card'
 import { Grid, LogoContainer, Logo } from './style'
 import * as gtag from '../../lib/gtag'
+import VisibilitySensor from 'react-visibility-sensor'
 
 class SponsorGrid extends React.Component<{}> {
   track = (name: string, url: string) => {
@@ -20,13 +21,15 @@ class SponsorGrid extends React.Component<{}> {
       <Grid>
         {sponsors.map(sponsor => {
           return (
-            <a key={sponsor.name} href={sponsor.url} onClick={() => this.track(sponsor.name, sponsor.url)} aria-label={sponsor.name} target={"_blank"} rel={"noopener noreferrer"}>
-              <Card>
-                <LogoContainer>
-                  <Logo src={sponsor.logoUrl} alt={sponsor.name} />
-                </LogoContainer>
-              </Card>
-            </a>
+            <VisibilitySensor key={sponsor.name}>
+              <a href={sponsor.url} onClick={() => this.track(sponsor.name, sponsor.url)} aria-label={sponsor.name} target={"_blank"} rel={"noopener noreferrer"}>
+                <Card style={{height:'100%'}}>
+                  <LogoContainer>
+                    <Logo src={sponsor.logoUrl} alt={sponsor.name} />
+                  </LogoContainer>
+                </Card>
+              </a>
+            </VisibilitySensor>
           )
         })}
       </Grid>

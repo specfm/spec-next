@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components'
+import Img from 'react-image'
 
 export const Container = styled.div`
   display: flex;
@@ -29,17 +30,14 @@ export const LogoContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 32px;
+  height: 100%;
 `
 
-export const Logo = styled.div`
-  background-image: url("${props => props.src}");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 140px;
-  height: 60px;
+export const Logo = styled(Img)`
+  max-height: 60px;
+  max-width: 140px;
 
   @media (max-width: 968px) {
-    width: calc(100%);
+    max-width: calc(100%);
   }
 `
