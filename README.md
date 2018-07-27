@@ -19,3 +19,6 @@ In another terminal window, start the client:
 
 Open the site:
 `localhost:3000`
+
+To run cypress tests:
+`yarn run cypress:open`
