@@ -19,7 +19,7 @@ aliases:
   - &yarn
     |
       yarn
-      yarn add global micro
+      yarn add global micro-dev
       cd ./servers/api && yarn && cd ../..
 
   - &setup-and-build-web
@@ -33,7 +33,7 @@ aliases:
 
   - &start-web
     name: Start web client in the background
-    command: yarn run dev:web
+    command: yarn run start
     background: true
 
 defaults: &defaults
@@ -91,7 +91,7 @@ jobs:
     <<: *js_defaults
     steps:
       - attach_workspace:
-          at: ~/spectrum
+          at: ~/spec-next
       - run:
           name: Run Flow
           command: yarn run flow
