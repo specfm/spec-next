@@ -75,6 +75,8 @@ export const Artwork = styled.img`
   border-radius: 4px;
   width: 40px;
   height: 40px;
+  min-width: 40px;
+  max-width: 40px;
 `
 
 export const Meta = styled.span`
@@ -103,4 +105,8 @@ export const AlgoliaLogo = styled.img`
   top: 13px;
   width: 120px;
   z-index: 1;
+
+  @media(max-width: 968px) {
+    top: 21px;
+  }
 `
