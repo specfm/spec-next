@@ -25,6 +25,7 @@ export const SearchInput = styled.input`
   transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
   font-size: 16px;
   -webkit-appearance: none;
+  -moz-appearance: none;
 
   ::-webkit-input-placeholder {
     text-align: center;
@@ -49,6 +50,8 @@ export const SearchInput = styled.input`
   &:hover {
     box-shadow: ${props => props.showHeaderShadow ? 'none' : '0 4px 12px rgba(0,0,0,0.1)'};
     transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
   &:focus {
@@ -56,6 +59,8 @@ export const SearchInput = styled.input`
     box-shadow: ${props => props.showHeaderShadow ? 'none' : '0 4px 12px rgba(0,0,0,0.1)'};
     background: ${props => props.showHeaderShadow ? tint(props.theme.bg.wash, -4) : props.theme.bg.default};
     transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
   &:active {

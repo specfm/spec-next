@@ -10,9 +10,6 @@ export default class MyApp extends App {
       <Container>
         <Head>
           <title>Spec · Level Up</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
-          <meta charSet="utf-8" />
-          
           <meta content="@specfm" name="twitter:site" key="twitter:site" />
           <meta content={"Spec · Level Up"} name="og:title" key="og:title" />
           <meta content={"Podcasts and resources to help designers and developers level up"} name="og:description" key="og:description" />
