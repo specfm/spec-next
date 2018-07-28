@@ -30,7 +30,7 @@ class EpisodeView extends React.Component<Props> {
           <title>Spec · {podcast.name} · {episode.title}</title>
           <meta content={`Spec · ${podcast.name} · ${episode.title}`} name="og:title" key="og:title" />
           <meta content={episode.description} name="og:description" key="og:description" />
-          <meta content={`https://spec.fm/${podcast.artworkUrl}`} name="og:image" key="og:image" />
+          <meta content={`https://spec.fm${podcast.artworkUrl}`} name="og:image" key="og:image" />
           <meta content={episode.audio_url} name="twitter:player" key="twitter:player" />
           <meta content={`Spec · ${podcast.name} · ${episode.title}`} name="twitter:title" key="twitter:title" />
           <meta name="apple-itunes-app" content={`app-id=${podcast.applePodcastId}`} key="apple-itunes-app" />
