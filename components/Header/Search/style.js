@@ -16,7 +16,7 @@ export const Container = styled.div`
 `
 
 export const SearchInput = styled.input`
-  border-radius: 4px;
+  border-radius: 4px!important;
   background: ${props => props.showHeaderShadow ? props.theme.bg.wash : props.theme.bg.default};
   color: ${props => props.theme.text.secondary};
   padding: 12px 16px;
