@@ -257,6 +257,10 @@ injectGlobal`
   .ais-InstantSearch__root {
     width: 100%;
     position: relative;
+
+    input {
+      border-radius: 4px;
+    }
   }
 
   .ais-Hits {
