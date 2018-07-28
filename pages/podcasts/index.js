@@ -3,11 +3,12 @@ import * as React from "react";
 import Head from 'next/head'
 import { api } from '../../config'
 import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
-import type { SimplecastPodcast, GetInitialProps } from '../../types'
+import type { ConfigPodcast, GetInitialProps } from '../../types'
 import PodcastsGrid from "../../components/PodcastsGrid";
+import sortPodcasts from '../../lib/scToConfigPodcasts'
 
 type Props = {
-  podcasts: ?Array<SimplecastPodcast>,
+  podcasts: ?Array<ConfigPodcast>,
 }
 
 class Podcasts extends React.Component<Props> {
@@ -18,8 +19,8 @@ class Podcasts extends React.Component<Props> {
       res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`)
     }
 
-    const podcasts = await api.getPodcasts()
-
+    const results = await api.getPodcasts()
+    const podcasts = sortPodcasts(results)
     return { podcasts };
   }
 

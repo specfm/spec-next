@@ -2,14 +2,15 @@
 import * as React from "react";
 import { api } from '../../config'
 import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
-import type { SimplecastPodcast, SimplecastEpisode, GetInitialProps } from '../../types'
+import type { ConfigPodcast, SimplecastPodcast, SimplecastEpisode, GetInitialProps } from '../../types'
 import EpisodeView from '../../components/EpisodeView'
 import PodcastsGrid from '../../components/PodcastsGrid'
 import PodcastView from "../../components/PodcastView";
+import sortPodcasts from '../../lib/scToConfigPodcasts'
 
 type Props = {
   podcast: ?SimplecastPodcast,
-  podcasts: ?Array<SimplecastPodcast>,
+  podcasts: ?Array<ConfigPodcast>,
   episode: SimplecastEpisode,
   episodes: ?Array<SimplecastEpisode>
 }
@@ -36,7 +37,8 @@ class Episode extends React.Component<Props> {
     }
 
     if (!podcast) {
-      podcasts = await api.getPodcasts()
+      const results = await api.getPodcasts()
+      podcasts = sortPodcasts(results)
     }
 
     if (podcast && episode && episode.error) {
