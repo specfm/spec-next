@@ -2,12 +2,16 @@
 import App, {Container} from 'next/app'
 import * as React from 'react'
 import Head from 'next/head'
+import withNProgress from "next-nprogress";
+import NProgressStyles from "next-nprogress/styles";
+import { theme } from '../components/theme'
 
-export default class MyApp extends App {
+class MyApp extends App {
   render () {
-    const {Component, pageProps} = this.props
+    const { Component, pageProps } = this.props
     return (
       <Container>
+        <NProgressStyles color={theme.brand.default} />
         <Head>
           <title>Spec · Level Up</title>
           <meta content="@specfm" name="twitter:site" key="twitter:site" />
@@ -32,3 +36,6 @@ export default class MyApp extends App {
     )
   }
 }
+
+const msDelay = 500;
+export default withNProgress(msDelay)(MyApp);
