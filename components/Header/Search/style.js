@@ -52,9 +52,14 @@ export const SearchInput = styled.input`
   }
 
   &:focus {
+    border-radius: 4px!important;
     box-shadow: ${props => props.showHeaderShadow ? 'none' : '0 4px 12px rgba(0,0,0,0.1)'};
     background: ${props => props.showHeaderShadow ? tint(props.theme.bg.wash, -4) : props.theme.bg.default};
     transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  &:active {
+    border-radius: 4px!important;
   }
 `
 
