@@ -27,7 +27,7 @@ class PodcastView extends React.Component<Props> {
           <title>Spec · {podcast.name}</title>
           <meta content={`Spec · ${podcast.name}`} name="og:title" key="og:title" />
           <meta content={podcast.description} name="og:description" key="og:description" />
-          <meta content={`https://spec.fm/static/${podcast.artworkUrl}`} name="og:image" key="og:image" />
+          <meta content={`https://spec.fm/${podcast.artworkUrl}`} name="og:image" key="og:image" />
           {
             episodes && episodes.length > 0 &&
             <meta content={episodes[0].audio_url} name="twitter:player" key="twitter:player" />
