@@ -217,7 +217,7 @@ injectGlobal`
   }
 
   [type="search"] {
-    -webkit-appearance: textfield;
+    -webkit-appearance: none;
     outline-offset: -2px;
   }
 
