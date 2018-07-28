@@ -17,9 +17,14 @@ type Props = {
 }
 
 class PodcastView extends React.Component<Props> {
+  shouldComponentUpdate(nextProps: Props) {
+    const curr = this.props
+    if (curr.podcast !== nextProps.podcast) return true
+    return false
+  }
+
   render() {
     const { podcast, episodes } = this.props
-
     return (
       <Grid data-cy="podcast-view">
 
