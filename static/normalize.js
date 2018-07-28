@@ -287,6 +287,7 @@ injectGlobal`
 
   @media (max-width: 968px) {
     .ais-Hits {
+      -webkit-overflow-scrolling: touch;
       top: 54px;
     }
   }

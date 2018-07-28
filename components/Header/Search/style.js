@@ -118,5 +118,6 @@ export const AlgoliaLogo = styled.img`
 
   @media(max-width: 968px) {
     top: 21px;
+    right: 16px;
   }
 `
