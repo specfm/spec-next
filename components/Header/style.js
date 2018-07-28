@@ -27,6 +27,11 @@ export const Logo = styled.img`
   width: 80px;
   height: 36px;
   grid-area: logo;
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 24px;
+  }
 `
 
 export const ButtonRowContainer = styled.div`

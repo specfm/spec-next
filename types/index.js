@@ -90,3 +90,18 @@ export type SearchResult = {
   id: number,
   publishedAt: string,
 }
+
+export type JobListing = {
+  id: string,
+  job_title: string,
+  job_description: string,
+  job_location: string,
+  job_application_link: string,
+  creation_date: string,
+  end_date: string,
+  job_link: string,
+  company: {
+    name: string,
+    company_url: string
+  }
+}

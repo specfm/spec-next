@@ -24,6 +24,12 @@ class Header extends React.Component<Props> {
         <Search showHeaderShadow={showHeaderShadow} />
 
         <ButtonRowContainer>
+          <Link href={'/jobs'}>
+            <a>
+              <GhostButton>Jobs</GhostButton>
+            </a>
+          </Link>
+
           <Link href={'/about'}>
             <a>
               <GhostButton>About</GhostButton>
