@@ -3,7 +3,7 @@ import * as React from "react";
 import Head from 'next/head'
 import { api } from '../config'
 import Page, { SectionHeading, Heading, Subheading } from '../components/Page'
-import type { SimplecastPodcast } from '../types'
+import type { SimplecastPodcast, GetInitialProps } from '../types'
 import PodcastGrid from '../components/PodcastsGrid'
 import ResourcesGrid from '../components/ResourcesGrid'
 
@@ -12,7 +12,13 @@ type Props = {
 }
 
 class Index extends React.Component<Props> {
-  static async getInitialProps() {
+  static async getInitialProps({ res }: GetInitialProps) {
+    if (res) {
+      // cache podcasts for a month
+      const cacheAge = 60 * 60 * 24 * 30
+      res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`)
+    }
+
     const podcasts = await api.getPodcasts()
 
     return { podcasts };

@@ -14,7 +14,6 @@ type State = {
 
 class Post extends React.Component<{}, State> {
   state = { 
-    // $FlowFixMe
     shuffledHosts: null 
   }
   

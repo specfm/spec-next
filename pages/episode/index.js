@@ -15,7 +15,7 @@ type Props = {
 }
 
 class Episode extends React.Component<Props> {
-  static async getInitialProps({ query }: GetInitialProps) {
+  static async getInitialProps({ query, res }: GetInitialProps) {
     let podcast, episode, podcasts, episodes
 
     if (query.slug && query.episodeId) {
@@ -45,6 +45,14 @@ class Episode extends React.Component<Props> {
 
     if (podcast && episode && !episode.published) {
       episodes = await api.getEpisodes(podcast.id)
+    }
+
+    if (podcast && episode && episode.published) {
+      if (res) {
+        // cache episodes for a day
+        const cacheAge = 60 * 60 * 24 * 7
+        res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`)
+      }
     }
 
     return { podcast, episode, podcasts, episodes };
