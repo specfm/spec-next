@@ -19,6 +19,12 @@ export default [
   },
 
   {
+    name: "InVision Studio",
+    url: "https://www.invisionapp.com/studio",
+    logoUrl: "/static/img/sponsors/invision_studio.png",
+  },
+
+  {
     name: "Sky Silk",
     url: "https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time",
     logoUrl: "/static/img/sponsors/skysilk.png",
