@@ -6,13 +6,7 @@ const fetch = require('node-fetch');
 const cache = require('micro-cacheable')
 const API_URL_ROOT = 'https://api.simplecast.com/v1'
 const API_KEY = process.env.SIMPLECAST_API_KEY
-const cors = microCors({
-  origin:
-    process.env.NODE_ENV === 'production'
-      ? /spec\.fm$/
-      : 'http://localhost:3000',
-  credentials: true,
-})
+const cors = microCors()
 
 const handler = async (req, res) => {
   const sendError = (code = 400, error = 'Invalid url') => send(res, code, { error })
