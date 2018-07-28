@@ -10,6 +10,11 @@ export const BlurredArt = styled(Img)`
   filter: blur(12px);
   opacity: 0.6;
   z-index: 1;
+
+  /* there are some problems with blurring images on mobile devices and perf */
+  @media (max-width: 468px) {
+    display: none;
+  }
 `
 
 export const Art = styled(Img)`
