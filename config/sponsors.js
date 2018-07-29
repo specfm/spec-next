@@ -17,7 +17,31 @@ export default [
     url: "https://twistapp.com/",
     logoUrl: "/static/img/sponsors/twistapp.png",
   },
+  
+  {
+    name: "Digital Ocean",
+    url: "https://try.digitalocean.com/performance/?utm_medium=podcast&utm_campaign=DoesNotCompute%7CPodcast%7CPricePerf_100&utm_source=does_not_compute",
+    logoUrl: "/static/img/sponsors/Digital_Ocean.png",
+  },
+  
+  {
+    name: "Dropbox",
+    url: "https://dropbox.com",
+    logoUrl: "/static/img/sponsors/dropbox.png",
+  },
 
+  {
+    name: "UENO",
+    url: "https://ueno.co",
+    logoUrl: "/static/img/sponsors/ueno.png",
+  },
+  
+  {
+    name: "Zendesk",
+    url: "https://www.zendesk.com/in-app-customer-service/?utm_medium=display&utm_source=specfm&utm_campaign=Little%2BBites%2BCocoa",
+    logoUrl: "/static/img/sponsors/zendesk.png",
+  },
+  
   {
     name: "Sky Silk",
     url: "https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time",
@@ -46,6 +70,12 @@ export default [
     name: "Bitrise",
     url: "https://www.bitrise.io/",
     logoUrl: "/static/img/sponsors/bitrise.png",
+  },
+  
+  {
+    name: "Hired",
+    url: "https://hired.com/?utm_source=podcast&amp;utm_medium=specfm&amp;utm_campaign=sponsorpage",
+    logoUrl: "/static/img/sponsors/hired.png",
   },
 
   {
@@ -97,8 +127,8 @@ export default [
   },
 
   {
-    name: "https://swiftype.com/DoesNotCompute",
-    url: "Swiftype",
+    name: "Swiftype",
+    url: "https://swiftype.com/DoesNotCompute",
     logoUrl: "/static/img/sponsors/swiftype.png",
   },
 
@@ -344,9 +374,9 @@ export default [
   },
 
   {
-    name: "InVision",
-    url: "https://www.invisionapp.com/studio?utm_medium=podcast&utm_source=layout&utm_campaign=AW_studio_2018Q1",
-    logoUrl: "/static/img/sponsors/invision.png",
+    name: "InVision_Studio",
+    url: "https://www.invisionapp.com/studio",
+    logoUrl: "/static/img/sponsors/invision_studio.png",
   },
 
   {
@@ -391,27 +421,15 @@ export default [
     logoUrl: "/static/img/sponsors/iconfinder.png",
   },
 
-  {
-    name: "Zendesk",
-    url: "https://www.zendesk.com/in-app-customer-service/?utm_medium=display&utm_source=specfm&utm_campaign=Little%2BBites%2BCocoa",
-    logoUrl: "/static/img/sponsors/zendesk.png",
+ {
+    name: "Sky Silk",
+    url: "https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time",
+    logoUrl: "/static/img/sponsors/skysilk.png",
   },
 
   {
-    name: "UENO",
-    url: "https://ueno.co",
-    logoUrl: "/static/img/sponsors/ueno.png",
-  },
-
-  {
-    name: "Dropbox",
-    url: "https://dropbox.com",
-    logoUrl: "/static/img/sponsors/dropbox.png",
-  },
-
-  {
-    name: "Hired",
-    url: "https://hired.com/?utm_source=podcast&amp;utm_medium=specfm&amp;utm_campaign=sponsorpage",
-    logoUrl: "/static/img/sponsors/hired.png",
+    name: "InstaBug",
+    url: "https://instabug.com/swift",
+    logoUrl: "/static/img/sponsors/instabug.png",
   },
 ]
