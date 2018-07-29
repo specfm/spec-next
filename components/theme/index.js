@@ -24,6 +24,9 @@ export const theme = {
   success: {
     default: "#21BE7C"
   },
+  warn: {
+    default: "#B00A0A"
+  },
   spectrum: {
     default: '#4400CC',
     alt: '#7B16FF',
