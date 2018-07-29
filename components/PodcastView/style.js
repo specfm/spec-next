@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components'
+import { hexa } from '../globals'
 
 export const Grid = styled.div`
   margin-top: 64px;
@@ -79,5 +80,38 @@ export const MobileSubscriptionOptions = styled.div`
   @media (max-width: 768px) {
     display: flex;
     width: 100%;
+  }
+`
+
+export const FeaturedEpisodesList = styled.ul`
+  margin: 0;
+  margin-top: 16px;
+  list-style-type: none;
+
+  &:last-child {
+    li {
+      margin-bottom: 0;
+    }
+  }
+`
+
+export const FeaturedEpisode = styled.li`
+  line-height: 1.4;
+  color: ${props => props.color};
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 4px;
+  margin: 2px -6px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+
+  .icon {
+    margin-right: 8px;
+    margin-left: -4px;
+  }
+  
+  &:hover {
+    background: ${props => hexa(props.color, 0.2)};
   }
 `

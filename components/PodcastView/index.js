@@ -1,15 +1,29 @@
 // @flow
 import * as React from "react";
 import Head from 'next/head'
-import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
-import { Grid, Sidebar, Content, Title, Description, Divider, Label, MobileArt, MobileSubscriptionOptions, } from './style'
+import type { ConfigPodcast, SimplecastEpisode } from '../../types'
+import { 
+  Grid, 
+  Sidebar, 
+  Content, 
+  Title, 
+  Description, 
+  Divider, 
+  Label,
+  MobileArt, 
+  MobileSubscriptionOptions,
+  FeaturedEpisode,
+  FeaturedEpisodesList,
+} from './style'
 import HostsGrid from '../HostsGrid'
+import Icon from '../Icon'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import EpisodesGrid from '../EpisodesGrid'
 import PodcastArt from '../PodcastArt'
 import PodcastShareButtons from '../PodcastShareButtons'
 import CommunityUpsell from '../CommunityUpsell'
+import { CustomNotice } from '../Blog'
  
 type Props = {
   podcast: ConfigPodcast,
@@ -25,6 +39,9 @@ class PodcastView extends React.Component<Props> {
 
   render() {
     const { podcast, episodes } = this.props
+    const featuredEpisodes = podcast.featuredEpisodes.length > 0 &&
+      episodes && episodes.length > 0 &&
+      podcast.featuredEpisodes.map(id => episodes.filter(e => e.id === id)[0])
     return (
       <Grid data-cy="podcast-view">
 
@@ -77,10 +94,39 @@ class PodcastView extends React.Component<Props> {
           </MobileArt>
           <Title>{podcast.name}</Title>
           <Description>{podcast.description}</Description>
+          
           <MobileSubscriptionOptions>
             <PodcastSubscriptionOptions podcast={podcast} />
           </MobileSubscriptionOptions>
+
           <PodcastShareButtons podcast={podcast} />
+          
+          {
+            featuredEpisodes &&
+            <CustomNotice color={podcast.colors.button}>
+              <CustomNotice.Title color={podcast.colors.text}>
+                Featured episodes
+              </CustomNotice.Title>
+
+              <FeaturedEpisodesList>
+              {
+                featuredEpisodes.map(fe => {
+                  return (
+                    <RouteLink key={fe.id} route='episode' params={{ slug: podcast.slug, episodeId: fe.id }}>
+                      <a>
+                        <FeaturedEpisode color={podcast.colors.text}>
+                          <Icon glyph={'view-forward'} size={16} />
+                          {fe.title}
+                        </FeaturedEpisode>
+                      </a>
+                    </RouteLink>
+                  )
+                })
+              }
+              </FeaturedEpisodesList>
+            </CustomNotice>
+          }
+
           <EpisodesGrid episodes={episodes} podcast={podcast} />
         </Content>
 

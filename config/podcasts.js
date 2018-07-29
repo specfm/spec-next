@@ -19,6 +19,7 @@ export default [
     applePodcastId: "955596067",
     twitterUsername: "developertea",
     hosts: [hosts.jcutrell],
+    featuredEpisodes: [],
     colors: {
       text: '#E54324',
       button: '#E54324'
@@ -42,6 +43,7 @@ export default [
     applePodcastId: "947191070",
     twitterUsername: "designdetailsfm",
     hosts: [hosts.marshallbock, hosts.brian_lovin],
+    featuredEpisodes: [161416, 113490, 103061, 103132, 103172, 103320],
     colors: {
       text: '#3D7B79',
       button: '#499290'
@@ -65,6 +67,7 @@ export default [
     applePodcastId: "1035147995",
     twitterUsername: "ImmutableFM",
     hosts: [hosts.soffes, hosts.defaultbryn],
+    featuredEpisodes: [],
     colors: {
       text: '#C93634',
       button: '#F65956'
@@ -88,6 +91,7 @@ export default [
     applePodcastId: "1048731980",
     twitterUsername: "dnccast",
     hosts: [hosts.seanwashbot, hosts.schrockwell],
+    featuredEpisodes: [],
     colors: {
       text: '#474747',
       button: '#474747'
@@ -111,6 +115,7 @@ export default [
     applePodcastId: "1055180013",
     twitterUsername: "vicarious_fm",
     hosts: [hosts.defaultbryn, hosts.marshallbock, hosts.sortino, hosts.sarahberus],
+    featuredEpisodes: [],
     colors: {
       text: '#0F6CEB',
       button: '#0F6CEB'
@@ -134,6 +139,7 @@ export default [
     applePodcastId: "968779958",
     twitterUsername: "FragmentedCast",
     hosts: [hosts.donnfelker, hosts.kaushikgopal],
+    featuredEpisodes: [],
     colors: {
       text: '#0070DA',
       button: '#0090FB'
@@ -157,6 +163,7 @@ export default [
     applePodcastId: "1122203945",
     twitterUsername: "runtimefm",
     hosts: [hosts.soffes, hosts.calebd],
+    featuredEpisodes: [],
     colors: {
       text: '#6D3BEC',
       button: '#6D3BEC'
@@ -180,6 +187,7 @@ export default [
     applePodcastId: "1131320952",
     twitterUsername: "getorthogonal",
     hosts: [hosts.cfoandrew, hosts.mrbrettkelly],
+    featuredEpisodes: [],
     colors: {
       text: '#0B5351',
       button: '#0B5351'
@@ -203,6 +211,7 @@ export default [
     applePodcastId: "1209817203",
     twitterUsername: "swift_unwrapped",
     hosts: [hosts.simjp, hosts.jesse_squires],
+    featuredEpisodes: [],
     colors: {
       text: '#D65A00',
       button: '#FF6B00'
@@ -226,6 +235,7 @@ export default [
     applePodcastId: "1063765302",
     twitterUsername: "toolsday",
     hosts: [hosts.una, hosts.chrisdhanaraj],
+    featuredEpisodes: [],
     colors: {
       text: '#2167A4',
       button: '#3A87C9'
@@ -249,6 +259,7 @@ export default [
     applePodcastId: "1050276556",
     twitterUsername: "layoutfm",
     hosts: [hosts.rafahari, hosts.vernalkick],
+    featuredEpisodes: [],
     colors: {
       text: '#399434',
       button: '#4AC644'

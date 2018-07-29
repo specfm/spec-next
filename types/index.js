@@ -69,6 +69,7 @@ export type ConfigPodcast = {|
   applePodcastId: string,
   twitterUsername: string,
   hosts: Array<Host>,
+  featuredEpisodes: Array<?number>,
   colors: {
     text: string,
     button: string,

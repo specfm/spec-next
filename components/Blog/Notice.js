@@ -31,3 +31,21 @@ export class WarnNotice extends React.Component<Props> {
     )
   }
 }
+
+type CustomProps = {
+  ...$Exact<Props>,
+  color: string,
+}
+
+export class CustomNotice extends React.Component<CustomProps> {
+  static Title = Styled.CustomNoticeTitle
+  static Description = Styled.CustomNoticeDescription
+
+  render() {
+    return (
+      <Styled.CustomNotice color={this.props.color}>
+        {this.props.children}
+      </Styled.CustomNotice>
+    )
+  }
+}
