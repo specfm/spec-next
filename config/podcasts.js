@@ -43,7 +43,7 @@ export default [
     applePodcastId: "947191070",
     twitterUsername: "designdetailsfm",
     hosts: [hosts.marshallbock, hosts.brian_lovin],
-    featuredEpisodes: [161416, 113490, 103061, 103132, 103172, 103320],
+    featuredEpisodes: [161416, 113490, 74759, 48685],
     colors: {
       text: '#3D7B79',
       button: '#499290'
