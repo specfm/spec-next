@@ -216,7 +216,7 @@ export const ButtonSegmentRow = styled.div`
   }
 
   button:not(:last-of-type) {
-    box-shadow: inset -1px 0 0 ${props => hexa(props.theme.bg.default, 0.12)};
+    box-shadow: inset -1px 0 0 rgba(255,255,255,0.12);
   }
 
   ${PrimaryButton} {

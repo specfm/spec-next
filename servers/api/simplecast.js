@@ -1,4 +1,3 @@
-// @flow
 const fetch = require('node-fetch');
 const API_URL_ROOT = 'https://api.simplecast.com/v1'
 const API_KEY = process.env.SIMPLECAST_API_KEY

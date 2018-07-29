@@ -15,6 +15,7 @@ export const RangeContainer = styled.div`
 
 export const LoadingContainer = styled.div`
   padding: 48px;
+  position: relative;
 `
 
 export const Grid = styled.div`
