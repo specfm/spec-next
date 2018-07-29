@@ -314,12 +314,6 @@ export default [
   },
 
   {
-    name: "Digital Ocean",
-    url: "https://digitalocean.com/?ref=specfm",
-    logoUrl: "/static/img/sponsors/digital-ocean.png",
-  },
-
-  {
     name: "Dringend",
     url: "http://dringend.cc/",
     logoUrl: "/static/img/sponsors/dringend.png",
@@ -419,17 +413,5 @@ export default [
     name: "Icon Finder",
     url: "https://iconfinder.com/?ref=specfm",
     logoUrl: "/static/img/sponsors/iconfinder.png",
-  },
-
- {
-    name: "Sky Silk",
-    url: "https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time",
-    logoUrl: "/static/img/sponsors/skysilk.png",
-  },
-
-  {
-    name: "InstaBug",
-    url: "https://instabug.com/swift",
-    logoUrl: "/static/img/sponsors/instabug.png",
   },
 ]
