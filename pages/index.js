@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 import Head from 'next/head'
-import { api } from '../config'
+import { podcasts } from '../config'
 import Page, { SectionHeading, Heading, Subheading } from '../components/Page'
 import type { ConfigPodcast, GetInitialProps } from '../types'
 import PodcastGrid from '../components/PodcastsGrid'
@@ -20,9 +20,8 @@ class Index extends React.Component<Props> {
       res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`)
     }
 
-    const results = await api.getPodcasts()
-    const podcasts = sortPodcasts(results)
-    return { podcasts };
+    const sorted = sortPodcasts(podcasts)
+    return { podcasts: sorted };
   }
 
   render() {

@@ -21,7 +21,6 @@ const fetchUrl = async (url: string) => {
 }
 
 const api = {
-  getPodcasts: async (): Promise<?Array<?SimplecastPodcast>> => await fetchUrl('podcasts.json'),
   getPodcast: async (id: ?number): Promise<?SimplecastPodcast> => id ? await fetchUrl(`podcasts/${id}.json`) : null,
   getEpisodes: async (id: ?number): Promise<?Array<?SimplecastEpisode>> => id ? await fetchUrl(`podcasts/${id}/episodes.json`) : [],
   getEpisode: async (showId: ?number, episodeId: number): Promise<?SimplecastEpisode> => showId ? await fetchUrl(`podcasts/${showId}/episodes/${episodeId}.json`) : null,
