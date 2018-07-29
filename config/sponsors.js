@@ -21,7 +21,7 @@ export default [
   {
     name: "Digital Ocean",
     url: "https://try.digitalocean.com/performance/?utm_medium=podcast&utm_campaign=DoesNotCompute%7CPodcast%7CPricePerf_100&utm_source=does_not_compute",
-    logoUrl: "/static/img/sponsors/Digital_Ocean.png",
+    logoUrl: "/static/img/sponsors/digital-ocean.png",
   },
   
   {
