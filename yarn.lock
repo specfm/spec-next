@@ -4388,9 +4388,9 @@ isomorphic-fetch@^2.1.1:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
-isomorphic-unfetch@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/isomorphic-unfetch/-/isomorphic-unfetch-2.1.0.tgz#dedc3a393a07bfb9295cf33104196f86905f66a9"
+isomorphic-unfetch@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/isomorphic-unfetch/-/isomorphic-unfetch-2.1.1.tgz#c321770bcd682c5c8550f31146fc7dd21ac33e7b"
   dependencies:
     node-fetch "^2.1.2"
     unfetch "^3.1.0"
