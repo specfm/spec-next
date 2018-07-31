@@ -12,5 +12,11 @@ app.prepare().then(() => {
   express()
     .use(handler)
     .use(favicon(path.join(__dirname, "static", "favicon.ico")))
+    .use((req, res, next) => {
+      if (/^\/static\//.test(req.url)) {
+        res.setHeader('Cache-Control', 'public,s-maxage=360000');
+      }
+      next();
+    })
     .listen(3000)
 })
