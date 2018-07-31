@@ -215,10 +215,6 @@ export const ButtonSegmentRow = styled.div`
     margin: 0 -1px;
   }
 
-  button:not(:last-of-type) {
-    box-shadow: inset -1px 0 0 rgba(255,255,255,0.12);
-  }
-
   ${PrimaryButton} {
     &:focus {
       box-shadow: 0 0 0 1px ${props => props.theme.bg.default},

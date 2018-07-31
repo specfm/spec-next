@@ -16,6 +16,10 @@ export const RangeContainer = styled.div`
 export const LoadingContainer = styled.div`
   padding: 48px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `
 
 export const Grid = styled.div`
