@@ -118,5 +118,17 @@ export default {
     name: "Rafael Conde",
     twitterUsername: "rafahari",
     profilePhotoUrl: "/static/img/hosts/rafahari.jpg"
+  },
+
+  luperdev: {
+    name: "Drew Luper",
+    twitterUsername: "luperdev",
+    profilePhotoUrl: "/static/img/hosts/luperdev.jpg"
+  },
+
+  _mikhailbot: {
+    name: "Mikhail Delport",
+    twitterUsername: "_mikhailbot",
+    profilePhotoUrl: "/static/img/hosts/mikhailbot.jpg"
   }
 }
