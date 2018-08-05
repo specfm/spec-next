@@ -28,6 +28,16 @@ export const JobContainer = styled.div`
     transform :translateY(-2px);
     transition: all 0.2s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    margin: 0 -16px;
+    width: calc(100% + 32px);
+    border-radius: 0;
+
+    &:hover {
+      border-radius: 0;
+    }
+  }
 `
 
 export const Title = styled.p`
