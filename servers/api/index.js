@@ -6,11 +6,17 @@ const cache = require('micro-cacheable')
 const cors = microCors()
 const getStats = require('./getStats')
 const simplecast = require('./simplecast')
+const getJobs = require('./jobs')
 
 const handler = async (req, res) => {
   const sendError = (code = 400, error = 'Invalid url') => send(res, code, { error })
+  
   if (!req.url) return sendError()
   if (req.url.length === 0 || req.url === '/') return sendError()
+
+  if (req.url.startsWith('/jobs')) {
+    return await getJobs()
+  }
 
   if (req.url.startsWith('/stats')) {
     return await getStats(req.url)
