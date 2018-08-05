@@ -39,7 +39,7 @@ export default class Sponsors extends React.Component<{}> {
           </Section>
 
           <Section>
-            <Number>15M+</Number>
+            <Number>17M+</Number>
             <Label>Total downloads</Label>
           </Section>
         </Grid>

@@ -17,7 +17,7 @@ class Footer extends React.Component<{}> {
           </a>
 
           <a href="https://spectrum.chat/specfm" target="_blank" rel="noopener noreferrer">
-            <Icon glyph={'spectrum'} />
+            <Icon glyph={'spectrum-solid'} />
           </a>
         </Icons>
         

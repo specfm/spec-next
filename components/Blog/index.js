@@ -1,6 +1,6 @@
 // @flow
 import { Container, HeaderImage, PostHeader, Title, Subtitle, Grid, Divider, } from './style'
-import { Notice, WarnNotice } from './Notice'
+import { Notice, WarnNotice, CustomNotice } from './Notice'
 import ShareButtons from './ShareButtons'
 
 export {
@@ -11,6 +11,7 @@ export {
   Subtitle,
   Notice,
   WarnNotice,
+  CustomNotice,
   ShareButtons,
   Grid,
   Divider,

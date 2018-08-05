@@ -1,6 +1,6 @@
 // @flow
 import styled from 'styled-components'
-import { tint, Content } from '../globals'
+import { tint, Content, hexa } from '../globals'
 
 export const Container = styled.div`
   ${Content};
@@ -41,13 +41,15 @@ export const NoticeTitle = styled.h6`
   color: ${props => tint(props.theme.bg.wash, -80)};
   font-weight: 700!important;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   margin-top: 0!important;
+  display: flex;
+  align-items: center;
 `
 
 export const NoticeDescription = styled.p`
-  margin-top: 16px;
+  margin-top: 12px;
   color: ${props => tint(props.theme.bg.wash, -64)};
   font-weight: 400;
 
@@ -71,6 +73,18 @@ export const WarnNoticeTitle = styled(NoticeTitle)`
 
 export const WarnNoticeDescription = styled(NoticeDescription)`
   color: ${tint('#FFF0CA', -64)};
+`
+
+export const CustomNotice = styled(Notice)`
+  background-color: ${props => hexa(props.color, 0.12)};
+`
+
+export const CustomNoticeTitle = styled(NoticeTitle)`
+  color: ${props => props.color};
+`
+
+export const CustomNoticeDescription = styled(NoticeDescription)`
+  color: ${props => props.color};
 `
 
 export const ShareButtonsContainer = styled.div`

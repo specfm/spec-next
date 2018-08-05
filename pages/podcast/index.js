@@ -1,6 +1,6 @@
 // @flow
 import * as React from "react";
-import { api } from '../../config'
+import { api, podcasts as configPodcasts } from '../../config'
 import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
 import type { ConfigPodcast, SimplecastPodcast, SimplecastEpisode, GetInitialProps } from '../../types'
 import PodcastView from '../../components/PodcastView'
@@ -33,8 +33,7 @@ class Podcast extends React.Component<Props> {
         ])
       }
 
-      const results = await api.getPodcasts()
-      podcasts = sortPodcasts(results)
+      podcasts = sortPodcasts(configPodcasts)
     }
 
     if (podcast && episodes) {
