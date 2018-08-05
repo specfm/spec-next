@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import type { JobListing, GetInitialProps } from '../../types'
-import { api } from '../../config'
+import { api, jobs as staticJobs } from '../../config'
 import Page, { SectionHeading, Heading, Subheading } from '../../components/Page'
 import JobsGrid from '../../components/JobsGrid'
 import { PrimaryButton } from '../../components/Button'
@@ -28,6 +28,9 @@ class Jobs extends React.Component<Props> {
 
   render() {
     const { jobs } = this.props
+
+    const allJobs = [...jobs, ...staticJobs]
+
     return (
       <Page dataCy={'invalid-podcast-view'}>
         <SectionHeading>
@@ -36,8 +39,8 @@ class Jobs extends React.Component<Props> {
         </SectionHeading>
 
         {
-          jobs &&
-          <JobsGrid jobs={jobs} />
+          allJobs && allJobs.length > 0 &&
+          <JobsGrid jobs={allJobs} />
         }
 
         <ActionContainer>

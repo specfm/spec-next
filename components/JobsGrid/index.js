@@ -29,8 +29,8 @@ class JobsGrid extends React.Component<Props> {
             return (
               <a href={job.job_link} onClick={() => this.track(job.company.name, job.job_title)} target="_blank" rel="noopener noreferrer" key={job.id}>
                 <JobContainer>
-                  <Title>{job.company.name}</Title>
-                  <Role>{job.job_title}</Role>
+                  <Title>{job.job_title}</Title>
+                  <Role>{job.company.name}</Role>
                   <Location>{job.job_location}</Location>
                 </JobContainer>
               </a>
