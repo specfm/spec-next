@@ -1,6 +1,6 @@
-// @flow
+require('now-env')
 const SEEKER_URL = 'https://api.seeker.company/v1'
-const SEEKER_API_KEY = '384a0a09-1bae-4d94-8cfd-d01b6b1c72a3'
+const SEEKER_API_KEY = process.env.SEEKER_API_KEY
 
 const getJobs = async () => {
   try {
