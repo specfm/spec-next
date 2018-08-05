@@ -41,7 +41,6 @@ export const SectionHeading = styled.div`
 
   @media (max-width: 968px) {
     align-items: flex-start;
-    padding: 0 16px;
     max-width: 100%;
   }
 `
