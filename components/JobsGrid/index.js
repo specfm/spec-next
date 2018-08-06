@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Container, JobContainer, Title, Role, Location } from './style'
+import { Container, JobContainer, Title, Role, Description } from './style'
 import * as gtag from '../../lib/gtag'
 import type { JobListing } from '../../types'
 
@@ -21,6 +21,10 @@ class JobsGrid extends React.Component<Props> {
   render() {
     const { jobs } = this.props
 
+    const truncate = str => str.length > 140
+      ? str.slice(0, 140) + '...'
+      : str
+
     return (
       <Container>
         {
@@ -30,8 +34,8 @@ class JobsGrid extends React.Component<Props> {
               <a href={job.job_link} onClick={() => this.track(job.company.name, job.job_title)} target="_blank" rel="noopener noreferrer" key={job.id}>
                 <JobContainer>
                   <Title>{job.job_title}</Title>
-                  <Role>{job.company.name}</Role>
-                  <Location>{job.job_location}</Location>
+                  <Role>{job.company.name} · {job.job_location}</Role>
+                  <Description>{truncate(job.job_description)}</Description>
                 </JobContainer>
               </a>
             )

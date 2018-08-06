@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const JobContainer = styled.div`
   display: flex;
   width: 100%;
-  padding: 16px;
+  padding: 24px 16px;
   border-bottom: 1px solid ${props => props.theme.border.default};
   flex-direction: column;
   background: ${props => props.theme.bg.wash};
@@ -52,9 +52,10 @@ export const Role = styled.p`
   color: ${props => props.theme.text.secondary};
 `
 
-export const Location = styled.p`
+export const Description = styled.p`
+  margin-top: 8px;
+  line-height: 1.4;
   font-size: 18px;
-  font-weight:4500;
-  color: ${props => props.theme.text.tertiary};
-
+  font-weight: 500;
+  color: ${props => props.theme.text.secondary};
 `
