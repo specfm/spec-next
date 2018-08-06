@@ -21,7 +21,7 @@ class JobsGrid extends React.Component<Props> {
   render() {
     const { jobs } = this.props
 
-    const truncate = str => str.length > 140
+    const truncate = str => str && str.length > 140
       ? str.slice(0, 140) + '...'
       : str
 
