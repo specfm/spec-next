@@ -6086,9 +6086,9 @@ react-dom@^16.4.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-image@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/react-image/-/react-image-1.4.0.tgz#b3a502799926a63957dae335004f637aa5bc3a1f"
+react-image@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-image/-/react-image-1.4.1.tgz#57d94a0184688c45a0c14d8f743a6291f0b43fe9"
   dependencies:
     babel-runtime "^6.0.0"
     prop-types "15.6.2"
