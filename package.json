@@ -31,7 +31,7 @@
     "react-clipboard.js": "^2.0.0",
     "react-dom": "^16.4.2",
     "react-image": "^1.4.1",
-    "react-instantsearch": "^5.2.2",
+    "react-instantsearch": "^5.2.3",
     "react-markdown": "^3.4.1",
     "react-visibility-sensor": "^3.11.1",
     "serve-favicon": "^2.5.0",
