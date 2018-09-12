@@ -414,4 +414,10 @@ export default [
     url: "https://iconfinder.com/?ref=specfm",
     logoUrl: "/static/img/sponsors/iconfinder.png",
   },
+
+  {
+    name: "Asana",
+    url: "https://asana.design/",
+    logoUrl: "/static/img/sponsors/asana.png",
+  },
 ]
