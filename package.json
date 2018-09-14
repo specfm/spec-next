@@ -27,7 +27,7 @@
     "next-nprogress": "^1.1.0",
     "next-optimized-images": "^1.4.1",
     "next-routes": "^1.4.2",
-    "react": "^16.5.0",
+    "react": "^16.5.1",
     "react-clipboard.js": "^2.0.0",
     "react-dom": "^16.5.0",
     "react-image": "^1.4.1",
