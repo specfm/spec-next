@@ -14,7 +14,7 @@
     "ioredis": "^3.2.2",
     "isomorphic-unfetch": "^2.1.1",
     "remove-markdown": "^0.3.0",
-    "stopword": "^0.1.10",
+    "stopword": "^0.1.11",
     "toobusy-js": "^0.5.1"
   },
   "license": "MIT",
