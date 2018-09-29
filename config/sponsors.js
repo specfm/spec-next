@@ -420,4 +420,10 @@ export default [
     url: "https://asana.design/",
     logoUrl: "/static/img/sponsors/asana.png",
   },
+
+  {
+    name: "ProtoPie",
+    url: "https://bit.ly/2otlJ6d",
+    logoUrl: "/static/img/sponsors/protopie.png",
+  },
 ]
