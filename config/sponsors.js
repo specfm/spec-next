@@ -426,4 +426,10 @@ export default [
     url: "https://bit.ly/2otlJ6d",
     logoUrl: "/static/img/sponsors/protopie.png",
   },
+  
+   {
+    name: ".Tech",
+    url: "https://get.tech/future-on-tech?utm_source=SPEC&utm_medium=Podcast&utm_campaign=F_uture_SPF&utm_term=stups",
+    logoUrl: "/static/img/sponsors/tech_domains.jpg",
+  },
 ]
