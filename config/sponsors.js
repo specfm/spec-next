@@ -432,4 +432,10 @@ export default [
     url: "https://get.tech/future-on-tech?utm_source=SPEC&utm_medium=Podcast&utm_campaign=F_uture_SPF&utm_term=stups",
     logoUrl: "/static/img/sponsors/tech_domains.jpg",
   },
+  
+   {
+    name: "American Express",
+    url: "https://americanexpress.io/android-jobs",
+    logoUrl: "/static/img/sponsors/amex_logo.jpg",
+  },
 ]
