@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, minmax(33%, max-content));
+  grid-template-rows: repeat(3, minmax(auto, max-content));
   grid-gap: 32px;
   width: 100%;
   max-width: 968px;
