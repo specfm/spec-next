@@ -5,8 +5,32 @@ import Head from 'next/head'
 import withNProgress from "next-nprogress";
 import NProgressStyles from "next-nprogress/styles";
 import { theme } from '../components/theme'
+import PlayerContext, { defaultPlayerContext } from '../components/GlobalPlayer/context'
+import GlobalPlayer from '../components/GlobalPlayer'
+import type { SimplecastEpisode } from '../types'
 
 class MyApp extends App {
+  constructor() {
+    super()
+
+    this.state = { 
+      ...defaultPlayerContext,
+      addTrackToQueue: this.addTrackToQueue,
+      clearQueue: this.clearQueue,
+    }
+  }
+
+  addTrackToQueue = (episode: SimplecastEpisode) => {
+    this.setState(state => ({
+      ...state,
+      trackQueue: [episode]
+    }))
+  }
+
+  clearQueue = () => {
+    this.setState(defaultPlayerContext)
+  }
+
   render () {
     const { Component, pageProps } = this.props
     return (
@@ -33,7 +57,12 @@ class MyApp extends App {
           
           {this.props.styleTags}
         </Head>
-        <Component {...pageProps} />
+        
+        <PlayerContext.Provider value={this.state}>
+          <Component {...pageProps} />
+          <GlobalPlayer />
+        </PlayerContext.Provider>
+
       </Container>
     )
   }
