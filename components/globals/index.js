@@ -102,6 +102,7 @@ export const Content = css`
 
   a {
     color: ${props => props.theme.brand.default};
+    font-weight: 500;
   }
 
   a:hover {
