@@ -22,6 +22,7 @@ class EpisodePreview extends React.Component<Props, State> {
   displayAudioPlayer = (visibility: boolean) => {
     return this.setState({ audioPlayerVisible: visibility })
   }
+  
   render() {
     const { episode, podcast } = this.props
     const { audioPlayerVisible } = this.state

@@ -46,14 +46,14 @@ class EmailCapture extends React.Component<{}, State> {
               
                   <Field className="mc-field-group">
                     <EmailInput type="email" aria-label={'Your email address'} placeholder="Your email address" name="EMAIL" className="required email" id="mce-EMAIL" />
-                    <Submit type="submit" aria-label={'Submit'} aria-hidden value="" name="subscribe" id="mc-embedded-subscribe" />
+                    <Submit type="submit" aria-label={'Submit'} aria-hidden defaultValue="" name="subscribe" id="mc-embedded-subscribe" />
                     <SubmitIcon>
                       <Icon glyph="view-forward" size={24} />
                     </SubmitIcon>
                   </Field>
 
                   <div style={{position: 'absolute', left: '-5000px'}}>
-                    <input type="text" aria-hidden name="b_bb74fc37bb01e808269590267_171da5009e" tabIndex="-1" value="" />
+                    <input type="text" aria-hidden name="b_bb74fc37bb01e808269590267_171da5009e" tabIndex="-1" defaultValue="" />
                   </div>
                   
                   <div className="response" id="mce-error-response" style={{display:'none'}} />

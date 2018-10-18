@@ -3,9 +3,12 @@ import styled from 'styled-components'
 import { tint, Content, hexa } from '../globals'
 
 export const Container = styled.div`
-  ${Content};
   max-width: 768px;
   width: 100%;
+`
+
+export const ContentContainer = styled.div`
+  ${Content};
 `
 
 export const HeaderImage = styled.img`
@@ -38,7 +41,7 @@ export const Notice = styled.div`
 `
 
 export const NoticeTitle = styled.h6`
-  color: ${props => tint(props.theme.bg.wash, -80)};
+  color: ${props => tint(props.theme.bg.wash, -88)};
   font-weight: 700!important;
   text-transform: uppercase;
   font-size: 16px;
@@ -50,11 +53,11 @@ export const NoticeTitle = styled.h6`
 
 export const NoticeDescription = styled.p`
   margin-top: 12px;
-  color: ${props => tint(props.theme.bg.wash, -64)};
+  color: ${props => tint(props.theme.bg.wash, -72)};
   font-weight: 400;
 
   a {
-    color: ${props => tint(props.theme.bg.wash, -80)};
+    color: ${props => tint(props.theme.bg.wash, -88)};
     font-weight: 600;
   }
 

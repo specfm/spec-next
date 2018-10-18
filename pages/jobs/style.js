@@ -6,7 +6,6 @@ export const ActionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 64px;
 
   @media(max-width: 768px) {
     button, a {

@@ -112,14 +112,14 @@ class PodcastView extends React.Component<Props> {
               {
                 featuredEpisodes.map(fe => {
                   return (
-                    <RouteLink key={fe.id} route='episode' params={{ slug: podcast.slug, episodeId: fe.id }}>
-                      <a>
-                        <FeaturedEpisode color={podcast.colors.text}>
-                          <Icon glyph={'view-forward'} size={16} />
-                          {fe.title}
-                        </FeaturedEpisode>
-                      </a>
-                    </RouteLink>
+                    <FeaturedEpisode key={fe.id} color={podcast.colors.text}>
+                      <RouteLink route='episode' params={{ slug: podcast.slug, episodeId: fe.id }}>
+                        <a>
+                            <Icon glyph={'view-forward'} size={16} />
+                            {fe.title}
+                        </a>
+                      </RouteLink>
+                    </FeaturedEpisode>
                   )
                 })
               }
