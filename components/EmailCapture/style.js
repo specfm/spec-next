@@ -40,40 +40,6 @@ export const Label = styled.p`
   display: flex;
 `
 
-export const Dismiss = styled.button`
-  display: flex;
-  width: 18px;
-  height: 18px;
-  background: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  color: ${props => props.theme.text.tertiary};
-  opacity: 0.5;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 1;
-    background: ${props => props.theme.text.tertiary};
-    color: ${props => props.theme.bg.default};
-  }
-
-  i {
-    position: relative;
-    top: -1px;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 600;
-  }
-
-  @media (max-width: 968px) {
-    position: absolute;
-    top: 16px;
-    right: 16px; 
-  }
-`
-
 export const EmailInput = styled.input`
   border-radius: 4px;
   background: ${props => props.theme.bg.default};
