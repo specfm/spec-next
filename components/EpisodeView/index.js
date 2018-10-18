@@ -14,12 +14,13 @@ import CommunityUpsell from '../CommunityUpsell'
 
 type Props = {
   podcast: ConfigPodcast,
-  episode: SimplecastEpisode
+  episode: SimplecastEpisode,
+  autoplay: boolean
 }
 
 class EpisodeView extends React.Component<Props> {
   render() {
-    const { podcast, episode } = this.props
+    const { podcast, episode, autoplay } = this.props
     const { month, year, day } = getDateObject(episode.published_at)
     const datestring = `${month} ${day}, ${year}`
 
@@ -78,7 +79,7 @@ class EpisodeView extends React.Component<Props> {
 
           <EpisodeShareButtons episode={episode} podcast={podcast} />
 
-          <audio data-cy="episode-player" src={episode.audio_url} controls preload="none"></audio>
+          <audio autoPlay={autoplay ? true : false} data-cy="episode-player" src={episode.audio_url} controls preload="none"></audio>
 
           <Markdown>
             {episode.long_description}
