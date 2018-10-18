@@ -38,6 +38,12 @@ class Jobs extends React.Component<Props> {
           <Subheading>Level up at an industry-leading company</Subheading>
         </SectionHeading>
 
+        <ActionContainer>
+          <a href="http://specfm.seeker.company/submit/job" target="_blank" rel="noopener noreferrer">
+            <PrimaryButton>Post a Job</PrimaryButton>
+          </a>
+        </ActionContainer>
+
         {
           allJobs && allJobs.length > 0 &&
           <JobsGrid jobs={allJobs} />

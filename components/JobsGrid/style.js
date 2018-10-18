@@ -4,6 +4,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   max-width: 968px;
+  margin-bottom: 64px;
+  margin-top: 64px;
 `
 
 export const JobContainer = styled.div`
