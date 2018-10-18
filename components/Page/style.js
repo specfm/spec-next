@@ -86,6 +86,7 @@ export const ScrollToTop = styled.button`
   color: ${props => props.theme.bg.default};
   transform: translateY(${props => props.isVisible ? '0' : '80px'});
   cursor: pointer;
+  z-index: 9999;
 
   &:hover {
     box-shadow: 0 8px 24px rgba(0,0,0,0.10);
