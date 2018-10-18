@@ -15,7 +15,7 @@ import CommunityUpsell from '../CommunityUpsell'
 type Props = {
   podcast: ConfigPodcast,
   episode: SimplecastEpisode,
-  autoplay: boolean
+  autoplay: ?string
 }
 
 class EpisodeView extends React.Component<Props> {

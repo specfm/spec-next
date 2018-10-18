@@ -13,7 +13,7 @@ type Props = {
   podcasts: ?Array<ConfigPodcast>,
   episode: SimplecastEpisode,
   episodes: ?Array<SimplecastEpisode>,
-  autoplay?: boolean
+  autoplay?: string
 }
 
 class Episode extends React.Component<Props> {
