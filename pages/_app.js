@@ -28,6 +28,8 @@ class MyApp extends App {
           <link rel="manifest" href="/static/meta/site.webmanifest" />
           <link rel="mask-icon" href="/static/meta/safari-pinned-tab.svg" color="#212325" />
           <meta name="msapplication-TileColor" content="#ffffff" />
+
+          <link rel="preconnect" href="https://api.spec.fm" />
           
           {this.props.styleTags}
         </Head>
