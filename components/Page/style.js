@@ -77,8 +77,8 @@ export const ScrollToTop = styled.button`
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 16px;
+  right: 16px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   transition: all 0.2s ease-in-out;
   opacity: ${props => props.isVisible ? '1' : '0'};

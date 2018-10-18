@@ -11,6 +11,7 @@ import Markdown from '../Markdown'
 import PodcastArt from "../PodcastArt";
 import EpisodeShareButtons from '../EpisodeShareButtons'
 import CommunityUpsell from '../CommunityUpsell'
+import GlobalPlayer from '../GlobalPlayer/context'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -79,6 +80,13 @@ class EpisodeView extends React.Component<Props> {
 
           <EpisodeShareButtons episode={episode} podcast={podcast} />
 
+          <GlobalPlayer.Consumer>
+            {
+              context => (
+                <button onClick={() => context.addTrackToQueue(episode)}>Add Episode</button>
+              )
+            }
+          </GlobalPlayer.Consumer>
           <audio autoPlay={autoplay ? true : false} data-cy="episode-player" src={episode.audio_url} controls preload="none"></audio>
 
           <Markdown>
