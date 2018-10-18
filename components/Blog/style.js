@@ -3,9 +3,12 @@ import styled from 'styled-components'
 import { tint, Content, hexa } from '../globals'
 
 export const Container = styled.div`
-  ${Content};
   max-width: 768px;
   width: 100%;
+`
+
+export const ContentContainer = styled.div`
+  ${Content};
 `
 
 export const HeaderImage = styled.img`

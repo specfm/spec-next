@@ -108,6 +108,10 @@ export const Content = css`
     text-decoration: underline;
   }
 
+  a:hover button {
+    text-decoration: none!important;
+  }
+
   ul, ol {
     margin-left: 24px;
     margin-top: 12px;

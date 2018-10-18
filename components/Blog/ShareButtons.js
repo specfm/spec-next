@@ -16,7 +16,7 @@ class BlogShareButtons extends React.Component<Props> {
       <ShareButtonsContainer>
         <ButtonRow>
         <a
-          href={url}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
           target="_blank"
           rel="noopener noreferrer"
         >
