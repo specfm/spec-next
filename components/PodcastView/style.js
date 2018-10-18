@@ -99,16 +99,21 @@ export const FeaturedEpisode = styled.li`
   line-height: 1.4;
   color: ${props => props.color};
   font-weight: 500;
-  padding: 6px 8px;
   border-radius: 4px;
   margin: 2px -6px;
   display: flex;
   align-items: center;
   font-size: 18px;
 
+  a {
+    padding: 6px 8px;
+  }
+
   .icon {
     margin-right: 8px;
     margin-left: -4px;
+    position: relative;
+    top: 2px;
   }
   
   &:hover {
