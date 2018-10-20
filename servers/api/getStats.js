@@ -13,10 +13,10 @@ const getStats = async (url) => {
   const ids = podcasts.map(podcast => podcast.id)
 
   const rangeToDays = {
-    all: 2000,
+    all: 3000,
     week: 7,
-    month: 30,
-    year: 365
+    month: 28,
+    year: 364
   }
   
   // start with the previous day

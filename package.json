@@ -16,7 +16,10 @@
     "flow status": "flow status",
     "flow coverage": "flow coverage",
     "cypress:open": "cypress open",
-    "test:e2e": "cypress run"
+    "test:e2e": "cypress run",
+    "deploy:web": "now",
+    "deploy:api": "(cd servers/api && now)",
+    "deploy:search": "(cd servers/search && now)"
   },
   "dependencies": {
     "eslint": "^5.7.0",
