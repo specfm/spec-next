@@ -6,7 +6,7 @@ import { connectSearchBox } from 'react-instantsearch-dom';
 const MySearchBox = ({ currentRefinement, refine, onChange, showHeaderShadow }: any) =>
   <SearchInput
     type="search"
-    autoFocus
+    autoFocus={false}
     value={currentRefinement}
     onFocus={onChange}
     onChange={e => { onChange(e); refine(e.target.value) }}
