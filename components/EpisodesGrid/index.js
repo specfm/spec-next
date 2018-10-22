@@ -35,7 +35,7 @@ class EpisodesGrid extends React.Component<Props, State> {
           })
         }
 
-        <Button onClick={this.expand}>View All Episodes</Button>
+        <Button style={{marginBottom: '64px'}} size={'large'} onClick={this.expand}>View All Episodes</Button>
       </Grid>
     )
   }

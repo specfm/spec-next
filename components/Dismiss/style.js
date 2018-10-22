@@ -24,8 +24,12 @@ export const Dismiss = styled.button`
     position: relative;
     top: -1px;
     font-style: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
     font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `

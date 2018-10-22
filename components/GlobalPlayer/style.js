@@ -29,6 +29,13 @@ export const Container = styled.div`
   @media (max-width: 556px) {
     width: 100%;
     max-width: calc(100% - 32px);
+
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      bottom: 20px;
+    }
   }
 `
 

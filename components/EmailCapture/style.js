@@ -38,6 +38,7 @@ export const InnerContainer = styled.div`
 
 export const Label = styled.p`
   display: flex;
+  padding-right: 16px;
 `
 
 export const EmailInput = styled.input`
