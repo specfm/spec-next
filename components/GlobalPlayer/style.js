@@ -29,6 +29,13 @@ export const Container = styled.div`
   @media (max-width: 556px) {
     width: 100%;
     max-width: calc(100% - 32px);
+
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      border-radius: 40px;
+    }
   }
 `
 
@@ -82,8 +89,8 @@ export const TextContainer = styled.div`
 `
 
 const defaultThumbStyles = css`
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
   border-radius: 8px;
   background: #ffffff;
   cursor: pointer;
@@ -122,7 +129,7 @@ export const Scrubber = styled.input`
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: -4px; 
+    margin-top: -6px; 
     ${defaultThumbStyles};
   }
 

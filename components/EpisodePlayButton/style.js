@@ -4,17 +4,12 @@ import { theme } from '../theme'
 
 export const PlayBox = styled.div`
   display: flex;
-  padding: 16px;
+  padding: 12px 16px;
   background: ${theme.text.default};
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.1s ease-in-out;
-
-  &:active {
-    transform: scale(0.98);
-    transition: transform 0.1s ease-in-out;
-  }
+  align-items: center;
+  justify-content: center;
 `
 
 export const IconContainer = styled.div`
@@ -37,7 +32,6 @@ export const MiniPlayBox = styled.div`
   width: 42px;
   height: 42px;
   border-radius: 22px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   margin-right: 16px;
@@ -58,14 +52,8 @@ export const TextContainer = styled.div`
   flex-direction: column;
 `
 
-export const Title = styled.p`
+export const Label = styled.p`
   font-size: 16px;
   color: #fff;
   font-weight: 600;
-`
-
-export const Description = styled.p`
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.8);
 `

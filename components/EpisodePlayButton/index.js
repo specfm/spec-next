@@ -8,8 +8,7 @@ import {
   PlayBox,
   IconContainer,
   TextContainer,
-  Title,
-  Description,
+  Label,
 } from './style'
 
 type Props = {
@@ -53,18 +52,17 @@ class EpisodePlayButton extends React.Component<Props> {
                   <IconContainer>
                     {
                       context.isPlaying && isSameTrackAsGlobalPlayer
-                      ? <Icon glyph="pause" />
-                      : <Icon glyph="play" />
+                      ? <Icon glyph="pause" size={24} />
+                      : <Icon glyph="play" size={24} />
                     }
                   </IconContainer>
                   
                   <TextContainer>
-                    <Title>{
+                    <Label>{
                       context.isPlaying && isSameTrackAsGlobalPlayer
                       ? 'Pause'
                       : 'Play'
-                    }</Title> 
-                    <Description>You can navigate the rest of the site while listening!</Description>
+                    }</Label> 
                   </TextContainer>
                 </PlayBox>
               )
