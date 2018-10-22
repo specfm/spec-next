@@ -3,7 +3,7 @@ import * as React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { GA_TRACKING_ID } from '../lib/gtag'
-import GlobalStyles from '../static/normalize'
+import { GlobalStyles } from '../static/normalize'
 
 export default class MyDocument extends Document {
   // $FlowFixMe
