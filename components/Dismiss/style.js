@@ -10,7 +10,7 @@ export const Dismiss = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  color: ${theme.text.tertiary};
+  color: ${props => props.tint ? props.tint(theme) : theme.text.tertiary};
   opacity: 0.5;
   cursor: pointer;
 
@@ -27,11 +27,5 @@ export const Dismiss = styled.button`
     font-size: 16px;
     line-height: 1;
     font-weight: 600;
-  }
-
-  @media (max-width: 968px) {
-    position: absolute;
-    top: 16px;
-    right: 16px; 
   }
 `

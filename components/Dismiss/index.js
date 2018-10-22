@@ -3,15 +3,16 @@ import * as React from 'react'
 import { Dismiss } from './style'
 
 type Props = {
-  onDismiss: Function
+  onDismiss: Function,
+  color?: Function
 }
 
 class DismissButton extends React.Component<Props> {
   render() {
-    const { onDismiss } = this.props
+    const { onDismiss, color } = this.props
 
     return (
-      <Dismiss onClick={onDismiss}><i>×</i></Dismiss>
+      <Dismiss onClick={onDismiss} tint={color}><i>×</i></Dismiss>
     )
   }
 }
