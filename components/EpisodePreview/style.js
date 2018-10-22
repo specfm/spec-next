@@ -18,6 +18,7 @@ export const Title = styled.h5`
   font-size: 24px;
   font-weight: 700;
   color: ${props => props.theme.text.default};
+  line-height: 1.3;
 `
 
 export const Timestamp = styled.p`
@@ -39,4 +40,14 @@ export const Divider = styled.div`
   width: 100%;
   background: ${props => tint(props.theme.border.default, 3)};
   margin-top: 24px;
+`
+
+export const PlayTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `

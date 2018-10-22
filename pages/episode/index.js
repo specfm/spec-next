@@ -12,7 +12,7 @@ type Props = {
   podcast: ?SimplecastPodcast,
   podcasts: ?Array<ConfigPodcast>,
   episode: SimplecastEpisode,
-  episodes: ?Array<SimplecastEpisode>
+  episodes: ?Array<SimplecastEpisode>,
 }
 
 class Episode extends React.Component<Props> {

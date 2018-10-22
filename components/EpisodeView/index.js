@@ -3,7 +3,6 @@ import * as React from "react";
 import Head from 'next/head'
 import type { ConfigPodcast, SimplecastEpisode } from '../../types'
 import { Link as RouteLink } from '../../config/routes'
-import { Grid, Sidebar, Content, Title, Description, Divider, Label } from './style'
 import HostsGrid from '../HostsGrid'
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions'
 import { getDateObject } from '../../lib/getDateObject'
@@ -11,10 +10,20 @@ import Markdown from '../Markdown'
 import PodcastArt from "../PodcastArt";
 import EpisodeShareButtons from '../EpisodeShareButtons'
 import CommunityUpsell from '../CommunityUpsell'
+import EpisodePlayButton from '../EpisodePlayButton'
+import { 
+  Grid, 
+  Sidebar, 
+  Content, 
+  Title, 
+  Description, 
+  Divider, 
+  Label
+} from './style'
 
 type Props = {
   podcast: ConfigPodcast,
-  episode: SimplecastEpisode
+  episode: SimplecastEpisode,
 }
 
 class EpisodeView extends React.Component<Props> {
@@ -76,9 +85,9 @@ class EpisodeView extends React.Component<Props> {
           </Description>
           <Title>{episode.title}</Title>
 
-          <EpisodeShareButtons episode={episode} podcast={podcast} />
+          <EpisodePlayButton episode={episode} size={'full'} />
 
-          <audio data-cy="episode-player" src={episode.audio_url} controls preload="none"></audio>
+          <EpisodeShareButtons episode={episode} podcast={podcast} />
 
           <Markdown>
             {episode.long_description}

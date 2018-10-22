@@ -1,6 +1,7 @@
 // @flow
 import styled from 'styled-components'
 import { tint } from '../globals'
+import { theme } from '../theme'
 
 export const Grid = styled.div`
   display: grid;
@@ -23,11 +24,11 @@ export const Option = styled.div`
 
   &:hover {
     transition: all 0.1s ease-in-out;
-    background: ${props => tint(props.theme.bg.wash, -3)};
+    background: ${tint(theme.bg.wash, -3)};
   }
 
   &:active {
-    background: ${props => tint(props.theme.bg.wash, -6)};
+    background: ${tint(theme.bg.wash, -6)};
     transform: translateY(1px);
     transition: all 0.1s ease-in-out;
   }
@@ -37,13 +38,13 @@ export const Avatar = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background-color: ${props => props.theme.bg.default};
+  background-color: ${theme.bg.default};
 `
 
 export const Label = styled.p`
   font-size: 16px;
   font-weight: 500;
-  color: ${props => props.theme.text.secondary};
+  color: ${theme.text.secondary};
   align-items: center;
   display: flex;
 `
