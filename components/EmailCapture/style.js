@@ -110,3 +110,11 @@ export const EmbedContainer = styled.div`
     width: 100%;
   }
 `
+
+export const DismissContainer = styled.span`
+  @media (max-width: 968px) {
+    position: absolute;
+    top: 16px;
+    right: 16px; 
+  }
+`

@@ -2,7 +2,17 @@
 import * as React from 'react'
 import * as localStorage from '../../lib/localStorage'
 import Icon from '../Icon'
-import { Container, InnerContainer, EmbedContainer, Label, EmailInput, Submit, Field, SubmitIcon } from './style'
+import { 
+  Container, 
+  InnerContainer, 
+  EmbedContainer, 
+  Label, 
+  EmailInput, 
+  Submit, 
+  Field, 
+  SubmitIcon, 
+  DismissContainer 
+} from './style'
 import Dismiss from '../Dismiss'
 
 type State = {
@@ -28,7 +38,9 @@ class EmailCapture extends React.Component<{}, State> {
     if (isVisible) {
       return (
         <Container>
-          <Dismiss onDismiss={this.handleDismiss}><i>×</i></Dismiss>
+          <DismissContainer>
+            <Dismiss onDismiss={this.handleDismiss}><i>×</i></Dismiss>
+          </DismissContainer> 
 
           <InnerContainer>
             <Label>Get weekly design and development resources delivered straight to your inbox</Label>
