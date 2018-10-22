@@ -1,7 +1,7 @@
 // @flow
-import { createGlobalStyle } from 'styled-components'
+import { injectGlobal } from 'styled-components'
 
-export const GlobalStyles = createGlobalStyle`
+injectGlobal`
   * {
     border: 0;
     box-sizing: inherit;

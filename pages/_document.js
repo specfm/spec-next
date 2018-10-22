@@ -3,7 +3,7 @@ import * as React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { GA_TRACKING_ID } from '../lib/gtag'
-import { GlobalStyles} from '../static/normalize'
+import '../static/normalize'
 
 export default class MyDocument extends Document {
   // $FlowFixMe
@@ -17,7 +17,6 @@ export default class MyDocument extends Document {
   render () {
     return (
       <html lang="en">
-        <GlobalStyles />
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
           <meta charSet="utf-8" />
