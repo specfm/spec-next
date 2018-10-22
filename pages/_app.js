@@ -5,30 +5,86 @@ import Head from 'next/head'
 import withNProgress from "next-nprogress";
 import NProgressStyles from "next-nprogress/styles";
 import { theme } from '../components/theme'
-import PlayerContext, { defaultPlayerContext } from '../components/GlobalPlayer/context'
+import GlobalPlayerContext, { defaultPlayerContext } from '../components/GlobalPlayer/context'
 import GlobalPlayer from '../components/GlobalPlayer'
 import type { SimplecastEpisode } from '../types'
 
 class MyApp extends App {
   constructor() {
-    super()
+    super() 
 
-    this.state = { 
+    this.state = {
       ...defaultPlayerContext,
       addTrackToQueue: this.addTrackToQueue,
       clearQueue: this.clearQueue,
+      pause: this.pause,
+      play: this.play,
+      scrub: this.scrub,
+      onProgress: this.onProgress,
+      onTrackEnded: this.onTrackEnded,
     }
   }
 
   addTrackToQueue = (episode: SimplecastEpisode) => {
     this.setState(state => ({
       ...state,
-      trackQueue: [episode]
+      isPlaying: true,
+      trackQueue: [episode],
+      progress: 0,
+      displaySubscriptions: false,
     }))
   }
 
-  clearQueue = () => {
-    this.setState(defaultPlayerContext)
+  clearQueue = () => this.setState(state => ({ 
+    ...state, 
+    trackQueue: [],
+    progress: 0,
+    displaySubscriptions: false,
+  }))
+
+  getAudioElement = () => document && document.getElementById('global-player-audio')
+
+  pause = () => {
+    const el = this.getAudioElement()
+    if (el) {
+      // $FlowIssue
+      el.pause()
+      this.setState(state => ({ ...state, isPlaying: false }))
+    }
+  }
+
+  play = () => {
+    const el = this.getAudioElement()
+    if (el) {
+      // $FlowIssue
+      el.play()
+      this.setState(state => ({ ...state, isPlaying: true }))
+    }
+  }
+
+  scrub = (ev: any) => {
+    const { value } = ev.target
+    const el = this.getAudioElement()
+
+    if (el) {
+      // $FlowIssue
+      el.currentTime = value
+      this.setState(state => ({ ...state, progress: value }))
+      this.play()
+    }
+  }
+
+  onProgress = () => {
+    const el = this.getAudioElement()
+    if (el) {
+      // $FlowIssue
+      this.setState(state => ({ ...state, progress: el.currentTime }))
+    }
+  }
+
+  onTrackEnded = () => {
+    this.pause()
+    this.setState(state => ({ ...state, displaySubscriptions: true, progress: 0 }))
   }
 
   render () {
@@ -58,10 +114,10 @@ class MyApp extends App {
           {this.props.styleTags}
         </Head>
         
-        <PlayerContext.Provider value={this.state}>
+        <GlobalPlayerContext.Provider value={this.state}>
           <Component {...pageProps} />
           <GlobalPlayer />
-        </PlayerContext.Provider>
+        </GlobalPlayerContext.Provider>
 
       </Container>
     )

@@ -109,4 +109,8 @@ export const ScrollToTop = styled.button`
     bottom: 16px;
     right: 16px;
   }
+
+  @media (max-width: 556px) {
+    display: none;
+  }
 `

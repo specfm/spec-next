@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   margin-top: 128px;
   padding: 0 16px;
-  margin-bottom: ${props => props.addPlayerPadding ? '156px' : '0'};
+  margin-bottom: ${props => props.addPlayerPadding ? '172px' : '0'};
 `
 
 export const Description = styled.p`

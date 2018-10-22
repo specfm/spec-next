@@ -133,3 +133,10 @@ export const Content = css`
     font-weight: 600;
   }
 `
+
+export const Truncate = (width: number) => css`
+  width: ${width}px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`

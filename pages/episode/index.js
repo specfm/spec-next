@@ -13,7 +13,6 @@ type Props = {
   podcasts: ?Array<ConfigPodcast>,
   episode: SimplecastEpisode,
   episodes: ?Array<SimplecastEpisode>,
-  autoplay?: string
 }
 
 class Episode extends React.Component<Props> {
@@ -57,11 +56,11 @@ class Episode extends React.Component<Props> {
       }
     }
 
-    return { podcast, episode, podcasts, episodes, autoplay: query.autoplay };
+    return { podcast, episode, podcasts, episodes };
   }
 
   render() {
-    const { podcast, episode, podcasts, episodes, autoplay } = this.props
+    const { podcast, episode, podcasts, episodes } = this.props
 
     if (podcast) {
       const configPodcast = api.getConfigPodcastFromId(podcast.id)
@@ -72,7 +71,7 @@ class Episode extends React.Component<Props> {
 
             {
               episode && !episode.error && episode.published
-              ? <EpisodeView podcast={configPodcast} episode={episode} autoplay={autoplay} />
+              ? <EpisodeView podcast={configPodcast} episode={episode} />
               : <PodcastView podcast={configPodcast} episodes={episodes} />
             }
             

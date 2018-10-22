@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components'
+import { theme } from '../theme'
 
 export const Grid = styled.div`
   margin-top: 64px;
@@ -32,9 +33,10 @@ export const Content = styled.div`
 export const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;
-  color: ${props => props.theme.text.default};
+  color: ${theme.text.default};
   letter-spacing: 0.8px;
   line-height: 1.2;
+  margin-bottom: 32px;
 
   @media (max-width: 968px) {
     font-size: 32px;
@@ -45,7 +47,7 @@ export const Title = styled.h1`
 export const Description = styled.h2`
   font-size: 22px;
   font-weight: 400;
-  color: ${props => props.theme.text.tertiary};
+  color: ${theme.text.tertiary};
   line-height: 1.4;
   margin-bottom: 4px;
   margin-top: 24px;
@@ -56,14 +58,14 @@ export const Description = styled.h2`
   }
 
   a:hover {
-    color: ${props => props.theme.text.default};
+    color: ${theme.text.default};
   }
 `
 
 export const Divider = styled.div`
   position: relative;
   height: 1px;
-  border-bottom: 1px solid ${props => props.theme.border.default};
+  border-bottom: 1px solid ${theme.border.default};
   width: 100%;
   margin-top: 48px;
 `
@@ -71,9 +73,9 @@ export const Divider = styled.div`
 export const Label = styled.span`
   position: relative;
   top: -13px;
-  background: ${props => props.theme.bg.wash};
+  background: ${theme.bg.wash};
   padding: 2px 16px 2px 0;
   font-size: 16px;
   font-weight: 500;
-  color: ${props => props.theme.text.secondary};
+  color: ${theme.text.secondary};
 `
