@@ -14,8 +14,9 @@ export const Container = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   z-index: 999;
+  opacity: ${props => props.isVisible ? '1' : '0'};
   transform: translateY(${props => props.isVisible ? '-16px' : '80px'}) scale(1);
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,7 +24,7 @@ export const Container = styled.div`
 
   &:active {
     transform: scale(0.98) translateY(-16px);
-    transition: transform 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   @media (max-width: 556px) {

@@ -13,7 +13,7 @@ export const Container = styled.div`
     width: 100%;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
     
