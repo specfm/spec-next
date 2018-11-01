@@ -438,4 +438,10 @@ export default [
     url: "https://americanexpress.io/android-jobs",
     logoUrl: "/static/img/sponsors/amex_logo.jpg",
   },
+  
+    {
+    name: "Manifold",
+    url: "https://www.manifold.co/devtea",
+    logoUrl: "/static/img/sponsors/manifold.png",
+  },
 ]
