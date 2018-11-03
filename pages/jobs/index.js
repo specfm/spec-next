@@ -29,7 +29,7 @@ class Jobs extends React.Component<Props> {
   render() {
     const { jobs } = this.props
 
-    const allJobs = [...jobs, ...staticJobs]
+    const allJobs = jobs ? [...jobs, ...staticJobs] : staticJobs
 
     return (
       <Page dataCy={'invalid-podcast-view'}>
