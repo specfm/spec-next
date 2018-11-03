@@ -3,7 +3,7 @@ import * as React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { GA_TRACKING_ID } from '../lib/gtag'
-import '../static/normalize'
+import { GlobalStyles } from '../static/normalize'
 
 export default class MyDocument extends Document {
   // $FlowFixMe
@@ -26,6 +26,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <GlobalStyles />
           <NextScript />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
