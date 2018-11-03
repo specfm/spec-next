@@ -62,21 +62,6 @@ export default [
   },
 
   {
-    id: "5",
-    job_title: "Senior Manager, Design Education",
-    job_description: "InVision is the Digital Product Design platform used to make the world’s best customer experiences. We provide design tools and educational resources for teams to navigate every stage of the product design process, from ideation to development.",
-    job_location: "Remote",
-    job_application_link: "https://boards.greenhouse.io/invision/jobs/1206168",
-    creation_date: JSON.stringify(new Date()),
-    end_date: JSON.stringify(new Date()),
-    job_link: "https://boards.greenhouse.io/invision/jobs/1206168",
-    company: {
-      name: "InVision",
-      company_url: "https://www.invisionapp.com/"
-    }
-  },
-
-  {
     id: "6",
     job_title: "Software Engineer - Compute",
     job_description: "At Datadog, we're on a mission to bring sanity to cloud development and operations. We need to make the heterogeneous, complex data we collect globally available for users to digest and act upon.",
