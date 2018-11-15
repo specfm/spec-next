@@ -1,5 +1,5 @@
 // @flow
-import Queue from 'bull'
+import Queue from 'bull';
 import createRedis from './create-redis';
 
 const client = createRedis();
@@ -7,7 +7,7 @@ const subscriber = createRedis();
 
 function createQueue(name: string, queueOptions: ?Object) {
   const queue = new Queue(name, {
-    createClient: function(type) {
+    createClient(type) {
       switch (type) {
         case 'client':
           return client;
@@ -23,16 +23,16 @@ function createQueue(name: string, queueOptions: ?Object) {
     },
     ...queueOptions,
   });
-  
+
   queue.on('stalled', () => {
-    return
+    console.error('Job stalled');
   });
 
   queue.on('failed', () => {
-    return
+    console.error('Job failed');
   });
 
   return queue;
 }
 
-module.exports = { createQueue }
+module.exports = { createQueue };

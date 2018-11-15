@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 10
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:  
+  - npm ci
+before_script:
+  - npm run build
+  - npm run dev:api &
+  - npm run start &
+script:
+  - node --version
+  - npm --version
+  - npm run flow
+  - npm run cypress:run
+notifications:
+  email: false

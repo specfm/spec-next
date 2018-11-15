@@ -1,16 +1,17 @@
 // @flow
-import { css } from 'styled-components'
+import { css } from 'styled-components';
 
 export const hexa = (hex: string, alpha: number) => {
-  const r = parseInt(hex.slice(1, 3), 16),
-    g = parseInt(hex.slice(3, 5), 16),
-    b = parseInt(hex.slice(5, 7), 16);
+  const r = parseInt(hex.slice(1, 3), 16);
+
+  const g = parseInt(hex.slice(3, 5), 16);
+
+  const b = parseInt(hex.slice(5, 7), 16);
 
   if (alpha >= 0) {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  } else {
-    return `rgb(${r}, ${g}, ${b})`;
   }
+  return `rgb(${r}, ${g}, ${b})`;
 };
 
 export const tint = (hex: string, amount: number) => {
@@ -31,7 +32,7 @@ export const tint = (hex: string, amount: number) => {
 
   const getDouble = (number: number) =>
     number.toString(16).length === 1
-      ? '0' + number.toString(16)
+      ? `0${number.toString(16)}`
       : number.toString(16);
 
   const RR = getDouble(R);
@@ -46,7 +47,6 @@ export const Shadow = {
   mid: '0 4px 12px',
   high: '0 8px 16px',
 };
-
 
 export const Content = css`
   h1 {
@@ -110,10 +110,11 @@ export const Content = css`
   }
 
   a:hover button {
-    text-decoration: none!important;
+    text-decoration: none !important;
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin-left: 24px;
     margin-top: 12px;
     margin-bottom: 16px;
@@ -132,11 +133,11 @@ export const Content = css`
   strong {
     font-weight: 600;
   }
-`
+`;
 
 export const Truncate = (width: number) => css`
   width: ${width}px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`
+`;

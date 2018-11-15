@@ -18,8 +18,8 @@ export type SimplecastPodcast = {
     large: string,
     small: string,
     thumb: string,
-  }
-}
+  },
+};
 
 export type SimplecastEpisode = {
   id: number,
@@ -40,17 +40,17 @@ export type SimplecastEpisode = {
   images: {
     large: string,
     small: string,
-    thumb: string
+    thumb: string,
   },
   sponsors: Array<?any>,
   error?: string,
-}
+};
 
 export type Host = {
   name: string,
   twitterUsername: string,
   profilePhotoUrl: string,
-}
+};
 
 export type ConfigPodcast = {|
   id: ?number,
@@ -73,8 +73,8 @@ export type ConfigPodcast = {|
   colors: {
     text: string,
     button: string,
-  }
-|}
+  },
+|};
 
 export type GetInitialProps = {
   pathname: string,
@@ -83,14 +83,14 @@ export type GetInitialProps = {
   res?: any,
   jsonPageRes?: any,
   err?: any,
-}
+};
 
 export type SearchResult = {
   podcastId: number,
   title: string,
   id: number,
   publishedAt: string,
-}
+};
 
 export type JobListing = {
   id: string,
@@ -103,6 +103,6 @@ export type JobListing = {
   job_link: string,
   company: {
     name: string,
-    company_url: string
-  }
-}
+    company_url: string,
+  },
+};

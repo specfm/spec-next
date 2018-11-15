@@ -1,18 +1,26 @@
 // @flow
-import * as React from 'react'
-import Link from 'next/link'
-import Card from '../Card'
-import { OutlineButton } from '../Button'
-import { Container, Grid, Art, Content, Title, Description } from './style'
+import * as React from 'react';
+import Link from 'next/link';
+import Card from '../Card';
+import { OutlineButton } from '../Button';
+import { Container, Grid, Art, Content, Title, Description } from './style';
 
 class ResourcesGrid extends React.Component<{}> {
   render() {
     return (
       <Container>
         <Grid>
-          <a href="http://littlebitesofcocoa.com/" target="_blank" rel="noopener noreferrer" data-cy="resource-lbc">
+          <a
+            href="http://littlebitesofcocoa.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cy="resource-lbc"
+          >
             <Card>
-              <Art src={'/static/img/resources/lbc.png'} alt={'Little Bites of Cocoa'} />
+              <Art
+                src="/static/img/resources/lbc.png"
+                alt="Little Bites of Cocoa"
+              />
 
               <Content>
                 <Title>Little Bites of Cocoa</Title>
@@ -22,9 +30,17 @@ class ResourcesGrid extends React.Component<{}> {
             </Card>
           </a>
 
-          <a href="http://www.brianlovin.com/design-details/" target="_blank" rel="noopener noreferrer" data-cy="resource-ddblog">
+          <a
+            href="http://www.brianlovin.com/design-details/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cy="resource-ddblog"
+          >
             <Card>
-              <Art src={'/static/img/resources/dd.png'} alt={'Design Details Blog'} />
+              <Art
+                src="/static/img/resources/dd.png"
+                alt="Design Details Blog"
+              />
 
               <Content>
                 <Title>Design Details Blog</Title>
@@ -34,10 +50,13 @@ class ResourcesGrid extends React.Component<{}> {
             </Card>
           </a>
 
-          <Link href={'/specifics'}>
+          <Link href="/specifics">
             <a data-cy="resource-specifics">
               <Card>
-                <Art src={'/static/img/resources/specifics.png'} alt={'Specifics'} />
+                <Art
+                  src="/static/img/resources/specifics.png"
+                  alt="Specifics"
+                />
 
                 <Content>
                   <Title>Specifics</Title>
@@ -49,8 +68,8 @@ class ResourcesGrid extends React.Component<{}> {
           </Link>
         </Grid>
       </Container>
-    )
+    );
   }
 }
 
-export default ResourcesGrid
+export default ResourcesGrid;

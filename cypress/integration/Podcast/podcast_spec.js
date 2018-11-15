@@ -1,3 +1,6 @@
+import podcasts from '../../../config/podcasts'
+const slugs = podcasts.map(podcast => podcast.slug)
+
 describe('Podcast', () => {
   beforeEach(() => {
     cy.visit(`/podcasts/design-details`);
@@ -24,8 +27,6 @@ describe('Invalid Podcast', () => {
     // page renders
     cy.get('[data-cy="invalid-podcast-view"]').should('be.visible');
     // podcast should be visible
-    cy.fixture('podcast-slugs').then(slugs => {
-      slugs.map(slug => cy.get(`[data-cy="${slug}-podcast"]`).should('be.visible'))
-    })
+    slugs.map(slug => cy.get(`[data-cy="${slug}-podcast"]`).should('be.visible'))
   })
 });

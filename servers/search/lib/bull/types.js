@@ -1,5 +1,5 @@
 // @flow
-import type { SimplecastEpisode } from "../types";
+import type { SimplecastEpisode } from '../types';
 
 export type Job<JobData> = {|
   id: string,
@@ -14,9 +14,9 @@ type JobOptions = {|
   removeOnComplete?: boolean,
   removeOnFail?: boolean,
   attempts?: number,
-  repeat?: { 
-    cron: string, 
-    tz: string 
+  repeat?: {
+    cron: string,
+    tz: string,
   },
 |};
 
@@ -28,13 +28,13 @@ interface BullQueue<JobData> {
   getJob: (id: string) => Promise<Job<JobData> | null>;
 }
 
-export type IndexPodcastsJobData = {}
+export type IndexPodcastsJobData = {};
 export type IndexPodcastJobData = {
-  id: number
-}
+  id: number,
+};
 export type IndexEpisodeJobData = {
   episode: SimplecastEpisode,
-}
+};
 
 export type Queues = {
   indexPodcastsInSearch: BullQueue<IndexPodcastsJobData>,
