@@ -445,7 +445,7 @@ export default [
     logoUrl: "/static/img/sponsors/manifold.png",
   },
   
-     {
+  {
     name: "Nevercode",
     url: "https://nevercode.io",
     logoUrl: "/static/img/sponsors/nevercode.png",
