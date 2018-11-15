@@ -16,8 +16,10 @@
     "flow status": "flow status",
     "flow coverage": "flow coverage",
     "cypress:open": "cypress open",
-    "test:e2e": "cypress run",
+    "cypress:run": "cypress run",
+    "lint:staged": "lint-staged",
     "deploy:web": "now",
+    "prettier": "prettier",
     "deploy:api": "(cd servers/api && now)",
     "deploy:search": "(cd servers/search && now)"
   },
