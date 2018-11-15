@@ -22,7 +22,6 @@
     "deploy:search": "(cd servers/search && now)"
   },
   "dependencies": {
-    "eslint": "^5.9.0",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
@@ -32,13 +31,13 @@
     "next-routes": "^1.4.2",
     "react": "^16.6.3",
     "react-clipboard": "^1.3.2",
-    "react-clipboard.js": "^2.0.0",
-    "react-dom": "^16.6.0",
+    "react-clipboard.js": "^2.0.1",
+    "react-dom": "^16.6.3",
     "react-image": "^1.5.1",
     "react-instantsearch": "^5.3.2",
     "react-markdown": "^4.0.3",
     "react-visibility": "^0.3.0",
-    "react-visibility-sensor": "^3.13.0",
+    "react-visibility-sensor": "^5.0.2",
     "serve-favicon": "^2.5.0",
     "styled-components": "^4.1.1",
     "throttle-debounce": "^2.0.1"
@@ -49,6 +48,7 @@
     "babel-plugin-transform-define": "^1.3.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "cypress": "^3.1.1",
+    "eslint": "^5.9.0",
     "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",

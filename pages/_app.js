@@ -6,6 +6,7 @@ import NProgress from "next-nprogress/component";
 import { theme } from '../components/theme'
 import GlobalPlayerContext, { defaultPlayerContext } from '../components/GlobalPlayer/context'
 import GlobalPlayer from '../components/GlobalPlayer'
+import { GlobalStyles } from '../static/normalize';
 import type { SimplecastEpisode } from '../types'
 
 class MyApp extends App {
@@ -90,6 +91,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
+        <GlobalStyles />
         <NProgress color={theme.brand.default} showAfterMs={300} />
         <Head>
           <title>Spec · Level Up</title>
