@@ -444,4 +444,10 @@ export default [
     url: "https://www.manifold.co/devtea",
     logoUrl: "/static/img/sponsors/manifold.png",
   },
+  
+     {
+    name: "Nevercode",
+    url: "https://nevercode.io",
+    logoUrl: "/static/img/sponsors/nevercode.png",
+  },
 ]
