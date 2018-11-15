@@ -3,15 +3,20 @@ import App, {Container} from 'next/app'
 import * as React from 'react'
 import Head from 'next/head'
 import NProgress from "next-nprogress/component";
+import * as Sentry from '@sentry/browser';
 import { theme } from '../components/theme'
 import GlobalPlayerContext, { defaultPlayerContext } from '../components/GlobalPlayer/context'
 import GlobalPlayer from '../components/GlobalPlayer'
 import { GlobalStyles } from '../static/normalize';
 import type { SimplecastEpisode } from '../types'
 
+const SENTRY_PUBLIC_DSN = 'https://7248f7abd384414b9fc10797611eff46@sentry.io/1323990';
+
 class MyApp extends App {
   constructor() {
     super() 
+
+    Sentry.init({ dsn: SENTRY_PUBLIC_DSN });
 
     this.state = {
       ...defaultPlayerContext,
@@ -23,6 +28,19 @@ class MyApp extends App {
       onProgress: this.onProgress,
       onTrackEnded: this.onTrackEnded,
     }
+  }
+
+  // $FlowFixMe
+  componentDidCatch(error: mixed, errorInfo: any) {
+    Sentry.configureScope(scope => {
+      Object.keys(errorInfo).forEach(key => {
+        scope.setExtra(key, errorInfo[key]);
+      });
+    });
+    Sentry.captureException(error);
+
+    // This is needed to render errors correctly in development / production
+    super.componentDidCatch(error, errorInfo);
   }
 
   addTrackToQueue = (episode: SimplecastEpisode) => {
@@ -40,6 +58,7 @@ class MyApp extends App {
     trackQueue: [],
     progress: 0,
     displaySubscriptions: false,
+    isPlaying: false,
   }))
 
   getAudioElement = () => document && document.getElementById('global-player-audio')
@@ -109,6 +128,11 @@ class MyApp extends App {
           <link rel="manifest" href="/static/meta/site.webmanifest" />
           <link rel="mask-icon" href="/static/meta/safari-pinned-tab.svg" color="#212325" />
           <meta name="msapplication-TileColor" content="#ffffff" />
+
+          <script
+            src="https://browser.sentry-cdn.com/4.2.4/bundle.min.js"
+            crossOrigin="anonymous"
+          />
 
           <link rel="preconnect" href="https://api.spec.fm" />
           
