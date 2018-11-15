@@ -1,8 +1,12 @@
 // @flow
-import * as React from 'react'
-import * as Styled from './style'
-import Icon from '../Icon'
-import Clipboard from 'react-clipboard.js'
+import * as React from 'react';
+import dynamic from 'next/dynamic';
+import * as Styled from './style';
+import Icon from '../Icon';
+
+const Clipboard = dynamic(() => import('react-clipboard.js'), {
+  ssr: false,
+});
 
 export type Size = 'small' | 'large' | 'default';
 export type Props = {
@@ -11,16 +15,12 @@ export type Props = {
   children: React.Node,
 };
 
-export const ButtonRow = Styled.ButtonRow
-export const ButtonSegmentRow = Styled.ButtonSegmentRow
+export const ButtonRow = Styled.ButtonRow;
+export const ButtonSegmentRow = Styled.ButtonSegmentRow;
 
 export class Button extends React.Component<Props> {
   render() {
-    return (
-      <Styled.Button {...this.props}>
-        {this.props.children}
-      </Styled.Button>
-    )
+    return <Styled.Button {...this.props}>{this.props.children}</Styled.Button>;
   }
 }
 
@@ -30,7 +30,7 @@ export class PrimaryButton extends React.Component<Props> {
       <Styled.PrimaryButton {...this.props}>
         {this.props.children}
       </Styled.PrimaryButton>
-    )
+    );
   }
 }
 
@@ -40,7 +40,7 @@ export class GhostButton extends React.Component<Props> {
       <Styled.GhostButton {...this.props}>
         {this.props.children}
       </Styled.GhostButton>
-    )
+    );
   }
 }
 
@@ -50,7 +50,7 @@ export class OutlineButton extends React.Component<Props> {
       <Styled.OutlineButton {...this.props}>
         {this.props.children}
       </Styled.OutlineButton>
-    )
+    );
   }
 }
 
@@ -61,7 +61,7 @@ export class FacebookButton extends React.Component<Props> {
         <Icon glyph="facebook" size={24} />
         {this.props.children}
       </Styled.FacebookButton>
-    )
+    );
   }
 }
 
@@ -72,38 +72,41 @@ export class TwitterButton extends React.Component<Props> {
         <Icon glyph="twitter" size={24} />
         {this.props.children}
       </Styled.TwitterButton>
-    )
+    );
   }
 }
 
 type CopyLinkProps = {
   ...$Exact<Props>,
   text: string,
-}
+};
 
 type CopyLinkState = {
-  isClicked: boolean
-}
+  isClicked: boolean,
+};
 
-export class CopyLinkButton extends React.Component<CopyLinkProps, CopyLinkState> {
+export class CopyLinkButton extends React.Component<
+  CopyLinkProps,
+  CopyLinkState
+> {
   ref: ?any;
+
   ref = null;
+
   state = {
-    isClicked: false
-  }
+    isClicked: false,
+  };
 
   onClick = () => {
-    this.setState({ isClicked: true })
+    this.setState({ isClicked: true });
 
-    const ref = setTimeout(() => {
-      return this.setState({ isClicked: false });
-    }, 2000);
+    const ref = setTimeout(() => this.setState({ isClicked: false }), 2000);
     this.ref = ref;
-  }
+  };
 
   render() {
-    const { text } = this.props
-    const { isClicked } = this.state
+    const { text } = this.props;
+    const { isClicked } = this.state;
     return (
       <Clipboard
         style={{ background: 'none' }}
@@ -113,13 +116,9 @@ export class CopyLinkButton extends React.Component<CopyLinkProps, CopyLinkState
       >
         <Styled.CopyLinkButton isClicked={isClicked} {...this.props}>
           <Icon glyph="link" size={24} />
-          {
-            isClicked
-            ? 'Copied!'
-            : this.props.children
-          }
+          {isClicked ? 'Copied!' : this.props.children}
         </Styled.CopyLinkButton>
       </Clipboard>
-    )
+    );
   }
 }
