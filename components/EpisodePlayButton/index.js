@@ -48,6 +48,7 @@ class EpisodePlayButton extends React.Component<Props> {
             if (size === 'full') {
               return (
                 <PlayBox 
+                  data-cy="episode-player"
                   onClick={playAction}>
                   <IconContainer>
                     {
@@ -71,6 +72,7 @@ class EpisodePlayButton extends React.Component<Props> {
             if (size === 'mini') {
               return (
                 <MiniPlayBox 
+                  data-cy="episode-player"
                   onClick={playAction}>
                   <IconContainer>
                     {

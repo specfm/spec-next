@@ -3,6 +3,7 @@
   "viewportWidth": 1300,
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 20000,
+  "video": false,
   "blacklistHosts": [
     "*.google-analytics.com",
     "*.googletagmanager.com"

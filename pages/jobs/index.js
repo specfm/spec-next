@@ -32,7 +32,7 @@ class Jobs extends React.Component<Props> {
     const allJobs = jobs ? [...jobs, ...staticJobs] : staticJobs
 
     return (
-      <Page dataCy={'invalid-podcast-view'}>
+      <Page dataCy={'jobs-view'}>
         <SectionHeading>
           <Heading>Jobs</Heading>
           <Subheading>Level up at an industry-leading company</Subheading>
