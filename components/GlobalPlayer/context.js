@@ -1,6 +1,7 @@
 // @flow
-import * as React from 'react'
-import type { SimplecastEpisode } from '../../types'
+import * as React from 'react';
+import type { SimplecastEpisode } from '../../types';
+
 export const defaultPlayerContext = {
   trackQueue: [],
   isPlaying: false,
@@ -18,6 +19,7 @@ export const defaultPlayerContext = {
   scrub: () => {},
   onProgress: () => {},
   onTrackEnded: () => {},
-}
+};
 
-export default React.createContext(defaultPlayerContext)
+// $FlowIssue
+export default React.createContext(defaultPlayerContext);
