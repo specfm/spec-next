@@ -2,8 +2,7 @@
 import App, {Container} from 'next/app'
 import * as React from 'react'
 import Head from 'next/head'
-import withNProgress from "next-nprogress";
-import NProgressStyles from "next-nprogress/styles";
+import NProgress from "next-nprogress/component";
 import { theme } from '../components/theme'
 import GlobalPlayerContext, { defaultPlayerContext } from '../components/GlobalPlayer/context'
 import GlobalPlayer from '../components/GlobalPlayer'
@@ -91,7 +90,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
-        <NProgressStyles color={theme.brand.default} />
+        <NProgress color={theme.brand.default} showAfterMs={300} />
         <Head>
           <title>Spec · Level Up</title>
           <meta content="@specfm" name="twitter:site" key="twitter:site" />
@@ -124,5 +123,4 @@ class MyApp extends App {
   }
 }
 
-const msDelay = 500;
-export default withNProgress(msDelay)(MyApp);
+export default MyApp;
