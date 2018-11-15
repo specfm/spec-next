@@ -1,16 +1,17 @@
 // @flow
-import "babel-polyfill"
-const debug = require('debug')('search');
+import 'babel-polyfill';
 import createWorker from './bull/create-worker';
-import processIndexPodcasts from './queues/indexPodcasts'
-import processIndexPodcast from './queues/indexPodcast'
-import processIndexEpisode from './queues/indexEpisode'
+import processIndexPodcasts from './queues/indexPodcasts';
+import processIndexPodcast from './queues/indexPodcast';
+import processIndexEpisode from './queues/indexEpisode';
 import {
   INDEX_PODCAST_IN_SEARCH,
   INDEX_PODCASTS_IN_SEARCH,
   INDEX_EPISODE_IN_SEARCH,
 } from './queues/constants';
 import { startCron } from './jobs';
+
+const debug = require('debug')('search');
 
 const PORT = parseInt(process.env.PORT, 10) || 3002;
 debug('Search server is starting...');
@@ -31,7 +32,7 @@ const server = createWorker(
   }
 );
 
-startCron()
+startCron();
 
 server.listen(PORT, 'localhost', 511, () => {
   debug(

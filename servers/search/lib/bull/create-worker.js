@@ -1,7 +1,7 @@
 // @flow
-import http from 'http'
-import EventEmitter from 'events'
-import { createQueue } from './create-queue'
+import http from 'http';
+import EventEmitter from 'events';
+import { createQueue } from './create-queue';
 import toobusy from './toobusy';
 
 type QueueMap = {
@@ -10,9 +10,8 @@ type QueueMap = {
 
 // Helper function to sum properties of an array of objects
 // e.g. [{ completed: 6 }, { completed: 2 }] => 8
-const sumArr = (input: Array<Object>, prop: string) => {
-  return input.reduce((sum, item) => sum + item[prop], 0);
-};
+const sumArr = (input: Array<Object>, prop: string) =>
+  input.reduce((sum, item) => sum + item[prop], 0);
 
 const createWorker = (queueMap: QueueMap, queueOptions?: Object = {}) => {
   // We add one error listener per queue, so we have to set the max listeners

@@ -1,6 +1,7 @@
 // @flow
-require('now-env')
 import Redis from 'ioredis';
+
+require('now-env');
 
 const config =
   process.env.NODE_ENV === 'production'

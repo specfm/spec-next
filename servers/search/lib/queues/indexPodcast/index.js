@@ -1,21 +1,24 @@
 // @flow
-require('now-env')
+import api from '../../api';
+import { indexEpisodeInSearch } from '../../bull/queues';
+import type { Job, IndexPodcastJobData } from '../../bull/types';
+
+require('now-env');
 const debug = require('debug')('search:index-podcast');
-import api from '../../api'
-import { indexEpisodeInSearch } from '../../bull/queues'
-import type { Job, IndexPodcastJobData } from '../../bull/types'
 
 export default async (job: Job<IndexPodcastJobData>) => {
   debug(`\nindex podcast job: ${job.id}`);
-  const { id } = job.data
+  const { id } = job.data;
 
-  const episodes = await api.getEpisodes(id)
+  const episodes = await api.getEpisodes(id);
   const indexEpisodesPromises = episodes
     .filter(episode => episode.published)
-    .map(episode => indexEpisodeInSearch.add({ 
-      showId: id,
-      episode
-    }))
+    .map(episode =>
+      indexEpisodeInSearch.add({
+        showId: id,
+        episode,
+      })
+    );
 
-  return Promise.all(indexEpisodesPromises)
+  return Promise.all(indexEpisodesPromises);
 };

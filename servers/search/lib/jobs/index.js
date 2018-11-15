@@ -1,10 +1,9 @@
 // @flow
-import { indexPodcastsInSearch } from '../bull/queues'
+import { indexPodcastsInSearch } from '../bull/queues';
 
 export const startCron = () => {
-  const pattern = process.env.NODE_ENV === 'production'
-    ? '30 5 * * *'
-    : '* * * * *'
+  const pattern =
+    process.env.NODE_ENV === 'production' ? '30 5 * * *' : '* * * * *';
 
   return indexPodcastsInSearch.add(
     {},
@@ -14,5 +13,5 @@ export const startCron = () => {
       attempts: 1,
       repeat: { cron: pattern, tz: 'America/Los_Angeles' },
     }
-  )
-}
+  );
+};
