@@ -1,17 +1,17 @@
 // @flow
-import * as React from 'react'
-import Card from '../Card'
-import { BlurredArt, Art } from './style'
-import VisibilitySensor from 'react-visibility-sensor'
+import * as React from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
+import Card from '../Card';
+import { BlurredArt, Art } from './style';
 
 type Props = {
   src: string,
-  alt: string
-}
+  alt: string,
+};
 
 class PodcastArt extends React.Component<Props> {
   render() {
-    const { src, alt } = this.props
+    const { src, alt } = this.props;
 
     return (
       <VisibilitySensor>
@@ -20,8 +20,8 @@ class PodcastArt extends React.Component<Props> {
           <Art src={src} alt={alt} />
         </Card>
       </VisibilitySensor>
-    )
+    );
   }
 }
 
-export default PodcastArt
+export default PodcastArt;

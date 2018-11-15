@@ -1,5 +1,1 @@
-export default [
-  "lbc",
-  "ddblog",
-  "specifics"
-]
+export default ['lbc', 'ddblog', 'specifics'];

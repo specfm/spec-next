@@ -1,38 +1,35 @@
 // @flow
-import * as React from 'react';
+// $FlowIssue
+import React, { useRef, useEffect } from 'react';
+import type { Node } from 'react';
 
 type Props = {
-  children: React.Node,
+  children: Node,
   onOutsideClick: Function,
-  style?: Object
+  style?: Object,
 };
 
-class OutsideAlerter extends React.Component<Props> {
-  wrapperRef: React.Node;
+export default function OutsideClickHandler(props: Props) {
+  const wrapperRef = useRef(null);
 
-  componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
-  }
-
-  setWrapperRef = (node: React.Node) => {
-    this.wrapperRef = node;
-  };
-
-  handleClickOutside = (event: any) => {
+  function handleClickOutside(event: any) {
+    const { onOutsideClick } = props;
     // $FlowFixMe
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.props.onOutsideClick();
+    if (wrapperRef && !wrapperRef.contains(event.target)) {
+      onOutsideClick();
     }
-  };
-
-  render() {
-    // $FlowFixMe
-    return <div style={this.props.style} ref={this.setWrapperRef}>{this.props.children}</div>;
   }
-}
 
-export default OutsideAlerter;
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const { style, children } = props;
+
+  return (
+    <div style={style} ref={wrapperRef}>
+      {children}
+    </div>
+  );
+}

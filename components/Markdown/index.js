@@ -1,23 +1,25 @@
 // @flow
-import * as React from 'react'
-import { Notes } from './style'
+import * as React from 'react';
+import { Notes } from './style';
 
 type Props = {
-  children: React.Node
-}
+  children: React.Node,
+};
 
 function LinkRenderer(props: any) {
-  return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
+  const { children, href } = props;
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  );
 }
 
 class Markdown extends React.Component<Props> {
   render() {
-    return (
-      <Notes renderers={{ link: LinkRenderer }}>
-        {this.props.children}
-      </Notes>
-    )
+    const { children } = this.props;
+    return <Notes renderers={{ link: LinkRenderer }}>{children}</Notes>;
   }
 }
 
-export default Markdown
+export default Markdown;
