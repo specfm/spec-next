@@ -466,4 +466,10 @@ export default [
     url: 'https://nevercode.io',
     logoUrl: '/static/img/sponsors/nevercode.png',
   },
+  
+  {
+    name: 'duckduckgo',
+    url: 'https://duckduckgo.com/',
+    logoUrl: '/static/img/sponsors/duckduckgo.png',
+  },
 ];
