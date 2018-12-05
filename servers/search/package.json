@@ -8,7 +8,7 @@
     "start": "NODE_ENV=production node build-search/index.js"
   },
   "dependencies": {
-    "algoliasearch": "^3.30.0",
+    "algoliasearch": "^3.31.0",
     "babel-polyfill": "^6.26.0",
     "bull": "^3.5.2",
     "debug": "^4.1.0",
