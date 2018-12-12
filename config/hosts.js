@@ -6,10 +6,10 @@ export default {
     profilePhotoUrl: '/static/img/hosts/jcutrell.jpg',
   },
 
-  defaultbryn: {
+  superbryntendo: {
     name: 'Bryn Jackson',
-    twitterUsername: 'defaultbryn',
-    profilePhotoUrl: '/static/img/hosts/defaultbryn.jpg',
+    twitterUsername: 'superbryntendo',
+    profilePhotoUrl: '/static/img/hosts/superbryntendo.jpg',
   },
 
   soffes: {
