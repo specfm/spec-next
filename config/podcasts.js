@@ -70,7 +70,7 @@ export default [
     breakerUrl: 'https://www.breaker.audio/immutable',
     applePodcastId: '1035147995',
     twitterUsername: 'ImmutableFM',
-    hosts: [hosts.soffes, hosts.defaultbryn],
+    hosts: [hosts.soffes, hosts.superbryntendo],
     featuredEpisodes: [],
     colors: {
       text: '#C93634',
@@ -120,7 +120,7 @@ export default [
     applePodcastId: '1055180013',
     twitterUsername: 'vicarious_fm',
     hosts: [
-      hosts.defaultbryn,
+      hosts.superbryntendo,
       hosts.marshallbock,
       hosts.sortino,
       hosts.sarahberus,
