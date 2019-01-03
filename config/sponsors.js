@@ -473,9 +473,15 @@ export default [
     logoUrl: '/static/img/sponsors/duckduckgo.png',
   },
   
-    {
+  {
     name: 'Discover.bot',
     url: 'https://bit.ly/2K3YOIN',
     logoUrl: '/static/img/sponsors/discoverbot.png',
+  },
+  
+  {
+    name: 'Sentry.io',
+    url: 'https://www.sentry.io',
+    logoUrl: '/static/img/sponsors/sentry.png',
   },
 ];
