@@ -44,12 +44,37 @@ export default [
       'https://www.zendesk.com/in-app-customer-service/?utm_medium=display&utm_source=specfm&utm_campaign=Little%2BBites%2BCocoa',
     logoUrl: '/static/img/sponsors/zendesk.png',
   },
-
+  
   {
-    name: 'Sky Silk',
+    name: 'Abstract',
     url:
-      'https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time',
-    logoUrl: '/static/img/sponsors/skysilk.png',
+      'https://www.goabstract.com/?&utm_medium=Partner-Advertising&utm_source=PA-Podcast&utm_campaign=CY-19-PA-Podcast-DesignDetails&utm_content=Logo',
+    logoUrl: '/static/img/sponsors/abstract.png',
+  },
+  
+  {
+    name: 'Shopify',
+    url: 'https://www.shopify.com/careers',
+    logoUrl: '/static/img/sponsors/shopify.png',
+  },
+  
+  {
+    name: 'Dolby',
+    url: 'https://goo.gl/CMMT6j',
+    logoUrl: '/static/img/sponsors/dolby.png',
+  },
+  
+  {
+    name: 'Asana',
+    url: 'https://asana.design/',
+    logoUrl: '/static/img/sponsors/asana.png',
+  },
+  
+  {
+    name: 'Gusto',
+    url:
+      'https://gusto.com/about/careers?utm_source=spec.fm&utm_campaign=careers',
+    logoUrl: '/static/img/sponsors/gusto.png',
   },
 
   {
@@ -103,13 +128,6 @@ export default [
   },
 
   {
-    name: 'Gusto',
-    url:
-      'https://gusto.com/about/careers?utm_source=spec.fm&utm_campaign=careers',
-    logoUrl: '/static/img/sponsors/gusto.png',
-  },
-
-  {
     name: 'Reaktor',
     url: 'https://reaktor.com/careers',
     logoUrl: '/static/img/sponsors/reaktor.png',
@@ -140,13 +158,6 @@ export default [
   },
 
   {
-    name: 'Abstract',
-    url:
-      'https://www.goabstract.com/?utm_source=Referral&utm_medium=Design-Detail&utm_campaign=RF-CY18-Q2-DesignDetail-Apr-Jul&utm_term=logo&utm_content=logo',
-    logoUrl: '/static/img/sponsors/abstract.png',
-  },
-
-  {
     name: 'Flywheel',
     url: 'https://local.getflywheel.com/tea',
     logoUrl: '/static/img/sponsors/flywheel.png',
@@ -168,12 +179,6 @@ export default [
     name: 'Figma',
     url: 'https://www.figma.com/careers',
     logoUrl: '/static/img/sponsors/figma.png',
-  },
-
-  {
-    name: 'Shopify',
-    url: 'https://www.shopify.com/careers',
-    logoUrl: '/static/img/sponsors/shopify.png',
   },
 
   {
@@ -233,11 +238,6 @@ export default [
     logoUrl: '/static/img/sponsors/pluot.png',
   },
 
-  {
-    name: 'Dolby',
-    url: 'https://goo.gl/CMMT6j',
-    logoUrl: '/static/img/sponsors/dolby.png',
-  },
 
   {
     name: 'Chart.io',
@@ -431,12 +431,6 @@ export default [
   },
 
   {
-    name: 'Asana',
-    url: 'https://asana.design/',
-    logoUrl: '/static/img/sponsors/asana.png',
-  },
-
-  {
     name: 'ProtoPie',
     url: 'https://bit.ly/2otlJ6d',
     logoUrl: '/static/img/sponsors/protopie.png',
@@ -483,5 +477,12 @@ export default [
     name: 'Sentry.io',
     url: 'https://www.sentry.io',
     logoUrl: '/static/img/sponsors/sentry.png',
+  },
+  
+  {
+    name: 'Sky Silk',
+    url:
+      'https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time',
+    logoUrl: '/static/img/sponsors/skysilk.png',
   },
 ];
