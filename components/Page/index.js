@@ -28,7 +28,7 @@ type Props = {
 };
 
 export default function Page(props: Props) {
-  const { children, showEmailCapture, dataCy } = props;
+  const { children, showEmailCapture = true, dataCy } = props;
   const [lastTrackedPageview, setLastTrackedPageview] = useState(null);
   const [showHeaderShadow, setHeaderShadow] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);

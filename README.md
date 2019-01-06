@@ -9,16 +9,16 @@ Clone the repository:
 `cd spec-next`
 
 Install dependencies for the web and api:
-`yarn && cd servers/api && yarn && cd ../..`
+`npm install && cd servers/api && npm install && cd ../..`
 
 Start the api:
-`yarn run dev:api`
+`npm run dev:api`
 
 In another terminal window, start the client:
-`yarn run dev:web`
+`npm run dev:web`
 
 Open the site:
 `localhost:3000`
 
 To run cypress tests:
-`yarn run cypress:open`
+`npm run cypress:open`
