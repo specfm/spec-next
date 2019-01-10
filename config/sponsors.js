@@ -485,6 +485,12 @@ export default [
     logoUrl: '/static/img/sponsors/readymag.png',
   },
   
+      {
+    name: 'Clubhouse',
+    url: 'https://clubhouse.io/',
+    logoUrl: '/static/img/sponsors/Clubhouse.png',
+  },
+  
   {
     name: 'Sky Silk',
     url:
