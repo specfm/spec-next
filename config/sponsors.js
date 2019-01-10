@@ -479,10 +479,16 @@ export default [
     logoUrl: '/static/img/sponsors/sentry.png',
   },
   
-    {
+  {
     name: 'Readymag',
     url: 'https://readymag.com/?utm_source=newsletter&utm_campaign=designdetails',
     logoUrl: '/static/img/sponsors/readymag.png',
+  },
+  
+  {
+    name: 'Clubhouse',
+    url: 'https://clubhouse.io/',
+    logoUrl: '/static/img/sponsors/Clubhouse.png',
   },
   
   {
