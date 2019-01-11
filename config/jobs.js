@@ -39,38 +39,6 @@ export default [
 
   {
     id: '3',
-    job_title: 'Product Designer',
-    job_description:
-      'InVision is the Digital Product Design platform used to make the world’s best customer experiences. We provide design tools and educational resources for teams to navigate  every stage of the product design process, from ideation to development.',
-    job_location: 'Remote',
-    job_application_link: 'https://grnh.se/e10ec8691',
-    creation_date: JSON.stringify(new Date()),
-    end_date: JSON.stringify(new Date()),
-    job_link: 'https://grnh.se/e10ec8691',
-    company: {
-      name: 'InVision',
-      company_url: 'https://www.invisionapp.com/',
-    },
-  },
-
-  {
-    id: '4',
-    job_title: 'Design Specialist',
-    job_description:
-      'InVision Design Specialists bring a unique skill set to the Design Transformation team as they combine the experience of a senior design practitioner with an expertise in crafting training and strategic content for teams at large brands or agencies on best practices, trends, and design tools. You will help these teams understand the importance of the tools they choose and how to improve all aspects of their work get the most value from the InVision platform. This role provides a rare opportunity to gain an in-depth understanding and help influence the diverse challenges companies are facing in the world of product design.',
-    job_location: 'Remote',
-    job_application_link: 'https://boards.greenhouse.io/invision/jobs/867187',
-    creation_date: JSON.stringify(new Date()),
-    end_date: JSON.stringify(new Date()),
-    job_link: 'https://boards.greenhouse.io/invision/jobs/867187',
-    company: {
-      name: 'InVision',
-      company_url: 'https://www.invisionapp.com/',
-    },
-  },
-
-  {
-    id: '6',
     job_title: 'Software Engineer - Compute',
     job_description:
       "At Datadog, we're on a mission to bring sanity to cloud development and operations. We need to make the heterogeneous, complex data we collect globally available for users to digest and act upon.",
