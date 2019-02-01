@@ -3,7 +3,7 @@ import { indexPodcastsInSearch } from '../bull/queues';
 
 export const startCron = () => {
   const pattern =
-    process.env.NODE_ENV === 'production' ? '30 5 * * *' : '* * * * *';
+    process.env.NODE_ENV === 'production' ? '30 5 1-31/2 * *' : '* * * * *';
 
   return indexPodcastsInSearch.add(
     {},
