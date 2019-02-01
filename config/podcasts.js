@@ -257,7 +257,7 @@ export default [
       button: '#3A87C9',
     },
   },
-  
+
   {
     id: 9926,
     name: 'Framework',
@@ -266,15 +266,16 @@ export default [
       'Framework is a podcast about the process of researching, planning and building that goes into bringing a product to market.',
     artworkUrl: '/static/img/shows/framework.jpg',
     simplecastId: 9926,
-    iTunesUrl: 'https://itunes.apple.com/ca/podcast/framework/id1373741352?mt=2',
+    iTunesUrl:
+      'https://itunes.apple.com/ca/podcast/framework/id1373741352?mt=2',
     overcastUrl: 'https://overcast.fm/itunes1373741352',
     pocketCastsUrl: 'http://pca.st/itunes/1373741352',
     castroUrl: 'https://castro.fm/itunes/1373741352',
-    breakerUrl: null,
+    breakerUrl: '',
     googlePodcastsUrl: '',
     rssFeedUrl: 'https://rss.simplecast.com/podcasts/9926/rss',
     applePodcastId: '1373741352',
-    twitterUsername: null,
+    twitterUsername: '',
     hosts: [hosts.tomcreighton, hosts.therobhayes],
     featuredEpisodes: [],
     colors: {
