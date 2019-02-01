@@ -264,7 +264,7 @@ export default [
     slug: 'framework',
     description:
       'Framework is a podcast about the process of researching, planning and building that goes into bringing a product to market.',
-    artworkUrl: '/static/img/shows/framework.png',
+    artworkUrl: '/static/img/shows/framework.jpg',
     simplecastId: 9926,
     iTunesUrl: 'https://itunes.apple.com/ca/podcast/framework/id1373741352?mt=2',
     overcastUrl: 'https://overcast.fm/itunes1373741352',
