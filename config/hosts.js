@@ -131,4 +131,15 @@ export default {
     twitterUsername: '_mikhailbot',
     profilePhotoUrl: '/static/img/hosts/mikhailbot.jpg',
   },
+  therobhayes: {
+    name: 'Robert Hayes',
+    twitterUsername: 'therobhayes',
+    profilePhotoUrl: '/static/img/hosts/robhayes.jpg',
+  },
+  tomcreighton: {
+    name: 'Tom Creighton',
+    twitterUsername: 'tomcreighton',
+    profilePhotoUrl: '/static/img/hosts/tomcreighton.jpg',
+  },
+  
 };
