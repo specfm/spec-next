@@ -38,7 +38,7 @@
     "react-dom": "16.7.0-alpha.0",
     "react-image": "^2.0.0",
     "react-instantsearch": "^5.3.2",
-    "react-instantsearch-dom": "^5.3.2",
+    "react-instantsearch-dom": "^5.4.0",
     "react-markdown": "^4.0.6",
     "react-visibility": "^0.3.0",
     "react-visibility-sensor": "^5.0.2",
