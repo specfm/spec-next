@@ -141,5 +141,9 @@ export default {
     twitterUsername: 'tomcreighton',
     profilePhotoUrl: '/static/img/hosts/tomcreighton.jpg',
   },
-  
+  chantastic: {
+    name: 'Michael Chan',
+    twitterUsername: 'chantastic',
+    profilePhotoUrl: '/static/img/hosts/chantastic.jpg',
+  },
 };

@@ -285,6 +285,31 @@ export default [
   },
 
   {
+    id: 6265,
+    name: 'React Podcast',
+    slug: 'react-podcast',
+    description: 'Conversations about React with your favorite developers.',
+    artworkUrl: '/static/img/shows/reactpodcast.jpg',
+    simplecastId: 6265,
+    iTunesUrl:
+      'https://itunes.apple.com/us/podcast/the-react-podcast/id1341969432',
+    overcastUrl: 'https://overcast.fm/itunes1341969432',
+    pocketCastsUrl: 'http://pca.st/itunes/1341969432',
+    castroUrl: 'https://castro.fm/itunes/1341969432',
+    breakerUrl: '',
+    googlePodcastsUrl: '',
+    rssFeedUrl: 'https://rss.simplecast.com/podcasts/6265/rss',
+    applePodcastId: '1341969432',
+    twitterUsername: 'reactpodcast',
+    hosts: [hosts.chantastic],
+    featuredEpisodes: [],
+    colors: {
+      text: '#FFE001',
+      button: '#FFE001',
+    },
+  },
+
+  {
     id: 99999,
     name: 'Layout',
     slug: 'layout',
