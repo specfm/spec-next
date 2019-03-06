@@ -287,7 +287,7 @@ export default [
   {
     id: 6265,
     name: 'React Podcast',
-    slug: 'react-podcast',
+    slug: 'reactpodcast',
     description: 'Conversations about React with your favorite developers.',
     artworkUrl: '/static/img/shows/reactpodcast.jpg',
     simplecastId: 6265,
