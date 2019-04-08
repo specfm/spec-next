@@ -488,7 +488,7 @@ export default [
     {
     name: 'ImageKit.io',
     url: 'https://imagekit.io?utm_source=developertea&utm_medium=podcast',
-    logoUrl: '/static/img/sponsors/imagkit.png',
+    logoUrl: '/static/img/sponsors/imagekit.png',
   },
   
   {
