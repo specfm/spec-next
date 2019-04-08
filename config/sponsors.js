@@ -485,6 +485,12 @@ export default [
     logoUrl: '/static/img/sponsors/readymag.png',
   },
   
+    {
+    name: 'ImageKit.io',
+    url: 'https://imagekit.io?utm_source=developertea&utm_medium=podcast',
+    logoUrl: '/static/img/sponsors/imagekit.png',
+  },
+  
   {
     name: 'Clubhouse',
     url: 'https://clubhouse.io/',
