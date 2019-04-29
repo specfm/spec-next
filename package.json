@@ -45,7 +45,7 @@
     "react-image": "^2.0.0",
     "react-instantsearch": "^5.4.0",
     "react-instantsearch-dom": "^5.4.0",
-    "react-markdown": "^4.0.6",
+    "react-markdown": "^4.0.8",
     "react-visibility": "^0.3.0",
     "react-visibility-sensor": "^5.0.2",
     "responsive-loader": "^1.2.0",
