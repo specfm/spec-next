@@ -497,6 +497,12 @@ export default [
     logoUrl: '/static/img/sponsors/Clubhouse.png',
   },
   
+    {
+    name: 'Infinite Red',
+    url: 'remote.infinite.red',
+    logoUrl: '/static/img/sponsors/infiniteredlogo.png',
+  },
+  
   {
     name: 'Sky Silk',
     url:
