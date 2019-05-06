@@ -215,7 +215,7 @@ export default [
     description:
       'A 30-minute spin off of Swift Weekly Brief and other Swifty news.',
     simplecastId: 2693,
-    artworkUrl: '/static/img/shows/swiftunwrapped.png',
+    artworkUrl: '/static/img/shows/swiftunwrapped.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1209817203',
     overcastUrl: 'https://overcast.fm/itunes1209817203',
     pocketCastsUrl: 'http://pca.st/itunes/1209817203',
