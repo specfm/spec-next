@@ -10,7 +10,7 @@
   "dependencies": {
     "algoliasearch": "^3.32.1",
     "babel-polyfill": "^6.26.0",
-    "bull": "^3.8.1",
+    "bull": "^3.9.1",
     "debug": "^4.1.1",
     "ioredis": "^3.2.2",
     "isomorphic-unfetch": "^2.1.1",
