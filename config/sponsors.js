@@ -497,7 +497,13 @@ export default [
     logoUrl: '/static/img/sponsors/Clubhouse.png',
   },
   
-    {
+  {
+    name: 'GitPrime',
+    url: 'https://gitprime.com/20patterns',
+    logoUrl: '/static/img/sponsors/gitprime.png',
+  },
+  
+  {
     name: 'Infinite Red',
     url: 'remote.infinite.red',
     logoUrl: '/static/img/sponsors/infiniteredlogo.png',
