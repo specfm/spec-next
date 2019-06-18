@@ -1,22 +1,22 @@
-const moment = require('moment');
-const simplecast = require('./simplecast');
+const moment = require("moment");
+const simplecast = require("./simplecast");
 
 const getStats = async url => {
   // url comes in as /stats/{range}
-  const parsed = url.split('/');
+  const parsed = url.split("/");
   // ['', 'stats', {range}]
   const range = parsed.length === 3 && parsed[2];
   // invalid url
   if (!range) return null;
 
-  const podcasts = await simplecast('/podcasts.json');
+  const podcasts = await simplecast("/podcasts");
   const ids = podcasts.map(podcast => podcast.id);
 
   const rangeToDays = {
     all: 3000,
     week: 7,
     month: 28,
-    year: 364,
+    year: 364
   };
 
   // start with the previous day
@@ -27,8 +27,8 @@ const getStats = async url => {
 
   const getDate = num =>
     moment()
-      .subtract(num, 'days')
-      .format('YYYY-MM-DD');
+      .subtract(num, "days")
+      .format("YYYY-MM-DD");
 
   // format date strings based on the range
   const currentPeriodEndDate = getDate(currentPeriodEnd);
@@ -43,15 +43,15 @@ const getStats = async url => {
       ),
       simplecast(
         `/podcasts/${id}/statistics/overall.json?start_date=${prevPeriodStartDate}&end_date=${prevPeriodEndDate}&timeframe=custom`
-      ),
+      )
     ]);
 
     return {
       id,
       totals: {
         current: current.total_listens,
-        previous: previous.total_listens,
-      },
+        previous: previous.total_listens
+      }
     };
   });
 
