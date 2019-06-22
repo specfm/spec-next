@@ -1,22 +1,26 @@
 // @flow
 // $FlowIssue
-import React, { useState } from 'react';
-import type { SimplecastEpisode, ConfigPodcast } from '../../types';
-import EpisodePreview from '../EpisodePreview';
-import { Grid } from './style';
-import { Button } from '../Button';
+import React, { useState } from "react";
+import type { SimplecastEpisode, ConfigPodcast } from "../../types";
+import EpisodePreview from "../EpisodePreview";
+import { Grid } from "./style";
+import { Button } from "../Button";
 
 type Props = {
   episodes: ?Array<SimplecastEpisode>,
-  podcast: ConfigPodcast,
+  podcast: ConfigPodcast
 };
 
 export default function EpisodesGrid(props: Props) {
   const [isExpanded, setExpanded] = useState(false);
   const { episodes: allEpisodes, podcast } = props;
 
-  if (!allEpisodes) return null;
-  const episodes = isExpanded ? allEpisodes : allEpisodes.slice(0, 5);
+  console.log(allEpisodes);
+
+  if (!allEpisodes.collection) return null;
+  const episodes = isExpanded
+    ? allEpisodes.collection
+    : allEpisodes.collection.slice(0, 5);
 
   return (
     <Grid data-cy="episodes-list">
@@ -30,7 +34,7 @@ export default function EpisodesGrid(props: Props) {
           />
         ))}
       <Button
-        style={{ marginBottom: '64px' }}
+        style={{ marginBottom: "64px" }}
         size="large"
         onClick={() => setExpanded(true)}
       >

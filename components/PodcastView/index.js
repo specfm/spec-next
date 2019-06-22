@@ -1,8 +1,8 @@
 // @flow
-import * as React from 'react';
-import Head from 'next/head';
-import { Link as RouteLink } from '../../config/routes';
-import type { ConfigPodcast, SimplecastEpisode } from '../../types';
+import * as React from "react";
+import Head from "next/head";
+import { Link as RouteLink } from "../../config/routes";
+import type { ConfigPodcast, SimplecastEpisode } from "../../types";
 import {
   Grid,
   Sidebar,
@@ -14,20 +14,20 @@ import {
   MobileArt,
   MobileSubscriptionOptions,
   FeaturedEpisode,
-  FeaturedEpisodesList,
-} from './style';
-import HostsGrid from '../HostsGrid';
-import Icon from '../Icon';
-import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions';
-import EpisodesGrid from '../EpisodesGrid';
-import PodcastArt from '../PodcastArt';
-import PodcastShareButtons from '../PodcastShareButtons';
-import CommunityUpsell from '../CommunityUpsell';
-import { CustomNotice } from '../Blog';
+  FeaturedEpisodesList
+} from "./style";
+import HostsGrid from "../HostsGrid";
+import Icon from "../Icon";
+import PodcastSubscriptionOptions from "../PodcastSubscriptionOptions";
+import EpisodesGrid from "../EpisodesGrid";
+import PodcastArt from "../PodcastArt";
+import PodcastShareButtons from "../PodcastShareButtons";
+import CommunityUpsell from "../CommunityUpsell";
+import { CustomNotice } from "../Blog";
 
 type Props = {
   podcast: ConfigPodcast,
-  episodes: ?Array<SimplecastEpisode>,
+  episodes: ?Array<SimplecastEpisode>
 };
 
 class PodcastView extends React.Component<Props> {
@@ -39,6 +39,7 @@ class PodcastView extends React.Component<Props> {
 
   render() {
     const { podcast, episodes } = this.props;
+    console.log(podcast, episodes);
     const featuredEpisodes =
       podcast.featuredEpisodes.length > 0 &&
       episodes &&
