@@ -1,19 +1,19 @@
 // @flow
-import App, { Container } from 'next/app';
-import * as React from 'react';
-import Head from 'next/head';
-import NProgress from 'next-nprogress/component';
-import * as Sentry from '@sentry/browser';
-import { theme } from '../components/theme';
+import App, { Container } from "next/app";
+import * as React from "react";
+import Head from "next/head";
+import NProgress from "next-nprogress/component";
+import * as Sentry from "@sentry/browser";
+import { theme } from "../components/theme";
 import GlobalPlayerContext, {
-  defaultPlayerContext,
-} from '../components/GlobalPlayer/context';
-import GlobalPlayer from '../components/GlobalPlayer';
-import { GlobalStyles } from '../static/normalize';
-import type { SimplecastEpisode } from '../types';
+  defaultPlayerContext
+} from "../components/GlobalPlayer/context";
+import GlobalPlayer from "../components/GlobalPlayer";
+import { GlobalStyles } from "../static/normalize";
+import type { SimplecastEpisode, SimplecastPodcast } from "../types";
 
 const SENTRY_PUBLIC_DSN =
-  'https://7248f7abd384414b9fc10797611eff46@sentry.io/1323990';
+  "https://7248f7abd384414b9fc10797611eff46@sentry.io/1323990";
 
 class MyApp extends App {
   constructor() {
@@ -29,7 +29,7 @@ class MyApp extends App {
       play: this.play,
       scrub: this.scrub,
       onProgress: this.onProgress,
-      onTrackEnded: this.onTrackEnded,
+      onTrackEnded: this.onTrackEnded
     };
   }
 
@@ -46,13 +46,17 @@ class MyApp extends App {
     super.componentDidCatch(error, errorInfo);
   }
 
-  addTrackToQueue = (episode: SimplecastEpisode) => {
+  addTrackToQueue = (
+    episode: SimplecastEpisode,
+    podcast: SimplecastPodcast
+  ) => {
     this.setState(state => ({
       ...state,
       isPlaying: true,
       trackQueue: [episode],
+      podcast,
       progress: 0,
-      displaySubscriptions: false,
+      displaySubscriptions: false
     }));
   };
 
@@ -62,11 +66,11 @@ class MyApp extends App {
       trackQueue: [],
       progress: 0,
       displaySubscriptions: false,
-      isPlaying: false,
+      isPlaying: false
     }));
 
   getAudioElement = () =>
-    document && document.getElementById('global-player-audio');
+    document && document.getElementById("global-player-audio");
 
   pause = () => {
     const el = this.getAudioElement();
@@ -111,7 +115,7 @@ class MyApp extends App {
     this.setState(state => ({
       ...state,
       displaySubscriptions: true,
-      progress: 0,
+      progress: 0
     }));
   };
 

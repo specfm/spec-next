@@ -104,11 +104,11 @@ export default [
   },
 
   {
-    id: 1457,
+    id: "61f26f87-7970-4eaf-9958-42cc1e69d49f",
     name: "Vicarious",
     slug: "vicarious",
     description: "Everyday escapism from a designers' point of view.",
-    simplecastId: 1457,
+    simplecastId: "61f26f87-7970-4eaf-9958-42cc1e69d49f",
     artworkUrl: "/static/img/shows/vicarious.jpg",
     iTunesUrl: "https://geo.itunes.apple.com/ca/podcast/feed/id1055180013",
     overcastUrl: "https://overcast.fm/itunes1055180013",

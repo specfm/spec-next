@@ -39,12 +39,12 @@ class PodcastView extends React.Component<Props> {
 
   render() {
     const { podcast, episodes } = this.props;
-    console.log(podcast, episodes);
     const featuredEpisodes =
       podcast.featuredEpisodes.length > 0 &&
       episodes &&
       episodes.length > 0 &&
       podcast.featuredEpisodes.map(id => episodes.filter(e => e.id === id)[0]);
+
     return (
       <Grid data-cy="podcast-view">
         <Head>

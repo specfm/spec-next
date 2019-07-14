@@ -15,8 +15,6 @@ export default function EpisodesGrid(props: Props) {
   const [isExpanded, setExpanded] = useState(false);
   const { episodes: allEpisodes, podcast } = props;
 
-  console.log(allEpisodes);
-
   if (!allEpisodes.collection) return null;
   const episodes = isExpanded
     ? allEpisodes.collection
@@ -25,7 +23,7 @@ export default function EpisodesGrid(props: Props) {
   return (
     <Grid data-cy="episodes-list">
       {episodes
-        .filter(episode => episode.published)
+        .filter(episode => episode.status == "published")
         .map(episode => (
           <EpisodePreview
             podcast={podcast}

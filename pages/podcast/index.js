@@ -1,25 +1,25 @@
 // @flow
-import * as React from 'react';
-import { api, podcasts as configPodcasts } from '../../config';
+import * as React from "react";
+import { api, podcasts as configPodcasts } from "../../config";
 import Page, {
   SectionHeading,
   Heading,
-  Subheading,
-} from '../../components/Page';
+  Subheading
+} from "../../components/Page";
 import type {
   ConfigPodcast,
   SimplecastPodcast,
   SimplecastEpisode,
-  GetInitialProps,
-} from '../../types';
-import PodcastView from '../../components/PodcastView';
-import PodcastsGrid from '../../components/PodcastsGrid';
-import sortPodcasts from '../../lib/scToConfigPodcasts';
+  GetInitialProps
+} from "../../types";
+import PodcastView from "../../components/PodcastView";
+import PodcastsGrid from "../../components/PodcastsGrid";
+import sortPodcasts from "../../lib/scToConfigPodcasts";
 
 type Props = {
   podcast: ?SimplecastPodcast,
   episodes: ?Array<SimplecastEpisode>,
-  podcasts: ?Array<ConfigPodcast>,
+  podcasts: ?Array<ConfigPodcast>
 };
 
 class Podcast extends React.Component<Props> {
@@ -37,7 +37,7 @@ class Podcast extends React.Component<Props> {
         // show from the api
         [podcast, episodes] = await Promise.all([
           api.getPodcast(configPodcast.simplecastId),
-          api.getEpisodes(configPodcast.simplecastId),
+          api.getEpisodes(configPodcast.simplecastId)
         ]);
       }
 
@@ -48,7 +48,7 @@ class Podcast extends React.Component<Props> {
       if (res) {
         // cache podcast for an hour
         const cacheAge = 60 * 60;
-        res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`);
+        res.setHeader("Cache-Control", `public,s-maxage=${cacheAge}`);
       }
     }
 

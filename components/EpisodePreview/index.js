@@ -1,26 +1,26 @@
 // @flow
-import * as React from 'react';
-import type { SimplecastEpisode, ConfigPodcast } from '../../types';
-import { Link as RouteLink } from '../../config/routes';
+import * as React from "react";
+import type { SimplecastEpisode, ConfigPodcast } from "../../types";
+import { Link as RouteLink } from "../../config/routes";
 import {
   Grid,
   Title,
   Timestamp,
   Divider,
   PlayTitleContainer,
-  TextContainer,
-} from './style';
-import { getDateObject } from '../../lib/getDateObject';
-import Markdown from '../Markdown';
-import EpisodePlayButton from '../EpisodePlayButton';
+  TextContainer
+} from "./style";
+import { getDateObject } from "../../lib/getDateObject";
+import Markdown from "../Markdown";
+import EpisodePlayButton from "../EpisodePlayButton";
 
 type Props = {
   episode: SimplecastEpisode,
-  podcast: ConfigPodcast,
+  podcast: ConfigPodcast
 };
 
 type State = {
-  audioPlayerVisible: boolean,
+  audioPlayerVisible: boolean
 };
 
 class EpisodePreview extends React.Component<Props, State> {
@@ -32,7 +32,7 @@ class EpisodePreview extends React.Component<Props, State> {
     return (
       <Grid>
         <PlayTitleContainer>
-          <EpisodePlayButton episode={episode} size="mini" />
+          <EpisodePlayButton episode={episode} podcast={podcast} size="mini" />
 
           <TextContainer>
             <RouteLink

@@ -1,9 +1,9 @@
 // @flow
-import * as React from 'react';
-import { api } from '../../config';
-import PlayerContext from './context';
-import Dismiss from '../Dismiss';
-import Icon from '../Icon';
+import * as React from "react";
+import { api } from "../../config";
+import PlayerContext from "./context";
+import Dismiss from "../Dismiss";
+import Icon from "../Icon";
 import {
   Container,
   PodcastTitle,
@@ -14,10 +14,10 @@ import {
   Scrubber,
   StyledAudioPlayer,
   SubscriptionsContainer,
-  ContentContainer,
-} from './style';
-import { Link as RouteLink } from '../../config/routes';
-import SubscriptionButtons from './SubscriptionButtons';
+  ContentContainer
+} from "./style";
+import { Link as RouteLink } from "../../config/routes";
+import SubscriptionButtons from "./SubscriptionButtons";
 
 class GlobalPlayer extends React.Component<{}> {
   render() {
@@ -26,9 +26,7 @@ class GlobalPlayer extends React.Component<{}> {
         {context => {
           const hasTrack = context.trackQueue.length > 0;
           const queuedTrack = hasTrack ? context.trackQueue[0] : undefined;
-          const podcast = queuedTrack
-            ? api.getConfigPodcastFromId(queuedTrack.podcast_id)
-            : undefined;
+          const podcast = hasTrack ? context.podcast : undefined;
 
           return (
             <Container isVisible={hasTrack}>
@@ -73,7 +71,7 @@ class GlobalPlayer extends React.Component<{}> {
                     <StyledAudioPlayer
                       id="global-player-audio"
                       autoPlay
-                      src={queuedTrack.audio_url}
+                      src={queuedTrack.enclosure_url}
                       controls={false}
                       preload="none"
                       onEnded={context.onTrackEnded}

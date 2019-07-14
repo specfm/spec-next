@@ -1,24 +1,24 @@
 // @flow
-import * as React from 'react';
-import type { SimplecastEpisode } from '../../types';
-import GlobalPlayer from '../GlobalPlayer/context';
-import Icon from '../Icon';
+import * as React from "react";
+import type { SimplecastEpisode } from "../../types";
+import GlobalPlayer from "../GlobalPlayer/context";
+import Icon from "../Icon";
 import {
   MiniPlayBox,
   PlayBox,
   IconContainer,
   TextContainer,
-  Label,
-} from './style';
+  Label
+} from "./style";
 
 type Props = {
   episode: SimplecastEpisode,
-  size: 'mini' | 'full',
+  size: "mini" | "full"
 };
 
 class EpisodePlayButton extends React.Component<Props> {
   render() {
-    const { episode, size = 'full' } = this.props;
+    const { episode, podcast, size = "full" } = this.props;
 
     return (
       <GlobalPlayer.Consumer>
@@ -31,7 +31,7 @@ class EpisodePlayButton extends React.Component<Props> {
           let playAction;
 
           if (shouldInitGlobalPlayer) {
-            playAction = () => context.addTrackToQueue(episode);
+            playAction = () => context.addTrackToQueue(episode, podcast);
           } else if (isSameTrackAsGlobalPlayer) {
             if (context.isPlaying) {
               playAction = () => context.pause();
@@ -39,10 +39,10 @@ class EpisodePlayButton extends React.Component<Props> {
               playAction = () => context.play();
             }
           } else {
-            playAction = () => context.addTrackToQueue(episode);
+            playAction = () => context.addTrackToQueue(episode, podcast);
           }
 
-          if (size === 'full') {
+          if (size === "full") {
             return (
               <PlayBox data-cy="episode-player" onClick={playAction}>
                 <IconContainer>
@@ -56,15 +56,15 @@ class EpisodePlayButton extends React.Component<Props> {
                 <TextContainer>
                   <Label>
                     {context.isPlaying && isSameTrackAsGlobalPlayer
-                      ? 'Pause'
-                      : 'Play'}
+                      ? "Pause"
+                      : "Play"}
                   </Label>
                 </TextContainer>
               </PlayBox>
             );
           }
 
-          if (size === 'mini') {
+          if (size === "mini") {
             return (
               <MiniPlayBox data-cy="episode-player" onClick={playAction}>
                 <IconContainer>

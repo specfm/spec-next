@@ -1,6 +1,6 @@
 // @flow
-import * as React from 'react';
-import type { SimplecastEpisode } from '../../types';
+import * as React from "react";
+import type { SimplecastEpisode, SimplecastPodcast } from "../../types";
 
 export const defaultPlayerContext = {
   trackQueue: [],
@@ -12,13 +12,16 @@ export const defaultPlayerContext = {
   // although all actual function logic is implemented in pages/_app.js
   // via class methods and state handlers
   // eslint-disable-next-line
-  addTrackToQueue: (episode: SimplecastEpisode) => {},
+  addTrackToQueue: (
+    episode: SimplecastEpisode,
+    podcast: SimplecastPodcast
+  ) => {},
   clearQueue: () => {},
   pause: () => {},
   play: () => {},
   scrub: () => {},
   onProgress: () => {},
-  onTrackEnded: () => {},
+  onTrackEnded: () => {}
 };
 
 // $FlowIssue
