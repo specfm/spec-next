@@ -30,7 +30,7 @@ export type SimplecastEpisode = {
   author: string,
   duration: number,
   explicit: false,
-  published: true,
+  is_published: true,
   description: string,
   long_description: string,
   published_at: string,
