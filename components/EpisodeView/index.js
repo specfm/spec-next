@@ -31,7 +31,6 @@ class EpisodeView extends React.Component<Props> {
     const { podcast, episode } = this.props;
     const { month, year, day } = getDateObject(episode.published_at);
     const datestring = `${month} ${day}, ${year}`;
-    debugger;
 
     return (
       <Grid data-cy="episode-view">
