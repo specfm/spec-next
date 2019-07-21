@@ -1,6 +1,6 @@
 // @flow
 export type SimplecastPodcast = {
-  id: number,
+  id: string,
   title: string,
   rss_url: string,
   description: ?string,
@@ -17,12 +17,12 @@ export type SimplecastPodcast = {
   images: {
     large: string,
     small: string,
-    thumb: string,
-  },
+    thumb: string
+  }
 };
 
 export type SimplecastEpisode = {
-  id: number,
+  id: string,
   number: number,
   podcast_id: number,
   guide: string,
@@ -40,16 +40,16 @@ export type SimplecastEpisode = {
   images: {
     large: string,
     small: string,
-    thumb: string,
+    thumb: string
   },
   sponsors: Array<?any>,
-  error?: string,
+  error?: string
 };
 
 export type Host = {
   name: string,
   twitterUsername: string,
-  profilePhotoUrl: string,
+  profilePhotoUrl: string
 };
 
 export type ConfigPodcast = {|
@@ -72,8 +72,8 @@ export type ConfigPodcast = {|
   featuredEpisodes: Array<?number>,
   colors: {
     text: string,
-    button: string,
-  },
+    button: string
+  }
 |};
 
 export type GetInitialProps = {
@@ -82,14 +82,14 @@ export type GetInitialProps = {
   req?: any,
   res?: any,
   jsonPageRes?: any,
-  err?: any,
+  err?: any
 };
 
 export type SearchResult = {
   podcastId: number,
   title: string,
   id: number,
-  publishedAt: string,
+  publishedAt: string
 };
 
 export type JobListing = {
@@ -103,6 +103,6 @@ export type JobListing = {
   job_link: string,
   company: {
     name: string,
-    company_url: string,
-  },
+    company_url: string
+  }
 };

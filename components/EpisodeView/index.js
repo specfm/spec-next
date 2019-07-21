@@ -1,16 +1,16 @@
 // @flow
-import * as React from 'react';
-import Head from 'next/head';
-import type { ConfigPodcast, SimplecastEpisode } from '../../types';
-import { Link as RouteLink } from '../../config/routes';
-import HostsGrid from '../HostsGrid';
-import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions';
-import { getDateObject } from '../../lib/getDateObject';
-import Markdown from '../Markdown';
-import PodcastArt from '../PodcastArt';
-import EpisodeShareButtons from '../EpisodeShareButtons';
-import CommunityUpsell from '../CommunityUpsell';
-import EpisodePlayButton from '../EpisodePlayButton';
+import * as React from "react";
+import Head from "next/head";
+import type { ConfigPodcast, SimplecastEpisode } from "../../types";
+import { Link as RouteLink } from "../../config/routes";
+import HostsGrid from "../HostsGrid";
+import PodcastSubscriptionOptions from "../PodcastSubscriptionOptions";
+import { getDateObject } from "../../lib/getDateObject";
+import Markdown from "../Markdown";
+import PodcastArt from "../PodcastArt";
+import EpisodeShareButtons from "../EpisodeShareButtons";
+import CommunityUpsell from "../CommunityUpsell";
+import EpisodePlayButton from "../EpisodePlayButton";
 import {
   Grid,
   Sidebar,
@@ -18,12 +18,12 @@ import {
   Title,
   Description,
   Divider,
-  Label,
-} from './style';
+  Label
+} from "./style";
 
 type Props = {
   podcast: ConfigPodcast,
-  episode: SimplecastEpisode,
+  episode: SimplecastEpisode
 };
 
 class EpisodeView extends React.Component<Props> {
@@ -31,6 +31,7 @@ class EpisodeView extends React.Component<Props> {
     const { podcast, episode } = this.props;
     const { month, year, day } = getDateObject(episode.published_at);
     const datestring = `${month} ${day}, ${year}`;
+    debugger;
 
     return (
       <Grid data-cy="episode-view">
@@ -103,7 +104,7 @@ class EpisodeView extends React.Component<Props> {
               <a>{podcast.name}</a>
             </RouteLink>
 
-            {' · '}
+            {" · "}
             {datestring}
           </Description>
           <Title>{episode.title}</Title>
@@ -112,7 +113,7 @@ class EpisodeView extends React.Component<Props> {
 
           <EpisodeShareButtons episode={episode} podcast={podcast} />
 
-          <Markdown>{episode.long_description}</Markdown>
+          <Markdown>{episode.long_description || episode.description}</Markdown>
         </Content>
       </Grid>
     );

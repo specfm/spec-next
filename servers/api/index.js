@@ -24,7 +24,8 @@ const handler = async (req, res) => {
     return getStats(req.url);
   }
 
-  if (!req.url.startsWith("/podcasts")) return sendError();
+  if (!req.url.startsWith("/podcasts") && !req.url.startsWith("/episodes"))
+    return sendError();
 
   return simplecast(req.url);
 };

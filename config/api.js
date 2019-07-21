@@ -32,7 +32,7 @@ const api = {
     showId: ?number,
     episodeId: number
   ): Promise<?SimplecastEpisode> =>
-    showId ? fetchUrl(`podcasts/${showId}/episodes/${episodeId}`) : null,
+    showId ? fetchUrl(`episodes/${episodeId}`) : null,
   getConfigPodcastFromSlug: (slug: string): ?ConfigPodcast =>
     podcasts.find(podcast => podcast && podcast.slug === slug),
   getConfigPodcastFromId: (id: number): ?ConfigPodcast =>

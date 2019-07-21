@@ -1,27 +1,27 @@
 // @flow
-import * as React from 'react';
-import { api, podcasts as configPodcasts } from '../../config';
+import * as React from "react";
+import { api, podcasts as configPodcasts } from "../../config";
 import Page, {
   SectionHeading,
   Heading,
-  Subheading,
-} from '../../components/Page';
+  Subheading
+} from "../../components/Page";
 import type {
   ConfigPodcast,
   SimplecastPodcast,
   SimplecastEpisode,
-  GetInitialProps,
-} from '../../types';
-import EpisodeView from '../../components/EpisodeView';
-import PodcastsGrid from '../../components/PodcastsGrid';
-import PodcastView from '../../components/PodcastView';
-import sortPodcasts from '../../lib/scToConfigPodcasts';
+  GetInitialProps
+} from "../../types";
+import EpisodeView from "../../components/EpisodeView";
+import PodcastsGrid from "../../components/PodcastsGrid";
+import PodcastView from "../../components/PodcastView";
+import sortPodcasts from "../../lib/scToConfigPodcasts";
 
 type Props = {
   podcast: ?SimplecastPodcast,
   podcasts: ?Array<ConfigPodcast>,
   episode: SimplecastEpisode,
-  episodes: ?Array<SimplecastEpisode>,
+  episodes: ?Array<SimplecastEpisode>
 };
 
 class Episode extends React.Component<Props> {
@@ -40,7 +40,7 @@ class Episode extends React.Component<Props> {
         // show from the api
         [podcast, episode] = await Promise.all([
           api.getPodcast(configPodcast.simplecastId),
-          api.getEpisode(configPodcast.simplecastId, parseInt(query.episodeId)),
+          api.getEpisode(configPodcast.simplecastId, query.episodeId)
         ]);
       }
     }
@@ -61,7 +61,7 @@ class Episode extends React.Component<Props> {
       if (res) {
         // cache episodes for a day
         const cacheAge = 60 * 60 * 24 * 7;
-        res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`);
+        res.setHeader("Cache-Control", `public,s-maxage=${cacheAge}`);
       }
     }
 
@@ -77,7 +77,7 @@ class Episode extends React.Component<Props> {
       if (configPodcast) {
         return (
           <Page>
-            {episode && !episode.error && episode.published ? (
+            {episode && !episode.error && episode.is_published ? (
               <EpisodeView podcast={configPodcast} episode={episode} />
             ) : (
               <PodcastView podcast={configPodcast} episodes={episodes} />
