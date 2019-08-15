@@ -509,6 +509,12 @@ export default [
     logoUrl: '/static/img/sponsors/infiniteredlogo.png',
   },
   
+    {
+    name: 'G2i',
+    url: 'https://www.g2i.co/?utm_source=React_radio_podcast&utm_medium=Podcast%20Link',
+    logoUrl: '/static/img/sponsors/g2i.png',
+  },
+  
   {
     name: 'Sky Silk',
     url:
