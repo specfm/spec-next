@@ -13,7 +13,7 @@
     "bull": "^3.10.0",
     "debug": "^4.1.1",
     "ioredis": "^3.2.2",
-    "isomorphic-unfetch": "^2.1.1",
+    "isomorphic-unfetch": "^3.0.0",
     "now-env": "^3.2.0",
     "remove-markdown": "^0.3.0",
     "stopword": "^0.1.17",
