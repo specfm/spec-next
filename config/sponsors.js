@@ -515,6 +515,12 @@ export default [
     logoUrl: '/static/img/sponsors/g2i.png',
   },
   
+      {
+    name: 'Stackbit',
+    url: 'https://www.stackbit.com/developertea',
+    logoUrl: '/static/img/sponsors/Stackbit-logo.png',
+  },
+  
   {
     name: 'Sky Silk',
     url:
