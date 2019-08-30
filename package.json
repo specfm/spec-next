@@ -47,7 +47,7 @@
     "react-instantsearch-dom": "^5.5.0",
     "react-markdown": "^4.0.8",
     "react-visibility": "^0.3.0",
-    "react-visibility-sensor": "^5.0.2",
+    "react-visibility-sensor": "^5.1.1",
     "responsive-loader": "^1.2.0",
     "serve-favicon": "^2.5.0",
     "styled-components": "^4.3.2",
