@@ -1,5 +1,3 @@
-require('now-env')
-
 module.exports = {
   "presets": ["next/babel"],
   "plugins": [

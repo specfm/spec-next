@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
+import Link from 'next/link'
 import type { SimplecastEpisode, ConfigPodcast } from '../../types';
-import { Link as RouteLink } from '../../config/routes';
 import {
   Grid,
   Title,
@@ -35,23 +35,23 @@ class EpisodePreview extends React.Component<Props, State> {
           <EpisodePlayButton episode={episode} size="mini" />
 
           <TextContainer>
-            <RouteLink
-              route="episode"
-              params={{ slug: podcast.slug, episodeId: episode.id }}
+            <Link
+              href="/podcasts/[slug]/[episodeId]"
+              as={`/podcasts/${podcast.slug}/${episode.id}`}
             >
               <a>
                 <Timestamp alt={datestring}>{datestring}</Timestamp>
               </a>
-            </RouteLink>
+            </Link>
 
-            <RouteLink
-              route="episode"
-              params={{ slug: podcast.slug, episodeId: episode.id }}
+            <Link
+              href="/podcasts/[slug]/[episodeId]"
+              as={`/podcasts/${podcast.slug}/${episode.id}`}
             >
               <a>
                 <Title>{episode.title}</Title>
               </a>
-            </RouteLink>
+            </Link>
           </TextContainer>
         </PlayTitleContainer>
 

@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
 import Head from 'next/head';
+import Link from 'next/link'
 import type { ConfigPodcast, SimplecastEpisode } from '../../types';
-import { Link as RouteLink } from '../../config/routes';
 import HostsGrid from '../HostsGrid';
 import PodcastSubscriptionOptions from '../PodcastSubscriptionOptions';
 import { getDateObject } from '../../lib/getDateObject';
@@ -76,11 +76,14 @@ class EpisodeView extends React.Component<Props> {
         </Head>
 
         <Sidebar>
-          <RouteLink route="podcast" params={{ slug: podcast.slug }}>
+          <Link 
+            href="/podcasts/[slug]"
+            as={`/podcasts/${podcast.slug}`}
+          >
             <a>
               <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
             </a>
-          </RouteLink>
+          </Link>
 
           <PodcastSubscriptionOptions podcast={podcast} />
 
@@ -99,9 +102,12 @@ class EpisodeView extends React.Component<Props> {
 
         <Content>
           <Description>
-            <RouteLink route="podcast" params={{ slug: podcast.slug }}>
+            <Link 
+              href="/podcasts/[slug]"
+              as={`/podcasts/${podcast.slug}`}
+            >
               <a>{podcast.name}</a>
-            </RouteLink>
+            </Link>
 
             {' · '}
             {datestring}

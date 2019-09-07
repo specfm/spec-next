@@ -1,16 +1,4 @@
 {
-  "alias": ["spec.fm"],
-  "github": {
-    "silent": true
-  },
-  "files": [
-    "components",
-    "config",
-    "lib",
-    "pages",
-    "static",
-    "types",
-    ".babelrc.js",
-    "server.js"
-  ]
+  "version": 2,
+  "alias": "spec.fm"
 }

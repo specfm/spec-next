@@ -3,7 +3,6 @@ import api from '../../api';
 import { indexPodcastInSearch } from '../../bull/queues';
 import type { Job, IndexPodcastsJobData } from '../../bull/types';
 
-require('now-env');
 const debug = require('debug')('search:index-podcasts');
 
 export default async (job: Job<IndexPodcastsJobData>) => {

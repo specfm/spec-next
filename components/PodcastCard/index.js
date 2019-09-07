@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { Link as RouteLink } from '../../config/routes';
+import Link from 'next/link'
 import type { ConfigPodcast } from '../../types';
 import PodcastArt from '../PodcastArt';
 
@@ -26,15 +26,15 @@ export default class PodcastCard extends React.Component<Props> {
     }
 
     return (
-      <RouteLink
+      <Link
         key={podcast.id}
-        route="podcast"
-        params={{ slug: podcast.slug }}
+        href="/podcasts/[slug]"
+        as={`/podcasts/${podcast.slug}`}
       >
         <a data-cy={`${podcast.slug}-podcast`}>
           <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
         </a>
-      </RouteLink>
+      </Link>
     );
   }
 }

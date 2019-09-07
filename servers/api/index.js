@@ -1,5 +1,4 @@
 // @flow
-require('now-env');
 const microCors = require('micro-cors');
 const { send } = require('micro');
 const cache = require('micro-cacheable');

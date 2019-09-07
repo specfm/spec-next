@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
+import Link from 'next/link'
 import { api } from '../../../config';
 import type { SearchResult } from '../../../types';
-import { Link as RouteLink } from '../../../config/routes';
 import { getDateObject } from '../../../lib/getDateObject';
 import {
   SearchEpisodeContainer,
@@ -41,9 +41,9 @@ class SearchEpisode extends React.Component<Props> {
     return (
       <SearchContext.Consumer>
         {({ clear }) => (
-          <RouteLink
-            route="episode"
-            params={{ slug: podcast.slug, episodeId: episode.id }}
+          <Link
+            href="/podcasts/[slug]/[episodeId]"
+            as={`/podcasts/${podcast.slug}/${episode.id}`}
           >
             <a>
               <SearchEpisodeContainer onClick={clear}>
@@ -54,7 +54,7 @@ class SearchEpisode extends React.Component<Props> {
                 </Meta>
               </SearchEpisodeContainer>
             </a>
-          </RouteLink>
+          </Link>
         )}
       </SearchContext.Consumer>
     );

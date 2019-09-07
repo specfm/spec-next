@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import Head from 'next/head';
-import { Link as RouteLink } from '../../config/routes';
+import Link from 'next/link'
 import type { ConfigPodcast, SimplecastEpisode } from '../../types';
 import {
   Grid,
@@ -88,11 +88,11 @@ class PodcastView extends React.Component<Props> {
         </Head>
 
         <Sidebar>
-          <RouteLink route="podcast" params={{ slug: podcast.slug }}>
+          <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
             <a>
               <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
             </a>
-          </RouteLink>
+          </Link>
           <PodcastSubscriptionOptions podcast={podcast} />
 
           <Divider>
@@ -110,11 +110,11 @@ class PodcastView extends React.Component<Props> {
 
         <Content>
           <MobileArt>
-            <RouteLink route="podcast" params={{ slug: podcast.slug }}>
+            <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
               <a>
                 <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
               </a>
-            </RouteLink>
+            </Link>
           </MobileArt>
           <Title>{podcast.name}</Title>
           <Description>{podcast.description}</Description>
@@ -134,15 +134,15 @@ class PodcastView extends React.Component<Props> {
               <FeaturedEpisodesList>
                 {featuredEpisodes.map(fe => (
                   <FeaturedEpisode key={fe.id} color={podcast.colors.text}>
-                    <RouteLink
-                      route="episode"
-                      params={{ slug: podcast.slug, episodeId: fe.id }}
+                    <Link
+                      href="/podcasts/[slug]/[episodeId]" 
+                      as={`/podcasts/${podcast.slug}/${fe.id}`}
                     >
                       <a>
                         <Icon glyph="view-forward" size={16} />
                         {fe.title}
                       </a>
-                    </RouteLink>
+                    </Link>
                   </FeaturedEpisode>
                 ))}
               </FeaturedEpisodesList>
