@@ -1,8 +1,7 @@
 // @flow
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import * as React from 'react';
 import Head from 'next/head';
-import NProgress from 'next-nprogress/component';
 import * as Sentry from '@sentry/browser';
 import { theme } from '../components/theme';
 import GlobalPlayerContext, {
@@ -118,9 +117,8 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <React.Fragment>
         <GlobalStyles />
-        <NProgress color={theme.brand.default} showAfterMs={300} />
         <Head>
           <title>Spec · Level Up</title>
           <meta content="@specfm" name="twitter:site" key="twitter:site" />
@@ -175,7 +173,7 @@ class MyApp extends App {
           <Component {...pageProps} />
           <GlobalPlayer />
         </GlobalPlayerContext.Provider>
-      </Container>
+      </React.Fragment>
     );
   }
 }

@@ -1,4 +1,3 @@
-require('now-env');
 require('isomorphic-unfetch');
 
 const SEEKER_URL = 'https://api.seeker.company/v1';

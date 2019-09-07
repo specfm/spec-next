@@ -1,20 +1,20 @@
 // @flow
 import * as React from 'react';
-import { api, podcasts as configPodcasts } from '../../config';
+import { api, podcasts as configPodcasts } from '../../../config';
 import Page, {
   SectionHeading,
   Heading,
   Subheading,
-} from '../../components/Page';
+} from '../../../components/Page';
 import type {
   ConfigPodcast,
   SimplecastPodcast,
   SimplecastEpisode,
   GetInitialProps,
-} from '../../types';
-import PodcastView from '../../components/PodcastView';
-import PodcastsGrid from '../../components/PodcastsGrid';
-import sortPodcasts from '../../lib/scToConfigPodcasts';
+} from '../../../types';
+import PodcastView from '../../../components/PodcastView';
+import PodcastsGrid from '../../../components/PodcastsGrid';
+import sortPodcasts from '../../../lib/scToConfigPodcasts';
 
 type Props = {
   podcast: ?SimplecastPodcast,
@@ -27,6 +27,8 @@ class Podcast extends React.Component<Props> {
     let podcast;
     let episodes;
     let podcasts;
+
+    console.log({ query })
 
     if (query.slug) {
       // match a slug to a podcast record in our config

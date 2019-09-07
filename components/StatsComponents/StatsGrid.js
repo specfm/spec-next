@@ -2,9 +2,9 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Card from '../../components/Card';
-import type { PodcastStats } from '.';
+import type { PodcastStats } from '../../pages/stats';
 import PodcastArt from '../../components/PodcastArt';
-import { Grid, Title, Subtitle, Growth, ContentContainer, Meta } from './style';
+import { Grid, Title, Subtitle, Growth, ContentContainer, Meta } from './index';
 
 type Props = {
   stats: Array<PodcastStats>,

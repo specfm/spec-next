@@ -47,7 +47,7 @@ class Podcasts extends React.Component<Props> {
 
   render() {
     const { podcasts } = this.props;
-
+    
     if (podcasts) {
       return (
         <Page dataCy="podcasts-view">

@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import Link from 'next/link'
 import { api } from '../../config';
 import PlayerContext from './context';
 import Dismiss from '../Dismiss';
@@ -16,7 +17,6 @@ import {
   SubscriptionsContainer,
   ContentContainer,
 } from './style';
-import { Link as RouteLink } from '../../config/routes';
 import SubscriptionButtons from './SubscriptionButtons';
 
 class GlobalPlayer extends React.Component<{}> {
@@ -56,19 +56,19 @@ class GlobalPlayer extends React.Component<{}> {
 
                 {hasTrack && queuedTrack && podcast && (
                   <TextContainer>
-                    <RouteLink
-                      route="episode"
-                      params={{ slug: podcast.slug, episodeId: queuedTrack.id }}
+                    <Link
+                      href="/podcasts/[slug]/[episodeId]"
+                      as={`/podcasts/${podcast.slug}/${queuedTrack.id}`}
                     >
                       <PodcastTitle>{podcast.name}</PodcastTitle>
-                    </RouteLink>
+                    </Link>
 
-                    <RouteLink
-                      route="episode"
-                      params={{ slug: podcast.slug, episodeId: queuedTrack.id }}
+                    <Link
+                      href="/podcasts/[slug]/[episodeId]"
+                      as={`/podcasts/${podcast.slug}/${queuedTrack.id}`}
                     >
                       <EpisodeTitle>{queuedTrack.title}</EpisodeTitle>
-                    </RouteLink>
+                    </Link>
 
                     <StyledAudioPlayer
                       id="global-player-audio"

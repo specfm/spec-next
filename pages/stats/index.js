@@ -14,8 +14,8 @@ import Page, {
   Subheading,
 } from '../../components/Page';
 import Spinner from '../../components/Spinner';
-import { RangeContainer, LoadingContainer } from './style';
-import StatsGrid from './StatsGrid';
+import { RangeContainer, LoadingContainer } from '../../components/StatsComponents';
+import StatsGrid from '../../components/StatsComponents/StatsGrid';
 
 export type PodcastStats = {
   id: number | string,

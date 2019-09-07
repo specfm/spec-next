@@ -1,24 +1,24 @@
-language: node_js
-node_js:
-  - 10
-addons:
-  apt:
-    packages:
-    - libgconf-2-4
-cache:
-  directories:
-    - ~/.npm
-    - ~/.cache
-install:  
-  - npm install
-before_script:
-  - npm run build
-  - npm run dev:api &
-  - npm run start &
-script:
-  - node --version
-  - npm --version
-  - npm run flow
-  - npm run cypress:run
-notifications:
-  email: false
+language: node_js	
+node_js:	
+  - 10	
+addons:	
+  apt:	
+    packages:	
+    - libgconf-2-4	
+cache:	
+  directories:	
+    - ~/.npm	
+    - ~/.cache	
+install:  	
+  - npm install	
+before_script:	
+  - npm run build	
+  - npm run dev:api &	
+  - npm run start &	
+script:	
+  - node --version	
+  - npm --version	
+  - npm run flow	
+  - npm run cypress:run	
+notifications:	
+  email: false 
