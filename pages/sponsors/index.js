@@ -11,7 +11,7 @@ import {
   Subtitle,
   Divider,
 } from '../../components/Blog';
-import { Grid, Section, Number, Label, ButtonContainer } from './style';
+import { Grid, Section, Number, Label, ButtonContainer } from '../../components/SponsorsComponents';
 
 export default class Sponsors extends React.Component<{}> {
   render() {
