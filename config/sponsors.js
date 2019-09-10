@@ -521,6 +521,12 @@ export default [
     logoUrl: '/static/img/sponsors/Stackbit-logo.png',
   },
   
+        {
+    name: 'Barclays',
+    url: 'https://ad.doubleclick.net/ddm/clk/449554279;253430086;p?https://home.barclays/careers/campaigns/developers/?utm_source=redapplecreative.co.uk&utm_medium=logo/sponsorship&utm_campaign=bx-developers&utm_term=us-nationwide&utm_content=NA',
+    logoUrl: '/static/img/sponsors/Barclays.png',
+  },
+  
   {
     name: 'Sky Silk',
     url:
