@@ -97,7 +97,7 @@ export default [
 
   {
     name: 'Bitrise',
-    url: 'https://www.bitrise.io/',
+    url: 'https://www.bitrise.io/?utm_source=fragmented_podcast&utm_medium=cpc&utm_campaign=fragmented_podcast&utm_content=spec_logo',
     logoUrl: '/static/img/sponsors/bitrise.png',
   },
 
