@@ -34,7 +34,7 @@
     "imagemin-optipng": "^7.0.0",
     "imagemin-svgo": "^7.0.0",
     "isomorphic-unfetch": "^3.0.0",
-    "jimp": "^0.8.3",
+    "jimp": "^0.8.4",
     "lqip-loader": "^2.2.0",
     "next": "^9.0.6",
     "next-compose-plugins": "^2.2.0",
