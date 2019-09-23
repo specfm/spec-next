@@ -520,6 +520,11 @@ export default [
     url: 'https://www.stackbit.com/developertea',
     logoUrl: '/static/img/sponsors/Stackbit-logo.png',
   },
+        {
+    name: 'Bluemedora',
+    url: 'https://bluemedora.com/compute-layer-vrealize-operations/',
+    logoUrl: '/static/img/sponsors/bluemedora.png',
+  },
   
         {
     name: 'Barclays',
