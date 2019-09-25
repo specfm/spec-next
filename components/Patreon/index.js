@@ -23,8 +23,8 @@ export const PatreonSidebar = () => {
         <SidebarContainer>
           <Avatar src={"/static/img/subscription_icons/patreon.jpg"} alt={'Support us on Patreon'} />
           <Meta>
-            <Label>Support on Patreon</Label>
-            <Sublabel>Listener supported</Sublabel>
+            <Label>Support us</Label>
+            <Sublabel>On Patreon</Sublabel>
           </Meta>
         </SidebarContainer>
       </Card>
@@ -50,7 +50,7 @@ export const PatreonMain = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <PatreonButton>Subscribe on Patreon</PatreonButton>
+        <PatreonButton>Support us on Patreon</PatreonButton>
       </a>
       
     </CustomNotice>
