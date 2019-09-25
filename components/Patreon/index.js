@@ -40,7 +40,7 @@ export const PatreonMain = () => {
       </CustomNotice.Title>
 
       <CustomNotice.Description>This show is possible because of the generosity of our listeners. If you've found our podcast useful or entertaining, please consider supporting us directly by becoming a patron.</CustomNotice.Description>
-      <CustomNotice.Description>Thank you for listening along with us for all these years, it means the world.</CustomNotice.Description>
+      <CustomNotice.Description>Thank you for listening along with us for all these years. It means the world.</CustomNotice.Description>
       <CustomNotice.Description>- Brian and Marshall</CustomNotice.Description>
 
       <div style={{ padding: '12px 0'}} />
