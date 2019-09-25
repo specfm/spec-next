@@ -106,7 +106,7 @@ export const PrimaryButton = styled.button`
   text-shadow: 0 1px 1px rgba(0,0,0,0.08);
 
   &:hover {
-    color: ${theme.text.reverse};
+    color: ${theme.bg.default};
     background-image: ${props =>
       `linear-gradient(to bottom, ${tint(props.theme.brand.alt, 16)}, ${tint(
         props.theme.brand.default,
@@ -242,7 +242,7 @@ export const FacebookButton = styled.button`
   }
 
   &:hover {
-    color: ${theme.text.reverse};
+    color: ${theme.bg.default};
     background-image: ${props =>
       `linear-gradient(to bottom, ${tint(
         props.theme.social.facebook,
@@ -283,7 +283,7 @@ export const TwitterButton = styled.button`
   }
 
   &:hover {
-    color: ${theme.text.reverse};
+    color: ${theme.bg.default};
     background-image: ${props =>
       `linear-gradient(to bottom, ${tint(
         props.theme.social.twitter,
@@ -304,6 +304,47 @@ export const TwitterButton = styled.button`
     box-shadow: 0 0 0 1px ${props =>
       props.theme.bg.default}, 0 0 0 3px ${props =>
   hexa(props.theme.social.twitter, 0.16)};
+  }
+`;
+
+export const PatreonButton = styled.button`
+  ${base}
+  border: 1px solid ${theme.social.patreon};
+  color: ${theme.bg.default};
+  background-color: ${theme.social.patreon};
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.theme.social.patreon}, ${
+      props.theme.social.patreon
+    })`};
+  text-shadow: 0 1px 1px rgba(0,0,0,0.08);
+
+  .icon {
+    margin-right: 8px;
+    margin-left: -4px;
+  }
+
+  &:hover {
+    color: ${theme.bg.default};
+    background-image: ${props =>
+      `linear-gradient(to bottom, ${tint(
+        props.theme.social.patreon,
+        4
+      )}, ${tint(props.theme.social.patreon, 4)})`};
+    box-shadow: ${props => (props.disabled ? 'none' : theme.shadows.button)};
+  }
+
+  &:active {
+    border: 1px solid ${theme.social.patreon};
+    background-image: ${props =>
+      `linear-gradient(to top, ${props.theme.social.patreon}, ${
+        props.theme.social.patreon
+      })`};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px ${props =>
+      props.theme.bg.default}, 0 0 0 3px ${props =>
+  hexa(props.theme.social.patreon, 0.16)};
   }
 `;
 

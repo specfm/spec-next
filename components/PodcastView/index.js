@@ -24,6 +24,7 @@ import PodcastArt from '../PodcastArt';
 import PodcastShareButtons from '../PodcastShareButtons';
 import CommunityUpsell from '../CommunityUpsell';
 import { CustomNotice } from '../Blog';
+import { PatreonSidebar, PatreonMain } from '../Patreon'
 
 type Props = {
   podcast: ConfigPodcast,
@@ -44,6 +45,7 @@ class PodcastView extends React.Component<Props> {
       episodes &&
       episodes.length > 0 &&
       podcast.featuredEpisodes.map(id => episodes.filter(e => e.id === id)[0]);
+
     return (
       <Grid data-cy="podcast-view">
         <Head>
@@ -95,6 +97,17 @@ class PodcastView extends React.Component<Props> {
           </Link>
           <PodcastSubscriptionOptions podcast={podcast} />
 
+          {
+            podcast.slug === 'design-details' && (
+              <React.Fragment>
+                <Divider>
+                  <Label>Listener supported</Label>
+                </Divider>
+                <PatreonSidebar />
+              </React.Fragment>
+            )
+          }
+
           <Divider>
             <Label>Hosted By</Label>
           </Divider>
@@ -123,7 +136,12 @@ class PodcastView extends React.Component<Props> {
             <PodcastSubscriptionOptions podcast={podcast} />
           </MobileSubscriptionOptions>
 
-          <PodcastShareButtons podcast={podcast} />
+
+          {
+            podcast.slug === 'design-details'
+            ? <PatreonMain />
+            : <PodcastShareButtons podcast={podcast} />
+          }
 
           {featuredEpisodes && (
             <CustomNotice color={podcast.colors.button}>
