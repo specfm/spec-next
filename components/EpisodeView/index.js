@@ -11,6 +11,7 @@ import PodcastArt from '../PodcastArt';
 import EpisodeShareButtons from '../EpisodeShareButtons';
 import CommunityUpsell from '../CommunityUpsell';
 import EpisodePlayButton from '../EpisodePlayButton';
+import { PatreonSidebar, PatreonMain } from '../Patreon'
 import {
   Grid,
   Sidebar,
@@ -117,6 +118,8 @@ class EpisodeView extends React.Component<Props> {
           <EpisodePlayButton episode={episode} size="full" />
 
           <EpisodeShareButtons episode={episode} podcast={podcast} />
+
+          {podcast.slug === 'design-details' && <PatreonMain />}
 
           <Markdown>{episode.long_description}</Markdown>
         </Content>

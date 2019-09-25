@@ -106,6 +106,13 @@ export const Glyph = ({ glyph }: GlyphProps) => {
           />
         </g>
       );
+    case 'patreon':
+      return (
+        <React.Fragment>
+          <rect width="5.66372" height="32" fill="#002C49"/>
+          <rect x="8.77878" width="23.2212" height="24.6385" rx="11.6106" fill="white"/>
+        </React.Fragment>
+      )
     default:
       return null;
   }

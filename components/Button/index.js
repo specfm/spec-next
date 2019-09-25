@@ -7,6 +7,7 @@ import GhostButton from './GhostButton';
 import OutlineButton from './OutlineButton';
 import PrimaryButton from './PrimaryButton';
 import TwitterButton from './TwitterButton';
+import PatreonButton from './PatreonButton'
 
 const { ButtonRow, ButtonSegmentRow } = Styled;
 
@@ -18,6 +19,7 @@ export {
   OutlineButton,
   PrimaryButton,
   TwitterButton,
+  PatreonButton,
   ButtonRow,
   ButtonSegmentRow,
 };

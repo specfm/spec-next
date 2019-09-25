@@ -28,8 +28,6 @@ class Podcast extends React.Component<Props> {
     let episodes;
     let podcasts;
 
-    console.log({ query })
-
     if (query.slug) {
       // match a slug to a podcast record in our config
       const configPodcast = api.getConfigPodcastFromSlug(query.slug);

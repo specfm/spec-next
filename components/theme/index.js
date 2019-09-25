@@ -1,3 +1,4 @@
+// @flow
 export const theme = {
   bg: {
     wash: '#F6F7F8',
@@ -20,6 +21,7 @@ export const theme = {
   social: {
     facebook: '#3B5998',
     twitter: '#00ACED',
+    patreon: '#F86754'
   },
   success: {
     default: '#21BE7C',
