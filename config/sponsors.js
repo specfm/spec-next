@@ -538,4 +538,10 @@ export default [
       'https://www.skysilk.com/?utm_source=Podcast&utm_medium=Newsletter&utm_campaign=Developer_Tea_Time',
     logoUrl: '/static/img/sponsors/skysilk.png',
   },
+    {
+    name: 'Toptal',
+    url:
+      'http://go.thoughtleaders.io/1280920190926',
+    logoUrl: '/static/img/sponsors/toptal.png',
+  },
 ];
