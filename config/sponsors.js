@@ -542,6 +542,6 @@ export default [
     name: 'Toptal',
     url:
       'http://go.thoughtleaders.io/1280920190926',
-    logoUrl: '/static/img/sponsors/toptal.png',
+    logoUrl: '/static/img/sponsors/toptalogo.png',
   },
 ];
