@@ -6168,10 +6168,10 @@ imagemin-mozjpeg@^8.0.0:
     is-jpg "^2.0.0"
     mozjpeg "^6.0.0"
 
-imagemin-optipng@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/imagemin-optipng/-/imagemin-optipng-7.0.0.tgz#7680359bcf254bb85bbe87e727d1bdfc03491b1d"
-  integrity sha512-N40bmLgiyv5H8xFp/RYmWKdg6Z19MGqzcNW+IWXG7VPrLV75NbcOn8y6A7eZcSHOCNW+DqBx+b95yw+Tf6Sl/g==
+imagemin-optipng@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/imagemin-optipng/-/imagemin-optipng-7.1.0.tgz#2225c82c35e5c29b7fa98d4f9ecee1161a68e888"
+  integrity sha512-JNORTZ6j6untH7e5gF4aWdhDCxe3ODsSLKs/f7Grewy3ebZpl1ZsU+VUTPY4rzeHgaFA8GSWOoA8V2M3OixWZQ==
   dependencies:
     exec-buffer "^3.0.0"
     is-png "^2.0.0"
