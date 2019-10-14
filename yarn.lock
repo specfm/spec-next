@@ -9650,10 +9650,10 @@ react-error-overlay@5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-image@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-image/-/react-image-2.2.0.tgz#d0fa05b098b6d55ccb5917d89310c0dfdec2968b"
-  integrity sha512-MXPNjcczXXN/2KRTV8tHV3D5fjc+QG7YIxULTQTWsN0o7anLae+igVUEYMjsP3jiuZxUoInVBvPy+p7woeOCSg==
+react-image@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-image/-/react-image-2.2.1.tgz#2aa7832be93023e918adae66b0d1b37d06eed293"
+  integrity sha512-fUlwjOmEQU8JBe5jsTnFiLbZy0IyiYx6sOUVMlz9os2+rZexiOJoC0WV4vycvnEgFVxsSYnS8YIhEi+X/NqP8g==
   dependencies:
     prop-types "15.7.2"
 
