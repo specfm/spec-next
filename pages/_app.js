@@ -164,7 +164,7 @@ class MyApp extends App {
             crossOrigin="anonymous"
           />
 
-          <link rel="preconnect" href="https://api.spec.fm" />
+          <link rel="preconnect" href="https://spec.fm/api" />
 
           {this.props.styleTags}
         </Head>

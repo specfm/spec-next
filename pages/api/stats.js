@@ -1,15 +1,23 @@
-const moment = require('moment');
-const simplecast = require('./simplecast');
+import moment from 'moment'
+import microCors from 'micro-cors'
+import fetch from 'isomorphic-unfetch'
+import simplecast from '../../lib/simplecast'
 
-const getStats = async url => {
-  // url comes in as /stats/{range}
-  const parsed = url.split('/');
-  // ['', 'stats', {range}]
-  const range = parsed.length === 3 && parsed[2];
-  // invalid url
+const cors = microCors();
+
+const prod = process.env.NODE_ENV === 'production';
+const API_URL = prod ? 'https://spec.fm/api' : 'http://localhost:3000/api';
+
+const fetchData = async (route) => {
+  const req = fetch(`${API_URL}/${route}`);
+  const res = await req;
+  return await res.json();
+}
+
+const getStats = async range => {
   if (!range) return null;
+  const podcasts= await fetchData('podcasts')
 
-  const podcasts = await simplecast('/podcasts.json');
   const ids = podcasts.map(podcast => podcast.id);
 
   const rangeToDays = {
@@ -38,12 +46,8 @@ const getStats = async url => {
 
   const statsPromises = ids.map(async id => {
     const [current, previous] = await Promise.all([
-      simplecast(
-        `/podcasts/${id}/statistics/overall.json?start_date=${currentPeriodStartDate}&end_date=${currentPeriodEndDate}&timeframe=custom`
-      ),
-      simplecast(
-        `/podcasts/${id}/statistics/overall.json?start_date=${prevPeriodStartDate}&end_date=${prevPeriodEndDate}&timeframe=custom`
-      ),
+      fetchData(`podcasts/${id}/statistics?start=${currentPeriodStartDate}&end=${currentPeriodEndDate}`),
+      fetchData(`podcasts/${id}/statistics?start=${prevPeriodStartDate}&end=${prevPeriodEndDate}`),
     ]);
 
     return {
@@ -58,4 +62,9 @@ const getStats = async url => {
   return Promise.all(statsPromises);
 };
 
-module.exports = getStats;
+const handler = async (req, res) => {
+  const stats = await getStats(req.query.range);
+  return res.send(stats)
+};
+
+export default cors(handler);
