@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   target: 'serverless',
   webpack: config => {
@@ -8,4 +10,8 @@ module.exports = {
 
     return config;
   },
+  env: {
+    "SIMPLECAST_API_KEY": process.env.SIMPLECAST_API_KEY,
+    "SEEKER_API_KEY": process.env.SEEKER_API_KEY
+  }
 };

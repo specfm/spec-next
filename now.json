@@ -1,4 +1,8 @@
 {
   "version": 2,
-  "alias": "spec.fm"
+  "alias": "spec.fm",
+  "env": {
+    "SIMPLECAST_API_KEY": "@simplecast-api-key",
+    "SEEKER_API_KEY": "@seeker-api-key"
+  }
 }

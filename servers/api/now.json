@@ -1,6 +1,0 @@
-{
-  "env": {
-    "SIMPLECAST_API_KEY": "@simplecast-api-key",
-    "SEEKER_API_KEY": "@seeker-api-key"
-	}
-}
