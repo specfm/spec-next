@@ -38,7 +38,6 @@ const api = {
     podcasts.find(
       podcast => podcast && podcast.simplecastId && podcast.simplecastId === id
     ),
-  getJobs: async (): Promise<Array<?JobListing>> => fetchUrl('jobs'),
   getStats: async (range: string): Promise<any> => fetchUrl(`stats?range=${range}`),
 };
 

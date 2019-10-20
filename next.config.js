@@ -11,7 +11,6 @@ module.exports = {
     return config;
   },
   env: {
-    "SIMPLECAST_API_KEY": process.env.SIMPLECAST_API_KEY,
-    "SEEKER_API_KEY": process.env.SEEKER_API_KEY
+    "SIMPLECAST_API_KEY": process.env.SIMPLECAST_API_KEY
   }
 };
