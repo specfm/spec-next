@@ -1,4 +1,5 @@
-const microCors = require('micro-cors');
+import microCors from 'micro-cors'
+import fetch from 'isomorphic-unfetch'
 const cors = microCors();
 const SEEKER_URL = 'https://api.seeker.company/v1';
 const { SEEKER_API_KEY } = process.env;

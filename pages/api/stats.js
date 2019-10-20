@@ -1,7 +1,10 @@
-const moment = require('moment');
-const microCors = require('micro-cors');
-const cors = microCors();
+import moment from 'moment'
+import microCors from 'micro-cors'
+import fetch from 'isomorphic-unfetch'
 import simplecast from '../../lib/simplecast'
+
+const cors = microCors();
+
 const prod = process.env.NODE_ENV === 'production';
 const API_URL = prod ? 'https://spec.fm/api' : 'http://localhost:3000/api';
 
