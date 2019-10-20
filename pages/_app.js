@@ -116,6 +116,7 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+    console.log({ client: process.env })
     return (
       <React.Fragment>
         <GlobalStyles />
