@@ -497,6 +497,12 @@ export default [
     logoUrl: '/static/img/sponsors/Clubhouse.png',
   },
   
+    {
+    name: 'Vettery',
+    url: 'https://www.vettery.com/tech?utm_source=podcast&utm_medium=specfm&utm_term=tech&utm_content=grouped&utm_campaign=ad-92198',
+    logoUrl: '/static/img/sponsors/vettery.png',
+  },
+  
   {
     name: 'GitPrime',
     url: 'https://gitprime.com/20patterns',
