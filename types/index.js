@@ -92,17 +92,11 @@ export type SearchResult = {
   publishedAt: string,
 };
 
-export type JobListing = {
-  id: string,
-  job_title: string,
-  job_description: string,
-  job_location: string,
-  job_application_link: string,
-  creation_date: string,
-  end_date: string,
-  job_link: string,
-  company: {
-    name: string,
-    company_url: string,
-  },
-};
+export type SearchableEpisode = {
+  podcastId: number,
+  title: string,
+  description: string,
+  publishedAt: string,
+  id: number,
+  objectID: number,
+}

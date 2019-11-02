@@ -5,7 +5,6 @@ import type {
   ConfigPodcast,
   SimplecastPodcast,
   SimplecastEpisode,
-  JobListing,
 } from '../../types';
 
 const prod = process.env.NODE_ENV === 'production';
