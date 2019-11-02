@@ -1,5 +1,5 @@
-import resources from '../../../config/resources'
-import podcasts from '../../../config/podcasts'
+import resources from '../../../src/config/resources'
+import podcasts from '../../../src/config/podcasts'
 const slugs = podcasts.map(podcast => podcast.slug)
 
 describe('Home', () => {

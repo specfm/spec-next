@@ -1,7 +1,7 @@
 // @flow
 import removeMd from 'remove-markdown';
 import { byteCount, withoutStopWords } from '../../utils/text-parsing';
-import type { SimplecastEpisode, SearchableEpisode } from '../../types';
+import type { SimplecastEpisode, SearchableEpisode } from '../../../../../types';
 
 export default (episode: SimplecastEpisode): SearchableEpisode => {
   let description = withoutStopWords(episode.long_description);

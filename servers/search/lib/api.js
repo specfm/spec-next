@@ -1,6 +1,6 @@
 // @flow
 import 'isomorphic-unfetch';
-import type { SimplecastPodcast, SimplecastEpisode } from './types';
+import type { SimplecastPodcast, SimplecastEpisode } from '../../../types';
 
 const prod = process.env.NODE_ENV === 'production';
 

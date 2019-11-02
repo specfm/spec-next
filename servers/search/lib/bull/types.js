@@ -1,5 +1,5 @@
 // @flow
-import type { SimplecastEpisode } from '../types';
+import type { SimplecastEpisode } from '../../../../types';
 
 export type Job<JobData> = {|
   id: string,
