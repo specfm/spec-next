@@ -1,4 +1,4 @@
-import podcasts from '../../../config/podcasts'
+import podcasts from '../../../src/config/podcasts'
 const slugs = podcasts.map(podcast => podcast.slug)
 
 describe('Podcasts', () => {
