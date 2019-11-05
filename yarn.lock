@@ -8085,10 +8085,10 @@ next-nprogress@^1.4.0:
   dependencies:
     nprogress "^0.2.0"
 
-next-optimized-images@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.3.tgz#40b8f0f98917742e3262d5b4ffac68ee09cfee30"
-  integrity sha512-eyTGBluzqZVZCqq5/+B+CoKWZJ8+ooIj7b4Z7jvQ38vVBOfZy4MeIh4oHrnk3KD4HM9qU/xDKBZuV6sgXSusdw==
+next-optimized-images@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.4.tgz#afc2812efd34901ebb0a8b18e21a5989b385cfe5"
+  integrity sha512-Vv/1NM1oeBm7ry2bfUzhqDtd5kHEuluEX0E6pdguVqrWIxa5WJzX4JwWlUR7OxD3BECa5uA13C0XkCtjG1Sdtg==
   dependencies:
     chalk "^2.4.2"
     figures "^3.0.0"
