@@ -33,6 +33,12 @@ export default [
   },
 
   {
+    name: 'Square',
+    url: 'https://developer.squareup.com/',
+    logoUrl: '/static/img/sponsors/square.png',
+  },
+  
+  {
     name: 'UENO',
     url: 'https://ueno.co',
     logoUrl: '/static/img/sponsors/ueno.png',
