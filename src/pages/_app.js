@@ -14,13 +14,11 @@ import Fathom from 'fathom-client'
 import Router from 'next/router'
 
 Router.events.on('routeChangeComplete', () => {
-  console.log('pageview')
   Fathom.trackPageview()
 })
 
 function FathomWrapper() {
   React.useEffect(() => {
-    console.log('mounting')
     if (process.env.NODE_ENV === 'production') {
       Fathom.load();
       Fathom.setSiteId('XSBRGEGA');
