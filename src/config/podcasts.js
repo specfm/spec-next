@@ -3,12 +3,12 @@ import hosts from './hosts';
 
 export default [
   {
-    id: '363',
+    id: 363,
     name: 'Developer Tea',
     slug: 'developer-tea',
     description:
       'A podcast for developers designed to fit inside your tea break',
-    simplecastId: '363',
+    simplecastId: 363,
     artworkUrl: '/static/img/shows/developertea.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id955596067',
     overcastUrl: 'https://overcast.fm/itunes955596067',
@@ -29,11 +29,11 @@ export default [
   },
 
   {
-    id: '1034',
+    id: 1034,
     name: 'Design Details',
     slug: 'design-details',
     description: 'A weekly conversation about design process and culture',
-    simplecastId: '1034',
+    simplecastId: 1034,
     artworkUrl: '/static/img/shows/designdetails.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id947191070',
     overcastUrl: 'https://overcast.fm/itunes947191070',
@@ -54,11 +54,11 @@ export default [
   },
 
   {
-    id: '1332',
+    id: 1332,
     name: 'Immutable',
     slug: 'immutable',
     description: 'A short, weekly show about design and development',
-    simplecastId: '1332',
+    simplecastId: 1332,
     artworkUrl: '/static/img/shows/immutable.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1035147995',
     overcastUrl: 'https://overcast.fm/itunes1035147995',
@@ -79,12 +79,12 @@ export default [
   },
 
   {
-    id: '1386',
+    id: 1386,
     name: 'Does Not Compute',
     slug: 'does-not-compute',
     description:
       'A weekly chat about the lives and workflows of modern web developers',
-    simplecastId: '1386',
+    simplecastId: 1386,
     artworkUrl: '/static/img/shows/dnc.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1048731980',
     overcastUrl: 'https://overcast.fm/itunes1048731980',
@@ -104,11 +104,11 @@ export default [
   },
 
   {
-    id: '1457',
+    id: 1457,
     name: 'Vicarious',
     slug: 'vicarious',
     description: "Everyday escapism from a designers' point of view.",
-    simplecastId: '1457',
+    simplecastId: 1457,
     artworkUrl: '/static/img/shows/vicarious.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1055180013',
     overcastUrl: 'https://overcast.fm/itunes1055180013',
@@ -133,12 +133,12 @@ export default [
   },
 
   {
-    id: '1684',
+    id: 1684,
     name: 'Fragmented',
     slug: 'fragmented',
     description:
       'An Android developer podcast where we talk about building good software and becoming better Android developers',
-    simplecastId: '1684',
+    simplecastId: 1684,
     artworkUrl: '/static/img/shows/fragmented.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id968779958',
     overcastUrl: 'https://overcast.fm/itunes968779958',
@@ -160,12 +160,12 @@ export default [
   },
 
   {
-    id: '2070',
+    id: 2070,
     name: 'Runtime',
     slug: 'runtime',
     description:
       'Sam Soffes and Caleb Davenport talk about Swift, iOS, and other things they like',
-    simplecastId: '2070',
+    simplecastId: 2070,
     artworkUrl: '/static/img/shows/runtime.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1122203945',
     overcastUrl: 'https://overcast.fm/itunes1122203945',
@@ -185,11 +185,11 @@ export default [
   },
 
   {
-    id: '2128',
+    id: 2128,
     name: 'Orthogonal',
     slug: 'orthogonal',
     description: 'A show about finance, freelance and being better at both',
-    simplecastId: '2128',
+    simplecastId: 2128,
     artworkUrl: '/static/img/shows/orthogonal.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1131320952',
     overcastUrl: 'https://overcast.fm/itunes1131320952',
@@ -209,12 +209,12 @@ export default [
   },
 
   {
-    id: '2693',
+    id: 2693,
     name: 'Swift Unwrapped',
     slug: 'swift-unwrapped',
     description:
       'A 30-minute spin off of Swift Weekly Brief and other Swifty news.',
-    simplecastId: '2693',
+    simplecastId: 2693,
     artworkUrl: '/static/img/shows/swiftunwrapped.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1209817203',
     overcastUrl: 'https://overcast.fm/itunes1209817203',
@@ -234,12 +234,12 @@ export default [
   },
 
   {
-    id: '4211',
+    id: 4211,
     name: 'Toolsday',
     slug: 'toolsday',
     description:
       'A show about the latest in tech tools, tips, and tricks on Tuesdays at 2',
-    simplecastId: '4211',
+    simplecastId: 4211,
     artworkUrl: '/static/img/shows/toolsday.jpg',
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1063765302',
     overcastUrl: 'https://overcast.fm/itunes1063765302',
@@ -259,13 +259,13 @@ export default [
   },
 
   {
-    id: '9926',
+    id: 9926,
     name: 'Framework',
     slug: 'framework',
     description:
       'Framework is a podcast about the process of researching, planning and building that goes into bringing a product to market.',
     artworkUrl: '/static/img/shows/framework.jpg',
-    simplecastId: '9926',
+    simplecastId: 9926,
     iTunesUrl:
       'https://itunes.apple.com/ca/podcast/framework/id1373741352?mt=2',
     overcastUrl: 'https://overcast.fm/itunes1373741352',
@@ -285,12 +285,12 @@ export default [
   },
 
   {
-    id: '6265',
+    id: 6265,
     name: 'React Podcast',
     slug: 'reactpodcast',
     description: 'Conversations about React with your favorite developers.',
     artworkUrl: '/static/img/shows/reactpodcast.jpg',
-    simplecastId: '6265',
+    simplecastId: 6265,
     iTunesUrl:
       'https://itunes.apple.com/us/podcast/the-react-podcast/id1341969432',
     overcastUrl: 'https://overcast.fm/itunes1341969432',
@@ -310,7 +310,7 @@ export default [
   },
 
   {
-    id: '99999',
+    id: 99999,
     name: 'Layout',
     slug: 'layout',
     description:

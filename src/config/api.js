@@ -22,18 +22,18 @@ const fetchUrl = async (url: string): any => {
 };
 
 const api = {
-  getPodcast: async (id: ?string): Promise<?SimplecastPodcast> =>
+  getPodcast: async (id: ?number): Promise<?SimplecastPodcast> =>
     id ? fetchUrl(`podcasts/${id}`) : null,
-  getEpisodes: async (id: ?string): Promise<?Array<?SimplecastEpisode>> =>
+  getEpisodes: async (id: ?number): Promise<?Array<?SimplecastEpisode>> =>
     id ? fetchUrl(`podcasts/${id}/episodes`) : [],
   getEpisode: async (
-    showId: ?string,
-    episodeId: string
+    showId: ?number,
+    episodeId: number
   ): Promise<?SimplecastEpisode> =>
     showId ? fetchUrl(`podcasts/${showId}/episodes/${episodeId}`) : null,
   getConfigPodcastFromSlug: (slug: string): ?ConfigPodcast =>
     podcasts.find(podcast => podcast && podcast.slug === slug),
-  getConfigPodcastFromId: (id: string): ?ConfigPodcast =>
+  getConfigPodcastFromId: (id: number): ?ConfigPodcast =>
     podcasts.find(
       podcast => podcast && podcast.simplecastId && podcast.simplecastId === id
     ),
