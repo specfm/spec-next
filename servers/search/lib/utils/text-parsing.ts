@@ -1,7 +1,6 @@
-// @flow
-const stopword = require('stopword');
+import stopword from 'stopword'
 
-export const strToArray = (str: string): Array<string> =>
+export const strToArray = (str) =>
   // turn the string into an array of words
   str
     .split(' ')
@@ -10,7 +9,7 @@ export const strToArray = (str: string): Array<string> =>
     // remove any newline characters
     .filter(n => n !== '\n');
 
-export const byteCount = (str: string) => {
+export const byteCount = (str) => {
   // returns the byte length of an utf8 string
   let s = str.length;
   for (let i = str.length - 1; i >= 0; i -= 1) {
@@ -22,7 +21,7 @@ export const byteCount = (str: string) => {
   return s;
 };
 
-export const withoutStopWords = (str: string): string => {
+export const withoutStopWords = (str) => {
   // turn the string into an array of words
   const arr = strToArray(str);
   // filter out any words that are considered stop words
