@@ -5,7 +5,6 @@
   "defaultCommandTimeout": 20000,
   "video": false,
   "blacklistHosts": [
-    "*.google-analytics.com",
-    "*.googletagmanager.com"
+    "*.usefathom.com"
   ]
 }

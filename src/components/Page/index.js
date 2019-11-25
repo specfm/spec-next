@@ -17,7 +17,6 @@ import {
   InnerContainer,
   ScrollToTop,
 } from './style';
-import * as gtag from '../../lib/gtag';
 
 export { SectionHeading, Heading, Subheading };
 
@@ -29,7 +28,6 @@ type Props = {
 
 export default function Page(props: Props) {
   const { children, showEmailCapture = true, dataCy } = props;
-  const [lastTrackedPageview, setLastTrackedPageview] = useState(null);
   const [showHeaderShadow, setHeaderShadow] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
 
@@ -56,20 +54,9 @@ export default function Page(props: Props) {
     return () => {
       if (window) {
         window.removeEventListener('scroll', throttledScroll);
-        setLastTrackedPageview(null);
       }
     };
   }, []);
-
-  useEffect(() => {
-    if (document) {
-      const newLocation = document.location.pathname;
-      if (newLocation !== lastTrackedPageview) {
-        gtag.pageview(document.location.pathname);
-        setLastTrackedPageview(newLocation);
-      }
-    }
-  });
 
   return (
     <ThemeProvider theme={theme}>

@@ -10,6 +10,23 @@ import GlobalPlayerContext, {
 import GlobalPlayer from '../components/GlobalPlayer';
 import { GlobalStyles } from '../../public/static/normalize';
 import type { SimplecastEpisode } from '../../types';
+import Fathom from 'fathom-client'
+import Router from 'next/router'
+
+Router.events.on('routeChangeComplete', () => {
+  Fathom.trackPageview()
+})
+
+function FathomWrapper() {
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      Fathom.load();
+      Fathom.setSiteId('XSBRGEGA');
+      Fathom.trackPageview();
+    }
+  }, [])
+  return null
+}
 
 const SENTRY_PUBLIC_DSN =
   'https://7248f7abd384414b9fc10797611eff46@sentry.io/1323990';
@@ -119,6 +136,7 @@ class MyApp extends App {
     return (
       <React.Fragment>
         <GlobalStyles />
+        <FathomWrapper />
         <Head>
           <title>Spec · Level Up</title>
           <meta content="@specfm" name="twitter:site" key="twitter:site" />
