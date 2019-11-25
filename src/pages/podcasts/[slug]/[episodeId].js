@@ -40,7 +40,7 @@ class Episode extends React.Component<Props> {
         // show from the api
         [podcast, episode] = await Promise.all([
           api.getPodcast(configPodcast.simplecastId),
-          api.getEpisode(configPodcast.simplecastId, parseInt(query.episodeId)),
+          api.getEpisode(configPodcast.simplecastId, query.episodeId),
         ]);
       }
     }

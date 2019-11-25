@@ -1,16 +1,10 @@
 {
   "name": "spec-next-search",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "DEBUG=search* nodemon lib/index.js --exec babel-node",
-    "build": "babel lib -d build-search",
-    "start": "NODE_ENV=production node build-search/index.js"
-  },
   "dependencies": {
+    "@types/algoliasearch": "^3.34.5",
     "algoliasearch": "^3.33.0",
     "babel-polyfill": "^6.26.0",
-    "bull": "^3.10.0",
     "debug": "^4.1.1",
     "ioredis": "^3.2.2",
     "isomorphic-unfetch": "^2.1.1",
@@ -20,6 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@now/node": "^1.2.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",

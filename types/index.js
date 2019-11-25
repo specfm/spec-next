@@ -1,6 +1,6 @@
 // @flow
 export type SimplecastPodcast = {
-  id: number,
+  id: string,
   title: string,
   rss_url: string,
   description: ?string,
@@ -22,9 +22,9 @@ export type SimplecastPodcast = {
 };
 
 export type SimplecastEpisode = {
-  id: number,
+  id: string,
   number: number,
-  podcast_id: number,
+  podcast_id: string,
   guide: string,
   title: string,
   author: string,
@@ -53,11 +53,11 @@ export type Host = {
 };
 
 export type ConfigPodcast = {|
-  id: ?number,
+  id: ?string,
   name: string,
   slug: string,
   description: string,
-  simplecastId: ?number,
+  simplecastId: ?string,
   artworkUrl: string,
   iTunesUrl: string,
   overcastUrl: string,
@@ -86,17 +86,17 @@ export type GetInitialProps = {
 };
 
 export type SearchResult = {
-  podcastId: number,
+  podcastId: string,
   title: string,
-  id: number,
+  id: string,
   publishedAt: string,
 };
 
 export type SearchableEpisode = {
-  podcastId: number,
+  podcastId: string,
   title: string,
   description: string,
   publishedAt: string,
-  id: number,
-  objectID: number,
+  id: string,
+  objectID: string,
 }

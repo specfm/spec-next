@@ -1,4 +1,11 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/search.ts",
+      "use": "@now/node"
+    }
+  ],
   "env": {
     "REDIS_PORT": "@redis-port",
     "REDIS_URL": "@redis-url",
@@ -6,5 +13,5 @@
     "SIMPLECAST_API_KEY": "@simplecast-api-key",
     "ALGOLIA_API_KEY": "@algolia-api-key",
     "ALGOLIA_APP_ID": "@algolia-app-id"
-	}
+  }
 }
