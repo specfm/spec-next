@@ -58,7 +58,7 @@
     "webp-loader": "^0.5.0"
   },
   "devDependencies": {
-    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-flow": "^7.7.4",
     "@cypress/browserify-preprocessor": "^2.0.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-styled-components": "^1.10.6",
