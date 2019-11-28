@@ -556,4 +556,11 @@ export default [
       'http://go.thoughtleaders.io/1280920190926',
     logoUrl: '/static/img/sponsors/toptalogo.png',
   },
+    },
+    {
+    name: 'GiveWell',
+    url:
+      'https://www.givewell.org/developertea',
+    logoUrl: '/static/img/sponsors/givewell.png',
+  },
 ];
