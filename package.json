@@ -55,7 +55,7 @@
     "serve-favicon": "^2.5.0",
     "styled-components": "^4.4.1",
     "throttle-debounce": "^2.1.0",
-    "webp-loader": "^0.5.0"
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.7.4",
