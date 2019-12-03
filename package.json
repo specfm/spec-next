@@ -32,7 +32,7 @@
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.0.0",
     "isomorphic-unfetch": "^3.0.0",
-    "jimp": "^0.8.5",
+    "jimp": "^0.9.3",
     "lqip-loader": "^2.2.0",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
