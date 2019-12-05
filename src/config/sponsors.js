@@ -165,7 +165,7 @@ export default [
 
   {
     name: 'Flywheel',
-    url: 'http://bit.ly/2JZWSSD',
+    url: 'https://bit.ly/2JZWSSD',
     logoUrl: '/static/img/sponsors/flywheel.png',
   },
 
