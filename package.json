@@ -24,7 +24,7 @@
     "deploy:search": "(cd servers/search && now)"
   },
   "dependencies": {
-    "@sentry/browser": "^5.9.1",
+    "@sentry/browser": "^5.10.0",
     "express": "^4.17.1",
     "fathom-client": "^1.0.0",
     "imagemin-gifsicle": "^6.0.1",
