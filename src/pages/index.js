@@ -26,7 +26,6 @@ class Index extends React.Component<Props> {
 
   render() {
     const { podcasts } = this.props;
-    console.log({ podcasts })
     return (
       <Page dataCy="home-view">
         <Head>
