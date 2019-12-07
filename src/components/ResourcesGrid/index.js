@@ -31,7 +31,7 @@ class ResourcesGrid extends React.Component<{}> {
           </a>
 
           <a
-            href="http://www.brianlovin.com/design-details/"
+            href="http://www.brianlovin.com/design-details"
             target="_blank"
             rel="noopener noreferrer"
             data-cy="resource-ddblog"
