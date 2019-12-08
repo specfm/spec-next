@@ -13,10 +13,11 @@
   },
   "routes": [
     {
-      "src": "/api/*",
+      "src": "/api/(.*)",
       "headers": {
-        "Cache-Control": "max-age=3600"
+        "cache-control": "s-maxage=3600"
       },
+      "dest": "/api/$1",
       "continue": true
     }
   ]
