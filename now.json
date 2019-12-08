@@ -10,5 +10,14 @@
     "env": {
       "SIMPLECAST_API_KEY": "@simplecast-api-key"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/*",
+      "headers": {
+        "Cache-Control": "max-age=3600"
+      },
+      "continue": true
+    }
+  ]
 }
