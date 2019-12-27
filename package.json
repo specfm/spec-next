@@ -1,9 +1,6 @@
 {
   "name": "spec-next",
   "version": "1.0.0",
-  "engines": {
-    "node": "^8.10.0"
-  },
   "scripts": {
     "dev": "next",
     "dev:search": "(cd servers/search && npm run dev)",
