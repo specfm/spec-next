@@ -17,6 +17,7 @@ class PodcastsGrid extends React.Component<Props> {
 
   render() {
     const { podcasts } = this.props;
+    
     return (
       <Container>
         <Grid>
