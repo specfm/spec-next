@@ -5,6 +5,6 @@
   "defaultCommandTimeout": 20000,
   "video": false,
   "blacklistHosts": [
-    "*usefathom.com"
+    "*.usefathom.com"
   ]
 }
