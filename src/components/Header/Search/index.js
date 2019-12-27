@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, Hits } from 'react-instantsearch-dom';
 import { Container, AlgoliaLogo } from './style';
 import OutsideClickHandler from '../../OutsideClickHandler';
@@ -9,6 +10,9 @@ import SearchContext from './SearchContext';
 
 const ALGOLIA_SEARCH_KEY = 'edad66bc16c4912d142a8e7dae608ccd';
 const ALGOLIA_APP_ID = 'M8MTCTQX8H';
+
+const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY);
+  
 // dev_pisodes is a typo when i was running the first dev migration of data :P
 const INDEX =
   process.env.NODE_ENV === 'production' ? 'episodes' : 'dev_pisodes';
@@ -60,8 +64,7 @@ class Search extends React.Component<Props, State> {
               </a>
             )}
             <InstantSearch
-              appId={ALGOLIA_APP_ID}
-              apiKey={ALGOLIA_SEARCH_KEY}
+              searchClient={searchClient}
               indexName={INDEX}
             >
               <SearchInput

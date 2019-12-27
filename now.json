@@ -6,11 +6,6 @@
   "env": {
     "SIMPLECAST_API_KEY": "@simplecast-api-key"
   },
-  "build": {
-    "env": {
-      "SIMPLECAST_API_KEY": "@simplecast-api-key"
-    }
-  },
   "routes": [
     {
       "src": "/api/(.*)",
