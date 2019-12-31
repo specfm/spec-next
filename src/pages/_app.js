@@ -10,7 +10,7 @@ import GlobalPlayerContext, {
 import GlobalPlayer from '../components/GlobalPlayer';
 import { GlobalStyles } from '../../public/static/normalize';
 import type { SimplecastEpisode } from '../../types';
-import { trackPageView, load, setSiteId } from 'fathom-client'
+import { trackPageview, load, setSiteId } from 'fathom-client'
 import Router from 'next/router'
 
 Router.events.on('routeChangeComplete', () => {
