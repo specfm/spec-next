@@ -23,7 +23,7 @@
   "dependencies": {
     "@sentry/browser": "^5.10.2",
     "algoliasearch": "^3.35.1",
-    "fathom-client": "^1.0.0",
+    "fathom-client": "^2.0.2",
     "isomorphic-unfetch": "^3.0.0",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
