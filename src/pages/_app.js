@@ -10,19 +10,19 @@ import GlobalPlayerContext, {
 import GlobalPlayer from '../components/GlobalPlayer';
 import { GlobalStyles } from '../../public/static/normalize';
 import type { SimplecastEpisode } from '../../types';
-import Fathom from 'fathom-client'
+import { trackPageView, load, setSiteId } from 'fathom-client'
 import Router from 'next/router'
 
 Router.events.on('routeChangeComplete', () => {
-  Fathom.trackPageview()
+  trackPageview()
 })
 
-function FathomWrapper() {
+function FathomProvider() {
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
-      Fathom.load();
-      Fathom.setSiteId('XSBRGEGA');
-      Fathom.trackPageview();
+      load();
+      setSiteId('XSBRGEGA');
+      trackPageview();
     }
   }, [])
   return null
@@ -136,7 +136,7 @@ class MyApp extends App {
     return (
       <React.Fragment>
         <GlobalStyles />
-        <FathomWrapper />
+        <FathomProvider />
         <Head>
           <title>Spec · Level Up</title>
           <meta content="@specfm" name="twitter:site" key="twitter:site" />
