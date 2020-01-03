@@ -561,4 +561,9 @@ export default [
     url: 'https://www.givewell.org/developertea',
     logoUrl: '/static/img/sponsors/givewell.png',
   },
+    {
+    name: 'Pathrise',
+    url: 'https://www.pathrise.com/?utm_source=sponsored_media&utm_campaign=developer_tea&utm_medium=podcast',
+    logoUrl: '/static/img/sponsors/pathriselogo.png',
+  },
 ];
