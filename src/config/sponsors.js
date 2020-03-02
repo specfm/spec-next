@@ -565,10 +565,17 @@ export default [
     name: 'Pathrise',
     url: 'https://www.pathrise.com/?utm_source=sponsored_media&utm_campaign=developer_tea&utm_medium=podcast',
     logoUrl: '/static/img/sponsors/pathriselogo.png',
+     },
   },
       {
     name: 'Oxylabs',
     url: 'https://oxylabs.io/developertea?utm_source=newsletter&utm_medium=email&utm_campaign=developer_tea',
     logoUrl: '/static/img/sponsors/oxylabslogo.png',
+  },
+    {
+    name: 'XTeam',
+    url:
+      'https://x-team.com/developertea',
+    logoUrl: '/static/img/sponsors/xteam.png',
   },
 ];
