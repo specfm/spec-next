@@ -64,3 +64,4 @@ typings/
 .next
 now-secrets.json
 servers/search/build-search
+.now

@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import Router from 'next/router'
 import { api, podcasts as configPodcasts } from '../../../config';
 import Page, {
   SectionHeading,
@@ -29,6 +30,17 @@ class Podcast extends React.Component<Props> {
     let podcasts;
 
     if (query.slug) {
+      if (query.slug === "design-details") {
+        if (res) {
+          res.writeHead(301, {
+            Location: `https://designdetails.fm`
+          });
+          res.end();
+        } else {
+          window.location = `https://designdetails.fm`
+        }
+      }
+
       // match a slug to a podcast record in our config
       const configPodcast = api.getConfigPodcastFromSlug(query.slug);
 
