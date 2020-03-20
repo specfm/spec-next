@@ -1,0 +1,13 @@
+name: index content in search
+
+on:
+  schedule:
+    - cron:  '30 12 * * 3'
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: https://search.spec.fm/api/search.ts
