@@ -1,5 +1,6 @@
 import indexPodcasts from '../lib/indexPodcasts'
 
 export default async (req, res) => {
-  return await indexPodcasts()
+  await indexPodcasts()
+  res.end('Indexing complete 🌱')
 }
