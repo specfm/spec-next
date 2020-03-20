@@ -3,7 +3,7 @@ const slugs = podcasts.map(podcast => podcast.slug)
 
 describe('Episode', () => {
   beforeEach(() => {
-    cy.visit(`/podcasts/design-details/171711`);
+    cy.visit(`/podcasts/developer-tea/317916`);
   });
 
   it('should render', () => {
@@ -25,7 +25,7 @@ describe('Invalid Podcast and Episode', () => {
 
 describe('Invalid Episode', () => {
   beforeEach(() => {
-    cy.visit(`/podcasts/design-details/1717112`);
+    cy.visit(`/podcasts/developer-tea/31791612345`);
   });
 
   it('should render', () => {
