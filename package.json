@@ -29,7 +29,7 @@
     "micro-cors": "^0.1.1",
     "moment": "^2.24.0",
     "next": "^9.3.1",
-    "react": "^16.13.0",
+    "react": "^16.13.1",
     "react-clipboard.js": "^2.0.16",
     "react-dom": "^16.13.0",
     "react-image": "^2.4.0",
