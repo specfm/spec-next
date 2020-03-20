@@ -2,7 +2,7 @@ name: index content in search
 
 on:
   schedule:
-    - cron:  '30 12 * * 3'
+    - cron:  '0 0 * * *'
 jobs:
   curl:
     runs-on: ubuntu-latest
