@@ -31,7 +31,7 @@
     "next": "^9.3.1",
     "react": "^16.13.1",
     "react-clipboard.js": "^2.0.16",
-    "react-dom": "^16.13.0",
+    "react-dom": "^16.13.1",
     "react-image": "^2.4.0",
     "react-instantsearch-dom": "^6.4.0",
     "react-markdown": "^4.3.1",
