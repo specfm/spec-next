@@ -21,7 +21,7 @@
     "deploy:search": "(cd servers/search && now)"
   },
   "dependencies": {
-    "@sentry/browser": "^5.15.0",
+    "@sentry/browser": "^5.15.4",
     "algoliasearch": "^4.1.0",
     "fathom-client": "^2.0.2",
     "isomorphic-unfetch": "^3.0.0",
