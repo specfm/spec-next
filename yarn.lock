@@ -5987,10 +5987,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@^9.3.5-canary.8:
-  version "9.3.5-canary.8"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.3.5-canary.8.tgz#e96fca81941b7d932cb9e114de100087146f614c"
-  integrity sha512-H8UEh0sBJ+i4GSZYBYsJH6GbFWpFlIzrLp6L063vA9iiOuJGBRXSts9VAVxZNjQ9I/HAxFOWeF93RcrpP3CAAg==
+next@^9.3.5:
+  version "9.3.5"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.3.5.tgz#c9ff01147d3c9e165efdaa2cec1702b5741f5ac7"
+  integrity sha512-vJKGUK2nMsveYZTZH5Oz9L+cDYcCsuWLUXfWJejvhdQ3jLgVhZVa+7TQ45Kt0PA1ea7jqlDUN22DtzmPFi981w==
   dependencies:
     "@ampproject/toolbox-optimizer" "2.2.0"
     "@babel/core" "7.7.2"
