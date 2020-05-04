@@ -583,10 +583,16 @@ export default [
       'https://landing.prodperfect.com/tea.html?utm_source=tea&utm_medium=advertisement&utm_campaign=core_demo_request',
     logoUrl: '/static/img/sponsors/ProdPerfect.png',
   },
-    {
+  {
     name: 'Educative.io',
     url:
       'http://www.educative.io/',
     logoUrl: '/static/img/sponsors/educative.png',
+  },
+  {
+    name: 'HeadSpin.io',
+    url:
+      'https://www.headspin.io/?utm_source=devtea&utm_medium=podcast&utm_campaign=brand_awareness',
+    logoUrl: '/static/img/sponsors/headspin.png',
   },
 ];
