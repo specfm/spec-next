@@ -595,4 +595,10 @@ export default [
       'https://www.headspin.io/?utm_source=devtea&utm_medium=podcast&utm_campaign=brand_awareness',
     logoUrl: '/static/img/sponsors/headspin.png',
   },
+  {
+    name: 'Float',
+    url:
+      'https://www.float.com/?utm_source=designdetails&utm_medium=specfm',
+    logoUrl: '/static/img/sponsors/float.png',
+  },
 ];
