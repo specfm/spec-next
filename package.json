@@ -61,7 +61,7 @@
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "prettier-eslint": "^9.0.1",
-    "wait-on": "^4.0.2"
+    "wait-on": "^5.0.0"
   },
   "license": "ISC"
 }
