@@ -7340,12 +7340,10 @@ react-fast-compare@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.0.1.tgz#884d339ce1341aad22392e7a88664c71da48600e"
   integrity sha512-C5vP0J644ofZGd54P8++O7AvrqMEbrGf8Ue0eAUJLJyw168dAX2aiYyX/zcY/eSNwO0IDjsKUaLE6n83D+TnEg==
 
-react-image@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/react-image/-/react-image-2.4.0.tgz#ef67a32e131c3570cc1eef106c470811bbfa094e"
-  integrity sha512-gYO0JUn4spmqFIac3BXG7vyXLL+PJAOOWw7O88StzEAC+fMSiTIOa5AVaIfBkUqTM3tZc0MO7/26jsRdUKioDg==
-  dependencies:
-    prop-types "15.7.2"
+react-image@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-image/-/react-image-3.0.3.tgz#a51268317af77a9a358fa1d0ec9565c98b56aab5"
+  integrity sha512-C6DUCkmrVw3A4Nxz8nA5RYQIJ1V/4XtJYIeUR7f0XoWl3cN6jTYqSQa3/zCJ2PZ4Dk+mgNWQnNZGP30xpmPiYQ==
 
 react-instantsearch-core@^6.4.0:
   version "6.4.0"
