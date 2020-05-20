@@ -601,4 +601,10 @@ export default [
       'https://www.float.com/?utm_source=designdetails&utm_medium=specfm',
     logoUrl: '/static/img/sponsors/float.png',
   },
+  {
+    name: 'ZeBrand',
+    url:
+      'https://zebranding.com/?utm_source=podcast&utm_medium=spec&utm_campaign=devtea',
+    logoUrl: '/static/img/sponsors/zebrand.png',
+  },
 ];
