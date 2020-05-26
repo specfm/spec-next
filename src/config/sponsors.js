@@ -511,7 +511,7 @@ export default [
   
   {
     name: 'GitPrime',
-    url: 'https://gitprime.com/20patterns',
+    url: 'https://www.pluralsight.com/product/flow/20-patterns',
     logoUrl: '/static/img/sponsors/gitprime.png',
   },
   
