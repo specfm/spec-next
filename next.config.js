@@ -1,8 +1,22 @@
-require('dotenv').config()
+const path = require('path')
+const withSourceMaps = require('@zeit/next-source-maps')()
 
-module.exports = {
-  target: 'serverless',
+module.exports = withSourceMaps({
   env: {
-    "SIMPLECAST_API_KEY": process.env.SIMPLECAST_API_KEY
+    SPECFM_FATHOM_SITE_ID: process.env.SPECFM_FATHOM_SITE_ID,
+    SPECFM_FATHOM_CUSTOM_URL: process.env.SPECFM_FATHOM_CUSTOM_URL,
+    SIMPLECAST_V2_API_KEY: process.env.SIMPLECAST_V2_API_KEY,
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    SENTRY_DSN: process.env.SENTRY_DSN,
   },
-};
+  webpack: (config, { isServer }) => {
+    config.resolve.alias['~'] = path.resolve('./src')
+
+    if (!isServer) {
+      config.resolve.alias['@sentry/node'] = '@sentry/browser'
+    }
+
+    return config
+  },
+})

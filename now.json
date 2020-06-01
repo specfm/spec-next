@@ -1,24 +1,23 @@
 {
   "version": 2,
-  "github": {
-    "silent": true
-  },
   "env": {
-    "SIMPLECAST_API_KEY": "@simplecast-api-key"
+    "SPECFM_FATHOM_SITE_ID": "@specfm-fathom-site-id",
+    "SPECFM_FATHOM_CUSTOM_URL": "@specfm-fathom-custom-url",
+    "SIMPLECAST_V2_API_KEY": "@simplecast-v2-api-key",
+    "ALGOLIA_API_KEY": "@algolia-api-key",
+    "ALGOLIA_APP_ID": "@algolia-app-id",
+    "SEARCH_INDEXING_TOKEN": "@search-indexing-token",
+    "SENTRY_DSN": "@sentry-dsn"
   },
   "build": {
     "env": {
-      "SIMPLECAST_API_KEY": "@simplecast-api-key"
+      "SPECFM_FATHOM_SITE_ID": "@specfm-fathom-site-id",
+      "SPECFM_FATHOM_CUSTOM_URL": "@specfm-fathom-custom-url",
+      "SIMPLECAST_V2_API_KEY": "@simplecast-v2-api-key",
+      "ALGOLIA_API_KEY": "@algolia-api-key",
+      "ALGOLIA_APP_ID": "@algolia-app-id",
+      "SEARCH_INDEXING_TOKEN": "@search-indexing-token",
+      "SENTRY_DSN": "@sentry-dsn"
     }
-  },
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "headers": {
-        "cache-control": "s-maxage=3600"
-      },
-      "dest": "/api/$1",
-      "continue": true
-    }
-  ]
+  }
 }
