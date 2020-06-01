@@ -29,9 +29,9 @@ export const getDateObject = (timestamp: string): DateObject => {
   const hours = date.getHours() || 0
   let hour
   if (hours === 0) {
-    hour = 12 // if timestamp is between midnight and 1am, show 12:XX am
+    hour = 12
   } else {
-    hour = hours > 12 ? hours - 12 : hours // else show proper am/pm -- todo: support 24hr time
+    hour = hours > 12 ? hours - 12 : hours
   }
 
   return {

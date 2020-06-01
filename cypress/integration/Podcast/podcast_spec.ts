@@ -29,7 +29,7 @@ describe('Invalid Podcast', () => {
 
   it('should render', () => {
     // page renders
-    cy.get('[data-cy="invalid-podcast-view"]').should('be.visible')
+    cy.get('[data-cy="home-view"]').should('be.visible')
     // podcast should be visible
     slugs.map((slug) =>
       cy.get(`[data-cy="${slug}-podcast"]`).should('be.visible')

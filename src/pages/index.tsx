@@ -39,6 +39,7 @@ export async function getStaticProps() {
     'reactpodcast',
     'does-not-compute',
     'fragmented',
+    'swift-unwrapped',
     'layout',
     'toolsday',
   ]

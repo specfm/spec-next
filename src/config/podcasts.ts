@@ -103,34 +103,34 @@ export default [
     },
   },
 
-  {
-    id: '6e0667be-2a21-4fb2-94a0-584091012a8c', // TODO
-    name: 'Vicarious',
-    slug: 'vicarious',
-    description: "Everyday escapism from a designers' point of view.",
-    simplecastId: '6e0667be-2a21-4fb2-94a0-584091012a8c', // TODO
-    artworkUrl: '/static/img/shows/vicarious.jpg',
-    iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1055180013',
-    overcastUrl: 'https://overcast.fm/itunes1055180013',
-    pocketCastsUrl: 'http://pca.st/itunes/1055180013',
-    rssFeedUrl: 'http://simplecast.fm/podcasts/1457/rss',
-    googlePodcastsUrl: 'https://spec.fm/podcasts/vicarious',
-    castroUrl: 'https://castro.fm/itunes/1055180013',
-    breakerUrl: 'https://www.breaker.audio/vicarious',
-    applePodcastId: '1055180013',
-    twitterUsername: 'vicarious_fm',
-    hosts: [
-      hosts.superbryntendo,
-      hosts.marshallbock,
-      hosts.sortino,
-      hosts.sarahberus,
-    ],
-    featuredEpisodes: [],
-    colors: {
-      text: '#0F6CEB',
-      button: '#0F6CEB',
-    },
-  },
+  // {
+  //   id: '6e0667be-2a21-4fb2-94a0-584091012a8c', // TODO
+  //   name: 'Vicarious',
+  //   slug: 'vicarious',
+  //   description: "Everyday escapism from a designers' point of view.",
+  //   simplecastId: '6e0667be-2a21-4fb2-94a0-584091012a8c', // TODO
+  //   artworkUrl: '/static/img/shows/vicarious.jpg',
+  //   iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1055180013',
+  //   overcastUrl: 'https://overcast.fm/itunes1055180013',
+  //   pocketCastsUrl: 'http://pca.st/itunes/1055180013',
+  //   rssFeedUrl: 'http://simplecast.fm/podcasts/1457/rss',
+  //   googlePodcastsUrl: 'https://spec.fm/podcasts/vicarious',
+  //   castroUrl: 'https://castro.fm/itunes/1055180013',
+  //   breakerUrl: 'https://www.breaker.audio/vicarious',
+  //   applePodcastId: '1055180013',
+  //   twitterUsername: 'vicarious_fm',
+  //   hosts: [
+  //     hosts.superbryntendo,
+  //     hosts.marshallbock,
+  //     hosts.sortino,
+  //     hosts.sarahberus,
+  //   ],
+  //   featuredEpisodes: [],
+  //   colors: {
+  //     text: '#0F6CEB',
+  //     button: '#0F6CEB',
+  //   },
+  // },
 
   {
     id: '20f35050-e836-44cd-8f7f-fd13e8cb2e44',
@@ -233,30 +233,30 @@ export default [
     },
   },
 
-  {
-    id: 'c0a958c6-59dd-45ad-b246-1b7a1a9e51f6', // TODO
-    name: 'Toolsday',
-    slug: 'toolsday',
-    description:
-      'A show about the latest in tech tools, tips, and tricks on Tuesdays at 2',
-    simplecastId: 'c0a958c6-59dd-45ad-b246-1b7a1a9e51f6', // TODO
-    artworkUrl: '/static/img/shows/toolsday.jpg',
-    iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1063765302',
-    overcastUrl: 'https://overcast.fm/itunes1063765302',
-    pocketCastsUrl: 'http://pca.st/itunes/1063765302',
-    rssFeedUrl: 'https://rss.simplecast.com/podcasts/4211/rss',
-    googlePodcastsUrl: '',
-    castroUrl: 'https://castro.fm/itunes/1063765302',
-    breakerUrl: 'https://www.breaker.audio/toolsday',
-    applePodcastId: '1063765302',
-    twitterUsername: 'toolsday',
-    hosts: [hosts.una, hosts.chrisdhanaraj],
-    featuredEpisodes: [],
-    colors: {
-      text: '#2167A4',
-      button: '#3A87C9',
-    },
-  },
+  // {
+  //   id: 'c0a958c6-59dd-45ad-b246-1b7a1a9e51f6', // TODO
+  //   name: 'Toolsday',
+  //   slug: 'toolsday',
+  //   description:
+  //     'A show about the latest in tech tools, tips, and tricks on Tuesdays at 2',
+  //   simplecastId: 'c0a958c6-59dd-45ad-b246-1b7a1a9e51f6', // TODO
+  //   artworkUrl: '/static/img/shows/toolsday.jpg',
+  //   iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1063765302',
+  //   overcastUrl: 'https://overcast.fm/itunes1063765302',
+  //   pocketCastsUrl: 'http://pca.st/itunes/1063765302',
+  //   rssFeedUrl: 'https://rss.simplecast.com/podcasts/4211/rss',
+  //   googlePodcastsUrl: '',
+  //   castroUrl: 'https://castro.fm/itunes/1063765302',
+  //   breakerUrl: 'https://www.breaker.audio/toolsday',
+  //   applePodcastId: '1063765302',
+  //   twitterUsername: 'toolsday',
+  //   hosts: [hosts.una, hosts.chrisdhanaraj],
+  //   featuredEpisodes: [],
+  //   colors: {
+  //     text: '#2167A4',
+  //     button: '#3A87C9',
+  //   },
+  // },
 
   {
     id: 'e8c261a2-fca8-4c9a-82eb-73351f2fbe2a',
@@ -309,13 +309,13 @@ export default [
     },
   },
   {
-    id: '99999', // TODO
+    id: '99999',
     name: 'Layout',
     slug: 'layout',
     description:
       'Layout is a weekly podcast about design, technology, programming and everything else',
     artworkUrl: '/static/img/shows/layout.png',
-    simplecastId: null, // TODO
+    simplecastId: null,
     iTunesUrl: 'https://geo.itunes.apple.com/ca/podcast/feed/id1050276556',
     overcastUrl: 'https://overcast.fm/itunes1050276556',
     pocketCastsUrl: 'http://pca.st/itunes/1050276556',

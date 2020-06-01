@@ -10,7 +10,7 @@ interface Props {
 
 export default function PodcastsPage({ podcasts }: Props) {
   return (
-    <Page dataCy="home-view">
+    <Page dataCy="podcasts-view">
       <SectionHeading>
         <Heading>Podcasts</Heading>
         <Subheading>
@@ -31,6 +31,7 @@ export async function getStaticProps() {
     'reactpodcast',
     'does-not-compute',
     'fragmented',
+    'swift-unwrapped',
     'layout',
     'toolsday',
   ]
