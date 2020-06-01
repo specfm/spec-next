@@ -1,11 +1,8 @@
 {
-  "plugins": [
-    "cypress"
-  ],
+  "rules": {
+    "cypress/no-unnecessary-waiting": "warn"
+  },
   "extends": [
     "plugin:cypress/recommended"
-  ],
-  "env": {
-    "cypress/globals": true
-  }
+  ]
 }

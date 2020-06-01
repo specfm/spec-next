@@ -25,7 +25,6 @@ interface Props {
 
 export default function EpisodeView(props: Props) {
   const { podcast, episode } = props
-
   if (!episode) {
     return (
       <Grid data-cy="episode-view">

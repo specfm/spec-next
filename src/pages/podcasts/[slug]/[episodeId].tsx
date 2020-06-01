@@ -13,10 +13,27 @@ interface Props {
 
 export default function EpisodePage(props: Props) {
   const { configPodcast, episode } = props
+
+  React.useEffect(() => {
+    if (configPodcast.slug === 'design-details') {
+      window.location.href = `https://designdetails.fm/episodes/${
+        episode.legacy_id || episode.token
+        }`
+    }
+  }, [])
+
   const router = useRouter()
 
   if (router.isFallback) {
     return <FullscreenLoading />
+  }
+
+  if (configPodcast.slug === 'design-details') {
+    return (
+      <Page>
+        <FullscreenLoading />
+      </Page>
+    )
   }
 
   return (
@@ -33,26 +50,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug, episodeId } = params
 
-  if (slug === 'design-details') {
-    return {
-      props: {
-        episode: null,
-        configPodcast: null,
-      },
-    }
-  }
-
   const configPodcast = getConfigPodcastFromSlug(slug)
-
-  if (!configPodcast || !episodeId || episodeId === 'undefined') {
-    return {
-      props: {
-        episode: null,
-        configPodcast: null,
-      },
-    }
-  }
-
   const episode = await getEpisode(episodeId)
 
   return {

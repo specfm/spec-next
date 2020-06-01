@@ -9,7 +9,6 @@ import {
   Title,
   Timestamp,
 } from './style'
-import SearchContext from './SearchContext'
 import { getConfigPodcastFromId } from '~/lib/simplecast'
 
 interface Episode {
@@ -38,23 +37,19 @@ export default function SearchResult(props: Props) {
   const datestring = `${month} ${day}, ${year}`
 
   return (
-    <SearchContext.Consumer>
-      {({ clear }) => (
-        <Link
-          href="/podcasts/[slug]/[episodeId]"
-          as={`/podcasts/${podcast.slug}/${episode.id}`}
-        >
-          <a>
-            <SearchEpisodeContainer onClick={clear}>
-              <Artwork src={podcast.artworkUrl} alt={podcast.name} />
-              <Meta>
-                <Title>{episode.title}</Title>
-                <Timestamp>{datestring}</Timestamp>
-              </Meta>
-            </SearchEpisodeContainer>
-          </a>
-        </Link>
-      )}
-    </SearchContext.Consumer>
+    <Link
+      href="/podcasts/[slug]/[episodeId]"
+      as={`/podcasts/${podcast.slug}/${episode.id}`}
+    >
+      <a>
+        <SearchEpisodeContainer>
+          <Artwork src={podcast.artworkUrl} alt={podcast.name} />
+          <Meta>
+            <Title>{episode.title}</Title>
+            <Timestamp>{datestring}</Timestamp>
+          </Meta>
+        </SearchEpisodeContainer>
+      </a>
+    </Link>
   )
 }

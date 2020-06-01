@@ -5,7 +5,6 @@ import { Container, AlgoliaLogo } from './style'
 import OutsideClickHandler from '../../OutsideClickHandler'
 import SearchInput from './SearchInput'
 import SearchResult from './SearchResult'
-import SearchContext from './SearchContext'
 
 const ALGOLIA_SEARCH_KEY = 'edad66bc16c4912d142a8e7dae608ccd'
 const ALGOLIA_APP_ID = 'M8MTCTQX8H'
@@ -23,35 +22,27 @@ export default function Search() {
 
   const clear = () => setValue('')
 
-  const context = {
-    value,
-    clear: clear,
-    onChange: onChange,
-  }
-
   return (
-    <SearchContext.Provider value={context}>
-      <Container>
-        <OutsideClickHandler onOutsideClick={clear} style={{ width: '100%' }}>
-          {value && (
-            <a
-              href="https://algolia.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AlgoliaLogo
-                src="/static/img/algolia.svg"
-                alt="Search by Algolia"
-              />
-            </a>
-          )}
-          <InstantSearch searchClient={searchClient} indexName={INDEX}>
-            <SearchInput onChange={onChange} />
+    <Container>
+      <OutsideClickHandler onOutsideClick={clear} style={{ width: '100%' }}>
+        {value && (
+          <a
+            href="https://algolia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AlgoliaLogo
+              src="/static/img/algolia.svg"
+              alt="Search by Algolia"
+            />
+          </a>
+        )}
+        <InstantSearch searchClient={searchClient} indexName={INDEX}>
+          <SearchInput onChange={onChange} />
 
-            {value && value.length > 0 && <Hits hitComponent={SearchResult} />}
-          </InstantSearch>
-        </OutsideClickHandler>
-      </Container>
-    </SearchContext.Provider>
+          {value && value.length > 0 && <Hits hitComponent={SearchResult} />}
+        </InstantSearch>
+      </OutsideClickHandler>
+    </Container>
   )
 }
