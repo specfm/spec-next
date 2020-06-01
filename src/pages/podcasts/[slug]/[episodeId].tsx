@@ -15,12 +15,12 @@ export default function EpisodePage(props: Props) {
   const { configPodcast, episode } = props
 
   React.useEffect(() => {
-    if (configPodcast.slug === 'design-details') {
+    if (configPodcast && configPodcast.slug === 'design-details') {
       window.location.href = `https://designdetails.fm/episodes/${
         episode.legacy_id || episode.token
         }`
     }
-  }, [])
+  }, [configPodcast])
 
   const router = useRouter()
 

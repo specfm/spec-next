@@ -9,6 +9,7 @@ module.exports = withSourceMaps({
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     SENTRY_DSN: process.env.SENTRY_DSN,
+    SEARCH_INDEXING_TOKEN: process.env.SEARCH_INDEXING_TOKEN,
   },
   webpack: (config, { isServer }) => {
     config.resolve.alias['~'] = path.resolve('./src')
