@@ -10,4 +10,4 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: https://spec.fm/api/search?token={{secrets.SEARCH_INDEXING_TOKEN}}
+        args: https://spec.fm/api/search?token=${{secrets.SEARCH_INDEXING_TOKEN}}
