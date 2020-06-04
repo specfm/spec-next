@@ -76,6 +76,7 @@ export async function getStaticProps({ params: { slug } }) {
   })
 
   return {
+    unstable_revalidate: 60 * 60,
     props: {
       configPodcast,
       episodes,

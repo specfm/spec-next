@@ -52,6 +52,7 @@ export async function getStaticProps() {
   )
 
   return {
+    unstable_revalidate: 60 * 60,
     props: {
       podcasts: [...active, ...inactive],
     },
