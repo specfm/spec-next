@@ -13,6 +13,11 @@ interface Props {
 
 export default function EpisodePage(props: Props) {
   const { configPodcast, episode } = props
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <FullscreenLoading />
+  }
 
   React.useEffect(() => {
     if (configPodcast && configPodcast.slug === 'design-details') {
@@ -21,12 +26,6 @@ export default function EpisodePage(props: Props) {
         }`
     }
   }, [configPodcast])
-
-  const router = useRouter()
-
-  if (router.isFallback) {
-    return <FullscreenLoading />
-  }
 
   if (configPodcast.slug === 'design-details') {
     return (
