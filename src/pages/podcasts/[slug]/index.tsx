@@ -16,13 +16,13 @@ export default function PodcastPage(props: Props) {
   const { configPodcast, episodes } = props
   const router = useRouter()
 
-  React.useEffect(() => {
-    if (!router.isFallback && (!configPodcast || !episodes)) router.push('/')
-  }, [router.isFallback])
-
   if (router.isFallback) {
     return <FullscreenLoading />
   }
+
+  React.useEffect(() => {
+    if (!configPodcast || !episodes) router.push('/')
+  }, [router.isFallback])
 
   if (configPodcast && episodes) {
     return (
