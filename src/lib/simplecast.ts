@@ -49,7 +49,7 @@ export async function getEpisodes({
     .then((res) => res.collection.filter((ep) => ep.status === 'published'))
     .then((res) => res.map(transformEpisode))
     .catch((err) => {
-      console.error(err)
+      console.error({ err, showId })
       return []
     })
 }
@@ -62,7 +62,7 @@ export async function getEpisode(id): Promise<SimplecastEpisode> {
       return transformEpisode(res)
     })
     .catch((err) => {
-      console.error(err)
+      console.error({ err, episodeId: id })
       return null
     })
 }
@@ -71,7 +71,7 @@ export async function getPodcasts(): Promise<SimplecastPodcast[]> {
   return await simplecast(`/podcasts`)
     .then((res) => res.collection.map(transformPodcast))
     .catch((err) => {
-      console.error(err)
+      console.error({ err })
       return []
     })
 }
@@ -84,7 +84,7 @@ export async function getPodcast(id): Promise<SimplecastPodcast> {
       return transformPodcast(res)
     })
     .catch((err) => {
-      console.error(err)
+      console.error({ err })
       return null
     })
 }
