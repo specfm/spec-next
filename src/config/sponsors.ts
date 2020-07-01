@@ -608,4 +608,10 @@ export default [
       'https://zebranding.com/?utm_source=podcast&utm_medium=spec&utm_campaign=devtea',
     logoUrl: '/static/img/sponsors/zebrand.png',
   },
+  {
+    name: 'Command Line Heroes',
+    url:
+      'https://www.redhat.com/en/command-line-heroes',
+    logoUrl: '/static/img/sponsors/clhlogo.png',
+  },
 ]
