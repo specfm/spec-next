@@ -614,4 +614,10 @@ export default [
       'https://www.redhat.com/en/command-line-heroes',
     logoUrl: '/static/img/sponsors/clhlogo.png',
   },
+  {
+    name: 'TestCafe',
+    url:
+      'https://devexpress.github.io/testcafe/',
+    logoUrl: '/static/img/sponsors/testcafelogo.png',
+  },
 ]
