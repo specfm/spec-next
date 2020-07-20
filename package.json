@@ -32,7 +32,7 @@
   "devDependencies": {
     "@babel/preset-flow": "^7.10.4",
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
-    "@cypress/browserify-preprocessor": "^3.0.0",
+    "@cypress/browserify-preprocessor": "^3.0.1",
     "@cypress/webpack-preprocessor": "^5.4.1",
     "@types/chai": "^4.2.11",
     "@types/jest": "^26.0.5",
