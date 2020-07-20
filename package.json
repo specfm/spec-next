@@ -20,7 +20,7 @@
     "next-seo": "^4.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-instantsearch-dom": "^6.6.0",
+    "react-instantsearch-dom": "^6.7.0",
     "react-markdown": "^4.3.1",
     "remove-markdown": "^0.3.0",
     "stopword": "^1.0.1",
