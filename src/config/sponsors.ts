@@ -614,6 +614,12 @@ export default [
       'https://www.redhat.com/en/command-line-heroes',
     logoUrl: '/static/img/sponsors/clhlogo.png',
   },
+   {
+    name: 'Honeybadger',
+    url:
+      'https://www.honeybadger.io/?utm_source=reactpodcast_toolsday&utm_medium=email&utm_campaign=podcast',
+    logoUrl: '/static/img/sponsors/honeybadgerlogo.png',
+  },
   {
     name: 'TestCafe',
     url:
