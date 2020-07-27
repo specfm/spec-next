@@ -10,7 +10,7 @@
     "lint:staged": "lint-staged"
   },
   "dependencies": {
-    "@sentry/browser": "^5.19.2",
+    "@sentry/browser": "^5.20.1",
     "@sentry/node": "^5.19.2",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.3.1",
