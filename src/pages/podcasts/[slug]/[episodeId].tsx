@@ -53,7 +53,7 @@ export async function getStaticProps({ params }) {
   const episode = await getEpisode(episodeId)
 
   return {
-    unstable_revalidate: 60 * 60,
+    revalidate: 60 * 60,
     props: {
       episode,
       configPodcast,
