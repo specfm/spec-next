@@ -4,7 +4,7 @@
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 20000,
   "video": false,
-  "blacklistHosts": [
+  "blockHosts": [
     "*.usefathom.com"
   ]
 }
