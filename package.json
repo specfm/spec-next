@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^5.21.4",
-    "@sentry/node": "^5.21.1",
+    "@sentry/node": "^5.21.4",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.4.0",
     "conditional-wrap": "^1.0.2",
