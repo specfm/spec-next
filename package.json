@@ -24,7 +24,7 @@
     "react-markdown": "^4.3.1",
     "remove-markdown": "^0.3.0",
     "stopword": "^1.0.1",
-    "styled-components": "^5.1.1",
+    "styled-components": "^5.2.0",
     "styled-normalize": "^8.0.7",
     "throttle-debounce": "^2.3.0",
     "use-dark-mode": "^2.3.1"
