@@ -33,7 +33,7 @@
     "@babel/preset-flow": "^7.10.4",
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
     "@cypress/browserify-preprocessor": "^3.0.1",
-    "@cypress/webpack-preprocessor": "^5.4.5",
+    "@cypress/webpack-preprocessor": "^5.4.6",
     "@types/chai": "^4.2.12",
     "@types/jest": "^26.0.14",
     "@types/mocha": "^8.0.3",
