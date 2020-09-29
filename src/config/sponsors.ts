@@ -632,4 +632,10 @@ export default [
       'https://devexpress.github.io/testcafe/',
     logoUrl: '/static/img/sponsors/testcafelogo.png',
   },
+  {
+    name: 'DeepSource',
+    url:
+      'https://deepsource.io/?ref=devtea',
+    logoUrl: '/static/img/sponsors/deepsource.png',
+  },
 ]
