@@ -636,6 +636,6 @@ export default [
     name: 'DeepSource',
     url:
       'https://deepsource.io/?ref=devtea',
-    logoUrl: '/static/img/sponsors/deepsource.png',
+    logoUrl: '/static/img/sponsors/deepsource 1.png',
   },
 ]
