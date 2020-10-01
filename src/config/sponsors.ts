@@ -638,4 +638,10 @@ export default [
       'https://deepsource.io/?ref=devtea',
     logoUrl: '/static/img/sponsors/deepsource 1.png',
   },
+  {
+    name: 'CuriosityStream',
+    url:
+      'https://curiositystream.com/design',
+    logoUrl: '/static/img/sponsors/curiositystreamlogo.png',
+  },
 ]
