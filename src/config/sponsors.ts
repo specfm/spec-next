@@ -644,4 +644,11 @@ export default [
       'https://curiositystream.com/design',
     logoUrl: '/static/img/sponsors/curiositystreamlogo.png',
   },
+  
+  {
+    name: 'AWS Amplify',
+    url:
+      'https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/',
+    logoUrl: '/static/img/sponsors/amplify.png',
+  },
 ]
