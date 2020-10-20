@@ -651,4 +651,10 @@ export default [
       'https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/',
     logoUrl: '/static/img/sponsors/amplify.png',
   },
+  {
+    name: 'Monday.com',
+    url:
+      'https://mondayapps.devpost.com/?utm_source=monday&utm_medium=podcast&utm_campaign=devtea',
+    logoUrl: '/static/img/sponsors/mondaylogo.png',
+  },
 ]
