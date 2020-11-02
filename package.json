@@ -19,7 +19,7 @@
     "next": "^9.5.5",
     "next-seo": "^4.15.0",
     "react": "^16.14.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-instantsearch-dom": "^6.8.1",
     "react-markdown": "^5.0.2",
     "remove-markdown": "^0.3.0",
