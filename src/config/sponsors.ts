@@ -11,6 +11,12 @@ export default [
       'https://appcenter.ms/?utm_source=Fragmented_podcast&utm_medium=newsletter&utm_campaign=appcenter_Fragmengted',
     logoUrl: '/static/img/sponsors/app-center.jpg',
   },
+  {
+    name: 'New Relic',
+    url:
+      'https://newrelic.com',
+    logoUrl: '/static/img/sponsors/newrelic_logo.png',
+  },
 
   {
     name: 'Twist',
