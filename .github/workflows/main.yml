@@ -29,3 +29,4 @@ jobs:
           build: yarn run build
           start: yarn run start
           browser: chrome
+          env: SIMPLECAST_API_KEY=${{ secrets.SIMPLECAST_V2_API_KEY }}
