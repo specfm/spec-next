@@ -11,22 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     # let's make sure our tests pass on Chrome browser
     name: E2E on Chrome
+    env:
+      SPECFM_FATHOM_SITE_ID: ${{ secrets.SPECFM_FATHOM_SITE_ID }}
+      SPECFM_FATHOM_CUSTOM_URL: ${{ secrets.SPECFM_FATHOM_CUSTOM_URL }}
+      SIMPLECAST_V2_API_KEY: ${{ secrets.SIMPLECAST_V2_API_KEY }}
     steps:
-      - name: Cache Next
-        uses: actions/cache@v2
-        with:
-          path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
       - name: Checkout
         uses: actions/checkout@v2
-        env:
-          SPECFM_FATHOM_SITE_ID: ${{ secrets.SPECFM_FATHOM_SITE_ID }}
-          SPECFM_FATHOM_CUSTOM_URL: ${{ secrets.SPECFM_FATHOM_CUSTOM_URL }}
-          SIMPLECAST_V2_API_KEY: ${{ secrets.SIMPLECAST_V2_API_KEY }}
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
           build: yarn run build
           start: yarn run start
           browser: chrome
-          env: SIMPLECAST_API_KEY=${{ secrets.SIMPLECAST_V2_API_KEY }}
