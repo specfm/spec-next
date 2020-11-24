@@ -13,8 +13,7 @@ export default [
   },
   {
     name: 'New Relic',
-    url:
-      'https://newrelic.com',
+    url: 'https://newrelic.com',
     logoUrl: '/static/img/sponsors/newrelic_logo.png',
   },
 
@@ -616,8 +615,7 @@ export default [
   },
   {
     name: 'Command Line Heroes',
-    url:
-      'https://www.redhat.com/en/command-line-heroes',
+    url: 'https://www.redhat.com/en/command-line-heroes',
     logoUrl: '/static/img/sponsors/clhlogo.png',
   },
   {
@@ -628,29 +626,25 @@ export default [
   },
   {
     name: 'Retool',
-    url:
-      'https://retool.com/?utm_source=spec&utm_medium=podcast',
+    url: 'https://retool.com/?utm_source=spec&utm_medium=podcast',
     logoUrl: '/static/img/sponsors/retoollogo.png',
   },
   {
     name: 'TestCafe',
-    url:
-      'https://devexpress.github.io/testcafe/',
+    url: 'https://devexpress.github.io/testcafe/',
     logoUrl: '/static/img/sponsors/testcafelogo.png',
   },
   {
     name: 'DeepSource',
-    url:
-      'https://deepsource.io/?ref=devtea',
+    url: 'https://deepsource.io/?ref=devtea',
     logoUrl: '/static/img/sponsors/deepsource 1.png',
   },
   {
     name: 'CuriosityStream',
-    url:
-      'https://curiositystream.com/design',
+    url: 'https://curiositystream.com/design',
     logoUrl: '/static/img/sponsors/curiositystreamlogo.png',
   },
-  
+
   {
     name: 'AWS Amplify',
     url:
