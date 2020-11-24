@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     # let's make sure our tests pass on Chrome browser
     name: E2E on Chrome
-    # env:
-    #   SPECFM_FATHOM_SITE_ID: ${{ secrets.SPECFM_FATHOM_SITE_ID }}
-    #   SPECFM_FATHOM_CUSTOM_URL: ${{ secrets.SPECFM_FATHOM_CUSTOM_URL }}
-    #   SIMPLECAST_V2_API_KEY: ${{ secrets.SIMPLECAST_V2_API_KEY }}
     steps:
       - name: Cache Next
         uses: actions/cache@v2
@@ -29,3 +25,7 @@ jobs:
           build: yarn run build
           start: yarn run start
           browser: chrome
+        env:
+          CYPRESS_SPECFM_FATHOM_SITE_ID: ${{ secrets.SPECFM_FATHOM_SITE_ID }}
+          CYPRESS_SPECFM_FATHOM_CUSTOM_URL: ${{ secrets.SPECFM_FATHOM_CUSTOM_URL }}
+          CYPRESS_SIMPLECAST_V2_API_KEY: ${{ secrets.SIMPLECAST_V2_API_KEY }}
