@@ -11,6 +11,12 @@ export default [
       'https://appcenter.ms/?utm_source=Fragmented_podcast&utm_medium=newsletter&utm_campaign=appcenter_Fragmengted',
     logoUrl: '/static/img/sponsors/app-center.jpg',
   },
+  {
+    name: 'New Relic',
+    url:
+      'https://newrelic.com',
+    logoUrl: '/static/img/sponsors/newrelic_logo.png',
+  },
 
   {
     name: 'Twist',
@@ -631,5 +637,30 @@ export default [
     url:
       'https://devexpress.github.io/testcafe/',
     logoUrl: '/static/img/sponsors/testcafelogo.png',
+  },
+  {
+    name: 'DeepSource',
+    url:
+      'https://deepsource.io/?ref=devtea',
+    logoUrl: '/static/img/sponsors/deepsource 1.png',
+  },
+  {
+    name: 'CuriosityStream',
+    url:
+      'https://curiositystream.com/design',
+    logoUrl: '/static/img/sponsors/curiositystreamlogo.png',
+  },
+  
+  {
+    name: 'AWS Amplify',
+    url:
+      'https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/',
+    logoUrl: '/static/img/sponsors/amplify.png',
+  },
+  {
+    name: 'Monday.com',
+    url:
+      'https://mondayapps.devpost.com/?utm_source=monday&utm_medium=podcast&utm_campaign=devtea',
+    logoUrl: '/static/img/sponsors/mondaylogo.png',
   },
 ]
