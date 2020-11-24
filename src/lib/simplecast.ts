@@ -46,7 +46,14 @@ export async function getEpisodes({
   return await simplecast(
     `/podcasts/${showId}/episodes?limit=${limit}&offset=${offset}&sort=published_at_desc`
   )
-    .then((res) => res.collection.filter((ep) => ep.status === 'published'))
+    .then((res) => {
+      if (!res || !res.collection) {
+        console.log({ res })
+        return []
+      } else {
+        return res.collection.filter((ep) => ep.status === 'published')
+      }
+    })
     .then((res) => res.map(transformEpisode))
     .catch((err) => {
       console.error({ err, showId })
