@@ -657,4 +657,10 @@ export default [
       'https://mondayapps.devpost.com/?utm_source=monday&utm_medium=podcast&utm_campaign=devtea',
     logoUrl: '/static/img/sponsors/mondaylogo.png',
   },
+   {
+    name: 'Outsystems',
+    url:
+      'https://www.outsystems.com/free-edition/?utm_source=specfm&utm_medium=referral&utm_campaign=2020-toolsday-sponsorship&utm_term=camp-gl&utm_content=personal-environment',
+    logoUrl: '/static/img/sponsors/outsystemslogo.png',
+  },
 ]
