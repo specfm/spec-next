@@ -23,7 +23,7 @@
     "react-instantsearch-dom": "^6.8.2",
     "react-markdown": "^5.0.3",
     "remove-markdown": "^0.3.0",
-    "stopword": "^1.0.3",
+    "stopword": "^1.0.4",
     "styled-components": "^5.2.1",
     "styled-normalize": "^8.0.7",
     "throttle-debounce": "^3.0.1",
