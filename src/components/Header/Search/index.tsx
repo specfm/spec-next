@@ -6,8 +6,8 @@ import OutsideClickHandler from '../../OutsideClickHandler'
 import SearchInput from './SearchInput'
 import SearchResult from './SearchResult'
 
-const ALGOLIA_SEARCH_KEY = 'edad66bc16c4912d142a8e7dae608ccd'
-const ALGOLIA_APP_ID = 'M8MTCTQX8H'
+const ALGOLIA_SEARCH_KEY = process.env.ALGOLIA_API_KEY
+const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID
 
 const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY)
 
