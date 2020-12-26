@@ -1,6 +1,5 @@
 import * as React from 'react'
 import GlobalStyles from '~/components/GlobalStyles'
-import Fathom from './Fathom'
 import SEO from './SEO'
 import DarkMode from './DarkMode'
 
@@ -13,7 +12,6 @@ export default function Providers({ children }: Props) {
     <React.Fragment>
       <SEO />
       <DarkMode />
-      <Fathom />
       <GlobalStyles.ResetStyles />
 
       {children}

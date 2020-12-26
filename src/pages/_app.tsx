@@ -1,41 +1,37 @@
-import * as React from 'react'
-import App from 'next/app'
-import Sentry from '~/lib/sentry'
+import { useEffect } from 'react'
+import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import * as Fathom from 'fathom-client'
 import Providers from '~/components/Providers'
-import '~/components/GlobalStyles/theme.css'
 
-class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {}
+function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return { pageProps }
-  }
-
-  componentDidCatch(error, errorInfo) {
-    Sentry.withScope((scope) => {
-      Object.keys(errorInfo).forEach((key) => {
-        scope.setExtra(key, errorInfo[key])
-      })
-
-      Sentry.captureException(error)
+  useEffect(() => {
+    // Initialize Fathom when the app loads
+    Fathom.load(process.env.SPECFM_FATHOM_SITE_ID, {
+      includedDomains: ['spec.fm'],
+      url: process.env.SPECFM_FATHOM_CUSTOM_URL,
+      excludedDomains: ['localhost,now.sh,vercel.app'],
     })
 
-    super.componentDidCatch(error, errorInfo)
-  }
+    function onRouteChangeComplete() {
+      Fathom.trackPageview()
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete)
 
-  render() {
-    const { Component, pageProps } = this.props
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete)
+    }
+  }, [])
 
-    return (
-      <Providers>
-        <Component {...pageProps} />
-      </Providers>
-    )
-  }
+  return (
+    <Providers>
+      <Component {...pageProps} />
+    </Providers>
+  )
 }
 
-export default MyApp
+export default App
