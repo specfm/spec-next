@@ -4,8 +4,6 @@ It uses the users' prefers-color-scheme media query to inline
 CSS variables into the :root of the page before any content is 
 rendered.
 */
-
-import Terser from 'terser'
 import { COLORS } from './colors'
 
 export function setColorsByTheme() {
@@ -30,9 +28,7 @@ export function MagicScriptTag() {
     JSON.stringify(COLORS)
   )
 
-  let calledFunction = `(${boundFn})()`
-
-  calledFunction = Terser.minify(calledFunction).code
+  const calledFunction = `(${boundFn})()`
 
   // eslint-disable-next-line react/no-danger
   return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />
