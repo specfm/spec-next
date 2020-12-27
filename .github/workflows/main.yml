@@ -9,7 +9,6 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    # let's make sure our tests pass on Chrome browser
     name: Cypress
     env:
       SPECFM_FATHOM_SITE_ID: ${{ secrets.SPECFM_FATHOM_SITE_ID }}
