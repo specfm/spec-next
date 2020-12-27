@@ -1,4 +1,4 @@
-name: E2E on Chrome
+name: Test and deploy
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     # let's make sure our tests pass on Chrome browser
-    name: E2E on Chrome
+    name: Cypress
     env:
       SPECFM_FATHOM_SITE_ID: ${{ secrets.SPECFM_FATHOM_SITE_ID }}
       SPECFM_FATHOM_CUSTOM_URL: ${{ secrets.SPECFM_FATHOM_CUSTOM_URL }}
@@ -26,6 +26,7 @@ jobs:
           browser: chrome
   deploy:
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
       - uses: actions/checkout@v2
       - uses: amondnet/vercel-action@v20
