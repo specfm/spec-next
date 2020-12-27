@@ -1,27 +1,42 @@
 import * as React from 'react'
-import Link from 'next/link'
 import Page from '~/components/Page'
 import { hosts } from '~/config'
 import {
   Container,
   ContentContainer,
+  Divider,
   PostHeader,
   Title,
 } from '~/components/Blog'
 import HostsGrid from '~/components/HostsGrid'
+import { WarnNotice } from '~/components/Blog/style'
 
 export default function About() {
   const hostsAsArray = Object.keys(hosts).map((name) => hosts[name])
 
   return (
-    <Page showEmailCapture={false} dataCy="about-view">
+    <Page dataCy="about-view">
       <Container>
         <ContentContainer style={{ paddingTop: '88px' }}>
           <PostHeader>
             <Title>About Spec</Title>
           </PostHeader>
 
-          <h3>Level Up</h3>
+          <WarnNotice>
+            Spec.fm is no longer operating, and all podcasts operate as
+            independent shows.{' '}
+            <a
+              href="https://sarahberus.medium.com/5-years-of-specfm-a09fa8390000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Read the Spec story</strong>
+            </a>
+            .
+          </WarnNotice>
+
+          <Divider />
+
           <p>What does it mean to level up in your career?</p>
 
           <p>
@@ -48,35 +63,6 @@ export default function About() {
             Today our podcasts are downloaded more than 100,000 times per week
             and we’re working to create new shows to provide the most up-to-date
             resources and information for the design & development community!
-          </p>
-
-          <p>
-            You can{' '}
-            <a
-              href="https://twitter.com/specfm"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              follow us on Twitter
-            </a>{' '}
-            for updates on new episodes, or join our{' '}
-            <a
-              href="https://spectrum.chat/specfm"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              community
-            </a>{' '}
-            to hang out with thousands of like-minded designers and developers.
-          </p>
-
-          <p>
-            If your company or product would like to sponsor our shows, we’d
-            love to chat!{' '}
-            <Link href="/sponsors">
-              <a>Learn more about sponsoring Spec</a>
-            </Link>
-            .
           </p>
 
           <h3>The team</h3>
