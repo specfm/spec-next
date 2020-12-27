@@ -24,15 +24,27 @@ jobs:
           build: yarn run build
           start: yarn run start
           browser: chrome
-  deploy:
+  preview:
     runs-on: ubuntu-latest
-    name: Deploy
+    name: Preview deployment
     steps:
       - uses: actions/checkout@v2
       - uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: success() && github.ref == 'refs/heads/main' && '--prod'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to production
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-args: '--prod'
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
