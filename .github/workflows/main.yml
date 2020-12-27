@@ -36,7 +36,6 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
           scope: ${{ secrets.VERCEL_TEAM_ID }}
-          vercel-project-name: spec-next
   deploy:
     runs-on: ubuntu-latest
     name: Deploy to production
@@ -51,4 +50,3 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
           scope: ${{ secrets.VERCEL_TEAM_ID }}
-          vercel-project-name: spec-next
