@@ -30,7 +30,7 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>Read the Spec story</strong>
+              <strong>Read the Spec Network story</strong>
             </a>
             .
           </WarnNotice>
