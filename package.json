@@ -13,7 +13,7 @@
     "@sentry/browser": "^5.30.0",
     "@sentry/node": "^5.30.0",
     "@zeit/next-source-maps": "0.0.4-canary.1",
-    "algoliasearch": "^4.8.3",
+    "algoliasearch": "^4.8.4",
     "conditional-wrap": "^1.0.2",
     "fathom-client": "^3.0.0",
     "isomorphic-unfetch": "^3.1.0",
