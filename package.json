@@ -10,7 +10,7 @@
     "lint:staged": "lint-staged"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-env": "^7.12.17",
     "@sentry/browser": "^6.1.0",
     "@sentry/node": "^6.1.0",
     "@zeit/next-source-maps": "0.0.4-canary.1",
