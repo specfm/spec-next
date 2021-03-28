@@ -7,7 +7,8 @@
     "prettier": "prettier",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@babel/preset-env": "^7.13.10",

@@ -48,7 +48,6 @@ export async function getEpisodes({
   )
     .then((res) => {
       if (!res || !res.collection) {
-        console.log({ res })
         return []
       } else {
         return res.collection.filter((ep) => ep.status === 'published')

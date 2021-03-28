@@ -12,7 +12,7 @@ export default function PodcastCard(props: Props) {
 
   if (
     podcast &&
-    (podcast.slug === 'layout' || podcast.slug === 'design-details')
+    (podcast.slug === 'layout' || podcast.slug === 'design-details' || podcast.slug === 'swift-unwrapped')
   ) {
     return (
       <a data-cy={`${podcast.slug}-podcast`} href={podcast.websiteUrl}>
