@@ -29,7 +29,7 @@ export default function ResourcesGrid() {
         </a>
 
         <a
-          href="https://brianlovin.com/design-details"
+          href="https://brianlovin.com/app-dissection"
           target="_blank"
           rel="noopener noreferrer"
           data-cy="resource-ddblog"

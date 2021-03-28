@@ -10,6 +10,7 @@ import FullscreenLoading from '~/components/FullscreenLoading'
 interface Props {
   configPodcast: ConfigPodcast
   episodes: SimplecastEpisode[]
+  slug: string
 }
 
 export default function PodcastPage(props: Props) {
@@ -21,7 +22,15 @@ export default function PodcastPage(props: Props) {
   }
 
   React.useEffect(() => {
-    if (!configPodcast || !episodes) router.push('/')
+    if (props.slug === 'design-details') {
+      window.location.href = `https://designdetails.fm/episodes/`
+    }
+
+    else if (props.slug === 'swift-unwrapped') {
+      window.location.href = `https://swiftunwrapped.github.io/`
+    }
+
+    else if (!configPodcast || !episodes) { router.push('/') }
   }, [router.isFallback])
 
   if (configPodcast && episodes) {
@@ -36,7 +45,7 @@ export default function PodcastPage(props: Props) {
 }
 
 export async function getStaticPaths() {
-  const dontIndex = ['design-details', 'layout']
+  const dontIndex = ['swift-unwrapped', 'design-details', 'layout']
   const paths = podcasts
     .filter((p) => dontIndex.indexOf(p.slug) < 0)
     .map(({ slug }) => ({
@@ -47,13 +56,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const dontIndex = ['design-details', 'layout']
+  const dontIndex = ['swift-unwrapped', 'design-details', 'layout']
 
   if (dontIndex.indexOf(slug) >= 0) {
     return {
       props: {
         configPodcast: null,
         episodes: null,
+        slug,
       },
     }
   }

@@ -227,6 +227,7 @@ export default [
     twitterUsername: 'swift_unwrapped',
     hosts: [hosts.simjp, hosts.jesse_squires],
     featuredEpisodes: [],
+    websiteUrl: 'https://swiftunwrapped.github.io',
     colors: {
       text: '#D65A00',
       button: '#FF6B00',

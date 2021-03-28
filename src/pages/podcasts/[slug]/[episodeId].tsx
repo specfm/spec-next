@@ -21,13 +21,19 @@ export default function EpisodePage(props: Props) {
 
   React.useEffect(() => {
     if (configPodcast && configPodcast.slug === 'design-details') {
-      window.location.href = `https://designdetails.fm/episodes/${
-        episode.legacy_id || episode.token
+      window.location.href = `https://designdetails.fm/episodes/${episode.legacy_id || episode.token
         }`
     }
+
+
+    if (configPodcast && configPodcast.slug === 'swift-unwrapped') {
+      window.location.href = `https://swiftunwrapped.github.io/episodes/${episode.legacy_id || episode.token
+        }`
+    }
+
   }, [configPodcast])
 
-  if (configPodcast.slug === 'design-details') {
+  if (configPodcast.slug === 'design-details' || configPodcast.slug === 'swift-unwrapped') {
     return (
       <Page>
         <FullscreenLoading />
