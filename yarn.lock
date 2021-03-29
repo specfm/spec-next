@@ -5766,10 +5766,10 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next-seo@^4.22.0:
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.22.0.tgz#5487080bf6f84031bc4686f9e37ecaad78f8cc5d"
-  integrity sha512-W4WBkSGIHRPHqIjfUy72Xv8Zx4q38LJLIcxkXlJecLSruQhtPGx8z2H3ct00D9uLbk9Bj2HbYVS5fewqx8ki2g==
+next-seo@^4.23.0:
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.23.0.tgz#24ef200e9faf0489ff1095f63b06adc21187db4c"
+  integrity sha512-/yTeeUT+zFTsrpP8iigwiwsj+HyT+ks1G27mgfnkKQBrFz9uph6Bot4nDrwfICgjvdLt2Zdve6okAgRUmhm+/g==
 
 next@^10.0.8:
   version "10.0.8"
