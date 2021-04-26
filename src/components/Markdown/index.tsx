@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { Notes } from './style'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
 
 interface Props {
   children: React.ReactElement | React.ReactElement[] | string
@@ -17,7 +19,11 @@ function LinkRenderer(props: any) {
 export default function Markdown(props: Props) {
   const { children } = props
   return (
-    <Notes escapeHtml={false} renderers={{ link: LinkRenderer }}>
+    <Notes
+      rehypePlugins={[rehypeRaw, rehypeSanitize]}
+      escapeHtml={false}
+      components={{ a: LinkRenderer }}
+    >
       {children}
     </Notes>
   )
