@@ -50,7 +50,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "cypress": "^7.1.0",
     "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-prettier": "^3.4.0",
