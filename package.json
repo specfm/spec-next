@@ -13,7 +13,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.14.1",
     "@sentry/browser": "^6.3.5",
-    "@sentry/node": "^6.3.5",
+    "@sentry/node": "^6.3.6",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.9.1",
     "babel-loader": "^8.2.2",
@@ -24,8 +24,8 @@
     "next-seo": "^4.24.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-instantsearch-dom": "^6.10.3",
-    "react-markdown": "^6.0.1",
+    "react-instantsearch-dom": "^6.11.0",
+    "react-markdown": "^6.0.2",
     "rehype-raw": "^5.1.0",
     "rehype-sanitize": "^4.0.0",
     "remove-markdown": "^0.3.0",
@@ -34,7 +34,7 @@
     "styled-normalize": "^8.0.7",
     "throttle-debounce": "^3.0.1",
     "use-dark-mode": "^2.3.1",
-    "webpack": "^5.36.2"
+    "webpack": "^5.37.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.13.13",
@@ -54,7 +54,7 @@
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "husky": "^6.0.0",
