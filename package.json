@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-env": "^7.14.2",
     "@sentry/browser": "^6.3.6",
     "@sentry/node": "^6.3.6",
     "@zeit/next-source-maps": "0.0.4-canary.1",
