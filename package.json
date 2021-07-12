@@ -13,7 +13,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.14.7",
     "@sentry/browser": "^6.9.0",
-    "@sentry/node": "^6.8.0",
+    "@sentry/node": "^6.9.0",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.10.3",
     "babel-loader": "^8.2.2",
