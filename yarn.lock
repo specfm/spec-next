@@ -7263,10 +7263,10 @@ static-extend@^0.1.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-stopword@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/stopword/-/stopword-1.0.9.tgz#3c619d829d074f455ca6eee304ceba6e9ec37a77"
-  integrity sha512-rQS/EkfDCLYmJcSj0N0O0DjxVFz9CwVLUvMPJPssRax24Bmfy07eJMSwPh8NHkk/kfh8YWIPRcl/QowBIhIZpg==
+stopword@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/stopword/-/stopword-1.0.11.tgz#2f9f36558bf1ad8c9e1197e572442e9b8814f153"
+  integrity sha512-rMBuk91/PTdV7GpVIwlZRLGcmZ9OMbTM+KXJN19oKIkgns+EhTVEzXfb4q8/v4ExuoGxNSBSHmuzt+DUijuQqQ==
 
 stream-browserify@3.0.0:
   version "3.0.0"
