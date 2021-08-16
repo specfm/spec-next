@@ -1,16 +1,6 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "extends": ["plugin:prettier/recommended"],
+  "plugins": ["react", "@typescript-eslint"],
   "env": {
     "node": true,
     "browser": true,

@@ -21,7 +21,6 @@ export default function Markdown(props: Props) {
   return (
     <Notes
       rehypePlugins={[rehypeRaw, rehypeSanitize]}
-      escapeHtml={false}
       components={{ a: LinkRenderer }}
     >
       {children}
