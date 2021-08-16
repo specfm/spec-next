@@ -8,7 +8,10 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "lint:staged": "lint-staged",
-    "prepare": "husky install"
+    "pre-commit": "lint-staged",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "test": ""
   },
   "dependencies": {
     "@babel/preset-env": "^7.15.0",
@@ -22,19 +25,19 @@
     "isomorphic-unfetch": "^3.1.0",
     "next": "^11.1.0",
     "next-seo": "^4.26.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-instantsearch-dom": "^6.12.1",
-    "react-markdown": "^6.0.3",
-    "rehype-raw": "^5.1.0",
-    "rehype-sanitize": "^4.0.0",
+    "react-markdown": "^7.0.0",
+    "rehype-raw": "^6.0.0",
+    "rehype-sanitize": "^5.0.0",
     "remove-markdown": "^0.3.0",
     "stopword": "^1.0.11",
     "styled-components": "^5.3.0",
     "styled-normalize": "^8.0.7",
     "throttle-debounce": "^3.0.1",
     "use-dark-mode": "^2.3.1",
-    "webpack": "^5.49.0"
+    "webpack": "^5.50.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.14.5",
@@ -57,7 +60,7 @@
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "prettier-eslint": "^13.0.0",
