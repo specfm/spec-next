@@ -30,7 +30,7 @@ export default function EpisodePreview(props: Props) {
             href="/podcasts/[slug]/[episodeId]"
             as={`/podcasts/${podcast.slug}/${
               episode.legacy_id || episode.token
-              }`}
+            }`}
           >
             <a>
               <Timestamp alt={datestring}>{datestring}</Timestamp>
@@ -41,7 +41,7 @@ export default function EpisodePreview(props: Props) {
             href="/podcasts/[slug]/[episodeId]"
             as={`/podcasts/${podcast.slug}/${
               episode.legacy_id || episode.token
-              }`}
+            }`}
           >
             <a>
               <Title>{episode.title}</Title>

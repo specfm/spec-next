@@ -24,13 +24,11 @@ export default function PodcastPage(props: Props) {
   React.useEffect(() => {
     if (props.slug === 'design-details') {
       window.location.href = `https://designdetails.fm/episodes/`
-    }
-
-    else if (props.slug === 'swift-unwrapped') {
+    } else if (props.slug === 'swift-unwrapped') {
       window.location.href = `https://swiftunwrapped.github.io/`
+    } else if (!configPodcast || !episodes) {
+      router.push('/')
     }
-
-    else if (!configPodcast || !episodes) { router.push('/') }
   }, [router.isFallback])
 
   if (configPodcast && episodes) {

@@ -60,7 +60,7 @@ const base = css`
   &:hover {
     transition: all 0.2s ease-in-out;
     box-shadow: ${(props) =>
-    props.disabled ? 'none' : `${theme.shadows.button}`};
+      props.disabled ? 'none' : `${theme.shadows.button}`};
   }
 
   &:focus {

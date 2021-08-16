@@ -1,29 +1,29 @@
-export const getItemFromStorage = key => {
-  if (!localStorage) return;
+export const getItemFromStorage = (key) => {
+  if (!localStorage) return
 
   try {
-    return JSON.parse(localStorage.getItem(key));
+    return JSON.parse(localStorage.getItem(key))
   } catch (err) {
-    return null;
+    return null
   }
-};
+}
 
 export const storeItem = (key, value) => {
-  if (!localStorage) return;
+  if (!localStorage) return
 
   try {
-    return localStorage.setItem(key, JSON.stringify(value));
+    return localStorage.setItem(key, JSON.stringify(value))
   } catch (err) {
-    return null;
+    return null
   }
-};
+}
 
-export const removeItemFromStorage = key => {
-  if (!localStorage) return;
+export const removeItemFromStorage = (key) => {
+  if (!localStorage) return
 
   try {
-    return localStorage.removeItem(key);
+    return localStorage.removeItem(key)
   } catch (err) {
-    return null;
+    return null
   }
-};
+}

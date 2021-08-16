@@ -6,8 +6,8 @@ export default (episode: SimplecastEpisode, showId: string) => {
   let description = episode.long_description
     ? withoutStopWords(episode.long_description)
     : episode.description
-      ? episode.description
-      : ''
+    ? episode.description
+    : ''
   const title = episode.title
 
   // algolia only supports 20kb records
