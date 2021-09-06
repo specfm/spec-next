@@ -11,16 +11,16 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-env": "^7.15.4",
     "@sentry/browser": "^6.11.0",
-    "@sentry/node": "^6.11.0",
+    "@sentry/node": "^6.12.0",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.10.5",
     "babel-loader": "^8.2.2",
     "conditional-wrap": "^1.0.2",
     "fathom-client": "^3.1.0",
     "isomorphic-unfetch": "^3.1.0",
-    "next": "^11.1.1",
+    "next": "^11.1.2",
     "next-seo": "^4.26.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -34,7 +34,7 @@
     "styled-normalize": "^8.0.7",
     "throttle-debounce": "^3.0.1",
     "use-dark-mode": "^2.3.1",
-    "webpack": "^5.51.1"
+    "webpack": "^5.52.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.14.5",
@@ -44,7 +44,7 @@
     "@types/chai": "^4.2.21",
     "@types/jest": "^27.0.1",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.7.8",
+    "@types/node": "^16.7.11",
     "@types/react": "^17.0.19",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
