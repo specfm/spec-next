@@ -16,7 +16,7 @@
     "@sentry/node": "^6.13.3",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.11.0",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.3",
     "conditional-wrap": "^1.0.2",
     "fathom-client": "^3.2.0",
     "isomorphic-unfetch": "^3.1.0",
