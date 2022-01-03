@@ -37,7 +37,7 @@
     "webpack": "^5.65.0"
   },
   "devDependencies": {
-    "@babel/preset-flow": "^7.16.5",
+    "@babel/preset-flow": "^7.16.7",
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
     "@cypress/webpack-preprocessor": "^5.11.0",
