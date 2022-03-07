@@ -29,7 +29,7 @@
     "rehype-raw": "^6.1.1",
     "rehype-sanitize": "^5.0.1",
     "remove-markdown": "^0.3.0",
-    "stopword": "^2.0.0",
+    "stopword": "^2.0.1",
     "styled-components": "^5.3.3",
     "styled-normalize": "^8.0.7",
     "throttle-debounce": "^3.0.1",
