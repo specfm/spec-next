@@ -24,7 +24,7 @@
     "next-seo": "^5.3.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-instantsearch-dom": "^6.23.2",
+    "react-instantsearch-dom": "^6.23.3",
     "react-markdown": "^8.0.2",
     "rehype-raw": "^6.1.1",
     "rehype-sanitize": "^5.0.1",
