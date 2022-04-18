@@ -32,7 +32,7 @@
     "stopword": "^2.0.2",
     "styled-components": "^5.3.5",
     "styled-normalize": "^8.0.7",
-    "throttle-debounce": "^4.0.0",
+    "throttle-debounce": "^4.0.1",
     "use-dark-mode": "^2.3.1",
     "webpack": "^5.72.0"
   },
