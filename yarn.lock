@@ -7032,10 +7032,10 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-throttle-debounce@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-4.0.0.tgz#ec763b1c050c3a8f73eddd2e853a720893102a40"
-  integrity sha512-bO2OiH++k8Z3cTNZccOJRlxY5Sk3Tx3Kz6cQl3VY5pTRcEgqbPxwEKtrC00whFAo2jIBQlaH1ZG5mtfrBef3qw==
+throttle-debounce@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-4.0.1.tgz#f86656fe9c8a6b8218952ef36c3bf225089b1baf"
+  integrity sha512-s3PedbXdZtr8v3J5Sxd5T/GmWG80BcK5GVpwDdvgEaUXsaMqQe4zxgmC4TA7B8luSDCPxo3CeSBS3F9rF1CZwg==
 
 throttleit@^1.0.0:
   version "1.0.0"
