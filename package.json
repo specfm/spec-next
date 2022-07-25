@@ -21,7 +21,7 @@
     "fathom-client": "^3.5.0",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^12.1.5",
-    "next-seo": "^5.4.0",
+    "next-seo": "^5.5.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-instantsearch-dom": "^6.30.2",
