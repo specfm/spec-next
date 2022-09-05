@@ -56,7 +56,7 @@
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react": "^7.31.7",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.3",
     "prettier": "^2.7.1",
