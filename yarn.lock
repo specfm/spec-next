@@ -7404,10 +7404,10 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
-stopword@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/stopword/-/stopword-2.0.2.tgz#a52ff1ddf12b37f87687d79965f26a3d0bc8fd94"
-  integrity sha512-CzXIXl2lt6wHfZ+RNjzlFpO63y7NtT4HBbKqWQvQ4dvutM/US5tGrAYKNMV05SdyudimyuNiIUD0/IQDMq8YNw==
+stopword@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/stopword/-/stopword-2.0.4.tgz#a1269a442a672c2859aa42020b157448e4b5d224"
+  integrity sha512-pyw3N8srR36KG6kf3dOKUSdBHwvk8iMJIRdddXB7ICrPilFGGxF++tWcQNdRXtEbkh3wZOrf5MJd60RkUI2YoA==
 
 stream-browserify@^2.0.0:
   version "2.0.2"
