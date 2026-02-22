@@ -16,5 +16,12 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+// Ignore uncaught exceptions from isomorphic-unfetch/node-fetch on modern Node.js
+Cypress.on('uncaught:exception', (err) => {
+  if (err.message.includes('Aborted is not defined')) {
+    return false
+  }
+})
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
