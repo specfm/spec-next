@@ -52,7 +52,7 @@ export async function getStaticPaths() {
       params: { slug },
     }))
 
-  return { paths, fallback: true }
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params: { slug } }) {
@@ -86,7 +86,6 @@ export async function getStaticProps({ params: { slug } }) {
   })
 
   return {
-    revalidate: 60 * 60,
     props: {
       configPodcast,
       episodes,
