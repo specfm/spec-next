@@ -1,8 +1,5 @@
 /// <reference types="cypress" />
 
-import podcasts from '../../../src/config/podcasts'
-const slugs = podcasts.map((podcast) => podcast.slug)
-
 describe('Podcast', () => {
   beforeEach(() => {
     cy.visit(`/podcasts/developer-tea`)
@@ -16,18 +13,5 @@ describe('Podcast', () => {
       )
     })
     cy.get('[data-cy="episodes-list"]').should('be.visible')
-  })
-})
-
-describe('Invalid Podcast', () => {
-  beforeEach(() => {
-    cy.visit(`/podcasts/foo`)
-  })
-
-  it('should render', () => {
-    cy.get('[data-cy="home-view"]').should('be.visible')
-    slugs.map((slug) =>
-      cy.get(`[data-cy="${slug}-podcast"]`).should('be.visible')
-    )
   })
 })

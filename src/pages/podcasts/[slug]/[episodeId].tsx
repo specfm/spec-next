@@ -49,7 +49,7 @@ export default function EpisodePage(props: Props) {
 }
 
 export async function getStaticPaths() {
-  return { paths: [], fallback: true }
+  return { paths: [], fallback: false }
 }
 
 export async function getStaticProps({ params }) {
@@ -59,7 +59,6 @@ export async function getStaticProps({ params }) {
   const episode = await getEpisode(episodeId)
 
   return {
-    revalidate: 60 * 60,
     props: {
       episode,
       configPodcast,
