@@ -17,9 +17,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
           build: yarn run build
           start: yarn run start
-          browser: chrome
+          # Cypress 9 can't drive current Chrome ("Not attached to an active page"); use its bundled Electron.
+          browser: electron

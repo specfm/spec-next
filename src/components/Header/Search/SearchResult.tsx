@@ -37,19 +37,14 @@ export default function SearchResult(props: Props) {
   const datestring = `${month} ${day}, ${year}`
 
   return (
-    <Link
-      href="/podcasts/[slug]/[episodeId]"
-      as={`/podcasts/${podcast.slug}/${episode.id}`}
-    >
-      <a>
-        <SearchEpisodeContainer>
-          <Artwork src={podcast.artworkUrl} alt={podcast.name} />
-          <Meta>
-            <Title>{episode.title}</Title>
-            <Timestamp>{datestring}</Timestamp>
-          </Meta>
-        </SearchEpisodeContainer>
-      </a>
+    <Link href={`/podcasts/${podcast.slug}/${episode.id}`}>
+      <SearchEpisodeContainer>
+        <Artwork src={podcast.artworkUrl} alt={podcast.name} />
+        <Meta>
+          <Title>{episode.title}</Title>
+          <Timestamp>{datestring}</Timestamp>
+        </Meta>
+      </SearchEpisodeContainer>
     </Link>
   )
 }

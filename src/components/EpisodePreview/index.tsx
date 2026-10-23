@@ -21,31 +21,20 @@ export default function EpisodePreview(props: Props) {
   const { episode, podcast } = props
   const { month, year, day } = getDateObject(episode.published_at)
   const datestring = `${month} ${day}, ${year}`
+  const episodeHref = `/podcasts/${podcast.slug}/${
+    episode.legacy_id || episode.token
+  }`
 
   return (
     <Grid>
       <PlayTitleContainer>
         <TextContainer>
-          <Link
-            href="/podcasts/[slug]/[episodeId]"
-            as={`/podcasts/${podcast.slug}/${
-              episode.legacy_id || episode.token
-              }`}
-          >
-            <a>
-              <Timestamp alt={datestring}>{datestring}</Timestamp>
-            </a>
+          <Link href={episodeHref}>
+            <Timestamp alt={datestring}>{datestring}</Timestamp>
           </Link>
 
-          <Link
-            href="/podcasts/[slug]/[episodeId]"
-            as={`/podcasts/${podcast.slug}/${
-              episode.legacy_id || episode.token
-              }`}
-          >
-            <a>
-              <Title>{episode.title}</Title>
-            </a>
+          <Link href={episodeHref}>
+            <Title>{episode.title}</Title>
           </Link>
         </TextContainer>
       </PlayTitleContainer>
