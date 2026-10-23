@@ -26,4 +26,5 @@ jobs:
         with:
           build: yarn run build
           start: yarn run start
-          browser: chrome
+          # Cypress 9 can't drive current Chrome ("Not attached to an active page"); use its bundled Electron.
+          browser: electron
