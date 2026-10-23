@@ -45,18 +45,16 @@ export default function ResourcesGrid() {
           </Card>
         </a>
 
-        <Link href="/specifics">
-          <a data-cy="resource-specifics">
-            <Card>
-              <Art src="/static/img/resources/specifics.png" alt="Specifics" />
+        <Link href="/specifics" data-cy="resource-specifics">
+          <Card>
+            <Art src="/static/img/resources/specifics.png" alt="Specifics" />
 
-              <Content>
-                <Title>Specifics</Title>
-                <Description>Reference guides for designers</Description>
-                <OutlineButton>Get specific</OutlineButton>
-              </Content>
-            </Card>
-          </a>
+            <Content>
+              <Title>Specifics</Title>
+              <Description>Reference guides for designers</Description>
+              <OutlineButton>Get specific</OutlineButton>
+            </Content>
+          </Card>
         </Link>
       </Grid>
     </Container>

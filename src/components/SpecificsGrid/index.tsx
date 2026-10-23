@@ -9,39 +9,33 @@ export default function SpecificsGrid() {
     <Container>
       <Grid>
         <Link href="/specifics/type-scale">
-          <a>
-            <Card>
-              <Art
-                src="/static/img/specifics/002-header.png"
-                alt="Typographic Scales"
-              />
+          <Card>
+            <Art
+              src="/static/img/specifics/002-header.png"
+              alt="Typographic Scales"
+            />
 
-              <Content>
-                <Title>Typographic Scales</Title>
-                <Description>
-                  Consistent typography using simple math
-                </Description>
-                <OutlineButton>View</OutlineButton>
-              </Content>
-            </Card>
-          </a>
+            <Content>
+              <Title>Typographic Scales</Title>
+              <Description>Consistent typography using simple math</Description>
+              <OutlineButton>View</OutlineButton>
+            </Content>
+          </Card>
         </Link>
 
         <Link href="/specifics/8-pt-grid">
-          <a>
-            <Card>
-              <Art src="/static/img/specifics/001-header.png" alt="8-pt Grid" />
+          <Card>
+            <Art src="/static/img/specifics/001-header.png" alt="8-pt Grid" />
 
-              <Content>
-                <Title>The 8-Point Grid</Title>
-                <Description>
-                  Using multiples of 8 to define dimensions, padding, and margin
-                  of elements
-                </Description>
-                <OutlineButton>View</OutlineButton>
-              </Content>
-            </Card>
-          </a>
+            <Content>
+              <Title>The 8-Point Grid</Title>
+              <Description>
+                Using multiples of 8 to define dimensions, padding, and margin
+                of elements
+              </Description>
+              <OutlineButton>View</OutlineButton>
+            </Content>
+          </Card>
         </Link>
       </Grid>
     </Container>

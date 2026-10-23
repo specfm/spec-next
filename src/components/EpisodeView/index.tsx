@@ -29,10 +29,8 @@ export default function EpisodeView(props: Props) {
     return (
       <Grid data-cy="episode-view">
         <Sidebar>
-          <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
-            <a>
-              <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
-            </a>
+          <Link href={`/podcasts/${podcast.slug}`}>
+            <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
           </Link>
 
           <PodcastSubscriptionOptions podcast={podcast} />
@@ -83,10 +81,8 @@ export default function EpisodeView(props: Props) {
       />
 
       <Sidebar>
-        <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
-          <a>
-            <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
-          </a>
+        <Link href={`/podcasts/${podcast.slug}`}>
+          <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
         </Link>
 
         <PodcastSubscriptionOptions podcast={podcast} />
@@ -100,9 +96,7 @@ export default function EpisodeView(props: Props) {
 
       <Content>
         <Description>
-          <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
-            <a>{podcast.name}</a>
-          </Link>
+          <Link href={`/podcasts/${podcast.slug}`}>{podcast.name}</Link>
 
           {' · '}
           {datestring}

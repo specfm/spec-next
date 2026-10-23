@@ -1,5 +1,8 @@
 {
   "name": "spec-next",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -14,16 +17,15 @@
     "@babel/preset-env": "^7.19.1",
     "@sentry/browser": "^7.13.0",
     "@sentry/node": "^7.13.0",
-    "@zeit/next-source-maps": "0.0.4-canary.1",
     "algoliasearch": "^4.14.2",
     "babel-loader": "^8.2.5",
     "conditional-wrap": "^1.0.2",
     "fathom-client": "^3.5.0",
     "isomorphic-unfetch": "^3.1.0",
-    "next": "^12.3.1",
+    "next": "^15.5.28",
     "next-seo": "^5.5.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-instantsearch-dom": "^6.33.0",
     "react-markdown": "^8.0.3",
     "rehype-raw": "^6.1.1",
@@ -44,12 +46,12 @@
     "@types/chai": "^4.3.3",
     "@types/jest": "^29.0.3",
     "@types/mocha": "^9.1.1",
-    "@types/node": "^18.7.23",
-    "@types/react": "^17.0.43",
+    "@types/node": "^24.19.2",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-styled-components": "^2.0.7",
     "cypress": "^9.7.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
@@ -61,11 +63,12 @@
     "lint-staged": "^12.4.3",
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1",
-    "typescript": "^4.6.4",
+    "typescript": "^5.9.3",
     "typescript-eslint-parser": "^22.0.0"
   },
   "resolutions": {
-    "remark-parse": "^8.0.1"
+    "remark-parse": "^8.0.1",
+    "sharp": "^0.35.5"
   },
   "lint-staged": {
     "*.js": [

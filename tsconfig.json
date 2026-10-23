@@ -21,8 +21,9 @@
     "paths": {
       "~/*": [
         "src/*"
-      ],
+      ]
     },
+    "incremental": true
   },
   "exclude": [
     "node_modules",

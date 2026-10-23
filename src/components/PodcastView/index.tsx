@@ -53,10 +53,8 @@ export default function PodcastView(props: Props) {
         ]}
       />
       <Sidebar>
-        <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
-          <a>
-            <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
-          </a>
+        <Link href={`/podcasts/${podcast.slug}`}>
+          <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
         </Link>
         <PodcastSubscriptionOptions podcast={podcast} />
 
@@ -69,10 +67,8 @@ export default function PodcastView(props: Props) {
 
       <Content>
         <MobileArt>
-          <Link href="/podcasts/[slug]" as={`/podcasts/${podcast.slug}`}>
-            <a>
-              <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
-            </a>
+          <Link href={`/podcasts/${podcast.slug}`}>
+            <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
           </Link>
         </MobileArt>
         <Title>{podcast.name}</Title>

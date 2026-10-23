@@ -1,7 +1,17 @@
 const path = require('path')
-const withSourceMaps = require('@zeit/next-source-maps')()
 
-module.exports = withSourceMaps({
+module.exports = {
+  productionBrowserSourceMaps: true,
+  compiler: {
+    styledComponents: {
+      ssr: true,
+      displayName: true,
+    },
+  },
+  images: {
+    // The site does not use next/image; keep the /_next/image optimizer disabled.
+    unoptimized: true,
+  },
   env: {
     SPECFM_FATHOM_SITE_ID: process.env.SPECFM_FATHOM_SITE_ID,
     SPECFM_FATHOM_CUSTOM_URL: process.env.SPECFM_FATHOM_CUSTOM_URL,
@@ -20,4 +30,4 @@ module.exports = withSourceMaps({
 
     return config
   },
-})
+}

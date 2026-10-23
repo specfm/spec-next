@@ -26,12 +26,10 @@ export default function PodcastCard(props: Props) {
   return (
     <Link
       key={podcast.id}
-      href="/podcasts/[slug]"
-      as={`/podcasts/${podcast.slug}`}
+      href={`/podcasts/${podcast.slug}`}
+      data-cy={`${podcast.slug}-podcast`}
     >
-      <a data-cy={`${podcast.slug}-podcast`}>
-        <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
-      </a>
+      <PodcastArt src={podcast.artworkUrl} alt={podcast.name} />
     </Link>
   )
 }

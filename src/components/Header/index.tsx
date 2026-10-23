@@ -8,27 +8,21 @@ import Search from './Search'
 export default function Header() {
   return (
     <Container>
-      <Link href="/">
-        <a style={{ display: 'flex', alignItems: 'center' }}>
-          <LogoContainer>
-            <Logo />
-          </LogoContainer>
-        </a>
+      <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
       </Link>
 
       <Search />
 
       <ButtonRowContainer>
         <Link href="/about">
-          <a>
-            <GhostButton>About</GhostButton>
-          </a>
+          <GhostButton>About</GhostButton>
         </Link>
 
-        <Link href="/sponsors">
-          <a style={{ marginLeft: '8px' }}>
-            <PrimaryButton>Sponsor</PrimaryButton>
-          </a>
+        <Link href="/sponsors" style={{ marginLeft: '8px' }}>
+          <PrimaryButton>Sponsor</PrimaryButton>
         </Link>
       </ButtonRowContainer>
     </Container>
